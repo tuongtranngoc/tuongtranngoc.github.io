@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 <figure>
-  <img src="{{ site.url }}../../../images/aboutme.jpg"/>
+  <img src="../images/aboutme.jpg"/>
   <figcaption>Tuong Tran at Long Bien Marathon in 2022</figcaption>
 </figure>
 
