@@ -1,1 +1,1 @@
-The repo aims to introduce mylife - an AI engineer
+The repo aims to introduce myself - an AI engineer
