@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 <figure>
-  <img src="../images/aboutme.jpg"/>
+  <img src="../images/aboutme.jpg" class="center"/>
   <figcaption>Tuong Tran at Long Bien Marathon in 2022</figcaption>
 </figure>
 
