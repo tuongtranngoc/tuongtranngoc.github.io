@@ -8,9 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-<figure>
+<figure align='center'>
   <img src="../images/aboutme.jpg" class="center"/>
-  <figcaption>Tuong Tran at Long Bien Marathon in 2022</figcaption>
+  <figcaption align='center'>Tuong Tran at Long Bien Marathon in 2022</figcaption>
 </figure>
 
 
