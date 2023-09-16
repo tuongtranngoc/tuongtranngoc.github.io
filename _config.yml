@@ -81,13 +81,13 @@ analytics:
 # Site Author
 author:
   name             : "Tuong Tran"
-  avatar           : "images/profile.png"
+  avatar           : "../images/profile.png"
   bio              : "AI Engineer"
   location         : "Ha Noi, Viet Nam"
   pubmed           : 
   googlescholar    : 
   email            : "ngoctuongwindy@gmail.com"
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  researchgate     :
   uri              :
   bitbucket        :
   codepen          :
@@ -101,14 +101,14 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "https://www.linkedin.com/in/tuong-tran-ngoc-885482154/"
   orcid            :
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "https://www.linkedin.com/in/tuong-tran-ngoc-885482154/"
+  twitter          : 
   vine             :
   weibo            :
   xing             :
