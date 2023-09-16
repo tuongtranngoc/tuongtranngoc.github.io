@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Tuong Tran"
+title: "About me"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,13 +8,13 @@ redirect_from:
   - /about.html
 ---
 
-<figure align='center'>
+<p align='center'>
   <img src="../images/aboutme.jpg" class="center"/>
   <figcaption align='center'>Tuong Tran at Long Bien Marathon in 2022</figcaption>
-</figure>
+</p>
 
 
-## About me
+## Biography
 I am an AI Engineer in the field of machine learning with a focus on computer vision. My research interests include the foundations of algorithms and their real-world applications.
 + **Object Detection/Segmentation/Pose Estimation**
 + **Optical Character Recognition (OCR)**
