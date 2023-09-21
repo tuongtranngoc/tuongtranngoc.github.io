@@ -3,7 +3,7 @@ main:
   - title: "Publications"
     url: /publications/
 
-  - title: "Mylife"
+  - title: "My life"
     url: /mylife/    
 
   - title: "Reading"
@@ -13,7 +13,7 @@ main:
     url: /portfolio/
         
   - title: "Blog Posts"
-    url: /year-archive/
+    url: /blogs/
     
   - title: "CV"
     url: /cv/
