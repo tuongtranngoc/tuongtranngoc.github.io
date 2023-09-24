@@ -1,7 +1,7 @@
 ---
 title: 'Trekking - Tay Con Linh, Ha Giang'
-date: 2023-09-16
-permalink: /mylife/2023/trekking/
+date: 2023-09-23
+permalink: /mylife/2023-09-23-trekking-tay-con-linh/
 tags:
   - Travel
   - Treeking
