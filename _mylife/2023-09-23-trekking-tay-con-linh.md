@@ -26,7 +26,7 @@ To have a good trip, I consulted friends who had previous experience. Essential 
 <head>
     <style type="text/css">
         figure{text-align: center;}
-        math{text-align: center;}
+        figcaption{text-align: center;}
     </style>
 </head>
 
@@ -41,7 +41,7 @@ To have a good trip, I consulted friends who had previous experience. Essential 
 </figure>
 
 <figure>
-    <img src='/images/posts/trekking-tay-con-linh/trekking_shoe.jpg'>
+    <img src='/images/mylife/trekking-tay-con-linh/trekking_shoe.jpg'>
     <figcaption align='center'>Trekking shoe</figcaption>
 </figure>
 
