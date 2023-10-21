@@ -10,7 +10,6 @@ redirect_from:
 
 <p align='center'>
   <img src="../images/aboutme.jpg" class="center"/>
-  <figcaption align='center'>Tuong Tran at Long Bien Marathon in 2022</figcaption>
 </p>
 
 
