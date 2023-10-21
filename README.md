@@ -1,1 +1,1 @@
-The repo aims to introduce myself - an AI engineer
+I'm an AI engineer
