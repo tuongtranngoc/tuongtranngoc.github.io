@@ -1,5 +1,5 @@
 ---
-title: 'Everything you need to know when creating a dataloader with variable-size input using collate_fn of Pytorch'
+title: 'Everything you need to know about Pytorch's collate_fn'
 date: 2023-11-20
 permalink: /posts/2023/collate_fn/
 tags:
@@ -79,15 +79,21 @@ def icdar15_collate_fn(batch):
     label_len = torch.cat(label_len, dim=0)
     return images, labels, label_len
 
+
+batch_size=32
+shuffle=True
+num_workers=8
+pin_memory=True
+
 train_dataset = Icdar15Dataset(mode='Train')
-train_loader = DataLoader(self.train_dataset, 
-                        batch_size=self.args.batch_size, 
-                        shuffle=self.args.shuffle,
-                        num_workers=self.args.num_workers,
-                        pin_memory=self.args.pin_memory,
+train_loader = DataLoader(train_dataset, 
+                        batch_size=batch_size, 
+                        shuffle=shuffle,
+                        num_workers=num_workers,
+                        pin_memory=pin_memory,
                         collate_fn=icdar15_collate_fn) # Add custom collate_fn to dataloader
 ```
 
 ## Reference
-+ https://discuss.pytorch.org/t/how-to-create-a-dataloader-with-variable-size-input/8278/3?u=ptrblck
-+ https://pytorch.org/docs/stable/data.html#dataloader-collate-fn
++ > https://discuss.pytorch.org/t/how-to-create-a-dataloader-with-variable-size-input/8278/3?u=ptrblck
++ > https://pytorch.org/docs/stable/data.html#dataloader-collate-fn
