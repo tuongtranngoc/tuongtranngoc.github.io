@@ -1,5 +1,5 @@
 ---
-title: 'Everything you need to know about Pytorch's collate_fn'
+title: Everything you need to know about Pytorch's collate_fn
 date: 2023-11-20
 permalink: /posts/2023/collate_fn/
 tags:
