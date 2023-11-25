@@ -95,5 +95,5 @@ train_loader = DataLoader(train_dataset,
 ```
 
 ## Reference
-+ > https://discuss.pytorch.org/t/how-to-create-a-dataloader-with-variable-size-input/8278/3?u=ptrblck
-+ > https://pytorch.org/docs/stable/data.html#dataloader-collate-fn
++  [How to create collate funtion](https://discuss.pytorch.org/t/how-to-create-a-dataloader-with-variable-size-input/8278/3?u=ptrblck)
++ [Working with collate function](https://pytorch.org/docs/stable/data.html#dataloader-collate-fn)
