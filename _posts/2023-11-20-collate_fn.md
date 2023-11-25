@@ -17,21 +17,20 @@ tags:
 
 ## Introduction
 
-By default, when we use Pytorch data loading utility `torch.utils.data.DataLoader` class:
-+ Default `collate_fn` collates a list of tuple into a single tuple of a batched image Tensor and a batched class label Tensor. In particular, the default `collate_fn` has the following properties:
-    + It always prepends a new dimension as the batch dimension.
-    + It automatically converts NumPy arrays and Python numerical values into PyTorch Tensors.
-    + It preserves the data structure, e.g., if each sample is a dictionary, it outputs a dictionary with the same set of keys but batched Tensors as values (or lists if the values can not be converted into Tensors). Same for list s, tuple s, namedtuple s, etc.
+Default `collate_fn` collates a list of tuple into a single tuple of a batched image Tensor and a batched class label Tensor. In particular, the default `collate_fn` has the following properties:
+  + It always prepends a new dimension as the batch dimension.
+  + It automatically converts NumPy arrays and Python numerical values into PyTorch Tensors.
+  + It preserves the data structure, e.g., if each sample is a dictionary, it outputs a dictionary with the same set of keys but batched Tensors as values (or lists if the values can not be converted into Tensors). Same for list s, tuple s, namedtuple s, etc.
 
 <figure>
     <img src='/images/posts/collate_fn/default_collate_fn.jpg'>
 </figure>
 
-+ Customized `collate_fn`, users may use it to achive custom batching, e.g, collating along a dimension other than the first, padding sequences of various lengths, or adding support for data types.
+Customized `collate_fn`, users may use it to achive custom batching, e.g, collating along a dimension other than the first, padding sequences of various lengths, or adding support for data types.
 
 ## How to use `collate_fn`
 
-This example provides a simple custom collate_fn for a text recognition problem using the icdar15 dataset. Input images have a shape of (3, 32, 320), and input labels have varying lengths associated with each input image, such as (image1, 'ABCD'), (image2, 'DEFK12232'), and so on.
+This example provides a simple custom `collate_fn`` for a text recognition problem using the icdar15 dataset. Input images have a shape of (3, 32, 320), and input labels have varying lengths associated with each input image, such as (image1, 'ABCD'), (image2, 'DEFK12232'), and so on.
 
 ```python
 from __future__ import division
