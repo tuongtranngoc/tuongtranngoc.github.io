@@ -1,7 +1,7 @@
 ---
-title: 'Trekking - Tay Con Linh, Ha Giang'
+title: 'Trekking - Ta Chi Nhu, Yen Bai'
 date: 2023-09-23
-permalink: /mylife/2023-09-23-trekking-tay-con-linh/
+permalink: /mylife/2023-09-23-trekking-ta-chi-nhu/
 tags:
   - Travel
   - Treeking
@@ -9,8 +9,6 @@ tags:
 ---
 
 ### Introduction
-
-Tay Con Linh is one of the mountain on the west of Ha Giang province. Tay Con Linh range stretches over two districts of Hoang Su Phi and Vi Xuyen, 46km from Ha Giang city. With an altitude of 2431m above sea level, this is the highest mountain peak in the Northeast, often called the **Roof of the Northeast**
 
 By chance, I came cross a post on social network talking about its beaty through people's trekking journeys. and I started trekking from here.
 
