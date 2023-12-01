@@ -52,6 +52,7 @@
 
   h2 {
     padding-bottom: 0.5em;
+    font-size: $type-size-4;
     border-bottom: 1px solid $border-color;
   }
 
@@ -62,7 +63,7 @@
   /* paragraph indents */
   p {
     margin: 0 0 $indent-var;
-
+    font-size: $type-size-4;
     /* sibling indentation*/
     @if $paragraph-indent == true {
       & + p {
@@ -74,7 +75,7 @@
 
   a {
     text-decoration: underline;
-
+    font-size: $type-size-4;
     &:hover {
       text-decoration: underline;
 
@@ -88,6 +89,7 @@
     margin-top: 1em;
     font-family: $sans-serif;
     font-weight: bold;
+    font-size: $type-size-4;
   }
 
   dd {
@@ -104,6 +106,7 @@
   blockquote + .small {
     margin-top: -1.5em;
     padding-left: 1.25rem;
+    font-size: $type-size-4;
   }
 }
 
