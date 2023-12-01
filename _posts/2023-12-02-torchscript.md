@@ -20,18 +20,8 @@ tags:
 
 Honestly, it took me a long time to learn about TorchScript, which is a new term for me at this point. But for an implemented model to be deployed for real-world applications across various platforms and devices, you need to know features, tools and libraries.
 
-## **Table of contents**
-- [Introduction](#introduction)
-  - [**Table of contents**](#table-of-contents)
-  - [1. Basics of Pytorch Model](#1-basics-of-pytorch-model)
-  - [2. What is TorchScript?](#2-what-is-torchscript)
-  - [3. When, How they be used?](#3-when-how-they-be-used)
-  - [4. Reference](#4-reference)
 
-
-<a name="1"></a>
-
-## 1. Basics of Pytorch Model
+# Basics of Pytorch Model
 In Pytorch, `Module` is the basic unit of composition to you can define a simple Module. It contains:
 +  A `__init__` function contains a set of parameters, sub-modules
 +  A `forward` function. This is the code that is run when the module is invoked
@@ -90,9 +80,7 @@ tensor([[[0.4750, 0.4638],
 
 `Graph mode` is the default model in Tensorflow, which means that the code is converted into a graph representation, and then executed by a runtime engine. This allows for better performance and scalability, as the graph can be optimized and parallelized across multiple devices.
 
-<a name="2"></a>
-
-## 2. What is TorchScript?
+# What is TorchScript?
 With TorchScript, Pytorch provides ease-of-use and flexibility in eager mode, while seamlessly transitioning to graph model for speed, optimization and functionality in C++ runtime enviroments.
 
 Pytorch provides two methods to convert `nn.Module` into a graph represented in TorchScript format: `trace` and `script`. 
@@ -188,9 +176,8 @@ traced_classifier = torch.jit.scipt(classifier)
 print(traced_ic.code)
 print(traced_classifier.code)
 ```
-<a name="3"></a>
 
-## 3. When, How they be used?
+# When, How they be used?
 
 As above mentioned, TorchScript provides ease-to-use and convert a runtime engine. This allows for better performance and scalability, as the graph can be optimized and parallelized across multiple devices.
 
@@ -205,6 +192,6 @@ print(loaded_script.code)
 
 Futhermore, Pytorch also provides API to can be loaded and executed from C++, with no dependency on Python. Please see [LOADING A TORCHSCRIPT MODEL IN C++](https://pytorch.org/tutorials/advanced/cpp_export.html) tutorial.
 
-## 4. Reference
+## Reference
 + [INTRODUCTION TO TORCHSCRIPT](https://pytorch.org/tutorials/beginner/Intro_to_TorchScript_tutorial.html#tracing-modules)
 + [TorchScript và PyTorch JIT](https://www.youtube.com/watch?v=2awmrMRf0dA)
