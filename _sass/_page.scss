@@ -52,19 +52,17 @@
 
   h2 {
     padding-bottom: 0.5em;
-    font-size: $type-size-4;
     border-bottom: 1px solid $border-color;
   }
 
   p, li, dl {
     font-size: 1em;
-    font-size: $type-size-5;
   }
 
   /* paragraph indents */
   p {
     margin: 0 0 $indent-var;
-    font-size: $type-size-5;
+
     /* sibling indentation*/
     @if $paragraph-indent == true {
       & + p {
@@ -76,7 +74,7 @@
 
   a {
     text-decoration: underline;
-    font-size: $type-size-4;
+
     &:hover {
       text-decoration: underline;
 
@@ -90,24 +88,22 @@
     margin-top: 1em;
     font-family: $sans-serif;
     font-weight: bold;
-    font-size: $type-size-4;
   }
 
   dd {
     margin-left: 1em;
     font-family: $sans-serif;
-    font-size: $type-size-4;
+    font-size: $type-size-6;
   }
 
   .small {
-    font-size: $type-size-4;
+    font-size: $type-size-6;
   }
 
   /* blockquote citations */
   blockquote + .small {
     margin-top: -1.5em;
     padding-left: 1.25rem;
-    font-size: $type-size-4;
   }
 }
 

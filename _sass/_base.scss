@@ -30,31 +30,31 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   margin-top: 0;
-  font-size: $type-size-4;
+  font-size: $type-size-3;
 }
 
 h2 {
-  font-size: $type-size-5;
+  font-size: $type-size-4;
 }
 
 h3 {
-  font-size: $type-size-6;
+  font-size: $type-size-5;
 }
 
 h4 {
-  font-size: $type-size-7;
+  font-size: $type-size-6;
 }
 
 h5 {
-  font-size: $type-size-7;
+  font-size: $type-size-6;
 }
 
 h6 {
-  font-size: $type-size-7;
+  font-size: $type-size-6;
 }
 
 small, .small {
-  font-size: $type-size-7;
+  font-size: $type-size-6;
 }
 
 p {
@@ -126,12 +126,10 @@ a {
 
 tt, code, kbd, samp, pre {
   font-family: $monospace;
-  font-size: $type-size-5;
 }
 
 pre {
   overflow-x: auto; /* add scrollbars to wide code blocks*/
-  font-size: $type-size-5;
 }
 
 p > code,
@@ -141,7 +139,7 @@ figcaption > code,
 td > code {
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
-  font-size: $type-size-7;
+  font-size: $type-size-6;
   background: $code-background-color;
   border: 1px solid $lighter-gray;
   border-radius: $border-radius;
@@ -314,5 +312,4 @@ nav {
 b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a, tr, td, form button, input[type="submit"], .btn, .highlight, .archive__item-teaser {
   -webkit-transition: $global-transition;
   transition: $global-transition;
-  font-size: $type-size-5;
 }
