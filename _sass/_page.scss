@@ -111,15 +111,16 @@
 
   figcaption {
     text-align: center;
+    align-items: center;
+    align-content: center;
   }
 
   video {
-    width: 80%;
+    width: 100%;
     height: auto;
     -ms-interpolation-mode: bicubic;
     align-items: center;
   }
-
 }
 
 .page__hero {
