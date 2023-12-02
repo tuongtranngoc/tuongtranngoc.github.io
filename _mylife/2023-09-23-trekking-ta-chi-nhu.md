@@ -47,7 +47,7 @@ Những vật dụng cần thiết khi đi leo núi mà bản thân phải tự 
 
 <figure>
     <img src='/images/mylife/trekking-ta-chi-nhu/trekking_shoe.jpg'>
-    <figcaption align='center'>Trekking shoe</figcaption>
+    <figcaption>Trekking shoe</figcaption>
 </figure>
 
 
