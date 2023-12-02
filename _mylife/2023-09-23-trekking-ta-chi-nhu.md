@@ -14,12 +14,6 @@ Tình cờ tôi đọc được một bài viết trên mạng xã hội nói v�
 
 ### Chuẩn bị
 
-Bản thân tôi ban đầu hoang mang không biết là sẽ đi như thế nào, lúc leo có đủ sức khỏe không, có sợ rơi xuống núi không, có sợ bị bắt cóc không, ... núi núi và mây mây. Và rồi tôi có tham khảo ý kiến ​​của những người bạn đã có kinh nghiệm trước đó, bản thân phần nào đã bớt lo lắng hơn và tự tin sẽ leo được. 
-
-Hiện tại, theo như tôi biết thì sẽ có hai hình thức mà mọi người có thể tham gia bộ môn này
-1. Mọi người có thể đăng ký đi theo Treeking Tours như [Viettrekking](https://viettrekking.vn/), [viettrektravel](https://vietrektravel.com/),... Đặc điểm của hình thức này thì chi phí khá là cao khi tính trên đầu người và tất nhiên đi kèm dịch vụ sẽ là tốt và đầy đủ (đồ ăn, porter, chỗ ở, ...), ngoài ra còn có dịch vụ bảo hiểm đi kèm trong quá trình xảy ra tai nạn.
-2. Mọi người có thể tự đứng lên tổ chức đi theo nhóm, kêu gọi mọi người tham gia hoặc xin đi ké trên các diễn đàn hội nhóm về trekking uy tín và tất nhiên mọi thứ ở trên bạn đều phải chuẩn bị. Chi phí của hình thức này thường sẽ có giá bằng nửa với giá đi tour ở trên.
-
 Những vật dụng cần thiết khi đi leo núi mà bản thân phải tự chuẩn bị trước:
 
 1. Ba lô đựng đồ: những loại chắc chắn, thể tích đủ để dựng các vận dụng cần thiết như quần áo và đồ ăn cá nhân  
@@ -37,17 +31,17 @@ Những vật dụng cần thiết khi đi leo núi mà bản thân phải tự 
 
 <figure>
     <img src='/images/mylife/trekking-ta-chi-nhu/essential_items.jpg'>
-    <figcaption align='center'>Essential Items</figcaption>
+    <figcaption class="figure-caption text-center">Essential Items</figcaption>
 </figure>
 
 <figure>
     <img src='/images/mylife/trekking-ta-chi-nhu/headband_hat.jpg'>
-    <figcaption align='center'>Headband Hat</figcaption>
+    <figcaption class="figure-caption text-center">Headband Hat</figcaption>
 </figure>
 
 <figure>
     <img src='/images/mylife/trekking-ta-chi-nhu/trekking_shoe.jpg'>
-    <figcaption>Trekking shoe</figcaption>
+    <figcaption class="figure-caption text-center">Trekking shoe</figcaption>
 </figure>
 
 
@@ -56,13 +50,13 @@ Những vật dụng cần thiết khi đi leo núi mà bản thân phải tự 
 Hành trình bắt đầu từ chân núi của xã Ngọc Chiên, huyện Mường La, tỉnh Sơn La đến đỉnh núi Tà Chì Nhù thuộc xã Xà Hồ, huyện Trạm Tấu, tỉnh Yên Bái.
 
 <figure>
-    <figcaption>Tại chân núi: mùa táo mèo chín rực</figcaption>
+    <figcaption class="figure-caption text-center">Tại chân núi: mùa táo mèo chín rực</figcaption>
     <img src='/images/mylife/trekking-ta-chi-nhu/chan_nui_1.jpg'>
     <img src='/images/mylife/trekking-ta-chi-nhu/chan_nui_2.jpg'>
 </figure>
 
 <figure>
-    <figcaption>Hành trình leo lên đỉnh núi</figcaption>
+    <figcaption class="figure-caption text-center">Hành trình leo lên đỉnh núi</figcaption>
     <img src='/images/mylife/trekking-ta-chi-nhu/len_nui_1.jpg'>
     <img src='/images/mylife/trekking-ta-chi-nhu/len_nui_2.jpg'>
     <img src='/images/mylife/trekking-ta-chi-nhu/len_nui_3.jpg'>
