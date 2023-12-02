@@ -37,14 +37,17 @@ Những vật dụng cần thiết khi đi leo núi mà bản thân phải tự 
 
 <figure>
     <img src='/images/mylife/trekking-ta-chi-nhu/essential_items.jpg'>
+    <figcaption align='center'>Essential Items</figcaption>
 </figure>
 
 <figure>
     <img src='/images/mylife/trekking-ta-chi-nhu/headband_hat.jpg'>
+    <figcaption align='center'>Headband Hat</figcaption>
 </figure>
 
 <figure>
     <img src='/images/mylife/trekking-ta-chi-nhu/trekking_shoe.jpg'>
+    <figcaption align='center'>Trekking shoe</figcaption>
 </figure>
 
 
@@ -53,16 +56,18 @@ Những vật dụng cần thiết khi đi leo núi mà bản thân phải tự 
 Hành trình bắt đầu từ chân núi của xã Ngọc Chiên, huyện Mường La, tỉnh Sơn La đến đỉnh núi Tà Chì Nhù thuộc xã Xà Hồ, huyện Trạm Tấu, tỉnh Yên Bái.
 
 <figure>
+    <figcaption>Tại chân núi: mùa táo mèo chín rực</figcaption>
     <img src='/images/mylife/trekking-ta-chi-nhu/chan_nui_1.jpg'>
     <img src='/images/mylife/trekking-ta-chi-nhu/chan_nui_2.jpg'>
 </figure>
 
 <figure>
+    <figcaption>Hành trình leo lên đỉnh núi</figcaption>
     <img src='/images/mylife/trekking-ta-chi-nhu/len_nui_1.jpg'>
     <img src='/images/mylife/trekking-ta-chi-nhu/len_nui_2.jpg'>
     <img src='/images/mylife/trekking-ta-chi-nhu/len_nui_3.jpg'>
 </figure>
 
-<video controls width=300>
+<video controls>
     <source src='/images/mylife/trekking-ta-chi-nhu/len_nui_4.MOV' type='video/mp4'>
 </video>
