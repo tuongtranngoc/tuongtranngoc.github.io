@@ -241,6 +241,10 @@
   }
 }
 
+figure, figcaption, video  {
+  text-align: center;
+}
+
 .page__meta-title {
   margin-bottom: 10px;
   font-size: $type-size-6;

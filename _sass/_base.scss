@@ -81,6 +81,10 @@ p, pre, blockquote, ul, ol, dl, figure, table, fieldset {
   widows: 3;
 }
 
+figure, figcaption, video  {
+  text-align: center;
+}
+
 /* abbreviations */
 
 abbr[title],
