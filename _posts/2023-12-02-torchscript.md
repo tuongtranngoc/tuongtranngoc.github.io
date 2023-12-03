@@ -18,8 +18,7 @@ tags:
 
 ## Introduction
 
-Honestly, it took me a long time to learn about TorchScript, which is a new term for me at this point. But for an implemented model to be deployed for real-world applications across various platforms and devices, you need to know features, tools and libraries.
-
+While understanding TorchScript, a relatively new concept for me, required significant effort, it's crucial to grasp the features, tools, and libraries involved in deploying an implemented model across diverse platforms and devices for real-world applications.
 
 ## Basics of Pytorch Model
 In Pytorch, `Module` is the basic unit of composition to you can define a simple Module. It contains:
@@ -81,7 +80,7 @@ tensor([[[0.4750, 0.4638],
 `Graph mode` is the default model in Tensorflow, which means that the code is converted into a graph representation, and then executed by a runtime engine. This allows for better performance and scalability, as the graph can be optimized and parallelized across multiple devices.
 
 ## What is TorchScript?
-With TorchScript, Pytorch provides ease-of-use and flexibility in eager mode, while seamlessly transitioning to graph model for speed, optimization and functionality in C++ runtime enviroments.
+TorchScript is a powerful tool that seamlessly integrates PyTorch's ease of use and flexibility in eager mode with the speed, optimization, and functionality of C++ runtime environments. This allows developers to quickly prototype and train models in Python while leveraging the efficiency of C++ for production deployment.
 
 Pytorch provides two methods to convert `nn.Module` into a graph represented in TorchScript format: `trace` and `script`. 
 + `torch.jit.trace(model, input)`: TorchScript records Intermediate Representations(IR/Operations) as a graph.
@@ -166,8 +165,7 @@ def forward(self, x: Tensor) -> Tensor:
   return torch.sigmoid(_0)
 ```
 
-Things we see: TorchScript does not record operation `if-else` (control flow) in `.code` output. TorchScript provides a script complier, 
-which does direct analysis this problem with `torch.jit.scipt`:
+The TorchScript compiler doesn't directly record control flow statements like `if-else` in its `.code` output. However, it offers a script compiler, `torch.jit.script`, that specifically addresses this issue by directly analyzing and handling control flow structures
 
 ```python
 traced_ic = torch.jit.script(ic)
