@@ -85,7 +85,7 @@ pyplot.show()
 We can see the expected relationship where low probability events are more surprising and carry more information, and the complement of high probability events carry less information.
 
 <figure>
-    <img src=/images/posts/20231207_cross_entropy/Plot-of-Probability-vs-Information.png>
+    <img src='/images/posts/20231207_cross_entropy/Plot-of-Probability-vs-Information.png'>
 </figure>
 
 In effect, calculating the information for a random variable is the same as calculating the information for the probability distribution of the events for the random variable. Calculating the information for a random variable is called `Entropy`.
