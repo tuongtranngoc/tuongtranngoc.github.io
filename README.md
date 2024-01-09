@@ -1,1 +1,1 @@
-I'm an AI engineer
+The blog documents my journey of my learning AI from scratch

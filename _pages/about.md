@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 <p align='center'>
-  <img src="../images/aboutme.jpg" class="center"/>
+  <img src="../images/profile.png" class="center" width=400px/>
 </p>
 
 
