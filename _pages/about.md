@@ -24,7 +24,7 @@ I have a background in mathematics and informatics, having graduated from Ha Noi
 My professional experience began at [VNPT-AI](https://icenter.ai/vi), where I developed computer vision-based algorithm optimization for VNPT Smart Vision, such as warning detection, and action object identification. After then, I worked on Document Understanding and Layout Analysis at [Eastgate-SoftWare](https://eastgate-software.com/).
 
 
-The blog documents my journey of my learning AI from scratch. Whenever I am upset, negative, distracted, I read my blog and remind my self of how far I have gone and 
+The blog documents my journey of learning AI from scratch. Whenever I am upset, negative, distracted, I read my blog and remind my self of how far I have gone and 
 I always remenber the words of a marathon runner namely `Annica Lin`
 
 <p align="center">

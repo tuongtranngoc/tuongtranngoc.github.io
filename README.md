@@ -1,1 +1,1 @@
-The blog documents my journey of my learning AI from scratch
+The blog documents my journey of learning AI from scratch
