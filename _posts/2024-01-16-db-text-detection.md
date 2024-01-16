@@ -35,3 +35,21 @@ To minimize the set a fixed threshold value, we insert the binarization operatio
     <img src='/images/posts/20230116_differentiable_binarization/binarization_architecture.png'>
 </figure>
 
++ First, the input image is fed into a feature-pyramid backbone.
++ Second, the pyramid features are up-sampled to the same scale and cascaded to produce feature $F$.
++ Then, faeture $F$ is used to predict both the probability map $(P)$ and threshold map $(T)$.
++ After that, the approximate binary map $(B)$ is calculated by $P$ and $T$.
+
+## Standard Binarization
+
+Given a probability map $P \in R^{H\times W}$ produced by a segmentation network, it is converted into a binary map $P \in R^{H\times W}$, with value 1 is considered as valid text areas, otherwise the remaining areas are background with value 0.
+
+$$B_{i, j}=  \left\{\begin{array}{rcl}1 & \medspace{if} &  P_{i, j} >= t, \\
+0 & \medspace{otherwise} &
+  \end{array}\right.$$
+
+where $t$ is the predefined threshold and $(i, j)$ indicates the coordinate point in the map.
+
+## Differentiable Binarization
+
+
