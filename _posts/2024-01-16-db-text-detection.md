@@ -40,7 +40,7 @@ To minimize the set a fixed threshold value, we insert the binarization operatio
 + Then, faeture $F$ is used to predict both the probability map $(P)$ and threshold map $(T)$.
 + After that, the approximate binary map $(B)$ is calculated by $P$ and $T$.
 
-## Standard Binarization
+### Standard Binarization
 
 Given a probability map $P \in R^{H\times W}$ produced by a segmentation network, it is converted into a binary map $P \in R^{H\times W}$, with value 1 is considered as valid text areas, otherwise the remaining areas are background with value 0.
 
@@ -50,6 +50,16 @@ $$B_{i, j}=  \left\{\begin{array}{rcl}1 & if &  P_{i, j} >= t, \\
 
 where $t$ is the predefined threshold and $(i, j)$ indicates the coordinate point in the map.
 
-## Differentiable Binarization
+### Differentiable Binarization
+
+For the standard binarization, it is not differentiable to optimize in segmentation network. To solve this problem, we use a approximate binarization function:
+
+$$\hat{B}_{i,j}=\frac{1}{1+e^{-k(P_{i,j}-T_{i,j})}}$$
+
+where $\hat{B}$ is the approximate binarization map. $P, T$ is the probability map and threshold map learned from segmentation network, $k$ indicates the amplifying factor (50 empirically).
+
+*Proof the differentiable of $\hat{B}_{i,j}$*
+
+
 
 
