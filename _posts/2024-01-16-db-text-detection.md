@@ -1,5 +1,5 @@
 ---
-title: 'Sence Text Detection With Differentiable Binarization'
+title: 'Scene Text Detection With Differentiable Binarization'
 date: 2024-01-16
 permalink: /posts/2023/db_textdet/
 tags:
@@ -17,8 +17,8 @@ tags:
 
 # Introduction
 
-In the real-world, sence text is often with various scales and shapes, including horizontal, multi-oriented and curved text. 
-Segmentation-based sence text detection has attracted a lot of attention in state-of-the-art papers. However, most segmentation-based methods require complex post-processing and take a lot of time in inference phrase. Most existing detection methods use the similar post-processing pipeline as below:
+In the real-world, scene text is often with various scales and shapes, including horizontal, multi-oriented and curved text. 
+Segmentation-based scene text detection has attracted a lot of attention in state-of-the-art papers. However, most segmentation-based methods require complex post-processing and take a lot of time in inference phrase. Most existing detection methods use the similar post-processing pipeline as below:
 
 <figure>
     <img src='/images/posts/20230116_differentiable_binarization/tradditional_method.png'>
