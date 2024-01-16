@@ -21,7 +21,7 @@ In the real-world, sence text is often with various scales and shapes, including
 Segmentation-based sence text detection has attracted a lot of attention in state-of-the-art papers. However, most segmentation-based methods require complex post-processing and take a lot of time in inference phrase. Most existing detection methods use the similar post-processing pipeline as below:
 
 <figure>
-    <img src='../images/posts/20230116_differentiable_binarization/tradditional_method.png'>
+    <img src='/images/posts/20230116_differentiable_binarization/tradditional_method.png'>
 </figure>
 
 + First, set a fixed threshold for converting the image into a binary image by a segmentation network.
@@ -32,6 +32,6 @@ To minimize the set a fixed threshold value, we insert the binarization operatio
 # Binarization
 
 <figure>
-    <img src='../images/posts/20230116_differentiable_binarization/binarization_architecture.png'>
+    <img src='/images/posts/20230116_differentiable_binarization/binarization_architecture.png'>
 </figure>
 
