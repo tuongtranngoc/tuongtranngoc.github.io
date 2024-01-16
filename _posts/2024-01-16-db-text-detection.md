@@ -44,8 +44,8 @@ To minimize the set a fixed threshold value, we insert the binarization operatio
 
 Given a probability map $P \in R^{H\times W}$ produced by a segmentation network, it is converted into a binary map $P \in R^{H\times W}$, with value 1 is considered as valid text areas, otherwise the remaining areas are background with value 0.
 
-$$B_{i, j}=  \left\{\begin{array}{rcl}1 & \medspace{if} &  P_{i, j} >= t, \\
-0 & \medspace{otherwise} &
+$$B_{i, j}=  \left\{\begin{array}{rcl}1 & if &  P_{i, j} >= t, \\
+0 & otherwise &
   \end{array}\right.$$
 
 where $t$ is the predefined threshold and $(i, j)$ indicates the coordinate point in the map.
