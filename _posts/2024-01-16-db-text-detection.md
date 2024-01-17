@@ -58,8 +58,16 @@ $$\hat{B}_{i,j}=\frac{1}{1+e^{-k(P_{i,j}-T_{i,j})}}$$
 
 where $\hat{B}$ is the approximate binarization map. $P, T$ is the probability map and threshold map learned from segmentation network, $k$ indicates the amplifying factor (50 empirically).
 
-*Proof the differentiable of $\hat{B}_{i,j}$*
+*Proof the differentiable of $\hat{B}_{i,j}$ in loss function*
 
+Set $x = P-T$, $f(x)=\hat{B}$ $\rightarrow f(x)=\frac{1}{1+e^{-kx}}$. We must proof the differentiable of $L_{\hat{B}}=logf(x)$
 
+$\frac{\partial L}{\partial x} = \frac{1}{lne} \frac{1}{1+e^{-kx}} (-ke^{-kx})=-ke^{-kx}f(x)$
+
+So, $L_{\hat{B}}$ is differentiable over all $x \in R$
+
+### Adaptive threshold
+
+How to create the text border in final result effectively when probability map can not cover totally text area?
 
 
