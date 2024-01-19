@@ -105,3 +105,7 @@ First, the probability map is a binary feature map, the area of texts is value `
 Second, the threshold map is also a binary feature map, the boundary of texts is value `1`, otherwise the remaining areas are value `0`. The generation code is implemented in [here](https://github.com/tuongtranngoc/DB-Text-Detection/blob/main/src/data/label_generator.py#L69-L145)
 
 Example:
+
+| <p> polygon </p> | <p> probability map </p>| <p> threshold map </p>|
+|--|--|--|
+| <img src="/images/posts/20230116_differentiable_binarization/21_polygon.png"> | <img src="/images/posts/20230116_differentiable_binarization/21_shrink_map.png"> | <img src="/images/posts/20230116_differentiable_binarization/21_border_map.png"> |
