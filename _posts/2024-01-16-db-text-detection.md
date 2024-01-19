@@ -106,6 +106,7 @@ Second, the threshold map is also a binary feature map, the boundary of texts is
 
 Example:
 
-| <p> polygon </p> | <p> probability map </p>| <p> threshold map </p>|
+| polygon | probability map | threshold map |
 |--|--|--|
 | <img src="/images/posts/20230116_differentiable_binarization/21_polygon.png"> | <img src="/images/posts/20230116_differentiable_binarization/21_shrink_map.png"> | <img src="/images/posts/20230116_differentiable_binarization/21_border_map.png"> |
+
