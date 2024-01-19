@@ -64,7 +64,9 @@ Set $x = P-T$, $f(x)=\hat{B}$ $\rightarrow f(x)=\frac{1}{1+e^{-kx}}$. We must pr
 
 $\frac{\partial L}{\partial x} = \frac{1}{lne} \frac{1}{1+e^{-kx}} (-ke^{-kx})=-ke^{-kx}f(x)$
 
-So, $L_{\hat{B}}$ is differentiable over all $x \in R$
+So, $L_{\hat{B}}$ is differentiable over all $x \in R$ 
+
+$\Rightarrow$ what must be proven
 
 ### Adaptive Threshold
 
@@ -109,4 +111,7 @@ Example:
 | polygon | probability map | threshold map |
 |--|--|--|
 | <img src="/images/posts/20230116_differentiable_binarization/21_polygon.png"> | <img src="/images/posts/20230116_differentiable_binarization/21_shrink_map.png"> | <img src="/images/posts/20230116_differentiable_binarization/21_border_map.png"> |
+
+# Reference
++ [Scene Text Detection With Differentiable Binarization paper](https://arxiv.org/abs/1911.08947)
 
