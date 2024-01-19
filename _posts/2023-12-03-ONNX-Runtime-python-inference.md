@@ -25,9 +25,9 @@ While understanding ONNX, a relatively new concept for me, required significant 
 
 ONNX (Open Neural Exchange) can be represented as a graph that show step-by-step how to transform the features (mathematical functions/operators) to get a prediction. That's why a machine-learning model implemented with ONNX is often referenced as an **ONNX graph**.
 
-<figure>
+<p align="center">
     <img src='/images/posts/20231203_onnx_runtime_py/linreg1.png'>
-</figure>
+</p>
 
 With ONNX operators, it ensures that predictions are equal or at least very close to th expected predictions computed with original model by using API.
 
