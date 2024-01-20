@@ -104,13 +104,40 @@ We need to generate labels for probability map and threshold map.
 
 First, the probability map is a binary feature map, the area of texts is value `1`, otherwise the remaining areas is background and have value `0`. The generation code is implemented in [here](https://github.com/tuongtranngoc/DB-Text-Detection/blob/main/src/data/label_generator.py#L15-L66)
 
-Second, the threshold map is also a binary feature map, the boundary of texts is value `1`, otherwise the remaining areas are value `0`. The generation code is implemented in [here](https://github.com/tuongtranngoc/DB-Text-Detection/blob/main/src/data/label_generator.py#L69-L145)
+Second, the threshold map is gap between the probability map and the dilated probability map (value $\in [0, 1]$). The generation code is implemented in [here](https://github.com/tuongtranngoc/DB-Text-Detection/blob/main/src/data/label_generator.py#L69-L145)
 
 Example:
 
 | polygon | probability map | threshold map |
 |--|--|--|
 | <img src="/images/posts/20230116_differentiable_binarization/21_polygon.png"> | <img src="/images/posts/20230116_differentiable_binarization/21_shrink_map.png"> | <img src="/images/posts/20230116_differentiable_binarization/21_border_map.png"> |
+
+# Loss function
+The loss function $L$ is a weighted sum of the probability map $L_p$, the threshold map $L_t$ and the binary map $L_b$
+
+$$L=L_p + \alpha.L_b + \beta.L_t$$
+
+
+### The probability map
+
+The probability map $P \in \lbrace 0, 1 \rbrace$, we apply binary cross entropy loss (BCE)
+
+$$L_p = -\sum^N_i [y_ilog(x_i) + (1-y_i)log(1-x_i)]$$
+
+### The binary map
+
+The binary map $B \in \lbrace 0, 1 \rbrace$, we also apply binary cross entropy loss (BCE)
+
+$$L_b = -\sum^N_i [y_ilog(x_i) + (1-y_i)log(1-x_i)]$$
+
+
+### The threshold map
+
+The threshold map $T \in [0, 1]$, we apply $L_1$ distance loss
+
+$$L_t = \sum_{i \in R_d} = \vert y_i-x_i \vert$$
+
+where $R_d$ is a set indexs of pixels inside dilated area that gap between the probability map and the dilated probability map. 
 
 # Reference
 + [Scene Text Detection With Differentiable Binarization paper](https://arxiv.org/abs/1911.08947)
