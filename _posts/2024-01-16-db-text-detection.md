@@ -1,7 +1,7 @@
 ---
 title: 'Scene Text Detection With Differentiable Binarization'
 date: 2024-01-16
-permalink: /posts/2023/db_textdet/
+permalink: /posts/2024/db_textdet/
 tags:
   - Mathematics
   - OCR
