@@ -1,7 +1,7 @@
 ---
-title: 'Tôi nói gì khi nói về chạy bộ'
+title: What I Talk About When I Talk About Running
 date: 2024-02-01
-permalink: /posts/2024/chaybo/
+permalink: /posts/2024/running/
 tags:
   - Running
   - Marathon
@@ -16,3 +16,7 @@ tags:
 </head>
 
 ## Giới thiệu
+
+<p align="center">
+  <img src="/images/reading/toinoigikhinoivechaybo.jpg">
+</p>
