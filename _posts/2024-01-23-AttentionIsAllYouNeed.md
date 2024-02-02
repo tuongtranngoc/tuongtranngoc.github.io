@@ -19,12 +19,13 @@ tags:
 
 **Transformer** is a term that everyone also must understand first if they want to dive into Large Language Model, but I happened to read about LayoutLM, BERT term first. After that, I returned Transformer to understand how it works. Unlike the tasks in Computer Vision, for me, LLM is actually much more difficult to approach and takes a lot of time to read papers, mathematics understanding and code implementation. 
 
-In the blog, let's learn about design, mathematical models and their applications. In the other blog on Harvard NLP also provides detail explanation with code implementation
+In the blog, let's learn about design, mathematical models and their applications. In the other blog on Harvard NLP also provides detail explanation with code implementation.
 
 ## Model Architecture
 Transformer model has an encoder-decoder structure:
 
 Given a input sequence of symbol representations 
+
 $$X = (x_1, x_2, ..., x_n)$$
 
 The encoder will map X to sequence of countinuous representations 
@@ -36,7 +37,7 @@ Given $Z$, the decoder then generates an output sequence $Y=(y_1, y_2, ..., y_m)
 Next, we go to the detailed components of the architecture in Transformer.
 
 <p align="center">
-  <img src="/images/posts/transformer/Transformer_model_architecture.png">
+  <img src="/images/posts/transformer/Transformer_model_architecture.png" width=300px>
 </p>
 
 ### Encoder
@@ -46,6 +47,7 @@ The encoder is composed of a stack $N=6$ identical layers. At each layer include
 + Feed Forward and Add & Norm
 
 **Add & Norm Layer** is a component followed by layer normalization and the output of each sub-layer is: 
+
 $$LN(x + S(x))$$
 
 where $S(x)$ is the function implemented by the sub-layer itself, $LN$ is layer normalization.
@@ -53,7 +55,7 @@ where $S(x)$ is the function implemented by the sub-layer itself, $LN$ is layer 
 **Attention** is function can be described mapping a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors. Assume that, the input consists of queries and keys of dimemsion $d_k$, and values of dimension $d_v$. 
 
 <p align="center">
-  <img src="/images/posts/transformer/scaled_dot_product_attention.png">
+  <img src="/images/posts/transformer/scaled_dot_product_attention.png" width=300px>
 </p>
 
 The output of Attention is computed by the Scaled Dot-Product Attention:
