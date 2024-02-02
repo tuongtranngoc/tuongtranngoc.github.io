@@ -1,6 +1,7 @@
 ---
 title: 'Trekking - Tà Chì Nhù, Yên Bái'
 date: 2023-09-23
+venue: "Ta Chi Nhu, Xa Ho, Trạm Tau, Yen Bai"
 permalink: /mylife/2023-09-23-trekking-ta-chi-nhu/
 tags:
   - Travel
