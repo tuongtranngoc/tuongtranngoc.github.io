@@ -113,9 +113,13 @@ class DotProductAttention(nn.Module):
 **Multi-Head Attention**: Instead of performing a single attention function, it allows the model to jointly attend to information from different representation subspaces at different positions. That perform the attention function in parallel.
 
 <p align="center">
-  <img src="../images/posts/transformer/multi-head_attention.png" width=170px>
+  <img src="/images/posts/transformer/multi-head_attention.png" width=170px>
 </p>
 
 $$\text{MultiHead(Q,K,V)}=\text{Concat}(\text{head}_1, ..., \text{head}_h)W^O$$
 
-where $\text{head}_i=\text{Attention}(QW_i^Q, KW_i^K, VW_i^V)$ $\forall$ $W_i^Q \in R^{d_\text{model} \times d_k}, W_i^K \in R^{d_\text{model} \times d_k}, W_i^V \in R^{d_\text{model} \times d_v}, W^O \in R^{hd_v \times d_\text{model}}$ 
+where 
+
+$\text{head}_i=\text{Attention}(QW_i^Q, KW_i^K, VW_i^V)$, 
+
+$W_i^Q \in R^{d_\text{model} \times d_k}, W_i^K \in R^{d_\text{model} \times d_k}, W_i^V \in R^{d_\text{model} \times d_v}, W^O \in R^{hd_v \times d_\text{model}}$ 
