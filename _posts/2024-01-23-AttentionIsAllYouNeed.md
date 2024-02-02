@@ -12,6 +12,7 @@ tags:
     <style type="text/css">
         figure{text-align: center;}
         math{text-align: center;}
+        {font-size: 0.8em;} 
     </style>
 </head>
 
@@ -55,7 +56,7 @@ where $S(x)$ is the function implemented by the sub-layer itself, $LN$ is layer 
 **Attention** is function can be described mapping a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors. Assume that, the input consists of queries and keys of dimemsion $d_k$, and values of dimension $d_v$. 
 
 <p align="center">
-  <img src="/images/posts/transformer/scaled_dot_product_attention.png" width=300px>
+  <img src="/images/posts/transformer/scaled_dot_product_attention.png" width=150px>
 </p>
 
 The output of Attention is computed by the Scaled Dot-Product Attention:
@@ -63,7 +64,9 @@ The output of Attention is computed by the Scaled Dot-Product Attention:
 $$\text{Attention}(Q, K, V)=\text{softmax}(\frac{QK^T}{\sqrt{d_k}})V$$
 
 Code implementation:
+
 ```python
+<p style="font-size: 32px;">
 def masked_softmax(X, valid_lens):
     """Perform softmax operation by masking elements on the last axis.
 
@@ -107,6 +110,7 @@ class DotProductAttention(nn.Module):
         scores = torch.bmm(queries, keys.transpose(1, 2)) / math.sqrt(d)
         self.attention_weights = masked_softmax(scores, valid_lens)
         return torch.bmm(self.dropout(self.attention_weights), values)
+</p>
 ```
 
 **Multi-Head Attention** allows the model to jointly attend to information from different representation subspaces at different positions.
