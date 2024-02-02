@@ -1,5 +1,5 @@
 ---
-title: 'Trekking - Tà Chì Nhù, Yên Bái'
+title: 'Trekking - Lao Than, Son La'
 date: 2023-09-23
 permalink: /mylife/2023-09-23-trekking-ta-chi-nhu/
 tags:
