@@ -73,7 +73,7 @@ The output of Attention is computed by the Scaled Dot-Product Attention:
 
 $$\text{Attention}(Q, K, V)=\text{softmax}(\frac{QK^T}{\sqrt{d_k}})V$$
 
-*Code implementation*:
+**Code implementation**:
 
 ```python
 def masked_softmax(X, valid_lens):
@@ -135,7 +135,7 @@ $\text{head}_i=\text{Attention}(QW_i^Q, KW_i^K, VW_i^V)$,
 
 $W_i^Q \in R^{d_\text{model} \times d_k}, W_i^K \in R^{d_\text{model} \times d_k}, W_i^V \in R^{d_\text{model} \times d_v}, W^O \in R^{hd_v \times d_\text{model}}$ 
 
-*Code implementation*
+**Code implementation**:
 
 ```python
 class MultiHeadAttention(nn.Module):
@@ -204,7 +204,7 @@ In addition to attention sub-layers, each of the layers in encoder and decoder c
 
 $$FFN(X)=\text{max}(0, XW_1 + b_1)W_2 + b_2$$
 
-*Code implementation*
+**Code implementation**:
 
 ```python
 class PositionWiseFFN(nn.Module):
@@ -229,7 +229,7 @@ $$PE_{pos, 2i}=sin(pos/10000^{2i/d_\text{model}})$$
 
 $$PE_{pos, 2i+1}=cos(pos/10000^{2i/d_\text{model}})$$
 
-*Code implementation*
+**Code implementation**:
 
 ```python
 class PositionalEncoding(nn.Module):
@@ -252,5 +252,6 @@ class PositionalEncoding(nn.Module):
         return self.dropout(X)
 ```
 
-
-
+## Reference
++ [The Annotated Transformer-Harvard NLP](https://nlp.seas.harvard.edu/2018/04/03/attention.html)
++ [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
