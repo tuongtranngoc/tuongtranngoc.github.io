@@ -2,7 +2,7 @@
 title: "What I Talk About When I Talk About Running"
 colllection: reading
 type: "Reading"
-venue: "Ha Dinh, Khuong Dinh, Thanh Xuan, Ha Noi"
+venue: "Winter, Ha Noi"
 date: 2024-02-01
 permalink: /posts/2024/readding-running/
 tags:
