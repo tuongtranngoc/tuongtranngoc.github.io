@@ -1,5 +1,8 @@
 ---
 title: 'Trekking - Tà Chì Nhù, Yên Bái'
+colllection: reading
+type: "mylife"
+venue: "Qutumn, Ha Noi"
 date: 2023-09-23
 permalink: /mylife/2023-09-23-trekking-ta-chi-nhu/
 tags:
