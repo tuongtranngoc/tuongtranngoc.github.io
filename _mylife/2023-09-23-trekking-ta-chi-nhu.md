@@ -2,7 +2,7 @@
 title: 'Trekking - Tà Chì Nhù, Yên Bái'
 colllection: reading
 type: "mylife"
-venue: "Qutumn, Ha Noi"
+venue: "Mùa thu, Hà Nội"
 date: 2023-09-23
 permalink: /mylife/2023-09-23-trekking-ta-chi-nhu/
 tags:
@@ -21,6 +21,10 @@ tags:
 ### Giới thiệu
 
 Tình cờ tôi đọc được một bài viết trên mạng xã hội nói về vẻ đẹp của thiên nhiên qua hành trình trải nghiệm leo núi của các du khách và người dân. Tôi bắt đầu đam mê leo núi từ đây.
+
+Tả Chỉ Nhu là đỉnh núi thuộc xã Xà Hồ, thuộc huyện Tam Tấu, tỉnh Yên Bái, có độ cao 2979m so với mực nước biển, là ngọn núi cao thứ 7 Việt Nam và được coi là nóc nhà Yên Bái.
+
+Đối với người lần đầu leo núi như tôi, ngọn núi này đáng để trải nghiệm vì địa hình không quá dốc, đường leo chủ yếu nằm trong rừng nguyên sinh nên ít nguy hiểm.
 
 ### Chuẩn bị
 
@@ -74,3 +78,4 @@ Hành trình bắt đầu từ chân núi của xã Ngọc Chiên, huyện Mư�
     <source src='/images/mylife/trekking-ta-chi-nhu/len_nui_4.MOV' type='video/mp4'>
 </video>
 </p>
+
