@@ -79,3 +79,66 @@ Hành trình bắt đầu từ chân núi của xã Ngọc Chiên, huyện Mư�
 </video>
 </p>
 
+<p align="center">
+<video controls>
+    <source src='/images/mylife/trekking-ta-chi-nhu/dinh_nui_19.mov' type='video/mp4'>
+</video>
+</p>
+
+<p align="center">
+<video controls>
+    <source src='/images/mylife/trekking-ta-chi-nhu/dinh_nui_8.mov' type='video/mp4'>
+</video>
+</p>
+
+<p align="center">
+    <img src='/images/mylife/trekking-ta-chi-nhu/dinh_nui_7.jpg'>
+</p>
+
+<p align="center">
+    <img src='/images/mylife/trekking-ta-chi-nhu/dinh_nui_8.jpg'>
+</p>
+
+<p align="center">
+    <img src='/images/mylife/trekking-ta-chi-nhu/dinh_nui_9.jpg'>
+</p>
+
+<p align="center">
+    <img src='/images/mylife/trekking-ta-chi-nhu/dinh_nui_10.jpg'>
+</p>
+
+<p align="center">
+    <img src='/images/mylife/trekking-ta-chi-nhu/dinh_nui_11.jpg'>
+</p>
+
+<p align="center">
+    <img src='/images/mylife/trekking-ta-chi-nhu/dinh_nui_12.jpg'>
+</p>
+
+<p align="center">
+    <img src='/images/mylife/trekking-ta-chi-nhu/dinh_nui_13.jpg'>
+</p>
+
+<p align="center">
+    <img src='/images/mylife/trekking-ta-chi-nhu/dinh_nui_13.jpg'>
+</p>
+
+<p align="center">
+    <img src='/images/mylife/trekking-ta-chi-nhu/dinh_nui_14.jpg'>
+</p>
+
+<p align="center">
+    <img src='/images/mylife/trekking-ta-chi-nhu/dinh_nui_15.jpg'>
+</p>
+
+<p align="center">
+    <img src='/images/mylife/trekking-ta-chi-nhu/dinh_nui_16.jpg'>
+</p>
+
+<p align="center">
+    <img src='/images/mylife/trekking-ta-chi-nhu//dinh_nui_17.jpg'>
+</p>
+
+<p align="center">
+    <img src='/images/mylife/trekking-ta-chi-nhu/dinh_nui_18.jpg'>
+</p>
