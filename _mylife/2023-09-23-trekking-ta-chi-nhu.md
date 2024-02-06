@@ -99,9 +99,6 @@ Hành trình bắt đầu từ chân núi của xã Ngọc Chiên, huyện Mư�
     <img src='/images/mylife/trekking-ta-chi-nhu/dinh_nui_8.jpg'>
 </p>
 
-<p align="center">
-    <img src='/images/mylife/trekking-ta-chi-nhu/dinh_nui_9.jpg'>
-</p>
 
 <p align="center">
     <img src='/images/mylife/trekking-ta-chi-nhu/dinh_nui_10.jpg'>
