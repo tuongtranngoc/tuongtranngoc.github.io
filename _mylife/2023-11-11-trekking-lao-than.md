@@ -3,7 +3,7 @@ title: "Trekking - Lảo Thẩn, Lào Cai"
 colllection: reading
 type: "mylife"
 venue: "Mùa đông, Hà Nội"
-date: 2023-09-23
+date: 2023-11-23
 permalink: /mylife/2023-11-23-trekking-lao-than/
 tags:
   - Travel
