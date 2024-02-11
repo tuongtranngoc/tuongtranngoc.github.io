@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Someone accidentally came to my blog 🙈!
+Someone accidentally came to my blog!
 
 I am an AI Engineer in the field of machine learning with a focus on computer vision. My research interests include the foundations of algorithms and their real-world applications.
 + **Object Detection/Segmentation/Pose Estimation**
