@@ -4,7 +4,7 @@ colllection: reading
 type: "Reading"
 venue: "Winter, Ha Noi"
 date: 2024-02-01
-permalink: /posts/2024/reading-running/
+permalink: /posts/2024/readding-running/
 tags:
   - Running
   - Marathon

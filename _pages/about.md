@@ -8,7 +8,12 @@ redirect_from:
   - /about.html
 ---
 
-Someone accidentally came to my blog!
+<p align='center'>
+  <img src="../images/profile.png" class="center" width=400px/>
+</p>
+
+
+Someone accidentally came to my blog 🙈!
 
 I am an AI Engineer in the field of machine learning with a focus on computer vision. My research interests include the foundations of algorithms and their real-world applications.
 + **Object Detection/Segmentation/Pose Estimation**
