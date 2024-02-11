@@ -17,7 +17,7 @@ tags:
     </style>
 </head>
 
-## Giới thiệu
+## Introduction
 
 <p align="center">
   <img src="/images/reading/dive-to-depp-learning/front.png">
