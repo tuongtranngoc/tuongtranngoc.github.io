@@ -4,7 +4,7 @@ colllection: reading
 type: "NLP Learning"
 venue: "Ha Noi"
 date: 2024-02-07
-permalink: /posts/2024/reading/dive-to-deep-learning/
+permalink: /posts/2024/reading-dive-to-deep-learning/
 tags:
   - Deep Learning
   - Mathematic
