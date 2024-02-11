@@ -54,7 +54,7 @@ Nói qua một chút về ngọn đỉnh này, Lảo Thẩn thuộc Thôn Phìn 
   <video controls>
       <source src='/images/mylife/trekking-lao-than/cay_anh_tuc.MOV' type='video/mp4'>
   </video>
-  <p align="center">Tưởng cây Cần Sa nhưng mà không phải</p>
+  <p align="center">Làm màu trong bụi cỏ ven đường</p>
 </p>
 
 <p align="center">

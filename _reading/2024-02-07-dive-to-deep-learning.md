@@ -2,7 +2,7 @@
 title: "Dive To Deep Learning"
 colllection: reading
 type: "Reading"
-venue: "NLP learning"
+venue: "NLP Learning"
 date: 2024-02-07
 permalink: /posts/2024/readding-dive-to-deep-learning/
 tags:
