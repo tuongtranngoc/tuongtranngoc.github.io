@@ -18,8 +18,13 @@ tags:
     </style>
 </head>
 
-## Giới thiệu
+## Introduction
 
 <p align="center">
   <img src="/images/reading/toinoigikhinoivechaybo.jpg">
 </p>
+
+1. 5/8/2005 - Kauai, Hawaii - Ai định cười Mick Jagger?
++ Reading, 07/02/2024
+2. 14/08/2005 - Mẹo trở thành tiểu thuyết gia chạy bộ
++ Reading, 08/02/2024
