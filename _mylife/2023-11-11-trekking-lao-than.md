@@ -111,3 +111,13 @@ Nói qua một chút về ngọn đỉnh này, Lảo Thẩn thuộc Thôn Phìn 
 <p align="center">
     <img src='/images/mylife/trekking-lao-than/lan_nghi.HEIC'>
 </p>
+
+<p align="center">
+    <img src='/images/mylife/trekking-lao-than/mo_ca_heo.jpg'>
+</p>
+
+<p align="center">
+    <img src='/images/mylife/trekking-lao-than/mo_ca_heo_2.jpg'>
+</p>
+
+
