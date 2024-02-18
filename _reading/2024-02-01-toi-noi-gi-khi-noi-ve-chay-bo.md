@@ -27,3 +27,5 @@ tags:
 1. Reading, 07/02/2024: 5/8/2005 - Kauai, Hawaii - Ai định cười Mick Jagger?
 2. Reading, 08/02/2024: 14/08/2005 - Kauai, Hawaii - Mẹo trở thành tiểu thuyết gia chạy bộ
 3. Reading, 13/02/2024: 01/09/2005 - Kauai, Hawaii - Athens giữa mùa hè - Lần đầu chạy 26,2 dặm
+4. Reading, 19/02/2024: 19/09/2005 - Tokyo - Phần lớn những gì tôi biết về viết truyện là do học được từ chạy bộ mỗi ngày
+  
