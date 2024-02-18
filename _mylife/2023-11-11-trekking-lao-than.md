@@ -32,14 +32,14 @@ Nói qua một chút về ngọn đỉnh này, Lảo Thẩn thuộc Thôn Phìn 
 + Bắt xe đi từ Hà Nôi $\rightarrow$ TP Lào Cai: tập trung tại nhà xe Hà Sơn Hải Vân - Bến xe Mỹ Đình.
 
 <p align="center">
-  <img src="/images/mylife/trekking-lao-than/TP_Lao_Cai.JPG">
+  <img src="/images/mylife/trekking-lao-than/TP_Lao_Cai.jpg">
   <p align="center">Thành phố Lào Cai 5h sáng tại bến xe</p>
 </p>
 
 + Di chuyển từ TP Lào Cai $\rightarrow$ homestay tại Phìn Hồ (điểm bắt đầu leo)
 
 <p align="center">
-  <img src="/images/mylife/trekking-lao-than/breakfast.heic">
+  <img src="/images/mylife/trekking-lao-than/breakfast.JPG">
   <p align="center">Ăn sáng với bát mỳ triệu view tại homestay</p>
 </p>
 
@@ -52,64 +52,64 @@ Nói qua một chút về ngọn đỉnh này, Lảo Thẩn thuộc Thôn Phìn 
 
 <p align="center">
   <video controls>
-      <source src='/images/mylife/trekking-lao-than/cay_anh_tuc.MOV' type='video/mp4'>
+      <source src='/images/mylife/trekking-lao-than/cay_anh_tuc.mp4' type='video/mp4'>
   </video>
   <p align="center">Làm màu trong bụi cỏ ven đường</p>
 </p>
 
 <p align="center">
   <video controls>
-      <source src='/images/mylife/trekking-lao-than/chu_meo_dang_yeu.MOV' type='video/mp4'>
+      <source src='/images/mylife/trekking-lao-than/chu_meo_dang_yeu.mp4' type='video/mp4'>
   </video>
   <p align="center">Meo, meo, meo</p>
 </p>
 
 <p align="center">
   <video controls>
-      <source src='/images/mylife/trekking-lao-than/cay_hanh_tay.MOV' type='video/mp4'>
+      <source src='/images/mylife/trekking-lao-than/cay_hanh_tay.mp4' type='video/mp4'>
   </video>
   <p align="center">Có một mùi vị giống cây hành tây mà không phải</p>
 </p>
 
 <p align="center">
   <video controls>
-      <source src='/images/mylife/trekking-lao-than/an_trua.MOV' type='video/mp4'>
+      <source src='/images/mylife/trekking-lao-than/an_trua.mp4' type='video/mp4'>
   </video>
   <p align="center">Đói quá, nhóm mình ăn trưa thôi</p>
 </p>
 
 <p align="center">
   <video controls>
-      <source src='/images/mylife/trekking-lao-than/len_nui_1.MOV' type='video/mp4'>
+      <source src='/images/mylife/trekking-lao-than/len_nui_1.mp4' type='video/mp4'>
   </video>
 </p>
 
 <p align="center">
-    <img src='/images/mylife/trekking-lao-than/len_nui_2.HEIC'>
+    <img src='/images/mylife/trekking-lao-than/len_nui_2.JPG'>
 </p>
 
 <p align="center">
-    <img src='/images/mylife/trekking-lao-than/len_nui_3.HEIC'>
+    <img src='/images/mylife/trekking-lao-than/len_nui_3.JPG'>
 </p>
 
 <p align="center">
-    <img src='/images/mylife/trekking-lao-than/len_nui_4.HEIC'>
+    <img src='/images/mylife/trekking-lao-than/len_nui_4.JPG'>
 </p>
 
 <p align="center">
-    <img src='/images/mylife/trekking-lao-than/len_nui_5.HEIC'>
+    <img src='/images/mylife/trekking-lao-than/len_nui_5.JPG'>
 </p>
 
 <p align="center">
-    <img src='/images/mylife/trekking-lao-than/len_nui_6.HEIC'>
+    <img src='/images/mylife/trekking-lao-than/len_nui_6.JPG'>
 </p>
 
 <p align="center">
-    <img src='/images/mylife/trekking-lao-than/dinh_nui.HEIC'>
+    <img src='/images/mylife/trekking-lao-than/dinh_nui.JPG'>
 </p>
 
 <p align="center">
-    <img src='/images/mylife/trekking-lao-than/lan_nghi.HEIC'>
+    <img src='/images/mylife/trekking-lao-than/lan_nghi.JPG'>
 </p>
 
 <p align="center">
@@ -119,5 +119,3 @@ Nói qua một chút về ngọn đỉnh này, Lảo Thẩn thuộc Thôn Phìn 
 <p align="center">
     <img src='/images/mylife/trekking-lao-than/mo_ca_heo_2.jpg'>
 </p>
-
-
