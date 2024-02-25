@@ -1,13 +1,13 @@
 ---
 layout: archive
 title: "Talk about my journeys"
-permalink: /mylife/
+permalink: /collections/
 author_profile: true
 ---
 
 {% include base_path %}
 {% capture written_blog %}'None'{% endcapture %}
-{% for post in site.mylife %}
+{% for post in site.collections %}
   {% capture blog %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% if blog != written_blog %}
     <h2 id="{{ blog | slugify }}" class="archive__subtitle">{{ blog }}</h2>
