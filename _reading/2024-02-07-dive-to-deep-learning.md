@@ -7,7 +7,7 @@ date: 2024-02-07
 permalink: /posts/2024/reading-dive-to-deep-learning/
 tags:
   - Deep Learning
-  - Mathematic
+  - Mathematics
 --- 
 
 <head>

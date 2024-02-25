@@ -182,7 +182,7 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
-  mylife:
+  collection:
     output: true
     permalink: /:collection/:path/
 
@@ -234,10 +234,10 @@ defaults:
       author_profile: true
       share: true
       comment: true
-  # _mylife
+  # _collections
   - scope:
       path: ""
-      type: mylife
+      type: collections
     values:
       layout: single
       author_profile: true
