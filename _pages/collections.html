@@ -7,8 +7,8 @@ author_profile: true
 
 {% include base_path %}
 {% capture written_blog %}'None'{% endcapture %}
-{% for collection in site.collections %}
-  {% capture blog %}{{ collection.date | date: '%Y' }}{% endcapture %}
+{% for post in site.collections %}
+  {% capture blog %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% if blog != written_blog %}
     <h2 id="{{ blog | slugify }}" class="archive__subtitle">{{ blog }}</h2>
     {% capture written_blog %}{{ blog }}{% endcapture %}
