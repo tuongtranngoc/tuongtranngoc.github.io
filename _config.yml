@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Tuong Tran"
+title                    : "Tuong Tran Ngoc"
 title_separator          : "-"
 name                     : &name "Tuong Tran"
 description              : &description "personal description"
@@ -80,7 +80,7 @@ analytics:
 # Site Author
 author:
   name             : "Tuong Tran Ngoc"
-  avatar           : "../images/smile.png"
+  avatar           : "../images/smile.jpg"
   bio              : "AI Engineer"
   location         : "Ha Noi, Viet Nam"
   pubmed           : 
