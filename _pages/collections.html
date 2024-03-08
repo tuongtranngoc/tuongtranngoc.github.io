@@ -10,8 +10,8 @@ author_profile: true
 {% for post in site.collections %}
   {% capture blog %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% if blog != written_blog %}
-    <h2 id="{{ blog | slugify }}" class="archive__subtitle">{{ blog }}</h2>
-    {% capture written_blog %}{{ blog }}{% endcapture %}
+    <h2 id="{{ collections | slugify }}" class="archive__subtitle">{{ collections }}</h2>
+    {% capture written_blog %}{{ collections }}{% endcapture %}
   {% endif %}
   {% include archive-single.html %}
 {% endfor %}
