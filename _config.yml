@@ -79,8 +79,8 @@ analytics:
 
 # Site Author
 author:
-  name             : "Tuong Tran"
-  avatar           : "../images/profile.png"
+  name             : "Tuong Tran Ngoc"
+  avatar           : "../images/smile.png"
   bio              : "AI Engineer"
   location         : "Ha Noi, Viet Nam"
   pubmed           : 
@@ -207,6 +207,7 @@ defaults:
       type: reading
     values:
       layout: single
+      read_time: true
       author_profile: true
       share: true
       comments: true
@@ -216,6 +217,7 @@ defaults:
       type: collections
     values:
       layout: single
+      read_time: true
       author_profile: true
       share: true
 
