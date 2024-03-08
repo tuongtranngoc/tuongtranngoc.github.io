@@ -22,12 +22,12 @@ tags:
 
 <p align="center">
     <img src='/images/mylife/trekking-samu/IMG_4756.JPG'>
-    <p>Hành trình đi từ chân núi Xín Vàng - Bắc Yên lên đỉnh Samu</p>
+    <p align="center"><b>Hành trình đi từ chân núi Xín Vàng - Bắc Yên lên đỉnh Samu</b></p>
 </p>
 
 <p align="center">
     <img src='/images/mylife/trekking-samu/IMG_4757.JPG'>
-    <p>Hành trình đi đỉnh núi Samu xuống chân núi Làng Chếu - Bắc Yên</p>
+    <p align="center"><b>Hành trình đi đỉnh núi Samu xuống chân núi Làng Chếu - Bắc Yên</b></p>
 </p>
 
 
