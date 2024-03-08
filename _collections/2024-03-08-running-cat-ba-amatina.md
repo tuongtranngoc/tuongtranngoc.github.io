@@ -10,6 +10,13 @@ tags:
   - Running
 ---
 
+<head>
+    <style type="text/css">
+        figure{text-align: center;}
+        math{text-align: center;}
+    </style>
+</head>
+
 ## Focusing 🏃🏼‍♂️
 
 1. Fastest X Cat Ba Amatina 2024 - 22 days left
