@@ -1,13 +1,13 @@
 # main links links
 main:
-  - title: "Collections"
-    url: /collections/    
-
-  - title: "Reading"
-    url: /reading/    
-        
   - title: "Blog Posts"
     url: /blog/
+
+  - title: "Reading"
+    url: /reading/ 
+
+  - title: "Collections"
+    url: /collections/    
     
   - title: "CV"
     url: /cv/
