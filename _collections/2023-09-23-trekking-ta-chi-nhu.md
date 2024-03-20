@@ -54,10 +54,6 @@ tags:
 </p>    
 
 <p align="center">
-    <img src='/images/mylife/trekking-ta-chi-nhu/IMG_2910.jpg'>
-</p>
-
-<p align="center">
     <img src='/images/mylife/trekking-ta-chi-nhu/IMG_2911.jpg'>
 </p>
 

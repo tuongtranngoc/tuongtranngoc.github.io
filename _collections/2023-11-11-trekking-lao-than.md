@@ -82,12 +82,6 @@ tags:
 </p>
 
 <p align="center">
-<video controls>
-    <source src='/images/mylife/trekking-lao-than/' type='video/mp4'>
-</video>
-</p>
-
-<p align="center">
     <img src='/images/mylife/trekking-lao-than/IMG_3401.jpg'>
 </p>
 
