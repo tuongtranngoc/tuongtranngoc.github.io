@@ -19,14 +19,25 @@ tags:
 
 ## Focusing 🏃🏼‍♂️
 
-1. Fastest X Cat Ba Amatina 2024 - 22 days left
+1. Fastest X Cat Ba Amatina 2024 - 11 days left
 <p align="center">
   <img src='/images/mylife/running-cat-ba-2024/IMG_4761.JPG'>
   <p align="center"><b></b>Running day</p>
 </p>
 
-1. Fastest X Cat Ba Amatina 2024 - 21 days left
-2. Fastest X Cat Ba Amatina 2024 - 20 days left
+1. Fastest X Cat Ba Amatina 2024 - 10 days left
+
+ <p align="center">
+  <img src='/images/mylife/running-cat-ba-2024/IMG_4777.JPG'>
+  <p align="center"><b></b>Running day</p>
+</p>  
+
+2. Fastest X Cat Ba Amatina 2024 - 9 days left
+
+ <p align="center">
+  <img src='/images/mylife/running-cat-ba-2024/IMG_4776.JPG'>
+  <p align="center"><b></b>Running day</p>
+</p> 
 
 ## Relaxing 🌴
 
