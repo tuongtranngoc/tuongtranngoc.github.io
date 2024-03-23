@@ -17,7 +17,9 @@ I am an AI Engineer in the field of machine learning with a focus on computer vi
 
 I have a background in mathematics and informatics, having graduated from Ha Noi University of Science and Technology (HUST). Since then, I have been deeply engaged in artificial intelligence, constantly expanding my knowledge through work experience.
 
-The blog documents my journey of learning AI from scratch. Whenever I am upset, negative, distracted, I read my blog and remind my self of how far I have gone and 
+The blog documents my journey of learning AI from scratch and collections from my life. It will mostly be documenting personal projects I have done for work, school or fun. At the same time, there are discovery trips that I have experienced. 
+
+Whenever I am upset, negative, distracted, I read my blog and remind my self of how far I have gone. 
 I always remenber the words of a marathon runner namely `Annica Lin`
 
 <p align="center">
