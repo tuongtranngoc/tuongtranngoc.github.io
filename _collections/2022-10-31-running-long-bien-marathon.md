@@ -3,7 +3,7 @@ title: 'Running - Long Bien Marathon 2022'
 colllection: reading
 type: "collections"
 venue: "Mùa thu, Hà Nội"
-date: 2024-03-08
+date: 2022-10-31
 permalink: /collections/2022-10-31-running-long-bien/
 tags:
   - Travel
