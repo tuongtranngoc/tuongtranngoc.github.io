@@ -50,11 +50,7 @@ tags:
 </p>
 
 <p align="center">
-  <img src='/images/mylife/running-long-bien-2022/IMG_1574.JPG'>
-</p>
-
-<p align="center">
-  <img src='/images/mylife/running-long-bien-2022/IMG_1577.JPG'>
+  <img src='/images/mylife/running-long-bien-2022/IMG_1577.PNG'>
 </p>
 
 <p align="center">
