@@ -18,7 +18,7 @@ tags:
 </head>
 
 <p align="center">
-  <img src='/images/mylife/running-long-bien-2022/IMG_1563.heic'>
+  <img src='/images/mylife/running-long-bien-2022/IMG_1563.PNG'>
 </p>
 
 <p align="center">
@@ -30,11 +30,11 @@ tags:
 </p>
 
 <p align="center">
-  <img src='/images/mylife/running-long-bien-2022/IMG_1535.heic'>
+  <img src='/images/mylife/running-long-bien-2022/IMG_1535.PNG'>
 </p>
 
 <p align="center">
-  <img src='/images/mylife/running-long-bien-2022/IMG_1559.heic'>
+  <img src='/images/mylife/running-long-bien-2022/IMG_1559.PNG'>
 </p>
 
 <p align="center">
@@ -70,5 +70,5 @@ tags:
 </p>
 
 <p align="center">
-  <img src='/images/mylife/running-long-bien-2022/IMG_1584.HEIC'>
+  <img src='/images/mylife/running-long-bien-2022/IMG_1584.PNG'>
 </p>
