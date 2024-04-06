@@ -48,6 +48,22 @@ tags:
   <p align="center"><b></b>Running day</p>
 </p> 
 
+
+**Fastest X Cat Ba Amatina 2024 - 6 days left**
+
+ <p align="center">
+  <img src='/images/mylife/running-cat-ba-2024/IMG_4794.JPG'>
+  <p align="center"><b></b>Supplementary exercise day</p>
+</p> 
+
+
+**Fastest X Cat Ba Amatina 2024 - 5 days left**
+
+ <p align="center">
+  <img src='/images/mylife/running-cat-ba-2024/IMG_4795.JPG'>
+  <p align="center"><b></b>Running day</p>
+</p> 
+
 ## Relaxing 🌴
 
 1. Fastest X Cat Ba Amatina 2024 - 2 days left
