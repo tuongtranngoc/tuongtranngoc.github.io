@@ -56,7 +56,6 @@ tags:
   <p align="center"><b></b>Supplementary exercise day</p>
 </p> 
 
-
 **Fastest X Cat Ba Amatina 2024 - 5 days left**
 
 <p align="center">
@@ -74,15 +73,17 @@ tags:
 
 <p align="center">
   <img src='/images/mylife/running-cat-ba-2024/IMG_4867.PNG'>
-</p> \
+</p>
 
 <p align="center">
   <img src='/images/mylife/running-cat-ba-2024/IMG_4883.PNG'>
 </p> 
 
 <p align="center">
-  <img src='/images/mylife/running-cat-ba-2024/video_4885.mp4'>
-</p> 
+<video controls>
+    <source src='/images/mylife/running-cat-ba-2024/video_4885.mp4' type='video/mp4'>
+</video>
+</p>
 
 ## Run to the finish line 🥇🥈🥉
 
