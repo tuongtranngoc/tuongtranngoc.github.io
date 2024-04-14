@@ -15,7 +15,7 @@ tags:
 </head>
 
 
-### Problem
+### 1. Problem
 
 In order to formulate a learning problem mathematically, we need to define two things:
 + **Model**: defines the set of allowable hypotheses, or functions that compute predictions from the inputs
@@ -33,10 +33,9 @@ Expand with $x \in R^{n}$
 
 $$L(w,b) = \frac{1}{n} \sum_{i=1}^n\frac{1}{2}(w_ix_i + b - \hat{y_i})^2=\frac{1}{2}||y-Xw||_2^2$$
 
-When training the model, we must seek parameters $(w, b)$ that minimize the total loss across all training samples:
-$$w^*, b^* = \argmin_{w, b} L(w, b)$$
+When training the model, we must seek parameters $(w, b)$ that minimize the total loss across all training samples.
 
-### Solution
+### 2. Solution
 
 #### 1. Derivative of the loss
 
