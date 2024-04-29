@@ -65,16 +65,9 @@ tags:
 
 <p align="center">
 <video controls>
-    <source src='/images/mylife/trekking-samu/IMG_4473.mp4' type='video/mp4'>
+    <source src='/images/mylife/trekking-samu/video_4473.mp4' type='video/mp4'>
 </video>
 </p>
-
-<p align="center">
-<video controls>
-    <source src='/images/mylife/trekking-samu/IMG_4482.mp4' type='video/mp4'>
-</video>
-</p>
-
 
 <p align="center">
     <img src='/images/mylife/trekking-samu/IMG_4432.jpg'>
