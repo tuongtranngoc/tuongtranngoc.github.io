@@ -33,7 +33,7 @@ tags:
 
 <p align="center">
 <video controls>
-    <source src='/images/mylife/trekking-ta-chi-nhu/IMG_2823.mp4' type='video/mp4'>
+    <source src='/images/mylife/trekking-ta-chi-nhu/video_2823.mp4' type='video/mp4'>
 </video>
 </p>
 
@@ -75,7 +75,7 @@ tags:
 
 <p align="center">
 <video controls>
-    <source src='/images/mylife/trekking-ta-chi-nhu/IMG_2941.mp4' type='video/mp4'>
+    <source src='/images/mylife/trekking-ta-chi-nhu/video_2941.mp4' type='video/mp4'>
 </video>
 </p>
 
@@ -97,7 +97,7 @@ tags:
 
 <p align="center">
 <video controls>
-    <source src='/images/mylife/trekking-ta-chi-nhu/IMG_2979.mp4' type='video/mp4'>
+    <source src='/images/mylife/trekking-ta-chi-nhu/video_2979.mp4' type='video/mp4'>
 </video>
 </p>
 
@@ -171,6 +171,6 @@ tags:
 
 <p align="center">
 <video controls>
-    <source src='/images/mylife/trekking-ta-chi-nhu/IMG_3298.mp4' type='video/mp4'>
+    <source src='/images/mylife/trekking-ta-chi-nhu/video_3298.mp4' type='video/mp4'>
 </video>
 </p>
