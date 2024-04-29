@@ -53,31 +53,31 @@ tags:
 
 <p align="center">
 <video controls>
-    <source src='/images/mylife/trekking-lao-than/IMG_3391.MOV' type='video/mp4'>
+    <source src='/images/mylife/trekking-lao-than/video_3391.mp4' type='video/mp4'>
 </video>
 </p>
 
 <p align="center">
 <video controls>
-    <source src='/images/mylife/trekking-lao-than/IMG_3395.MOV' type='video/mp4'>
+    <source src='/images/mylife/trekking-lao-than/video_3395.mp4' type='video/mp4'>
 </video>
 </p>
 
 <p align="center">
 <video controls>
-    <source src='/images/mylife/trekking-lao-than/IMG_3424.MOV' type='video/mp4'>
+    <source src='/images/mylife/trekking-lao-than/video_3424.mp4' type='video/mp4'>
 </video>
 </p>
 
 <p align="center">
 <video controls>
-    <source src='/images/mylife/trekking-lao-than/IMG_3450.MOV' type='video/mp4'>
+    <source src='/images/mylife/trekking-lao-than/video_3450.mp4' type='video/mp4'>
 </video>
 </p>
 
 <p align="center">
 <video controls>
-    <source src='/images/mylife/trekking-lao-than/IMG_3550.MOV' type='video/mp4'>
+    <source src='/images/mylife/trekking-lao-than/video_3550.mp4' type='video/mp4'>
 </video>
 </p>
 
