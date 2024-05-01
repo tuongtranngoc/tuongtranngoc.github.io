@@ -58,13 +58,13 @@
 
   p, li, dl {
     font-size: 1em;
-    font-size: $type-size-6;
+    font-size: $type-size-5;
   }
 
   /* paragraph indents */
   p {
     margin: 0 0 $indent-var;
-    font-size: $type-size-6;
+    font-size: $type-size-5;
     /* sibling indentation*/
     @if $paragraph-indent == true {
       & + p {
@@ -106,7 +106,7 @@
   blockquote + .small {
     margin-top: -1.5em;
     padding-left: 1.25rem;
-    font-size: $type-size-4;
+    font-size: $type-size-5;
   }
 
   figure figcaption {
