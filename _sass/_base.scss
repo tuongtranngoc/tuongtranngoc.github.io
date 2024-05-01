@@ -201,11 +201,13 @@ figure {
           align-items: flex-start;
   flex-wrap: wrap;
   margin: 2em 0;
+  text-align: center;
 
   img,
   iframe,
   .fluid-width-video-wrapper {
     margin-bottom: 1em;
+    text-align: center;
   }
 
   img {
@@ -214,6 +216,7 @@ figure {
     border-radius: $border-radius;
     -webkit-transition: $global-transition;
     transition: $global-transition;
+    text-align: center;
   }
 
   > a {
