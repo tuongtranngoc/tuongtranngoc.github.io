@@ -42,19 +42,19 @@ h3 {
 }
 
 h4 {
-  font-size: $type-size-6;
+  font-size: $type-size-5;
 }
 
 h5 {
-  font-size: $type-size-6;
+  font-size: $type-size-5;
 }
 
 h6 {
-  font-size: $type-size-6;
+  font-size: $type-size-5;
 }
 
 small, .small {
-  font-size: $type-size-6;
+  font-size: $type-size-5;
 }
 
 p {
@@ -131,6 +131,7 @@ a {
 
 tt, code, kbd, samp, pre {
   font-family: $monospace;
+  font-size: $type-size-4;
 }
 
 pre {
@@ -147,7 +148,7 @@ figcaption > code {
 td > code {
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
-  font-size: $type-size-6;
+  font-size: $type-size-4;
   background: $code-background-color;
   border: 1px solid $lighter-gray;
   border-radius: $border-radius;
@@ -247,7 +248,7 @@ figcaption {
   margin-bottom: 0.5em;
   color: mix(#fff, $text-color, 25%);
   font-family: $caption-font-family;
-  font-size: $type-size-6;
+  font-size: $type-size-5;
 
   a {
     color: inherit;
