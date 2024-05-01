@@ -20,7 +20,7 @@ tags:
 
 ## Introduction
 
-<p align="center">
+<p style="text-align:center;">
   <img src="/images/reading/toinoigikhinoivechaybo.jpg">
 </p>
 

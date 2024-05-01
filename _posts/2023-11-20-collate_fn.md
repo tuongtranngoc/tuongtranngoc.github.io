@@ -22,7 +22,7 @@ Default `collate_fn` collates a list of tuple into a single tuple of a batched i
   + It automatically converts NumPy arrays and Python numerical values into PyTorch Tensors.
   + It preserves the data structure, e.g., if each sample is a dictionary, it outputs a dictionary with the same set of keys but batched Tensors as values (or lists if the values can not be converted into Tensors). Same for list s, tuple s, namedtuple s, etc.
 
-<p align="center">
+<p style="text-align:center;">
     <img src='/images/posts/collate_fn/default_collate_fn.jpg'>
 </p>
 

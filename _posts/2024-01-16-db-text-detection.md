@@ -20,7 +20,7 @@ tags:
 In the real-world, scene text is often with various scales and shapes, including horizontal, multi-oriented and curved text. 
 Segmentation-based scene text detection has attracted a lot of attention in state-of-the-art papers. However, most segmentation-based methods require complex post-processing and take a lot of time in inference phrase. Most existing detection methods use the similar post-processing pipeline as below:
 
-<p align="center">
+<p style="text-align:center;">
     <img src='/images/posts/20230116_differentiable_binarization/tradditional_method.png'>
 </p>
 
@@ -31,7 +31,7 @@ To minimize the set a fixed threshold value, we insert the binarization operatio
 
 # Binarization
 
-<p align="center">
+<p style="text-align:center;">
     <img src='/images/posts/20230116_differentiable_binarization/binarization_architecture.png'>
 </p>
 
@@ -72,7 +72,7 @@ $\Rightarrow$ what must be proven
 
 To support for accurate localization of text boders in scences. A technique is designed to apply on threshold map with supervision.
 
-<p align="center">
+<p style="text-align:center;">
     <img src='/images/posts/20230116_differentiable_binarization/adaptive_threshold_map.png'>
 </p>
 
@@ -82,7 +82,7 @@ I'm impressed with the approach in paper, especially how to create labels for tr
 
 **Generation Mechanism**
 
-<p align="center">
+<p style="text-align:center;">
     <img src="/images/posts/20230116_differentiable_binarization/label_generation.png">
 </p>
 

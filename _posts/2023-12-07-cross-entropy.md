@@ -84,7 +84,7 @@ pyplot.show()
 
 We can see the expected relationship where low probability events are more surprising and carry more information, and the complement of high probability events carry less information.
 
-<p align="center">
+<p style="text-align:center;">
     <img src='/images/posts/20231207_cross_entropy/Plot-of-Probability-vs-Information.png'>
 </p>
 
