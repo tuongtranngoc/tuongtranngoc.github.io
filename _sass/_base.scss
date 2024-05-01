@@ -62,6 +62,11 @@ p {
   text-align: justify;
 }
 
+p > img {
+  margin-bottom: 1.3em;
+  text-align: center;
+}
+
 u,
 ins {
   text-decoration: none;
