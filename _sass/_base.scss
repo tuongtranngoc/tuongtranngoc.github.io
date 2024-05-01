@@ -138,6 +138,10 @@ pre {
   overflow-x: auto; /* add scrollbars to wide code blocks*/
 }
 
+pre > code {
+  font-size: $type-size-4;
+}
+
 p > code,
 a > code,
 li > code,
@@ -148,7 +152,7 @@ figcaption > code {
 td > code {
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
-  font-size: $type-size-3;
+  font-size: $type-size-5;
   background: $code-background-color;
   border: 1px solid $lighter-gray;
   border-radius: $border-radius;

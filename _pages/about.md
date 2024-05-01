@@ -19,9 +19,4 @@ I have a background in mathematics and informatics, having graduated from Ha Noi
 
 The blog documents my journey of learning AI from scratch and collections from my life. It will mostly be documenting personal projects I have done for work, school or fun. At the same time, there are discovery trips that I have experienced. 
 
-Whenever I am upset, negative, distracted, I read my blog and remind my self of how far I have gone. 
-I always remenber the words of a marathon runner namely `Annica Lin`
-
-<p align="center">
-  <b>Let start and don't stop, you will see the benefits everywhere in your life, I will see you on the road.</b>
-</p>
+Whenever I am upset, negative, distracted, I read my blog and remind my self of how far I have gone.
