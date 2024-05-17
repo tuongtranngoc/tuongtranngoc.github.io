@@ -1,5 +1,5 @@
 ---
-title: "Transformer: Attention is All You Need"
+title: "Attention Mechanism and Transformers"
 date: 2024-01-21
 permalink: /posts/2024/transformer/
 tags:
