@@ -24,9 +24,8 @@ tags:
 </p>
 
 
-1. Attention Mechanisms and Transformers
-2. Natural Language Processing: 
-+ Pretraining - BERT
-+ The dataset for pretraining BERT
-+ Finetuning BERT: Applications and Inference
+1. Recurrent Neural Networks
+2. Attention Mechanisms and Transformers
+3. Natural Language Processing 
+   
 
