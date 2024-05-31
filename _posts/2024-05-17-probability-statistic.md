@@ -21,4 +21,4 @@ Anything that happens in our life is uncertain. There's uncertainty anywhere so 
 
 ## Notation
 
-**Sample space ($\Omega$)**: 
+**Sample space ($\Omega$)**
