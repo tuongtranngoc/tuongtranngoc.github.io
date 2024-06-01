@@ -54,3 +54,8 @@ $$=P(A). P(B|A)$$
 Assuming that $P(A \cup B) \neq 0$,
 
 $$P(A \cup B | C) = P(A|C) + P(B|C)$$
+
+## Reference
+
+1. [Probability For Computer Scientists](https://chrispiech.github.io/probabilityForComputerScientists/en/index.html)
+2. [Probabilistic Systems Analysis and Applied Probability](https://www.youtube.com/playlist?list=PLUl4u3cNGP61MdtwGTqZA0MreSaDybji8)
