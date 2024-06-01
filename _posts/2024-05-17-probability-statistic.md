@@ -23,7 +23,7 @@ Anything that happens in our life is uncertain. There's uncertainty anywhere so 
 
 **Sample space ($\Omega$)**
 + Discrete: $\Omega = \lbrace 1, 2, 3, 4, ... \rbrace$
-+ Continuous: $\Omega = \lbrace(x, y) | 0 <= x, y <= 1 \rbrace$
++ Continuous: $\Omega = \lbrace(x, y)\vert 0 <= x, y <= 1 \rbrace$
 
 **Probaility Aximos**
 
@@ -41,7 +41,7 @@ $$P(A_1 \cup A_2 \cup ....) = P(A_1) + P(A_2) + ...$$
   <img src="/images/posts/2024-05-17-probability-statistic/conditional_prob.png">
 </p>
 
-$P(A | B)$ : The probability of $A$ given that $B$ occoured
+$P(A\vert B)$ : The probability of $A$ given that $B$ occoured
 
 Assuming that $P(B) \neq 0$
 
@@ -51,3 +51,6 @@ $$\Rightarrow P(A \cap B) = P(B). P(A|B)$$
 
 $$=P(A). P(B|A)$$
 
+Assuming that $P(A \cup B) \neq 0$,
+
+$$P(A \cup B | C) = P(A|C) + P(B|C)$$
