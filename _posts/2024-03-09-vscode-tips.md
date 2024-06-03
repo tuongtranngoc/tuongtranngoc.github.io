@@ -24,6 +24,28 @@ Visual Studio Code, also commonly referred to as VS Code, is a source-code edito
 
 Here are the extensions, tips, key highlights of the regularly updated versions once you get into it and will become addicted to the benefits it brings in your programming work.
 
-## Basic settings and operations
+## Key Bindings
 
-## Key highlight 
+Visual Studio Code lets you perform most tasks directly from the keyboard. You can see detail them in [Key Bindings](https://code.visualstudio.com/docs/getstarted/keybindings)
+
+**Some common key bindings**
+
+Nagative back and forward
+
+```shell
+Alt + Right/Left
+```
+
+Find a file in folder at workspace
+
+```shell
+Ctrl + p <file_name> <folder>
+```
+
+Format document
+
+```shell
+Alt + Shift + F
+```
+
+
