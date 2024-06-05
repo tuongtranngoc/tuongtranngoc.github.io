@@ -21,7 +21,7 @@ Anything that happens in our life is uncertain. There's uncertainty anywhere so 
 
 ## 1. Core Probability and Aximos
 
-**Sample space ($\Omega$)**
+**Sample space ($\Omega$)**: is the set of all possible outcomes of an experiment.
 + Discrete: $\Omega = \lbrace 1, 2, 3, 4, ... \rbrace$
 + Continuous: $\Omega = \lbrace(x, y)\vert 0 <= x, y <= 1 \rbrace$
 
@@ -53,11 +53,11 @@ Anything that happens in our life is uncertain. There's uncertainty anywhere so 
 
 7. Probability of or (Inclusion-Exclusion): 
    
-   $$P(E_1 \text{or} E_2) = P(E_1) + P(E_2) - P(E_1 \text{and} E_2)$$
+   $$P(E_1 \cup E_2) = P(E_1) + P(E_2) - P(E_1 \cap E_2)$$
 
 8. Probability of and for independent events: If events are independent, the probability of two events occurring is
    
-   $$P(E_1 \text{and} E_2 ... \text{and}E_n) = \prod_{i=1}^{n}P(E_i)$$
+   $$P(E_1 \cap E_2 ... \cap E_n) = \prod_{i=1}^{n}P(E_i)$$
 
 9.  General Probability of and (The Chain Rule):
    
@@ -67,14 +67,9 @@ Anything that happens in our life is uncertain. There's uncertainty anywhere so 
    
    $$P(E_1) = P(E_1 \cap E_2) + P(E_1 \cap E_2^C)=P(E_1|E_2).P(E_2) + P(E_1|E_2^C).P(E_2^C)$$
 
-
 11. Bayes' Theory
    
    $$P(B\vert E) = \frac{P(E\vert B). P(B)}{P(E)}$$
-
-   Bayes' Theorem combined with the Law of Total Probability:
-   
-   $$P(P\vert E)=\frac{P(E\vert B). P(B)}{P(E\vert B). P(B) + P(E\vert B^C).P(B^C)}$$
 
 
 ### 1.1 Counting
