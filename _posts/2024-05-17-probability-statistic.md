@@ -17,9 +17,9 @@ tags:
 
 ## Why Probability
 
-Anything that happens in our life is uncertain. There's uncertainty anywhere so whatever you try to do, you need to have some way of dealing or thinking about uncertainty. And the way to do that in a systematic way is using the models that are given to us by **Probability Theory**. So if you're an engineer and you're dealing with some real-world problems. Basically, you're facing noise, noise is random, is uncertain. So, how do you model it? how to you deal with it?
+Anything that happens in our life is uncertain. There's uncertainty anywhere so whatever you try to do, you need to have some way of dealing or thinking about uncertainty. And the way to do that in a systematic way is using the models that are given to us by **Probability Theory**. So if you're an engineer and you're dealing with some real-world problems. Basically, you're facing **I wonder if the crush loves me**, it is random, is uncertain. So, how do you model it? how to you deal with it?
 
-## 1. Probability Models and Aximos
+## 1. Core Probability and Aximos
 
 **Sample space ($\Omega$)**
 + Discrete: $\Omega = \lbrace 1, 2, 3, 4, ... \rbrace$
@@ -27,13 +27,41 @@ Anything that happens in our life is uncertain. There's uncertainty anywhere so 
 
 **Probaility Aximos**
 
-1. Nonegativity $P(A) >= 0$
-2. Normaliztion $P(\Omega)=1$
-3. Additivity: If $A \cap B = \varnothing => P(A \cup B)=P(A) + P(B)$
-4. If $A_1, A_2, ...$ are disjoint sets. 
-$$P(A_1 \cup A_2 \cup ....) = P(A_1) + P(A_2) + ...$$
+1. The probability of any event $E$ can be defined as: 
+   $$P(E) = \lim_{n \rightarrow \infty} \frac{\text{count}(E)}{n}$$
+2. Nonegativity: 
+   $$0 \leq P(E) \leq 1$$
+3. All outcomes must be from the Sample Space: 
+   $$P(\Omega)=1$$
+4. The probability of an event from its complement: 
+   $$P(E) = 1 - P(E^c)$$
+5. Probability of **or** with Mututally Exclusive Events: 
+   $$E_1 \cap E_2 = \varnothing => P(E_1 \cup E_2)=P(E_1) + P(E_2)$$
+6. If $E_1, E_2, ..., E_n$ are disjoint sets (mutually exclusive)
+   $$P(E_1 \cup E_2 \cup .... \cup E_n) = P(E_1) + P(E_2) + ... + P(E_n)=\sum_{i=1}^{n}P(E_i)$$
+7. Probability of or (Inclusion-Exclusion): 
+   $$P(E_1 \text{or} E_2) = P(E_1) + P(E_2) - P(E_1 \text{and} E_2)$$
+8. Probability of and for Independent Events: If events are independent, the probability of two eventS occurring is
+   $$P(E_1 \text{and} E_2 ... \text{and}E_n) = \prod_{i=1}^{n}P(E_i)$$
+9. General Probability of and (The Chain Rule):
+    $$P(E_1 \cap E_2 ... \cap E_n) = P(E_1). P(E_2 \vert E_1). P(E_3|E_1 \cap E_2) ... P(E_n|E_1\cap ... \cap E_{n-1})$$
+10. The Law of Total Probability: For 2 any events $E_1$ and $E_2$:
+    $$P(E_1) = P(E_1 \cap E_2) + P(E_1 \cap E_2^C)=P(E_1|E_2).P(E_2) + P(E_1|E_2^C).P(E_2^C)$$
 
-## 2. Conditioning and Bayes' Rule
+11. Bayes' Theory
+    $$P(B\vert E) = \frac{P(E\vert B). P(B)}{P(E)}$$
+    Bayes' Theorem combined with the Law of Total Probability:
+    $$P(P\vert E)=\frac{P(E\vert B). P(B)}{P(E\vert B). P(B) + P(E\vert B^C).P(B^C)}$$
+
+### 1.1 Counting
+
+### 1.2 Combinatorics
+
+### 1.3 Definition of Probability
+
+### 1.4 Probability of or
+
+### 1.5 Conditional Probability
 
 **Conditional Probabilty**
 
@@ -41,7 +69,7 @@ $$P(A_1 \cup A_2 \cup ....) = P(A_1) + P(A_2) + ...$$
   <img src="/images/posts/2024-05-17-probability-statistic/conditional_prob.png">
 </p>
 
-$P(A\vert B)$ : The probability of $A$ given that $B$ occoured
+$P(A\vert B)$ : The probability of $A$ given that $B$ occured
 
 Assuming that $P(B) \neq 0$
 
@@ -54,6 +82,22 @@ $$=P(A). P(B|A)$$
 Assuming that $P(A \cup B) \neq 0$,
 
 $$P(A \cup B | C) = P(A|C) + P(B|C)$$
+
+
+Conditioning on multiple events
+
+$$P(A\vert B,C) = \frac{P(A \space \text{and} \space B \vert C)}{P(B \vert C)}$$
+
+### 1.6 Independence
+
+### 1.7 Probability of and
+
+### 1.8 Law of Total Probability
+
+### 1.9 Bayes' Theorem
+
+### 1.10 Log Probabilities
+
 
 ## Reference
 
