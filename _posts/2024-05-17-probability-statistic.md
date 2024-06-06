@@ -63,9 +63,9 @@ Anything that happens in our life is uncertain. There's uncertainty anywhere so 
    
    $$P(E_1 \cap E_2 ... \cap E_n) = P(E_1). P(E_2 \vert E_1). P(E_3|E_1 \cap E_2) ... P(E_n|E_1\cap ... \cap E_{n-1})$$
 
-+ The Law of Total Probability: For 2 any events $E_1$ and $E_2$:
++ The Law of Total Probability: For an event $E$, if you can divide the sample space into any number of mutually exclusive events: $B_1, B_2, ..., B_n$:
    
-   $$P(E_1) = P(E_1 \cap E_2) + P(E_1 \cap E_2^C)=P(E_1|E_2).P(E_2) + P(E_1|E_2^C).P(E_2^C)$$
+   $$P(E) = P(E \cap B_1) \cup P(E \cap B_2) \cap ... \cap P(E \cap B_n) = \sum_{i=1}^n P(E \cap B_i)$$
 
 + Bayes' Theory
    
