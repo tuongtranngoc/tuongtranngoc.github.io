@@ -1,7 +1,7 @@
 ---
-title: "Instance Segmentation: MaskR-CNN"
+title: "Instance Segmentation"
 date: 2024-06-02
-permalink: /posts/2024/maskrcnn/
+permalink: /posts/2024/instancesegmentation/
 tags:
   - Mathematics
   - Machine Learning
@@ -28,5 +28,4 @@ tags:
 </p>
 
 ## Region of Intersect (RoI)
-
 

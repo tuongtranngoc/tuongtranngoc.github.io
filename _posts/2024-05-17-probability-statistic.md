@@ -73,6 +73,18 @@ Anything that happens in our life is uncertain. There's uncertainty anywhere so 
 
 
 ### 1.1 Counting
+**Definition**: Step Rule of Counting (aka Product Rule of Counting)
+
+If an experiment with two parts, $A$ is the first part, $B$ is the second part (the outcomes in $B$ is regardless of the outcomes of $A$): 
+$$\vert A \vert=m, \vert B \vert=n$$
+
+The total number of outcomes for the expepriment:
+
+$$\vert A \vert . \vert B \vert = m.n$$
+
+**Counting with or**
+
+
 
 ### 1.2 Combinatorics
 
