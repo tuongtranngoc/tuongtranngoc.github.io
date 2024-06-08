@@ -159,7 +159,7 @@ $$P(A \cup B | C) = P(A|C) + P(B|C)$$
 
 Conditioning on multiple events
 
-$$P(A\vert B,C) = \frac{P(A \space \text{and} \space B \vert C)}{P(B \vert C)}$$
+$$P(A\vert B,C) = \frac{P(A \space \cap \space B \vert C)}{P(B \vert C)}$$
 
 ### 1.6 Independence
 
