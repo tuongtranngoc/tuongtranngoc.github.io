@@ -84,9 +84,35 @@ $$\vert A \vert . \vert B \vert = m.n$$
 
 **Counting with or**
 
+Mutually Exclusion Counting: $A \cap B = \varnothing$, the possible outcomes of the experiment
 
+$$\vert A \cup B \vert = \vert A \vert + \vert B \vert$$
+
+Inclusion Exclusion Counting: $A \cap B \neq \varnothing$, the possible outcomes of the experiment.
+
+$$\vert A \cup B \vert = \vert A \vert + \vert B \vert - \vert A \cap B \vert$$
 
 ### 1.2 Combinatorics
+
+**Permutations of Distinct Objects**
+
+Permutation Rule: A permutation is an ordered arrangement of $n$ distinct object. Those $n$ object can be permuted in $m$ ways
+$$m = n.(n-1).(n-2)... 2. 1 = n !$$
+
+**Permutations of Indistinct Objects**
+
+Generally when there are $n$ objects and:
+
+$n_1$ are the same and $n_2$ are the same ... $n_k$ are the same.
+
+The number of distinct permutation is:
+
+$$m = \frac{n!}{n_1!n_2!...n_k!}$$
+
+
+**Combinations of Distinct Objects**
+
+
 
 ### 1.3 Definition of Probability
 
