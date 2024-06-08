@@ -112,13 +112,29 @@ $$m = \frac{n!}{n_1!n_2!...n_k!}$$
 
 **Combinations of Distinct Objects**
 
+A combination is an unordered selection of $k$ objects from a set of $n$ objects
+
+$$m=\frac{n!}{k!(n-k)!} = \left( \begin{array}{c} x \\ y \end{array} \right)$$
+
+### 1.3 Probability of or
+
+**Or with Mutually Exclusive Events**: For $n$ events $E_1, E_2, ..., E_n$ where each event is mutually exclusive of one another:
+
+$$P(E_1 \cup E_2 \cup ... \cup E_n) = P(E_1) + P(E_2) + ... + P(E_n) = \sum_{i=1}^n P(E_i)$$
+
+**Or with Non-Mutually Exclusive Events**
+
++ For 2 any events $E_1, E_2$:
+
+$$P(E_1 \cup E_2) = P(E_1) + P(E_2) - P(E_1 \cap E_2)$$
+
++ For 3 events: $E_1, E_2, E_3$
+
+$$P(E_1 \cup E_2 \cup E_3) = \\ P(E_1) + P(E_2) + P(E_3) \\ - P(E_1 \cap E_2) - P(E_2 \cap E_3) - P(E_1 \cap E_3) \\ - P(E_1 \cap E_2 \cap E_3)$$
 
 
-### 1.3 Definition of Probability
 
-### 1.4 Probability of or
-
-### 1.5 Conditional Probability
+### 1.4 Conditional Probability
 
 **Conditional Probabilty**
 
