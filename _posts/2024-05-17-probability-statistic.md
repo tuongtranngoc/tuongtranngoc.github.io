@@ -1,7 +1,7 @@
 ---
-title: "Probability and Statistics"
+title: "Core Probability"
 date: 2024-05-17
-permalink: /posts/2024/probability_statistic/
+permalink: /posts/2024/core_probability
 tags:
   - Mathematics
   - Machine Learning
@@ -162,6 +162,14 @@ Conditioning on multiple events
 $$P(A\vert B,C) = \frac{P(A \space \cap \space B \vert C)}{P(B \vert C)}$$
 
 ### 1.6 Independence
+
+Events $E_1, E_2, ..., E_n$ are independent if for every subset wih $k$ elements ($k \leq n$):
+
+$$P(E_1, E_2, ..., E_k) = \prod_{i=1}^k P(E_i)$$
+
+**Conditional Independent**
+
+
 
 ### 1.7 Probability of and
 
