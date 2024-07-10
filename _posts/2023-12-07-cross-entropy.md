@@ -23,7 +23,9 @@ Cross-entropy is commonly used in machine learning as a loss function. Cross-ent
 ## What is the Cross Entropy?
 `Cross Entropy` is a measure of the difference between two probability distribution for a random variable or set of events. This concept may sound confusing, I will start with a simple theory to detail understand.
 
-As you know, rare events are more uncertain or more surprising and require more information to represent them than common events. We can calculate the amount of information there is in an event using the probability of the event. This is called `self-information` or simply the `information` and can be calculated for a discrete event x as follows:
+As you know, rare events are more uncertain and require more information to represent them than common events. In other words, to avoid imbalance between events in machine learning problems .  
+
+We can calculate the amount of information there is in an event using the probability of the event. This is called `self-information` or simply the `information` and can be calculated for a discrete event x as follows:
 
 $$I(x) = -log(p(x))$$
 
