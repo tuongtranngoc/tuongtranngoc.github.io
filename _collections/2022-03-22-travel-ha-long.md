@@ -59,6 +59,8 @@ Hành trình du lịch tự túc đi từ Hà Nội đến 2 điểm của Quả
   <p style="text-align:center;"><b></b>Trên tàu ra Vịnh</p>
 </p>
 
+**Tà Xùa**
+
 <p style="text-align:center;">
   <img src='/images/mylife/travel-ha-long-2022/IMG_2092.PNG'>
   <p style="text-align:center;"><b></b>Chạy bộ buổi sáng trên homestay Tà Xùa</p>
