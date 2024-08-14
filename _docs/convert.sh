@@ -1,0 +1,1 @@
+magick mogrify -monitor -format PNG *.HEIC

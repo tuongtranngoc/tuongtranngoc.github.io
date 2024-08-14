@@ -69,19 +69,23 @@ tags:
 
 <p style="text-align:center;">
   <img src='/images/mylife/running-cat-ba-2024/IMG_4814.PNG'>
+  <p style="text-align:center;"><b></b>Nhận bit tại Quảng Trường - Cát Bà</p>
 </p> 
 
 <p style="text-align:center;">
   <img src='/images/mylife/running-cat-ba-2024/IMG_4867.PNG'>
+  <p style="text-align:center;"><b></b>Lòng vòng quanh Quảng Trường</p>
 </p>
 
 <p style="text-align:center;">
   <img src='/images/mylife/running-cat-ba-2024/IMG_4883.PNG'>
+  <p style="text-align:center;"><b></b>Bãi tắm Cát Cò 1</p>
 </p> 
 
 <p style="text-align:center;">
 <video controls>
     <source src='/images/mylife/running-cat-ba-2024/video_4885.mp4' type='video/mp4'>
+    <p style="text-align:center;"><b></b>Bãi tắm Cát Cò 1</p>
 </video>
 </p>
 
@@ -89,42 +93,54 @@ tags:
 
 <p style="text-align:center;">
   <img src='/images/mylife/running-cat-ba-2024/IMG_4965.JPG'>
+  <p style="text-align:center;"><b></b>1/2 chặng đường 12/21km</p>
 </p> 
 
 <p style="text-align:center;">
   <img src='/images/mylife/running-cat-ba-2024/IMG_4967.JPG'>
+  <p style="text-align:center;"><b></b>Kết thúc chặng đường</p>
 </p> 
 
 ## Travel Cat Ba Island 🌴 🏝️
 
 <p style="text-align:center;">
   <img src='/images/mylife/running-cat-ba-2024/IMG_4925.PNG'>
+  <p style="text-align:center;"><b></b>Hang quân Y, Trân Châu</p>
 </p> 
 
 <p style="text-align:center;">
   <img src='/images/mylife/running-cat-ba-2024/IMG_4926.PNG'>
+  <p style="text-align:center;"><b></b>Hang quân Y, Trân Châu</p>
 </p> 
 
 <p style="text-align:center;">
   <img src='/images/mylife/running-cat-ba-2024/IMG_4927.PNG'>
+  <p style="text-align:center;"><b></b>Hang quân Y, Trân Châu</p>
 </p> 
 
 <p style="text-align:center;">
   <img src='/images/mylife/running-cat-ba-2024/IMG_4928.PNG'>
+  <p style="text-align:center;"><b></b>Hang quân Y, Trân Châu</p>
 </p>
 
 <p style="text-align:center;">
   <img src='/images/mylife/running-cat-ba-2024/IMG_4934.PNG'>
+  <p style="text-align:center;"><b></b>Hang quân Y, Trân Châu</p>
 </p>
 
 <p style="text-align:center;">
   <img src='/images/mylife/running-cat-ba-2024/IMG_4935.PNG'>
+  <p style="text-align:center;"><b></b>Hang quân Y, Trân Châu</p>
 </p> 
 
 <p style="text-align:center;">
   <img src='/images/mylife/running-cat-ba-2024/IMG_4938.PNG'>
+  <p style="text-align:center;"><b></b>Hang quân Y, Trân Châu</p>
 </p>
 
 <p style="text-align:center;">
   <img src='/images/mylife/running-cat-ba-2024/IMG_4939.PNG'>
+  <p style="text-align:center;"><b></b>Hang quân Y, Trân Châu</p>
 </p> 
+
+
