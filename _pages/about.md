@@ -7,13 +7,10 @@ redirect_from:
   - /about.html
 ---
 
-Someone accidentally came to my blog 🙈!
+Looks like somebody has stumbled upon my blog 🙈!
 
 ## Biography
-I am an AI Engineer in the field of machine learning with a focus on computer vision. My research interests include the foundations of algorithms and their real-world applications.
-+ **Object Detection/Segmentation/Pose Estimation**
-+ **Optical Character Recognition (OCR)**
-+ **Document Intelligence**
+I am an AI Research Engineer and working at Eastgate-Software. Prior to that, I have had the fortune of working at iCOMM Media & Tech, Jsc and VNPT-AI Center.
 
 I have a background in mathematics and informatics, having graduated from Ha Noi University of Science and Technology (HUST). Since then, I have been deeply engaged in artificial intelligence, constantly expanding my knowledge through work experience.
 
