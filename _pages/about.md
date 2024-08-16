@@ -10,7 +10,7 @@ redirect_from:
 Looks like somebody has stumbled upon my blog 🙈!
 
 ## Biography
-I am an AI Research Engineer and working at [Eastgate-Software](https://eastgate-software.com/). Prior to that, I have had the fortune of working at [iCOMM Media & Tech, Jsc](https://icomm.vn/) and [VNPT-AI Center](https://icenter.ai/vi).
+I am an AI Research Engineer and working at [Eastgate-Software](https://eastgate-software.com/). Prior to that, I have had the fortune of working at [VNPT-AI Center](https://icenter.ai/vi) and [iCOMM Media & Tech, Jsc](https://icomm.vn/).
 
 I have a background in mathematics and informatics, having graduated from Ha Noi University of Science and Technology (HUST). Since then, I have been deeply engaged in artificial intelligence, constantly expanding my knowledge through work experience.
 
