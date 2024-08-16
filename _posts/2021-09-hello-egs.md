@@ -1,5 +1,5 @@
 ---
-title: "Hello, Eastgate-Software"
+title: "Hello - Eastgate-Software"
 date: 2021-07-19
 permalink: /posts/2021/hello-egs
 tags:
