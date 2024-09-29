@@ -218,9 +218,11 @@ defaults:
       type: collections
     values:
       layout: single
-      read_time: true
       author_profile: true
+      read_time: true
+      comments: true
       share: true
+      related: true
 
 # Sass/SCSS
 sass:
