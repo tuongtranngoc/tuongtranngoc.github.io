@@ -20,7 +20,7 @@ tags:
 
 Quảng Bình International Marathon 2024 là giải đấu marathon do Sở VHTT Quảng Bình tổ chức để kỷ niệm các ngày lễ lớn của tỉnh tại thành phố Đồng Hới. Sự kiện tổ chức chạy road cho các Runners với các cự ly: 5K, 10K, 21K, 42K.
 
-Đây cũng là lần thứ hai mình quay lại đây với mục tiêu tham gia giải chạy. Khác với lần trước, mình vào đây đi du lịch cùng gia đình và thăm người thân. Giải chạy lần này, tuy không đạt được mục tiêu về đích (chỉ chạy được nửa quãng đường do vấn đề về sức khoẻ) nhưng từ đây mình nhận ra rằng, bản thân cần chuẩn bị tốt hơn trước khi giải đáu bắt đầu để tránh những tình huống hy hữu như giải lần mình gặp phải
+Đây cũng là lần thứ hai mình quay lại đây với mục tiêu tham gia giải chạy. Khác với lần trước, mình vào đây đi du lịch cùng gia đình và thăm người thân. Giải chạy lần này, tuy không đạt được mục tiêu về đích (chỉ chạy được nửa quãng đường do vấn đề về sức khoẻ) nhưng từ đây mình nhận ra rằng, bản thân cần chuẩn bị tốt hơn trước khi giải chạy bắt đầu để tránh những tình huống hy hữu.
 
 
 <p style="text-align:center;">
