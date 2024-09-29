@@ -1,5 +1,5 @@
 ---
-title: 'Travel - Hạ Long, Tà Xùa - Quảng Ninh'
+title: 'Travel - Hạ Long, Bình Liêu, Quảng Ninh - Tà Xùa, Bắc Yên, Sơn La'
 colllection: reading
 type: "collections"
 venue: "Mùa hạ, Hà Nội"
@@ -19,7 +19,7 @@ tags:
 
 ## Giới thiệu
 
-Hành trình du lịch tự túc đi từ Hà Nội đến 2 điểm của Quảng Ninh: Hạ Long và Tà Xùa. Khác với trải nghiệm mát mẻ, thảnh thơi tại Vịnh Hạ Long, quá trình leo lên đỉnh núi Tà Xùa khá là vất vả, nóng nực.
+Hành trình du lịch tự túc đi từ Hà Nội đến 2 điểm của Quảng Ninh: Hạ Long và Bình Liêu, một điểm của Bắc Yên, Sơn La: Tà Xùa Khác với trải nghiệm mát mẻ, thảnh thơi tại Vịnh Hạ Long, quá trình leo lên đỉnh núi Tà Xùa, Bình Liêu khá là vất vả, cực nhọc.
 
 ## Bắt đầu cuộc hành trình
 
@@ -97,14 +97,14 @@ Hành trình du lịch tự túc đi từ Hà Nội đến 2 điểm của Quả
 <video controls>
     <source src='/images/mylife/travel-ha-long-2022/video_1454.mp4' type='video/mp4'>
 </video>
-<p style="text-align:center;"><b></b>Hoa cỏ Lau trên đỉnh Tà Xùa</p>
+<p style="text-align:center;"><b></b>Cánh đồng cỏ lau ở Bình Liêu </p>
 </p>
 
 <p style="text-align:center;">
 <video controls>
     <source src='/images/mylife/travel-ha-long-2022/video_1461.mp4' type='video/mp4'>
 </video>
-<p style="text-align:center;"><b></b>Hoa cỏ Lau trên đỉnh Tà Xùa</p>
+<p style="text-align:center;"><b></b>Cánh đồng cỏ lau ở Bình Liêu</p>
 </p>
 
 <p style="text-align:center;">
