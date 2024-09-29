@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 {% capture written_blog %}'None'{% endcapture %}
-{% for post in site.collections %}
+{% for post in site.collections reversed %}
   {% capture blog %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% if blog != written_blog %}
     <h2 id="{{ blog | slugify }}" class="archive__subtitle">{{ blog }}</h2>
