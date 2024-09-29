@@ -70,7 +70,7 @@ tags:
 
 <p style="text-align:center;">
   <img src='/images/mylife/running-cat-ba-2024/IMG_4814.PNG'>
-  <p style="text-align:center;"><b></b>Nhận bit tại Quảng Trường - Cát Bà</p>
+  <p style="text-align:center;"><b></b>Nhận BIB tại Quảng Trường - Cát Bà</p>
 </p> 
 
 <p style="text-align:center;">
