@@ -1,6 +1,7 @@
 ---
 title: 'Running - Long Bien Marathon 2022'
 colllection: reading
+excerpt: "Lần đầu tham gia một giải đấu Marathon <br/><img src='/images/mylife/running-long-bien-2022/IMG_1563_excerpt.PNG'>"
 type: "collections"
 venue: "Mùa thu, Hà Nội"
 date: 2022-10-31
