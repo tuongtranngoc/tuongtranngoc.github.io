@@ -56,4 +56,4 @@ Awards And Achievements
     * <a href="https://drive.google.com/file/d/1F4LfXRhZaTePhUQrd9n96gj2iiRv76cO/view">Certification</a>
 
 * CODEWAR 2019 programming contest organized by FPT
-<img src='/images/cv/1725752416436.jpeg' width="300" height="500">
+<img src='/images/cv/1725752416436.jpeg' width="500" height="300">
