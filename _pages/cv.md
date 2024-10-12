@@ -12,7 +12,7 @@ Education
 ======
 
 * 2015 - 2020, Engineer's degree, Mathematics and Informatics, Hanoi University of Science and Technology
-    * Grade: Good - GPA 3.11
+    * Grade: Good
     * Activities and societies: Best applicability project prize of scientific research contest for students, Ha Noi University of Science and Technology, 2018-2019.
     * CODEWAR-2019 programming contest organized by FPT
     * Certificated Deep Learning course that was sponsored by the VietNam Institute for Advanced Study in Mathematics (VIASM)
@@ -21,20 +21,13 @@ Education
 Work Experience
 ======
 
+* Oct 2024 - Present, Machine Learning Engineer, Kalapa., Jsc
+
 * Jun 2021 - Oct 2024, AI Engineer, Eastgate Software
-    * Prepare proposal documentation
-    * Utilize technologies and techniques such as data visualization, Docker, Flask API, AWS, Azure DIP services, Milvus vector database, MongoDB, and PostgreSQL.
-    * Contribute to and participate in projects involving Retrieval-Augmented Generation (RAG), large language models (LLMs), ChatGPT, and prompting techniques.
-    * Propose and work on projects related to Neural Relation Extraction (NRE), Optical Character Recognition (OCR), intelligent documentation, relation extraction, time series models, and machine learning models.
-    * Develop a data crawling tool using Selenium Chrome and the Wikipedia API.
 
 * Oct 2019 - Jun 2021, AI Engineer, VNPT AI
-    * Explore research methods and develop products using object detection and pose estimation algorithms for smart vision applications.
-    * Enhance and optimize models to improve accuracy and performance, ensuring efficient algorithm execution on hardware devices like TensorRT, ONNX, CPU, and GPU.
 
 * Jan 2019 - Apr 2019, Web Developer and AI Researcher Internship, ICOMM Media & Tech., Jsc
-    * Data Crawling: Develop an automated tool to collect data from social media platforms (e.g., Facebook, Google) using Selenium Chrome with C# and JavaScript/CSS.
-    * Research: Re-implement the CRNN algorithm, focusing on training and fine-tuning for handwriting recognition tasks.
 
 
 Key Skills
@@ -54,6 +47,3 @@ Awards And Achievements
     * Advisor: Assoc. <a href="https://www.mica.edu.vn/perso/Le-Thi-Lan/"> Prof. Thi-Lan Le, International Research Institute MICA </a>
     * Research topic: Personal protective equipment (PPE) - Build a system to detect and monitor the personal protective equipment of workers at construction sites.
     * <a href="https://drive.google.com/file/d/1F4LfXRhZaTePhUQrd9n96gj2iiRv76cO/view">Certification</a>
-
-* CODEWAR 2019 programming contest organized by FPT
-<img src='/images/cv/1725752416436.jpeg' width="500" height="300">
