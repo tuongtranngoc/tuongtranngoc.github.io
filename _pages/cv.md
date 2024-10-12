@@ -8,6 +8,10 @@ author_profile: true
 
 {% include base_path %}
 
+I am an Machine Learning Engineer and working at Kalapa, JSC. Prior to that, I have had the fortune of working at Eastgate-Software, VNPT-AI Center and iCOMM Media & Tech, Jsc.
+I had graduated from Ha Noi University of Science and Technology (HUST). Since then, I have been deeply engaged in artificial intelligence, constantly expanding my knowledge through work experience.
+
+
 Education
 ======
 
