@@ -19,28 +19,28 @@ Education
     * Grade: Good
     * Activities and societies: Best applicability project prize of scientific research contest for students, Ha Noi University of Science and Technology, 2018-2019.
     * CODEWAR-2019 programming contest organized by FPT
-    * Certificated Deep Learning course that was sponsored by the VietNam Institute for Advanced Study in Mathematics (VIASM)
+    * Completed the Deep Learning course that was sponsored by the VietNam Institute for Advanced Study in Mathematics (VIASM)
 
 
 Work Experience
 ======
 
-* Oct 2024 - Present, Machine Learning Engineer, Kalapa., Jsc
+* Oct 2024 - Present, AI Research Engineer, [Kalapa., Jsc](https://kalapa.vn/)
 
-* Jun 2021 - Oct 2024, AI Engineer, Eastgate Software
+* Jun 2021 - Oct 2024, AI Engineer, [Eastgate Software](https://eastgate-software.com/)
 
-* Oct 2019 - Jun 2021, AI Engineer, VNPT AI
+* Oct 2019 - Jun 2021, AI Engineer, [VNPT-AI](https://icenter.ai/vi)
 
-* Jan 2019 - Apr 2019, Web Developer and AI Researcher Internship, ICOMM Media & Tech., Jsc
+* Jan 2019 - Apr 2019, Web Developer and AI Researcher Internship, [ICOMM Media & Tech., Jsc](https://icomm.vn/)
 
 
 Key Skills
 ======
 
 * Programming Language: Python, PyTorch, Tensorflow Framework
-* Programming Skill: Basic knowledge of the data structures and algorithms
+* Programming Skill: Advanced knowledge of the data structures and algorithms
 * Web Based Language: HTML, CSS, JavaScript
-* Services: Docker, Git, Kafka Consumer, Kafka Producer, Flask API
+* Services: Docker, Git, Kafka Consumer, Kafka Producer, Flask API, TF serving
 * DBMS: PostgreSQL, MongoDB
 
 
