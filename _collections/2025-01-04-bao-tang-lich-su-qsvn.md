@@ -1,6 +1,6 @@
 ---
 title: 'Hiking - Bảo tàng lịch sử quân sự Việt Nam'
-excerpt: "<br/><img src='/images/mylife/2025/hiking-bao-tang-lich-su-qsvn/coverimage_.PNG'>"
+excerpt: "<br/><img src='/images/mylife/2025/hiking-bao-tang-lich-su-qsvn/cover.PNG'>"
 colllection: 
 type: "collections"
 venue: "Mùa đông, Hà Nội"
