@@ -39,7 +39,7 @@ Bảo tàng Lịch sử Quân sự Việt Nam là một trong các bảo tàng q
 <p style="text-align:center;"><b></b>Sân trước của khu nhà bảo tàng 4 tầng nổi</p>
 </p>
 
-Các viện trưng bày ngoài trời của bảo tàng bao gồm máy bay, xe tăng, pháo, ...
+Các hiện vật trưng bày ngoài trời của bảo tàng bao gồm máy bay, xe tăng, pháo, ...
 
 <p style="text-align:center;">
   <img src='/images/mylife/2025/hiking-bao-tang-lich-su-qsvn/IMG_1494.PNG'>
@@ -185,3 +185,31 @@ Các viện trưng bày ngoài trời của bảo tàng bao gồm máy bay, xe t
   <img src='/images/mylife/2025/hiking-bao-tang-lich-su-qsvn/IMG_1536.PNG'>
   <p style="text-align:center;"><b></b></p>
 </p> 
+
+Đối diện với bảo tàng, bên kia đường là khu đại đô thị Vinhome Smart City
+
+<p style="text-align:center;">
+<video controls>
+    <source src='/images/mylife/2025/hiking-bao-tang-lich-su-qsvn/IMG_0183.mp4' type='video/mp4'>
+</video>
+<p style="text-align:center;"><b></b>Cổng vào đại đô thị Vinhome Smart City</p>
+</p>
+
+<p style="text-align:center;">
+  <img src='/images/mylife/2025/hiking-bao-tang-lich-su-qsvn/IMG_1492.PNG'>
+  <p style="text-align:center;"><b></b>Các toà nhà cao tầng trong khu đô thị</p>
+</p> 
+
+<p style="text-align:center;">
+<video controls>
+    <source src='/images/mylife/2025/hiking-bao-tang-lich-su-qsvn/IMG_1545.mp4' type='video/mp4'>
+</video>
+<p style="text-align:center;"><b></b>Cư dân đi làm và đi học về khu đô thị</p>
+</p>
+
+<p style="text-align:center;">
+<video controls>
+    <source src='/images/mylife/2025/hiking-bao-tang-lich-su-qsvn/IMG_0266.mp4' type='video/mp4'>
+</video>
+<p style="text-align:center;"><b></b>Buổi tối rực đèn</p>
+</p>
