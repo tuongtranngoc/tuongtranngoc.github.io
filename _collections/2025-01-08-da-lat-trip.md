@@ -39,10 +39,6 @@ tags:
 <p style="text-align:center;"><b></b></p>
 </p>
 
-<p style="text-align:center;">
-  <img src='/images/mylife/2025/company-trip-da-lat/IMG_1671.PNG'>
-  <p style="text-align:center;"><b></b></p>
-</p> 
 
 <p style="text-align:center;">
   <img src='/images/mylife/2025/company-trip-da-lat/IMG_1672.PNG'>
@@ -53,13 +49,6 @@ tags:
   <img src='/images/mylife/2025/company-trip-da-lat/IMG_1674.PNG'>
   <p style="text-align:center;"><b></b></p>
 </p> 
-
-<p style="text-align:center;">
-<video controls>
-    <source src='/images/mylife/2025/company-trip-da-lat/IMG_1675.mp4' type='video/mp4'>
-</video>
-<p style="text-align:center;"><b></b></p>
-</p>
 
 <p style="text-align:center;">
 <video controls>
@@ -89,20 +78,8 @@ tags:
 </p>
 
 <p style="text-align:center;">
-  <img src='/images/mylife/2025/company-trip-da-lat/IMG_1706.PNG'>
-  <p style="text-align:center;"><b></b></p>
-</p>
-
-<p style="text-align:center;">
 <video controls>
     <source src='/images/mylife/2025/company-trip-da-lat/IMG_1708.mp4' type='video/mp4'>
-</video>
-<p style="text-align:center;"><b></b></p>
-</p>
-
-<p style="text-align:center;">
-<video controls>
-    <source src='/images/mylife/2025/company-trip-da-lat/IMG_1710.mp4' type='video/mp4'>
 </video>
 <p style="text-align:center;"><b></b></p>
 </p>
