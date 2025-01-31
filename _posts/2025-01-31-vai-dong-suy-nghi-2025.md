@@ -35,7 +35,7 @@ Nay đã là mùng 3 Tết Ất Tỵ 2025, mình có rảnh một hôm (trước
 >+ Vạn lần nhắc nhở bản thân rằng luôn luôn chăm chỉ, tận tâm trong mọi việc. Duy trì thói quen chạy bộ hằng ngày là cách nâng cao sức khỏe cả về thể chất lẫn tâm hồn, suy nghĩ kỹ trước khi đưa ra quyết định vì mọi sự ngu dốt đều phải giá bằng tiền, luôn học tập chăm chỉ là cách nâng cao giá trị của bản thân.
 
 
- <p align='center'>
+ <p style="text-align:center;">
     <b>Bye 2024</b>
     <br>
     <b>Một năm 2025 trở thành phiên bản tốt hơn !!!</b>
