@@ -1,5 +1,5 @@
 ---
-title: 'Chông chênh tuổi 28 - 2025'
+title: 'Chông chênh tuổi 28'
 date: 2025-04-25
 permalink: /posts/2025/chong_chenh_tuoi_28/
 tags:
