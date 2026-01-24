@@ -4,16 +4,233 @@ title: "Talk about my journeys"
 permalink: /collections/
 author_profile: true
 redirect_from:
-  - /wordpress/collections/
+- /wordpress/collections/
 ---
 
 {% include base_path %}
-{% capture written_year %}'None'{% endcapture %}
-{% for post in site.collections reversed %}
+
+<div id="collections-container">
+  {% capture written_year %}'None'{% endcapture %}
+  {% for post in site.collections reversed %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-  {% if year != written_year %}
-    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
+  <div class="collection-item" data-year="{{ year }}">
+    {% if year != written_year %}
+    <h2 id="{{ year | slugify }}" class="archive__subtitle year-header" data-year="{{ year }}">{{ year }}</h2>
     {% capture written_year %}{{ year }}{% endcapture %}
-  {% endif %}
-  {% include archive-single.html %}
-{% endfor %}
+    {% endif %}
+    {% include archive-single.html %}
+  </div>
+  {% endfor %}
+</div>
+
+<nav class="pagination" id="pagination-nav" style="display: none;">
+  <ul id="pagination-list">
+  </ul>
+</nav>
+
+<style>
+  .collection-item {
+    display: none;
+  }
+
+  .collection-item.visible {
+    display: block;
+  }
+
+  .pagination {
+    margin-top: 2em;
+    text-align: center;
+  }
+
+  .pagination ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+
+  .pagination li a,
+  .pagination li span {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    background: #fff;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .pagination li a:hover {
+    background: #f5f5f5;
+    border-color: #999;
+  }
+
+  .pagination li a.current {
+    background: #494e52;
+    color: #fff;
+    border-color: #494e52;
+    cursor: default;
+  }
+
+  .pagination li a.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .pagination li a.ellipsis {
+    border: none;
+    background: transparent;
+    cursor: default;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const itemsPerPage = 5;
+    const container = document.getElementById('collections-container');
+    const items = container.querySelectorAll('.collection-item');
+    const paginationNav = document.getElementById('pagination-nav');
+    const paginationList = document.getElementById('pagination-list');
+
+    const totalItems = items.length;
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+    if (totalPages <= 1) {
+      // Show all items if only one page
+      items.forEach(item => item.classList.add('visible'));
+      return;
+    }
+
+    let currentPage = 1;
+
+    function showPage(page) {
+      currentPage = page;
+      const start = (page - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+
+      // Track which years we've shown headers for on this page
+      const yearsShown = new Set();
+
+      // First, hide all items and year headers
+      items.forEach((item, index) => {
+        item.classList.remove('visible');
+        const yearHeader = item.querySelector('.year-header');
+        if (yearHeader) {
+          yearHeader.style.display = 'none';
+        }
+      });
+
+      // Show items for current page
+      items.forEach((item, index) => {
+        if (index >= start && index < end) {
+          item.classList.add('visible');
+          const year = item.dataset.year;
+          const yearHeader = item.querySelector('.year-header');
+
+          // Show year header only for the first item of each year on this page
+          if (yearHeader && !yearsShown.has(year)) {
+            yearHeader.style.display = 'block';
+            yearsShown.add(year);
+          }
+        }
+      });
+
+      renderPagination();
+
+      // Scroll to top of container
+      container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function renderPagination() {
+      paginationList.innerHTML = '';
+
+      // Previous button
+      const prevLi = document.createElement('li');
+      const prevLink = document.createElement('a');
+      prevLink.textContent = 'Previous';
+      if (currentPage === 1) {
+        prevLink.classList.add('disabled');
+      } else {
+        prevLink.addEventListener('click', () => showPage(currentPage - 1));
+      }
+      prevLi.appendChild(prevLink);
+      paginationList.appendChild(prevLi);
+
+      // Page numbers with ellipsis
+      const maxVisiblePages = 5;
+      let startPage = Math.max(1, currentPage - 2);
+      let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+      if (endPage - startPage < maxVisiblePages - 1) {
+        startPage = Math.max(1, endPage - maxVisiblePages + 1);
+      }
+
+      // First page
+      if (startPage > 1) {
+        addPageLink(1);
+        if (startPage > 2) {
+          addEllipsis();
+        }
+      }
+
+      // Middle pages
+      for (let i = startPage; i <= endPage; i++) {
+        addPageLink(i);
+      }
+
+      // Last page
+      if (endPage < totalPages) {
+        if (endPage < totalPages - 1) {
+          addEllipsis();
+        }
+        addPageLink(totalPages);
+      }
+
+      // Next button
+      const nextLi = document.createElement('li');
+      const nextLink = document.createElement('a');
+      nextLink.textContent = 'Next';
+      if (currentPage === totalPages) {
+        nextLink.classList.add('disabled');
+      } else {
+        nextLink.addEventListener('click', () => showPage(currentPage + 1));
+      }
+      nextLi.appendChild(nextLink);
+      paginationList.appendChild(nextLi);
+
+      paginationNav.style.display = 'block';
+    }
+
+    function addPageLink(pageNum) {
+      const li = document.createElement('li');
+      const link = document.createElement('a');
+      link.textContent = pageNum;
+      if (pageNum === currentPage) {
+        link.classList.add('current');
+      } else {
+        link.addEventListener('click', () => showPage(pageNum));
+      }
+      li.appendChild(link);
+      paginationList.appendChild(li);
+    }
+
+    function addEllipsis() {
+      const li = document.createElement('li');
+      const span = document.createElement('a');
+      span.textContent = '…';
+      span.classList.add('ellipsis');
+      li.appendChild(span);
+      paginationList.appendChild(li);
+    }
+
+    // Initialize first page
+    showPage(1);
+  });
+</script>
