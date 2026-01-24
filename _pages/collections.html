@@ -3,70 +3,14 @@ layout: archive
 title: "Talk about my journeys"
 permalink: /collections/
 author_profile: true
-redirect_from:
-  - /wordpress/collections/
+pagination:
+  enabled: true
+  collection: collections
+  permalink: /page:num/
 ---
 
----
-layout: archive
-title: "Talk about my journeys"
-permalink: /collections/
-author_profile: true
-redirect_from:
-  - /wordpress/collections/
----
+{% for post in paginator.posts %}
+  {% include archive-single.html %}
+{% endfor %}
 
-{% include base_path %}
-
-<div id="collection-container">
-  {% capture written_blog %}'None'{% endcapture %}
-  {% for post in site.collections reversed %}
-    <div class="collection-item" style="display: none;">
-      {% capture blog %}{{ post.date | date: '%Y' }}{% endcapture %}
-      {% if blog != written_blog %}
-        <h2 id="{{ blog | slugify }}" class="archive__subtitle">{{ blog }}</h2>
-        {% capture written_blog %}{{ blog }}{% endcapture %}
-      {% endif %}
-      {% include archive-single.html %}
-    </div>
-  {% endfor %}
-</div>
-
-<button id="load-more">Load More</button>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var container = document.getElementById("collection-container");
-    var items = container.getElementsByClassName("collection-item");
-    var loadMoreButton = document.getElementById("load-more");
-    var initialItems = 5;
-    var itemsToShow = 5;
-
-    for (var i = 0; i < initialItems && i < items.length; i++) {
-      items[i].style.display = "block";
-    }
-
-    if (items.length <= initialItems) {
-      loadMoreButton.style.display = "none";
-    }
-
-    loadMoreButton.addEventListener("click", function() {
-      var currentlyShown = 0;
-      for (var i = 0; i < items.length; i++) {
-        if (items[i].style.display === "block") {
-          currentlyShown++;
-        }
-      }
-
-      var newlyShown = 0;
-      for (var i = currentlyShown; i < items.length && newlyShown < itemsToShow; i++) {
-        items[i].style.display = "block";
-        newlyShown++;
-      }
-
-      if (currentlyShown + newlyShown >= items.length) {
-        loadMoreButton.style.display = "none";
-      }
-    });
-  });
-</script>
+{% include paginator.html %}
