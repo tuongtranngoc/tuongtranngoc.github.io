@@ -27,4 +27,5 @@ group :jekyll_plugins do
   gem 'jekyll-paginate-v2'
   gem 'jekyll-gist'
   gem 'jekyll-redirect-from'
+  gem 'kramdown-parser-gfm'
 end
