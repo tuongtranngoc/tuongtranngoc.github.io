@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 {% capture written_blog %}'None'{% endcapture %}
-{% for post in site.posts %}
+{% for post in paginator.posts %}
   {% capture blog %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% if blog != written_blog %}
     <h2 id="{{ blog | slugify }}" class="archive__subtitle">{{ blog }}</h2>
@@ -17,3 +17,5 @@ redirect_from:
   {% endif %}
   {% include archive-single.html %}
 {% endfor %}
+
+{% include paginator.html %}
