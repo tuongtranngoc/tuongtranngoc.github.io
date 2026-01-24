@@ -2,13 +2,16 @@
 layout: archive
 title: "Blog posts"
 author_profile: true
-pagination:
-  enabled: true
-  collection: posts
-  permalink: /blog/page:num/
 ---
 
+{% include base_path %}
+{% capture written_blog %}'None'{% endcapture %}
 {% for post in paginator.posts %}
+  {% capture blog %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% if blog != written_blog %}
+    <h2 id="{{ blog | slugify }}" class="archive__subtitle">{{ blog }}</h2>
+    {% capture written_blog %}{{ blog }}{% endcapture %}
+  {% endif %}
   {% include archive-single.html %}
 {% endfor %}
 

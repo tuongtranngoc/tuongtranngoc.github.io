@@ -3,14 +3,17 @@ layout: archive
 title: "Talk about my journeys"
 permalink: /collections/
 author_profile: true
-pagination:
-  enabled: true
-  collection: collections
-  permalink: /collections/page:num/
+redirect_from:
+  - /wordpress/collections/
 ---
 
-{% for post in paginator.posts %}
+{% include base_path %}
+{% capture written_blog %}'None'{% endcapture %}
+{% for post in site.collections reversed %}
+  {% capture blog %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% if blog != written_blog %}
+    <h2 id="{{ blog | slugify }}" class="archive__subtitle">{{ blog }}</h2>
+    {% capture written_blog %}{{ blog }}{% endcapture %}
+  {% endif %}
   {% include archive-single.html %}
 {% endfor %}
-
-{% include paginator.html %}
