@@ -1,11 +1,9 @@
 ---
 title: 'Company Trip - Đà Lạt'
 excerpt: "<br/><img src='/images/mylife/2025/company-trip-da-lat/cover.PNG'>"
-colllection: 
-type: "collections"
+collection: journeys
 venue: "Mùa đông, Hà Nội"
 date: 2025-01-08
-permalink: /collections/2024-01-08-da-lat-trip/
 tags:
   - Travel
 ---

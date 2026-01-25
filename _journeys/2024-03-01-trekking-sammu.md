@@ -1,11 +1,9 @@
 ---
-title: "Trekking - SAMU, Bắc Yên, Sơn La"
-colllection: reading
+title: "Trekking - SAMMU, Bắc Yên, Sơn La"
 excerpt: "Sự bỏ lỡ đáng tiếc <br/><img src='/images/mylife/trekking-samu/IMG_4675_excerpt.jpg'>"
-type: "collections"
+collection: journeys
 venue: "Mùa Xuân, Hà Nội"
 date: 2024-03-01
-permalink: /collections/2024-03-01-trekking-samu/
 tags:
   - Travel
   - Treeking

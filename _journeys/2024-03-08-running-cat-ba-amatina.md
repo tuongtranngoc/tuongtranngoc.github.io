@@ -1,11 +1,9 @@
 ---
 title: 'Running - Fastest X Cat Ba Amatina 2024'
-colllection: reading
 excerpt: "Hoàn thành half-marathon đầu tiên <br/><img src='/images/mylife/running-cat-ba-2024/IMG_4883_excerpt.PNG'>"
-type: "collections"
+collection: journeys
 venue: "Mùa xuân, Hà Nội"
 date: 2024-03-08
-permalink: /collections/2024-03-08-running-cat-ba-amatina/
 tags:
   - Travel
   - Running

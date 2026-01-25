@@ -9,172 +9,24 @@ redirect_from:
 
 {% include base_path %}
 
-<div id="journeys-container">
-  {% assign journey_docs = site.journeys | sort: "date" | reverse %}
-  {% for post in journey_docs %}
+---
+layout: archive
+title: "Talk about my journeys"
+permalink: /journeys/
+author_profile: true
+redirect_from:
+- /wordpress/collections/
+---
+
+{% include base_path %}
+
+{% capture written_year %}'None'{% endcapture %}
+{% assign journey_docs = site.journeys | sort: "date" | reverse %}
+{% for post in journey_docs %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-  <div class="journey-item" data-year="{{ year }}">
-    {% if year != written_year %}
-    <h2 id="{{ year | slugify }}" class="archive__subtitle year-header" data-year="{{ year }}">{{ year }}</h2>
+  {% if year != written_year %}
+    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
     {% capture written_year %}{{ year }}{% endcapture %}
-    {% endif %}
-    {% include archive-single.html %}
-  </div>
-  {% endfor %}
-</div>
-
-<nav class="pagination" id="pagination-nav">
-  <ul id="pagination-list">
-  </ul>
-</nav>
-
-<style>
-  .journey-item {
-    display: none;
-  }
-  .journey-item.visible {
-    display: block;
-  }
-  .year-header {
-    display: none;
-  }
-</style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const itemsPerPage = 5;
-    const container = document.getElementById('journeys-container');
-    const items = container.querySelectorAll('.journey-item');
-    const paginationNav = document.getElementById('pagination-nav');
-    const paginationList = document.getElementById('pagination-list');
-
-    const totalItems = items.length;
-    const totalPages = Math.ceil(totalItems / itemsPerPage);
-
-    if (totalItems === 0) {
-      paginationNav.style.display = 'none';
-      return;
-    }
-
-    if (totalPages <= 1) {
-      // Show all items if only one page
-      items.forEach(item => item.classList.add('visible'));
-      paginationNav.style.display = 'none';
-      return;
-    }
-
-    let currentPage = 1;
-
-    function showPage(page) {
-      currentPage = page;
-      const start = (page - 1) * itemsPerPage;
-      const end = start + itemsPerPage;
-
-      const yearsShown = new Set();
-
-      items.forEach((item, index) => {
-        item.classList.remove('visible');
-        const yearHeader = item.querySelector('.year-header');
-        if (yearHeader) {
-          yearHeader.style.display = 'none';
-        }
-      });
-
-      items.forEach((item, index) => {
-        if (index >= start && index < end) {
-          item.classList.add('visible');
-          const year = item.dataset.year;
-          const yearHeader = item.querySelector('.year-header');
-          if (yearHeader && !yearsShown.has(year)) {
-            yearHeader.style.display = 'block';
-            yearsShown.add(year);
-          }
-        }
-      });
-
-      renderPagination();
-      container.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-
-    function renderPagination() {
-      paginationList.innerHTML = '';
-
-      // Previous button
-      const prevLi = document.createElement('li');
-      const prevLink = document.createElement('a');
-      prevLink.textContent = 'Previous';
-      if (currentPage === 1) {
-        prevLink.classList.add('disabled');
-      } else {
-        prevLink.addEventListener('click', (e) => { e.preventDefault(); showPage(currentPage - 1); });
-      }
-      prevLi.appendChild(prevLink);
-      paginationList.appendChild(prevLi);
-
-      const maxVisiblePages = 5;
-      let startPage = Math.max(1, currentPage - 2);
-      let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
-
-      if (endPage - startPage < maxVisiblePages - 1) {
-        startPage = Math.max(1, endPage - maxVisiblePages + 1);
-      }
-
-      if (startPage > 1) {
-        addPageLink(1);
-        if (startPage > 2) {
-          addEllipsis();
-        }
-      }
-
-      for (let i = startPage; i <= endPage; i++) {
-        addPageLink(i);
-      }
-
-      if (endPage < totalPages) {
-        if (endPage < totalPages - 1) {
-          addEllipsis();
-        }
-        addPageLink(totalPages);
-      }
-
-      // Next button
-      const nextLi = document.createElement('li');
-      const nextLink = document.createElement('a');
-      nextLink.textContent = 'Next';
-      if (currentPage === totalPages) {
-        nextLink.classList.add('disabled');
-      } else {
-        nextLink.addEventListener('click', (e) => { e.preventDefault(); showPage(currentPage + 1); });
-      }
-      nextLi.appendChild(nextLink);
-      paginationList.appendChild(nextLi);
-    }
-
-    function addPageLink(pageNum) {
-      const li = document.createElement('li');
-      const link = document.createElement('a');
-      link.href = '#';
-      link.textContent = pageNum;
-      if (pageNum === currentPage) {
-        link.classList.add('current');
-        link.classList.add('disabled');
-      } else {
-        link.addEventListener('click', (e) => { e.preventDefault(); showPage(pageNum); });
-      }
-      li.appendChild(link);
-      paginationList.appendChild(li);
-    }
-
-    function addEllipsis() {
-      const li = document.createElement('li');
-      const span = document.createElement('a');
-      span.href = '#';
-      span.classList.add('disabled');
-      span.innerHTML = '&hellip;';
-      li.appendChild(span);
-      paginationList.appendChild(li);
-    }
-
-    showPage(1);
-  });
-</script>
+  {% endif %}
+  {% include archive-single.html %}
+{% endfor %}

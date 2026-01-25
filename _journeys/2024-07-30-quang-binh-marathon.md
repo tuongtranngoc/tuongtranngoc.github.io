@@ -1,11 +1,9 @@
 ---
 title: 'Running - Quảng Bình International Marathon 2024'
 excerpt: "Bản thân chưa thực sự có sự chuẩn bị tốt <br/><img src='/images/mylife/running-quang-binh-2024/cau_nhat_le_2-2_excerpt.jpg'>"
-colllection: reading
-type: "collections"
+collection: journeys
 venue: "Mùa hạ, Hà Nội"
 date: 2024-07-30
-permalink: /collections/2024-07-30-running-quang-binh/
 tags:
   - Travel
   - Running

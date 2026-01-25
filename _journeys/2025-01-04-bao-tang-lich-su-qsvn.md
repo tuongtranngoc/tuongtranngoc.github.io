@@ -1,11 +1,9 @@
 ---
 title: 'Hiking - Bảo tàng lịch sử quân sự Việt Nam'
 excerpt: "<br/><img src='/images/mylife/2025/hiking-bao-tang-lich-su-qsvn/cover.PNG'>"
-colllection: 
-type: "collections"
+collection: journeys
 venue: "Mùa đông, Hà Nội"
 date: 2025-01-04
-permalink: /collections/2024-01-04-hiking-bao-tang-lich-qsvn/
 tags:
   - Travel
   - Running

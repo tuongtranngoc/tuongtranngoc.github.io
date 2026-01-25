@@ -1,11 +1,9 @@
 ---
 title: 'Trekking - Tà Chì Nhù, Yên Bái'
-colllection: reading
 excerpt: "Lần đầu leo núi <br/><img src='/images/mylife/trekking-ta-chi-nhu/IMG_3014_excerpt.jpg'>"
-type: "collections"
+collection: journeys
 venue: "Mùa thu, Hà Nội"
 date: 2023-09-23
-permalink: /collections/2023-09-23-trekking-ta-chi-nhu/
 tags:
   - Travel
   - Treeking

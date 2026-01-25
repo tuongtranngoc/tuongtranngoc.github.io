@@ -1,11 +1,9 @@
 ---
 title: 'Travel - Hạ Long, Bình Liêu, Quảng Ninh - Tà Xùa, Bắc Yên, Sơn La'
 excerpt: "Một chuyến phượt dài hơi nhất <br/><img src='/images/mylife/travel-ha-long-2022/IMG_1168_excerpt.PNG'>"
-colllection: reading
-type: "collections"
+collection: journeys
 venue: "Mùa hạ, Hà Nội"
 date: 2022-03-22
-permalink: /collections/2022-03-22-travel-ha-long/
 tags:
   - Travel
 ---
