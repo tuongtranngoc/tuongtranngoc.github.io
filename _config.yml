@@ -177,7 +177,7 @@ collections:
   reading:
     output: true
     permalink: /:collection/:path/
-  collections:
+  journeys:
     output: true
     permalink: /:collection/:path/
 
@@ -212,10 +212,10 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _collections
+  # _journeys
   - scope:
       path: ""
-      type: collections
+      type: journeys
     values:
       layout: single
       author_profile: true

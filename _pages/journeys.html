@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Talk about my journeys"
-permalink: /collections/
+permalink: /journeys/
 author_profile: true
 redirect_from:
 - /wordpress/collections/
@@ -9,22 +9,17 @@ redirect_from:
 
 {% include base_path %}
 
-<div id="collections-container">
-  {% capture written_year %}'None'{% endcapture %}
-  {% for collection in site.collections %}
-  {% if collection.label == "collections" %}
-  {% assign collection_docs = collection.docs | sort: "date" | reverse %}
-  {% for post in collection_docs %}
+<div id="journeys-container">
+  {% assign journey_docs = site.journeys | sort: "date" | reverse %}
+  {% for post in journey_docs %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-  <div class="collection-item" data-year="{{ year }}">
+  <div class="journey-item" data-year="{{ year }}">
     {% if year != written_year %}
     <h2 id="{{ year | slugify }}" class="archive__subtitle year-header" data-year="{{ year }}">{{ year }}</h2>
     {% capture written_year %}{{ year }}{% endcapture %}
     {% endif %}
     {% include archive-single.html %}
   </div>
-  {% endfor %}
-  {% endif %}
   {% endfor %}
 </div>
 
@@ -34,10 +29,10 @@ redirect_from:
 </nav>
 
 <style>
-  .collection-item {
+  .journey-item {
     display: none;
   }
-  .collection-item.visible {
+  .journey-item.visible {
     display: block;
   }
   .year-header {
@@ -48,8 +43,8 @@ redirect_from:
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const itemsPerPage = 5;
-    const container = document.getElementById('collections-container');
-    const items = container.querySelectorAll('.collection-item');
+    const container = document.getElementById('journeys-container');
+    const items = container.querySelectorAll('.journey-item');
     const paginationNav = document.getElementById('pagination-nav');
     const paginationList = document.getElementById('pagination-list');
 

@@ -6,8 +6,7 @@ main:
   - title: "Reading"
     url: /reading/ 
 
-  - title: "Collections"
-    url: /collections/    
-    
+  - title: "Journeys"
+    url: /journeys/
   - title: "CV"
     url: /cv/
