@@ -1,12 +1,12 @@
 {% assign base_path = site.baseurl %}
 {% if paginator.total_pages > 1 %}
-<nav class="pagination">
+<nav class="pagination" aria-label="Pagination">
   <ul>
     {% comment %} Link for previous page {% endcomment %}
     {% if paginator.previous_page %}
-      <li><a href="{{ paginator.previous_page_path | prepend: base_path }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a></li>
+      <li><a href="{{ paginator.previous_page_path | prepend: base_path }}" class="pagination__prev">&laquo; Prev</a></li>
     {% else %}
-      <li><a href="#" class="disabled"><span aria-hidden="true">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</span></a></li>
+      <li><a href="#" class="pagination__prev disabled">&laquo; Prev</a></li>
     {% endif %}
 
     {% comment %} First page {% endcomment %}
@@ -19,7 +19,7 @@
     {% assign page_start = 2 %}
     {% if paginator.page > 4 %}
       {% assign page_start = paginator.page | minus: 2 %}
-      <li><a href="#" class="disabled">&hellip;</a></li>
+      <li><a href="#" class="disabled pagination__ellipsis">&hellip;</a></li>
     {% endif %}
 
     {% assign page_end = paginator.total_pages | minus: 1 %}
@@ -37,7 +37,7 @@
     {% endfor %}
 
     {% if pages_to_end > 3 %}
-      <li><a href="#" class="disabled">&hellip;</a></li>
+      <li><a href="#" class="disabled pagination__ellipsis">&hellip;</a></li>
     {% endif %}
 
     {% if paginator.page == paginator.total_pages %}
@@ -48,9 +48,9 @@
 
     {% comment %} Link next page {% endcomment %}
     {% if paginator.next_page %}
-      <li><a href="{{ paginator.next_page_path | prepend: base_path }}">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a></li>
+      <li><a href="{{ paginator.next_page_path | prepend: base_path }}" class="pagination__next">Next &raquo;</a></li>
     {% else %}
-      <li><a href="#" class="disabled"><span aria-hidden="true">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</span></a></li>
+      <li><a href="#" class="pagination__next disabled">Next &raquo;</a></li>
     {% endif %}
   </ul>
 </nav>

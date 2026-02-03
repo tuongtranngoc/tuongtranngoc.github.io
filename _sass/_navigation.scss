@@ -59,65 +59,83 @@
 .pagination {
   @include full();
   @include clearfix();
-  margin-top: 1em;
-  padding-top: 1em;
+  margin-top: 1.5em;
+  padding-top: 1.5em;
 
   ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
     font-family: $sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.35em;
+    flex-wrap: wrap;
   }
 
   li {
-    display: block;
-    float: left;
-    margin-left: -1px;
+    display: inline-block;
 
     a {
-      margin-bottom: 0.25em;
-      padding: 0.5em 1em;
+      display: inline-block;
+      min-width: 2.2em;
+      padding: 0.45em 0.75em;
       font-family: $sans-serif;
       font-size: 14px;
-      font-weight: bold;
+      font-weight: 500;
       line-height: 1.5;
       text-align: center;
       text-decoration: none;
-      color: mix(#fff, $gray, 25%);
+      color: mix(#fff, $gray, 10%);
+      background: #fff;
       border: 1px solid $light-gray;
-      border-radius: 0;
+      border-radius: 6px;
+      transition: all 0.2s ease;
 
       &:hover {
-        color: $link-color-hover;
+        background: mix(#fff, $primary-color, 90%);
+        border-color: mix(#fff, $primary-color, 60%);
+        color: $primary-color;
       }
 
       &.current {
         color: #fff;
         background: $primary-color;
+        border-color: $primary-color;
+        font-weight: 700;
+        box-shadow: 0 2px 4px rgba($primary-color, 0.3);
       }
 
       &.disabled {
-        color: mix(#fff, $gray, 75%);
+        color: mix(#fff, $gray, 70%);
         pointer-events: none;
         cursor: not-allowed;
+        background: mix(#fff, $light-gray, 50%);
+      }
+
+      &.current.disabled {
+        pointer-events: none;
+        color: #fff;
+        background: $primary-color;
       }
     }
+  }
 
-    &:first-child {
-      margin-left: 0;
+  &__prev,
+  &__next {
+    padding: 0.45em 1em !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em;
+  }
 
-      a {
-        border-top-left-radius: $border-radius;
-        border-bottom-left-radius: $border-radius;
-      }
-    }
-
-    &:last-child {
-      a {
-        border-top-right-radius: $border-radius;
-        border-bottom-right-radius: $border-radius;
-      }
-    }
+  &__ellipsis {
+    border: none !important;
+    background: transparent !important;
+    cursor: default !important;
+    min-width: auto !important;
+    padding: 0.45em 0.25em !important;
+    color: mix(#fff, $gray, 40%) !important;
   }
 
   /* next/previous buttons */
