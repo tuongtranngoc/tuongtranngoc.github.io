@@ -1,6 +1,6 @@
 ---
 title: "Trekking - Lảo Thẩn, Lào Cai"
-colllection: reading
+collection: reading
 excerpt: "Đẹp đến lảo đảo, thẩn thơ <br/><img src='/images/mylife/trekking-lao-than/IMG_7105_excerpt.jpg'>"
 type: "collections"
 venue: "Mùa đông, Hà Nội"

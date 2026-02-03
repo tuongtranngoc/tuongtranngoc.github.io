@@ -1,6 +1,6 @@
 ---
 title: 'Trekking - Tà Chì Nhù, Yên Bái'
-colllection: reading
+collection: reading
 excerpt: "Lần đầu leo núi <br/><img src='/images/mylife/trekking-ta-chi-nhu/IMG_3014_excerpt.jpg'>"
 type: "collections"
 venue: "Mùa thu, Hà Nội"

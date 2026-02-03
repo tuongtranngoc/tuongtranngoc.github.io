@@ -1,6 +1,6 @@
 ---
 title: "Trekking - SAMU, Bắc Yên, Sơn La"
-colllection: reading
+collection: reading
 excerpt: "Sự bỏ lỡ đáng tiếc <br/><img src='/images/mylife/trekking-samu/IMG_4675_excerpt.jpg'>"
 type: "collections"
 venue: "Mùa Xuân, Hà Nội"

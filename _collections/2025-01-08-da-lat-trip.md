@@ -1,7 +1,7 @@
 ---
 title: 'Company Trip - Đà Lạt'
 excerpt: "<br/><img src='/images/mylife/2025/company-trip-da-lat/cover.PNG'>"
-colllection: 
+collection: reading
 type: "collections"
 venue: "Mùa đông, Hà Nội"
 date: 2025-01-08

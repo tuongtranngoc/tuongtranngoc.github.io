@@ -1,0 +1,45 @@
+{% assign excerpt_content = post.excerpt %}
+{% assign img_start = excerpt_content | split: "src='" %}
+{% if img_start.size > 1 %}
+  {% assign img_url = img_start[1] | split: "'" | first %}
+{% else %}
+  {% assign img_start2 = excerpt_content | split: 'src="' %}
+  {% if img_start2.size > 1 %}
+    {% assign img_url = img_start2[1] | split: '"' | first %}
+  {% else %}
+    {% assign img_url = "" %}
+  {% endif %}
+{% endif %}
+
+{% assign tag_list = "" %}
+{% for tag in post.tags %}
+  {% if forloop.first %}
+    {% assign tag_list = tag %}
+  {% else %}
+    {% assign tag_list = tag_list | append: "," | append: tag %}
+  {% endif %}
+{% endfor %}
+
+<div class="collection-card" data-tags="{{ tag_list }}">
+  <a href="{{ post.permalink | prepend: site.baseurl }}">
+    {% if img_url != "" %}
+    <div class="collection-card__image">
+      <img src="{{ img_url }}" alt="{{ post.title }}" loading="lazy">
+    </div>
+    {% endif %}
+    <div class="collection-card__body">
+      <h3 class="collection-card__title">{{ post.title }}</h3>
+      <span class="collection-card__date">{{ post.date | date: "%B %Y" }}</span>
+      {% if post.venue %}
+      <span class="collection-card__venue">{{ post.venue }}</span>
+      {% endif %}
+      {% if post.tags.size > 0 %}
+      <div class="collection-card__tags">
+        {% for tag in post.tags %}
+        <span class="tag-badge">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </a>
+</div>
