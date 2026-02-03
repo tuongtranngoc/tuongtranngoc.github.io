@@ -6,12 +6,124 @@ author_profile: true
 ---
 
 {% include base_path %}
+
+{% assign per_page = 5 %}
+{% assign reading_posts = site.reading | reverse %}
+
 {% capture written_year %}'None'{% endcapture %}
-{% for post in site.reading reversed %}
+{% assign index = 0 %}
+{% for post in reading_posts %}
+  {% assign page_num = index | divided_by: per_page | plus: 1 %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% if year != written_year %}
-    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
+    <h2 id="{{ year | slugify }}" class="archive__subtitle" data-page="{{ page_num }}">{{ year }}</h2>
     {% capture written_year %}{{ year }}{% endcapture %}
   {% endif %}
-  {% include archive-single.html %}
+  <div class="reading-item" data-page="{{ page_num }}">
+    {% include archive-single.html %}
+  </div>
+  {% assign index = index | plus: 1 %}
 {% endfor %}
+
+{% assign total_items = site.reading | size %}
+{% assign total_pages = total_items | divided_by: per_page %}
+{% assign remainder = total_items | modulo: per_page %}
+{% if remainder > 0 %}
+  {% assign total_pages = total_pages | plus: 1 %}
+{% endif %}
+
+{% if total_pages > 1 %}
+<nav class="pagination" aria-label="Pagination" id="reading-pagination">
+  <ul>
+    <li><a href="#" class="pagination__prev disabled" id="pagination-prev">&laquo; Prev</a></li>
+
+    {% for i in (1..total_pages) %}
+      <li>
+        <a href="#" class="pagination__page{% if i == 1 %} disabled current{% endif %}" data-page="{{ i }}">{{ i }}</a>
+      </li>
+    {% endfor %}
+
+    <li><a href="#" class="pagination__next{% if total_pages == 1 %} disabled{% endif %}" id="pagination-next">Next &raquo;</a></li>
+  </ul>
+</nav>
+{% endif %}
+
+<script>
+(function() {
+  var currentPage = 1;
+  var totalPages = {{ total_pages }};
+
+  function showPage(page) {
+    currentPage = page;
+
+    // Show/hide reading items
+    var items = document.querySelectorAll('.reading-item');
+    items.forEach(function(item) {
+      item.style.display = parseInt(item.getAttribute('data-page')) === page ? '' : 'none';
+    });
+
+    // Show/hide year subtitles - show if any item on that page shares the year
+    var subtitles = document.querySelectorAll('.archive__subtitle[data-page]');
+    subtitles.forEach(function(subtitle) {
+      subtitle.style.display = parseInt(subtitle.getAttribute('data-page')) === page ? '' : 'none';
+    });
+
+    // Update pagination links
+    var pageLinks = document.querySelectorAll('.pagination__page');
+    pageLinks.forEach(function(link) {
+      var linkPage = parseInt(link.getAttribute('data-page'));
+      if (linkPage === page) {
+        link.classList.add('disabled', 'current');
+      } else {
+        link.classList.remove('disabled', 'current');
+      }
+    });
+
+    // Update prev/next
+    var prev = document.getElementById('pagination-prev');
+    var next = document.getElementById('pagination-next');
+    if (prev) {
+      if (page <= 1) {
+        prev.classList.add('disabled');
+        prev.removeAttribute('data-action');
+      } else {
+        prev.classList.remove('disabled');
+        prev.setAttribute('data-action', 'prev');
+      }
+    }
+    if (next) {
+      if (page >= totalPages) {
+        next.classList.add('disabled');
+        next.removeAttribute('data-action');
+      } else {
+        next.classList.remove('disabled');
+        next.setAttribute('data-action', 'next');
+      }
+    }
+
+    window.scrollTo(0, 0);
+  }
+
+  // Event delegation for pagination clicks
+  var pagination = document.getElementById('reading-pagination');
+  if (pagination) {
+    pagination.addEventListener('click', function(e) {
+      e.preventDefault();
+      var target = e.target;
+      if (target.tagName !== 'A') return;
+      if (target.classList.contains('disabled')) return;
+
+      if (target.classList.contains('pagination__page')) {
+        showPage(parseInt(target.getAttribute('data-page')));
+      } else if (target.id === 'pagination-prev') {
+        showPage(currentPage - 1);
+      } else if (target.id === 'pagination-next') {
+        showPage(currentPage + 1);
+      }
+    });
+  }
+
+  // Initialize: show page 1
+  showPage(1);
+})();
+</script>
