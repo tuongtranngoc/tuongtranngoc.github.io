@@ -180,6 +180,9 @@ collections:
   collections:
     output: true
     permalink: /:collection/:path/
+  journeys:
+    output: true
+    permalink: /:collection/:path/
 
 
 # Defaults
@@ -216,6 +219,17 @@ defaults:
   - scope:
       path: ""
       type: collections
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _journeys
+  - scope:
+      path: ""
+      type: journeys
     values:
       layout: single
       author_profile: true
