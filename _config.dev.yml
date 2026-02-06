@@ -9,5 +9,5 @@ comments:
   disqus:
     shortname: "mmistakes-dev"
 
-sass:
+sass: 
   style: expanded

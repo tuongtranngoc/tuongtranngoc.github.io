@@ -7,123 +7,82 @@ author_profile: true
 
 {% include base_path %}
 
-{% assign per_page = 5 %}
-{% assign reading_posts = site.reading | reverse %}
+<div id="collection-filters" class="collection-filters">
+  <button class="filter-btn active" data-tag="all">All</button>
+</div>
 
 {% capture written_year %}'None'{% endcapture %}
-{% assign index = 0 %}
-{% for post in reading_posts %}
-  {% assign page_num = index | divided_by: per_page | plus: 1 %}
+{% for post in site.reading reversed %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% if year != written_year %}
-    <h2 id="{{ year | slugify }}" class="archive__subtitle" data-page="{{ page_num }}">{{ year }}</h2>
+    {% if written_year != "'None'" %}
+      </div><!-- /.collection-grid -->
+    {% endif %}
+    <h2 id="{{ year | slugify }}" class="archive__subtitle collection-year-header">{{ year }}</h2>
+    <div class="collection-grid">
     {% capture written_year %}{{ year }}{% endcapture %}
   {% endif %}
-  <div class="reading-item" data-page="{{ page_num }}">
-    {% include archive-single.html %}
-  </div>
-  {% assign index = index | plus: 1 %}
+  {% include reading-card.html %}
 {% endfor %}
-
-{% assign total_items = site.reading | size %}
-{% assign total_pages = total_items | divided_by: per_page %}
-{% assign remainder = total_items | modulo: per_page %}
-{% if remainder > 0 %}
-  {% assign total_pages = total_pages | plus: 1 %}
-{% endif %}
-
-{% if total_pages > 1 %}
-<nav class="pagination" aria-label="Pagination" id="reading-pagination">
-  <ul>
-    <li><a href="#" class="pagination__prev disabled" id="pagination-prev">&laquo; Prev</a></li>
-
-    {% for i in (1..total_pages) %}
-      <li>
-        <a href="#" class="pagination__page{% if i == 1 %} disabled current{% endif %}" data-page="{{ i }}">{{ i }}</a>
-      </li>
-    {% endfor %}
-
-    <li><a href="#" class="pagination__next{% if total_pages == 1 %} disabled{% endif %}" id="pagination-next">Next &raquo;</a></li>
-  </ul>
-</nav>
+{% if site.reading.size > 0 %}
+  </div><!-- /.collection-grid -->
 {% endif %}
 
 <script>
 (function() {
-  var currentPage = 1;
-  var totalPages = {{ total_pages }};
-
-  function showPage(page) {
-    currentPage = page;
-
-    // Show/hide reading items
-    var items = document.querySelectorAll('.reading-item');
-    items.forEach(function(item) {
-      item.style.display = parseInt(item.getAttribute('data-page')) === page ? '' : 'none';
-    });
-
-    // Show/hide year subtitles - show if any item on that page shares the year
-    var subtitles = document.querySelectorAll('.archive__subtitle[data-page]');
-    subtitles.forEach(function(subtitle) {
-      subtitle.style.display = parseInt(subtitle.getAttribute('data-page')) === page ? '' : 'none';
-    });
-
-    // Update pagination links
-    var pageLinks = document.querySelectorAll('.pagination__page');
-    pageLinks.forEach(function(link) {
-      var linkPage = parseInt(link.getAttribute('data-page'));
-      if (linkPage === page) {
-        link.classList.add('disabled', 'current');
-      } else {
-        link.classList.remove('disabled', 'current');
-      }
-    });
-
-    // Update prev/next
-    var prev = document.getElementById('pagination-prev');
-    var next = document.getElementById('pagination-next');
-    if (prev) {
-      if (page <= 1) {
-        prev.classList.add('disabled');
-        prev.removeAttribute('data-action');
-      } else {
-        prev.classList.remove('disabled');
-        prev.setAttribute('data-action', 'prev');
-      }
+  // Collect all unique tags
+  var cards = document.querySelectorAll('.collection-card');
+  var tagSet = {};
+  cards.forEach(function(card) {
+    var tags = card.getAttribute('data-tags');
+    if (tags) {
+      tags.split(',').forEach(function(t) {
+        t = t.trim();
+        if (t) tagSet[t] = true;
+      });
     }
-    if (next) {
-      if (page >= totalPages) {
-        next.classList.add('disabled');
-        next.removeAttribute('data-action');
+  });
+
+  // Render filter buttons
+  var filterContainer = document.getElementById('collection-filters');
+  Object.keys(tagSet).sort().forEach(function(tag) {
+    var btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.setAttribute('data-tag', tag);
+    btn.textContent = tag;
+    filterContainer.appendChild(btn);
+  });
+
+  // Filter logic
+  filterContainer.addEventListener('click', function(e) {
+    if (!e.target.classList.contains('filter-btn')) return;
+    var selected = e.target.getAttribute('data-tag');
+
+    // Update active state
+    filterContainer.querySelectorAll('.filter-btn').forEach(function(b) {
+      b.classList.remove('active');
+    });
+    e.target.classList.add('active');
+
+    // Show/hide cards
+    cards.forEach(function(card) {
+      if (selected === 'all') {
+        card.style.display = '';
       } else {
-        next.classList.remove('disabled');
-        next.setAttribute('data-action', 'next');
-      }
-    }
-
-    window.scrollTo(0, 0);
-  }
-
-  // Event delegation for pagination clicks
-  var pagination = document.getElementById('reading-pagination');
-  if (pagination) {
-    pagination.addEventListener('click', function(e) {
-      e.preventDefault();
-      var target = e.target;
-      if (target.tagName !== 'A') return;
-      if (target.classList.contains('disabled')) return;
-
-      if (target.classList.contains('pagination__page')) {
-        showPage(parseInt(target.getAttribute('data-page')));
-      } else if (target.id === 'pagination-prev') {
-        showPage(currentPage - 1);
-      } else if (target.id === 'pagination-next') {
-        showPage(currentPage + 1);
+        var tags = card.getAttribute('data-tags').split(',').map(function(t){ return t.trim(); });
+        card.style.display = tags.indexOf(selected) >= 0 ? '' : 'none';
       }
     });
-  }
 
-  // Initialize: show page 1
-  showPage(1);
+    // Show/hide year headers based on whether any visible cards exist in that group
+    document.querySelectorAll('.collection-year-header').forEach(function(header) {
+      var grid = header.nextElementSibling;
+      if (grid && grid.classList.contains('collection-grid')) {
+        var visibleCards = grid.querySelectorAll('.collection-card:not([style*="display: none"])');
+        header.style.display = visibleCards.length > 0 ? '' : 'none';
+        grid.style.display = visibleCards.length > 0 ? '' : 'none';
+      }
+    });
+  });
 })();
 </script>
