@@ -9,7 +9,6 @@ author_profile: true
 
 <div class="cv-actions">
   <a href="{{ base_path }}/cv/cv.pdf" download class="btn btn--info btn--small">Download PDF</a>
-  <button id="cv-view-source" class="btn btn--success btn--small">View LaTeX Source</button>
 </div>
 
 <div class="cv-viewer">
@@ -30,21 +29,9 @@ author_profile: true
   </div>
 </div>
 
-<div class="cv-modal-overlay" id="cv-modal-overlay"></div>
-<div class="cv-modal" id="cv-modal">
-  <div class="cv-modal__header">
-    <span>cv.tex</span>
-    <button id="cv-modal-close">&times;</button>
-  </div>
-  <div class="cv-modal__body">
-    <pre><code id="cv-source-code" class="language-latex"></code></pre>
-  </div>
-</div>
-
 <script>
 (function() {
   var pdfUrl = '{{ base_path }}/cv/cv.pdf';
-  var texUrl = '{{ base_path }}/cv/cv.tex';
   var pdfDoc = null;
   var currentPage = 1;
   var currentScale = window.innerWidth < 600 ? 1.0 : 1.5;
@@ -97,44 +84,11 @@ author_profile: true
       });
     } else if (attempts > 30) {
       clearInterval(pollInterval);
-      // Fallback: replace canvas with object embed
       var container = document.getElementById('cv-canvas-container');
       container.innerHTML = '<object data="' + pdfUrl + '" type="application/pdf" width="100%" height="800px">' +
         '<p>PDF viewer unavailable. <a href="' + pdfUrl + '">Download the PDF</a>.</p></object>';
       pageInfo.textContent = 'Embedded view';
     }
   }, 100);
-
-  // LaTeX source modal
-  var modal = document.getElementById('cv-modal');
-  var overlay = document.getElementById('cv-modal-overlay');
-  var sourceCode = document.getElementById('cv-source-code');
-  var fetched = false;
-
-  function openModal() {
-    if (!fetched) {
-      fetch(texUrl).then(function(r) { return r.text(); }).then(function(text) {
-        sourceCode.textContent = text;
-        fetched = true;
-        if (typeof Prism !== 'undefined') Prism.highlightElement(sourceCode);
-      }).catch(function() {
-        sourceCode.textContent = 'Failed to load source file.';
-      });
-    }
-    modal.style.display = 'block';
-    overlay.style.display = 'block';
-  }
-
-  function closeModal() {
-    modal.style.display = 'none';
-    overlay.style.display = 'none';
-  }
-
-  document.getElementById('cv-view-source').addEventListener('click', openModal);
-  document.getElementById('cv-modal-close').addEventListener('click', closeModal);
-  overlay.addEventListener('click', closeModal);
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeModal();
-  });
 })();
 </script>
