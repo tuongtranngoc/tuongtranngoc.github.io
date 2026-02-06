@@ -88,7 +88,7 @@
       text-align: center;
       text-decoration: none;
       color: mix(#fff, $gray, 10%);
-      background: #fff;
+      background: var(--color-card-bg);
       border: 1px solid $light-gray;
       border-radius: 6px;
       transition: all 0.2s ease;
@@ -193,7 +193,7 @@
 .greedy-nav {
   position: relative;
   min-width: 250px;
-  background: $background-color;
+  background: var(--color-bg);
 
   a {
     display: block;
@@ -273,9 +273,9 @@
     right: 0;
     margin-top: 15px;
     padding: 5px;
-    border: 1px solid $border-color;
+    border: 1px solid var(--color-border);
     border-radius: $border-radius;
-    background: #fff;
+    background: var(--color-nav-dropdown-bg);
     box-shadow: 0 0 10px rgba(#000, 0.25);
 
     a {
@@ -310,7 +310,7 @@
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: #fff transparent;
+      border-color: var(--color-nav-dropdown-bg) transparent;
       display: block;
       z-index: 1;
     }
@@ -392,8 +392,8 @@
   color: $gray;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background-color: #fff;
-  border: 1px solid $border-color;
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   border-radius: $border-radius;
   box-shadow: $box-shadow;
 

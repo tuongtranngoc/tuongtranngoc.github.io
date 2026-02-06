@@ -17,7 +17,21 @@
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-toggle__icon theme-toggle__icon--light">&#9790;</span>
+          <span class="theme-toggle__icon theme-toggle__icon--dark">&#9728;</span>
+        </button>
       </nav>
     </div>
   </div>
 </div>
+<script>
+(function() {
+  var btn = document.getElementById('theme-toggle');
+  btn.addEventListener('click', function() {
+    var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
+  });
+})();
+</script>

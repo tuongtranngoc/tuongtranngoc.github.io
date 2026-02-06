@@ -10,7 +10,7 @@
   border-radius: $border-radius;
   overflow: hidden;
   min-height: 600px;
-  background: $lighter-gray;
+  background: var(--color-bg-secondary);
 
   &__controls {
     display: flex;
@@ -54,10 +54,37 @@
     display: flex;
     justify-content: center;
     padding: 1em;
+  }
+
+  &__page {
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 
     canvas {
       display: block;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .textLayer {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      opacity: 0.2;
+      line-height: 1.0;
+
+      > span {
+        color: transparent;
+        position: absolute;
+        white-space: pre;
+        cursor: text;
+        transform-origin: 0% 0%;
+      }
+
+      ::selection {
+        background: rgba(0, 123, 255, 0.3);
+      }
     }
   }
 }

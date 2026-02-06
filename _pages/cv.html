@@ -1,13 +1,13 @@
 ---
 layout: archive
-title: "CV"
+title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
 ---
 
 {% include base_path %}
 
-<p>You can find my full CV below. Feel free to download a copy using the button, or browse it directly in the viewer.</p>
+<p>You can find my full Curriculum Vitae below. Feel free to download a copy using the button, or browse it directly in the viewer.</p>
 
 <div class="cv-actions">
   <a href="{{ base_path }}/files/Tran_Ngoc_Tuong_CV.pdf" download class="btn btn--info btn--small">Download PDF</a>
@@ -22,7 +22,10 @@ author_profile: true
     <button id="cv-zoom-in" title="Zoom in">+</button>
   </div>
   <div class="cv-viewer__canvas-container" id="cv-canvas-container">
-    <canvas id="cv-canvas"></canvas>
+    <div class="cv-viewer__page" id="cv-page-container">
+      <canvas id="cv-canvas"></canvas>
+      <div class="textLayer" id="cv-text-layer"></div>
+    </div>
     <noscript>
       <object data="{{ base_path }}/files/Tran_Ngoc_Tuong_CV.pdf" type="application/pdf" width="100%" height="800px">
         <p>Your browser does not support PDFs. <a href="{{ base_path }}/files/Tran_Ngoc_Tuong_CV.pdf">Download the PDF</a>.</p>
@@ -44,13 +47,33 @@ author_profile: true
   var nextBtn = document.getElementById('cv-next');
   var zoomInBtn = document.getElementById('cv-zoom-in');
   var zoomOutBtn = document.getElementById('cv-zoom-out');
+  var pageContainer = document.getElementById('cv-page-container');
+  var textLayerDiv = document.getElementById('cv-text-layer');
 
   function renderPage(num) {
     pdfDoc.getPage(num).then(function(page) {
       var viewport = page.getViewport({ scale: currentScale });
       canvas.height = viewport.height;
       canvas.width = viewport.width;
-      page.render({ canvasContext: ctx, viewport: viewport });
+      pageContainer.style.width = viewport.width + 'px';
+      pageContainer.style.height = viewport.height + 'px';
+
+      page.render({ canvasContext: ctx, viewport: viewport }).promise.then(function() {
+        textLayerDiv.innerHTML = '';
+        textLayerDiv.style.width = viewport.width + 'px';
+        textLayerDiv.style.height = viewport.height + 'px';
+
+        page.getTextContent().then(function(textContent) {
+          if (pdfjsLib.renderTextLayer) {
+            pdfjsLib.renderTextLayer({
+              textContentSource: textContent,
+              container: textLayerDiv,
+              viewport: viewport
+            });
+          }
+        });
+      });
+
       pageInfo.textContent = num + ' / ' + pdfDoc.numPages;
       prevBtn.disabled = num <= 1;
       nextBtn.disabled = num >= pdfDoc.numPages;

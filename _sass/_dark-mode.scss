@@ -1,0 +1,31 @@
+:root {
+  --color-bg: #fff;
+  --color-text: #{$dark-gray};
+  --color-text-muted: #{$gray};
+  --color-border: #{$lighter-gray};
+  --color-bg-secondary: #{$lighter-gray};
+  --color-bg-code: #fafafa;
+  --color-card-bg: #fff;
+  --color-card-shadow: rgba(0, 0, 0, 0.1);
+  --color-link: #{$info-color};
+  --color-nav-dropdown-bg: #fff;
+}
+
+[data-theme="dark"] {
+  --color-bg: #1a1a2e;
+  --color-text: #e0e0e0;
+  --color-text-muted: #a0a0a0;
+  --color-border: #2a2a3e;
+  --color-bg-secondary: #16213e;
+  --color-bg-code: #2a2a3e;
+  --color-card-bg: #16213e;
+  --color-card-shadow: rgba(0, 0, 0, 0.3);
+  --color-link: #6fc3df;
+  --color-nav-dropdown-bg: #1a1a2e;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
