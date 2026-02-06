@@ -56,7 +56,6 @@
   line-height: 1;
   z-index: 20;
   transition: all 0.2s ease;
-  position: relative;
 
   &:hover {
     background: var(--color-bg-secondary);
@@ -92,10 +91,6 @@
       display: inline;
     }
   }
-}
-
-.greedy-nav button:not(.theme-toggle) {
-  right: 2.5rem;
 }
 
 .masthead__menu-item {
