@@ -10,7 +10,7 @@ author_profile: true
 <p>You can find my full Curriculum Vitae below. Feel free to download a copy using the button, or browse it directly in the viewer.</p>
 
 <div class="cv-actions">
-  <a href="{{ base_path }}/files/Tran_Ngoc_Tuong_CV.pdf" download class="btn btn--info btn--small">Download PDF</a>
+  <a href="/files/Tran_Ngoc_Tuong_CV.pdf" download class="btn btn--info btn--small">Download PDF</a>
 </div>
 
 <div class="cv-viewer">
@@ -27,8 +27,8 @@ author_profile: true
       <div class="textLayer" id="cv-text-layer"></div>
     </div>
     <noscript>
-      <object data="{{ base_path }}/files/Tran_Ngoc_Tuong_CV.pdf" type="application/pdf" width="100%" height="800px">
-        <p>Your browser does not support PDFs. <a href="{{ base_path }}/files/Tran_Ngoc_Tuong_CV.pdf">Download the PDF</a>.</p>
+      <object data="/files/Tran_Ngoc_Tuong_CV.pdf" type="application/pdf" width="100%" height="800px">
+        <p>Your browser does not support PDFs. <a href="/files/Tran_Ngoc_Tuong_CV.pdf">Download the PDF</a>.</p>
       </object>
     </noscript>
   </div>
@@ -36,7 +36,9 @@ author_profile: true
 
 <script>
 (function() {
-  var pdfUrl = '{{ base_path }}/files/Tran_Ngoc_Tuong_CV.pdf';
+  console.log('CV PDF Viewer initializing...');
+
+  var pdfUrl = '/files/Tran_Ngoc_Tuong_CV.pdf';
   var pdfDoc = null;
   var currentPage = 1;
   var currentScale = window.innerWidth < 600 ? 1.0 : 1.5;
@@ -51,6 +53,9 @@ author_profile: true
   var textLayerDiv = document.getElementById('cv-text-layer');
 
   function renderPage(num) {
+    console.log('Rendering page:', num);
+    pageInfo.textContent = 'Rendering page ' + num + '...';
+
     pdfDoc.getPage(num).then(function(page) {
       var viewport = page.getViewport({ scale: currentScale });
       canvas.height = viewport.height;
@@ -58,62 +63,107 @@ author_profile: true
       pageContainer.style.width = viewport.width + 'px';
       pageContainer.style.height = viewport.height + 'px';
 
-      page.render({ canvasContext: ctx, viewport: viewport }).promise.then(function() {
+      var renderContext = {
+        canvasContext: ctx,
+        viewport: viewport
+      };
+
+      page.render(renderContext).promise.then(function() {
+        console.log('Page rendered successfully');
+
+        // Render text layer
         textLayerDiv.innerHTML = '';
         textLayerDiv.style.width = viewport.width + 'px';
         textLayerDiv.style.height = viewport.height + 'px';
 
         page.getTextContent().then(function(textContent) {
-          if (pdfjsLib.renderTextLayer) {
+          if (typeof pdfjsLib.renderTextLayer === 'function') {
             pdfjsLib.renderTextLayer({
               textContentSource: textContent,
               container: textLayerDiv,
               viewport: viewport
             });
           }
+        }).catch(function(err) {
+          console.warn('Text layer rendering failed:', err);
         });
+      }).catch(function(err) {
+        console.error('Page rendering failed:', err);
       });
 
       pageInfo.textContent = num + ' / ' + pdfDoc.numPages;
       prevBtn.disabled = num <= 1;
       nextBtn.disabled = num >= pdfDoc.numPages;
+    }).catch(function(err) {
+      console.error('Get page failed:', err);
+      pageInfo.textContent = 'Error loading page';
     });
   }
 
+  function loadPDF() {
+    console.log('Loading PDF from:', pdfUrl);
+    console.log('pdfjsLib available:', typeof pdfjsLib !== 'undefined');
+
+    if (typeof pdfjsLib === 'undefined') {
+      console.error('PDF.js library not loaded!');
+      pageInfo.textContent = 'PDF.js not loaded';
+      useFallback();
+      return;
+    }
+
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.worker.min.js';
+
+    var loadingTask = pdfjsLib.getDocument(pdfUrl);
+
+    loadingTask.promise.then(function(pdf) {
+      console.log('PDF loaded successfully. Pages:', pdf.numPages);
+      pdfDoc = pdf;
+      renderPage(1);
+    }).catch(function(error) {
+      console.error('PDF loading error:', error);
+      pageInfo.textContent = 'Failed to load PDF';
+      useFallback();
+    });
+  }
+
+  function useFallback() {
+    var container = document.getElementById('cv-canvas-container');
+    container.innerHTML = '<object data="' + pdfUrl + '" type="application/pdf" width="100%" height="800px" style="width:100%;min-height:800px;">' +
+      '<p style="padding:2em;text-align:center;">Unable to display PDF. <a href="' + pdfUrl + '">Download the PDF</a> instead.</p></object>';
+  }
+
+  // Event listeners
   prevBtn.addEventListener('click', function() {
-    if (currentPage > 1) { currentPage--; renderPage(currentPage); }
+    if (currentPage > 1) {
+      currentPage--;
+      renderPage(currentPage);
+    }
   });
+
   nextBtn.addEventListener('click', function() {
-    if (pdfDoc && currentPage < pdfDoc.numPages) { currentPage++; renderPage(currentPage); }
+    if (pdfDoc && currentPage < pdfDoc.numPages) {
+      currentPage++;
+      renderPage(currentPage);
+    }
   });
+
   zoomInBtn.addEventListener('click', function() {
     currentScale += 0.25;
     if (pdfDoc) renderPage(currentPage);
   });
+
   zoomOutBtn.addEventListener('click', function() {
-    if (currentScale > 0.5) { currentScale -= 0.25; if (pdfDoc) renderPage(currentPage); }
+    if (currentScale > 0.5) {
+      currentScale -= 0.25;
+      if (pdfDoc) renderPage(currentPage);
+    }
   });
 
-  // Poll for pdfjsLib availability (loaded via defer)
-  var attempts = 0;
-  var pollInterval = setInterval(function() {
-    attempts++;
-    if (typeof pdfjsLib !== 'undefined') {
-      clearInterval(pollInterval);
-      pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.worker.min.js';
-      pdfjsLib.getDocument(pdfUrl).promise.then(function(pdf) {
-        pdfDoc = pdf;
-        renderPage(1);
-      }).catch(function() {
-        pageInfo.textContent = 'PDF not available';
-      });
-    } else if (attempts > 30) {
-      clearInterval(pollInterval);
-      var container = document.getElementById('cv-canvas-container');
-      container.innerHTML = '<object data="' + pdfUrl + '" type="application/pdf" width="100%" height="800px">' +
-        '<p>PDF viewer unavailable. <a href="' + pdfUrl + '">Download the PDF</a>.</p></object>';
-      pageInfo.textContent = 'Embedded view';
-    }
-  }, 100);
+  // Initialize
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadPDF);
+  } else {
+    loadPDF();
+  }
 })();
 </script>

@@ -6,7 +6,7 @@
 }
 
 .cv-viewer {
-  border: 1px solid $border-color;
+  border: 1px solid var(--color-border);
   border-radius: $border-radius;
   overflow: hidden;
   min-height: 600px;
@@ -18,22 +18,25 @@
     justify-content: center;
     gap: 0.75em;
     padding: 0.5em 1em;
-    background: #494e52;
-    color: #fff;
+    background: var(--color-bg-secondary);
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text);
     font-family: $sans-serif;
     font-size: $type-size-6;
 
     button {
       background: transparent;
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      border: 1px solid var(--color-border);
       border-radius: $border-radius;
-      color: #fff;
+      color: var(--color-text);
       padding: 0.25em 0.6em;
       cursor: pointer;
       font-size: $type-size-7;
+      transition: all 0.2s ease;
 
       &:hover {
-        background: rgba(255, 255, 255, 0.15);
+        background: var(--color-bg);
+        border-color: var(--color-link);
       }
 
       &:disabled {
@@ -83,7 +86,11 @@
       }
 
       ::selection {
-        background: rgba(0, 123, 255, 0.3);
+        background: rgba(88, 166, 255, 0.3);
+      }
+
+      [data-theme="dark"] & ::selection {
+        background: rgba(88, 166, 255, 0.4);
       }
     }
   }

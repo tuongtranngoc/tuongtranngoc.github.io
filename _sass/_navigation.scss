@@ -182,7 +182,7 @@
 .page__comments + .pagination {
   margin-top: 2em;
   padding-top: 2em;
-  border-top: 1px solid $border-color;
+  border-top: 1px solid var(--color-border);
 }
 
 
@@ -297,7 +297,7 @@
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: $border-color transparent;
+      border-color: var(--color-border) transparent;
       display: block;
       z-index: 0;
     }
@@ -317,7 +317,7 @@
 
     li {
       display: block;
-      border-bottom: 1px solid $border-color;
+      border-bottom: 1px solid var(--color-border);
 
       &:last-child {
         border-bottom: none;

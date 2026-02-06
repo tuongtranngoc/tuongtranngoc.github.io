@@ -4,7 +4,7 @@
 
 .masthead {
   position: relative;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid var(--color-border);
   -webkit-animation: intro 0.3s both;
           animation: intro 0.3s both;
   -webkit-animation-delay: 0.15s;
@@ -55,10 +55,29 @@
   font-size: 1.1rem;
   line-height: 1;
   z-index: 20;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
+  position: relative;
 
   &:hover {
     background: var(--color-bg-secondary);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  &:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: var(--color-nav-dropdown-bg);
+    color: var(--color-text);
+    padding: 0.4em 0.8em;
+    border-radius: $border-radius;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--color-border);
+    z-index: 100;
+    pointer-events: none;
   }
 
   .theme-toggle__icon--dark {

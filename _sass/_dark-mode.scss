@@ -12,20 +12,95 @@
 }
 
 [data-theme="dark"] {
-  --color-bg: #1a1a2e;
-  --color-text: #e0e0e0;
-  --color-text-muted: #a0a0a0;
-  --color-border: #2a2a3e;
-  --color-bg-secondary: #16213e;
-  --color-bg-code: #2a2a3e;
-  --color-card-bg: #16213e;
-  --color-card-shadow: rgba(0, 0, 0, 0.3);
-  --color-link: #6fc3df;
-  --color-nav-dropdown-bg: #1a1a2e;
+  --color-bg: #0d1117;
+  --color-text: #c9d1d9;
+  --color-text-muted: #8b949e;
+  --color-border: #30363d;
+  --color-bg-secondary: #161b22;
+  --color-bg-code: #161b22;
+  --color-card-bg: #0d1117;
+  --color-card-shadow: rgba(0, 0, 0, 0.5);
+  --color-link: #58a6ff;
+  --color-nav-dropdown-bg: #161b22;
 }
 
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] {
+  a {
+    color: var(--color-link);
+
+    &:hover {
+      color: lighten(#58a6ff, 10%);
+    }
+  }
+
+  .page__content {
+    h1, h2, h3, h4, h5, h6 {
+      color: #c9d1d9;
+    }
+  }
+
+  code {
+    background-color: var(--color-bg-code);
+    color: #c9d1d9;
+  }
+
+  pre {
+    background-color: var(--color-bg-code);
+  }
+
+  .masthead {
+    background-color: var(--color-bg);
+    border-bottom-color: var(--color-border);
+  }
+
+  .page__footer {
+    background-color: var(--color-bg-secondary);
+    border-top-color: var(--color-border);
+    color: var(--color-text-muted);
+  }
+
+  .author__avatar img {
+    border-color: var(--color-border);
+  }
+
+  blockquote {
+    border-left-color: var(--color-border);
+    color: var(--color-text-muted);
+  }
+
+  table {
+    border-color: var(--color-border);
+
+    th, td {
+      border-color: var(--color-border);
+    }
+
+    th {
+      background-color: var(--color-bg-secondary);
+    }
+  }
+
+  hr {
+    border-color: var(--color-border);
+  }
+
+  input, textarea, select {
+    background-color: var(--color-bg-secondary);
+    border-color: var(--color-border);
+    color: var(--color-text);
+  }
+
+  .btn {
+    border-color: var(--color-border);
+
+    &:hover {
+      background-color: var(--color-bg-secondary);
+    }
+  }
 }
