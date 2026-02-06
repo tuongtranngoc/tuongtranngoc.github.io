@@ -1,11 +1,11 @@
 ---
-title: "Trekking - SAMU lần 2, không còn mẩnh ký ức nào trong đầu"
+title: "Trekking - SAMU, Bắc Yên, Sơn La"
 collection: reading
-excerpt: "Trekking SAMU lần 2 <br/><img src='/images/mylife/trekking-samu/IMG_4675_excerpt.jpg'>"
+excerpt: "Sự bỏ lỡ đáng tiếc <br/><img src='/images/mylife/trekking-samu/IMG_4675_excerpt.jpg'>"
 type: "collections"
 venue: "Mùa Xuân, Hà Nội"
-date: 2026-01-10
-permalink: /collections/2026-01-10-trekking-samu-lan-2/
+date: 2024-03-01
+permalink: /collections/2024-03-01-trekking-samu/
 tags:
   - Travel
   - Treeking
