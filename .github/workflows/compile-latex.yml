@@ -19,8 +19,8 @@ jobs:
           root_file: cv/cv.tex
           latexmk_use_xelatex: true
           extra_system_packages: |
-            fonts-noto
-            fonts-noto-cjk
+            font-noto
+            font-noto-cjk
 
       - run: mv cv.pdf cv/cv.pdf
 
