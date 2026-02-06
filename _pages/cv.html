@@ -7,8 +7,10 @@ author_profile: true
 
 {% include base_path %}
 
+<p>You can find my full CV below. Feel free to download a copy using the button, or browse it directly in the viewer.</p>
+
 <div class="cv-actions">
-  <a href="{{ base_path }}/cv/cv.pdf" download class="btn btn--info btn--small">Download PDF</a>
+  <a href="{{ base_path }}/files/Tran_Ngoc_Tuong_CV.pdf" download class="btn btn--info btn--small">Download PDF</a>
 </div>
 
 <div class="cv-viewer">
@@ -22,8 +24,8 @@ author_profile: true
   <div class="cv-viewer__canvas-container" id="cv-canvas-container">
     <canvas id="cv-canvas"></canvas>
     <noscript>
-      <object data="{{ base_path }}/cv/cv.pdf" type="application/pdf" width="100%" height="800px">
-        <p>Your browser does not support PDFs. <a href="{{ base_path }}/cv/cv.pdf">Download the PDF</a>.</p>
+      <object data="{{ base_path }}/files/Tran_Ngoc_Tuong_CV.pdf" type="application/pdf" width="100%" height="800px">
+        <p>Your browser does not support PDFs. <a href="{{ base_path }}/files/Tran_Ngoc_Tuong_CV.pdf">Download the PDF</a>.</p>
       </object>
     </noscript>
   </div>
@@ -31,7 +33,7 @@ author_profile: true
 
 <script>
 (function() {
-  var pdfUrl = '{{ base_path }}/cv/cv.pdf';
+  var pdfUrl = '{{ base_path }}/files/Tran_Ngoc_Tuong_CV.pdf';
   var pdfDoc = null;
   var currentPage = 1;
   var currentScale = window.innerWidth < 600 ? 1.0 : 1.5;
