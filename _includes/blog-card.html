@@ -1,0 +1,38 @@
+{% include base_path %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+{% assign tag_list = "" %}
+{% for tag in post.tags %}
+  {% if forloop.first %}
+    {% assign tag_list = tag %}
+  {% else %}
+    {% assign tag_list = tag_list | append: "," | append: tag %}
+  {% endif %}
+{% endfor %}
+
+<div class="blog-card" data-tags="{{ tag_list }}">
+  <a href="{{ base_path }}{{ post.url }}" rel="permalink">
+    <div class="blog-card__body">
+      <h3 class="blog-card__title">{{ title }}</h3>
+      <span class="blog-card__date">
+        <i class="fa fa-fw fa-calendar" aria-hidden="true"></i>
+        {{ post.date | date: "%B %d, %Y" }}
+      </span>
+      {% if post.excerpt %}
+      <p class="blog-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+      {% endif %}
+      {% if post.tags.size > 0 %}
+      <div class="blog-card__tags">
+        {% for tag in post.tags %}
+        <span class="tag-badge">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </a>
+</div>
