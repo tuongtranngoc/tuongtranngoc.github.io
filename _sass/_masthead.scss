@@ -41,25 +41,26 @@
   }
 }
 
-.theme-toggle {
-  position: absolute;
-  right: 0;
-  top: 50%;
+.greedy-nav .theme-toggle {
+  position: absolute !important;
+  right: 0 !important;
+  top: 50% !important;
   transform: translateY(-50%);
-  padding: 0.25rem 0.5rem;
-  border: 1px solid var(--color-border);
-  border-radius: $border-radius;
-  background: transparent;
-  color: var(--color-text);
+  height: auto !important;
+  padding: 0.3rem 0.5rem !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: $border-radius !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--color-text) !important;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1;
   z-index: 20;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease;
 
   &:hover {
-    background: var(--color-bg-secondary);
-    transform: translateY(-50%) scale(1.1);
+    background-color: var(--color-bg-secondary) !important;
   }
 
   &:hover::after {
