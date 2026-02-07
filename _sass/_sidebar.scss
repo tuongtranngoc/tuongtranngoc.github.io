@@ -76,6 +76,9 @@
   box-shadow: 0 2px 8px var(--color-card-shadow);
   padding: 2rem 1.5rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile-card__avatar {
@@ -104,6 +107,7 @@
 .profile-card__bio {
   font-size: $type-size-5;
   color: var(--color-text-muted);
+  font-style: italic;
   margin: 0 0 0.5rem;
 
   p {
