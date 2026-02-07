@@ -1,7 +1,7 @@
 ---
 title: "Trekking - SAMU lần 2, không còn mảnh ký ức nào trong đầu"
 collection: reading
-excerpt: "Trekking SAMU lần 2 <br/><img src='/images/posts/2026/trekking-samu-lan-2/IMG_1449.PNG'>"
+excerpt: "Trekking SAMU lần 2 <br/><img src='/images/posts/2026/trekking-samu-lan-2/IMG_3486.PNG'>"
 type: "collections"
 venue: "Bắc Yên, Sơn La"
 date: 2026-01-10
