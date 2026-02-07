@@ -81,7 +81,9 @@ analytics:
 author:
   name             : "Tuong Tran Ngoc"
   avatar           : "../images/smile.jpg"
-  bio              : "Data Scientist, Software Engineer"
+  bio:
+    - "AI Engineer"
+    - "Data Scientist"
   location         : "Ha Noi, Viet Nam"
   pubmed           :
   googlescholar    : 

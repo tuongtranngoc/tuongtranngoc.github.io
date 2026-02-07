@@ -15,7 +15,17 @@
   </div>
 
   <h3 class="profile-card__name" itemprop="name">{{ author.name }}</h3>
-  {% if author.bio %}<p class="profile-card__bio" itemprop="jobTitle">{{ author.bio }}</p>{% endif %}
+  {% if author.bio %}
+    <div class="profile-card__bio" itemprop="jobTitle">
+      {% if author.bio.first %}
+        {% for role in author.bio %}
+          <p>{{ role }}</p>
+        {% endfor %}
+      {% else %}
+        <p>{{ author.bio }}</p>
+      {% endif %}
+    </div>
+  {% endif %}
   {% if author.location %}
     <p class="profile-card__location">
       <i class="fas fa-map-marker-alt" aria-hidden="true"></i> {{ author.location }}
