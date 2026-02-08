@@ -26,5 +26,20 @@ When you give coding assistant a task, like fixing a bug based on an error messa
 
 1. **Gather Context** - Understanding what the error refers to, which of parts in codebase is affected, and what files are relevant
 2. **Formulate a plan** - Deciding hwo to solve the issue, such as changing code and test to verify the fix
-3 **Take action** - Implementing the solution by updating files and running commands.
+3. **Take action** - Implementing the solution by updating files and running commands.
+
+## How Tool Use Works
+
+Language models by themselves can only process text and return text. That means they cannot actually read files or run commands. If you ask a standalone language model to read a file, it will tell you it doesn't have that capability.
+
+Coding assistant solve this problem by using tool use:
+1. You ask: "What code is written in the main.go file?"
+2. The coding assistant adds tool instructions to your request
+3. The language model responds: "ReadFile: main.go"
+4. The coding assistant reads the actual file and sends its contents back to the model
+5. The language model provides a final answer based on the file contents
+
+<p style="text-align:center;">
+  <img src="/images/posts/2026/claude_code_in_action/tool-use.png">
+</p>
 
