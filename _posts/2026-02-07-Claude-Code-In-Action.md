@@ -66,9 +66,7 @@ Taking a screenshot and sending it to Claude helps it understand exactly what yo
 
 #### Thinking and Planning mode
 
-**Planning mode**
-
-For more complex tasks that require extensive research across your codebase, you can enable Planning Mode. This feature makes Claude do thorough exploration of your project before implementing changes.
+**Planning mode**: For more complex tasks that require extensive research across your codebase, you can enable Planning Mode. This feature makes Claude do thorough exploration of your project before implementing changes.
 
 Claude will:
 1. Read more files in your project
@@ -76,9 +74,7 @@ Claude will:
 3. Show you exactly what it intends to do
 4. Wait for your approval before proceeding
 
-**Thinking mode**
-
-Claude offers different levels of reasoning through "thinking" modes. These allow Claude to spend more time reasoning about complex problems before providing solutions.
+**Thinking mode**: Claude offers different levels of reasoning through "thinking" modes. These allow Claude to spend more time reasoning about complex problems before providing solutions.
 
 The available thinking modes include:
 
@@ -89,6 +85,20 @@ The available thinking modes include:
 5. "Ultrathink" - Maximum reasoning capability
 
 Each mode gives Claude progressively more tokens to work with, allowing for deeper analysis of challenging problems.
+
+
+**When to use Planning and Thinking**:
+Planning Mode is best for:
+
+1. Tasks requiring broad understanding of your codebase
+2. Multi-step implementations
+3. Changes that affect multiple files or components
+
+Thinking Mode is best for:
+
+1. Complex logic problems
+2. Debugging difficult issues
+3. Algorithmic challenges
 
 
 
