@@ -179,6 +179,9 @@ collections:
   readings:
     output: true
     permalink: /:collection/:path/
+  learnings:
+    output: true
+    permalink: /:collection/:path/
   collections:
     output: true
     permalink: /:collection/:path/
@@ -217,6 +220,17 @@ defaults:
       author_profile: true
       share: true
       comments: true
+  # _learnings
+  - scope:
+      path: ""
+      type: learnings
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
   # _collections
   - scope:
       path: ""

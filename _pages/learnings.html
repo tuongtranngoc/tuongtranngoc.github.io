@@ -1,0 +1,88 @@
+---
+layout: archive
+title: "Learnings"
+permalink: /learnings/
+author_profile: true
+---
+
+{% include base_path %}
+
+<div id="collection-filters" class="collection-filters">
+  <button class="filter-btn active" data-tag="all">All</button>
+</div>
+
+{% capture written_year %}'None'{% endcapture %}
+{% for post in site.learnings reversed %}
+  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% if year != written_year %}
+    {% if written_year != "'None'" %}
+      </div><!-- /.collection-grid -->
+    {% endif %}
+    <h2 id="{{ year | slugify }}" class="archive__subtitle collection-year-header">{{ year }}</h2>
+    <div class="collection-grid">
+    {% capture written_year %}{{ year }}{% endcapture %}
+  {% endif %}
+  {% include collection-card.html %}
+{% endfor %}
+{% if site.learnings.size > 0 %}
+  </div><!-- /.collection-grid -->
+{% endif %}
+
+<script>
+(function() {
+  // Collect all unique tags
+  var cards = document.querySelectorAll('.collection-card');
+  var tagSet = {};
+  cards.forEach(function(card) {
+    var tags = card.getAttribute('data-tags');
+    if (tags) {
+      tags.split(',').forEach(function(t) {
+        t = t.trim();
+        if (t) tagSet[t] = true;
+      });
+    }
+  });
+
+  // Render filter buttons
+  var filterContainer = document.getElementById('collection-filters');
+  Object.keys(tagSet).sort().forEach(function(tag) {
+    var btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.setAttribute('data-tag', tag);
+    btn.textContent = tag;
+    filterContainer.appendChild(btn);
+  });
+
+  // Filter logic
+  filterContainer.addEventListener('click', function(e) {
+    if (!e.target.classList.contains('filter-btn')) return;
+    var selected = e.target.getAttribute('data-tag');
+
+    // Update active state
+    filterContainer.querySelectorAll('.filter-btn').forEach(function(b) {
+      b.classList.remove('active');
+    });
+    e.target.classList.add('active');
+
+    // Show/hide cards
+    cards.forEach(function(card) {
+      if (selected === 'all') {
+        card.style.display = '';
+      } else {
+        var tags = card.getAttribute('data-tags').split(',').map(function(t){ return t.trim(); });
+        card.style.display = tags.indexOf(selected) >= 0 ? '' : 'none';
+      }
+    });
+
+    // Show/hide year headers based on whether any visible cards exist in that group
+    document.querySelectorAll('.collection-year-header').forEach(function(header) {
+      var grid = header.nextElementSibling;
+      if (grid && grid.classList.contains('collection-grid')) {
+        var visibleCards = grid.querySelectorAll('.collection-card:not([style*="display: none"])');
+        header.style.display = visibleCards.length > 0 ? '' : 'none';
+        grid.style.display = visibleCards.length > 0 ? '' : 'none';
+      }
+    });
+  });
+})();
+</script>

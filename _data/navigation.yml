@@ -6,8 +6,11 @@ main:
   - title: "Readings"
     url: /readings/
 
+  - title: "Learnings"
+    url: /learnings/
+
   - title: "Collections"
-    url: /collections/    
-    
+    url: /collections/
+
   - title: "CV"
     url: /cv/
