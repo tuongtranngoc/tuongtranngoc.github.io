@@ -61,9 +61,35 @@ Coding assistant solve this problem by using tool use:
 </p>
 
 ### 2. Making changes
-**Using Screenshots for Precise Communication**
+#### Using Screenshots for Precise Communication
 Taking a screenshot and sending it to Claude helps it understand exactly what you're referring to — simply paste the image and ask Claude to make the changes you need.
 
-**Thinking and Planning mode**
+#### Thinking and Planning mode
+
+**Planning mode**
+
+For more complex tasks that require extensive research across your codebase, you can enable Planning Mode. This feature makes Claude do thorough exploration of your project before implementing changes.
+
+Claude will:
+1. Read more files in your project
+2. Create a detailed implementation plan
+3. Show you exactly what it intends to do
+4. Wait for your approval before proceeding
+
+**Thinking mode**
+
+Claude offers different levels of reasoning through "thinking" modes. These allow Claude to spend more time reasoning about complex problems before providing solutions.
+
+The available thinking modes include:
+
+1. "Think" - Basic reasoning
+2. "Think more" - Extended reasoning
+3. "Think a lot" - Comprehensive reasoning
+4. "Think longer" - Extended time reasoning
+5. "Ultrathink" - Maximum reasoning capability
+
+Each mode gives Claude progressively more tokens to work with, allowing for deeper analysis of challenging problems.
+
+
 
 
