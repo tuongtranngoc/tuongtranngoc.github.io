@@ -43,3 +43,27 @@ Coding assistant solve this problem by using tool use:
   <img src="/images/posts/2026/claude_code_in_action/tool-use.png">
 </p>
 
+## Getting hands on
+
+### 1. Adding context
+
+**The `/init` command**
+- Scan your codebase
+- Creates a summary
+- Writes the summary to the CLAUDE.md file
+- This file is include in very request
+
+
+**CLAUDE.md files Locations**
+
+<p style="text-align:center;">
+  <img src="/images/posts/2026/claude_code_in_action/CLAUDE.md.png">
+</p>
+
+### 2. Making changes
+**Using Screenshots for Precise Communication**
+Taking a screenshot and sending it to Claude helps it understand exactly what you're referring to — simply paste the image and ask Claude to make the changes you need.
+
+**Thinking and Planning mode**
+
+
