@@ -176,7 +176,7 @@ kramdown:
 
 # Collections
 collections:
-  reading:
+  readings:
     output: true
     permalink: /:collection/:path/
   collections:
@@ -207,10 +207,10 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _reading
+  # _readings
   - scope:
       path: ""
-      type: reading
+      type: readings
     values:
       layout: single
       read_time: true

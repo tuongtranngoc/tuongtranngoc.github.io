@@ -3,8 +3,8 @@ main:
   - title: "Blog Posts"
     url: /blog/
 
-  - title: "Reading"
-    url: /reading/ 
+  - title: "Readings"
+    url: /readings/
 
   - title: "Collections"
     url: /collections/    
