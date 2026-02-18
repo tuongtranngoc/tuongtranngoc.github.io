@@ -37,5 +37,5 @@ Tôi đã dành hai ngày để hoàn thành khóa học và nhận được ch�
 ## Course Certificate
 
 <p style="text-align:center;">
-  <img src="/images/learning/2026/claude-code-in-action/course-claude-code-in-action.png">
+  <img src="/images/learning/2026/claude-code-in-action/certificate-5fo4ip9xjobj-1771456506.png">
 </p>
