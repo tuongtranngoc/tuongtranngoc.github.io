@@ -1,6 +1,6 @@
 ---
 title: "Claude Code In Action"
-colllection: reading
+colllection: learnings
 type: "Software Engineer, Vibe coding"
 venue: "Nam Dinh"
 date: 2026-02-18
