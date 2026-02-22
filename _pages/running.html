@@ -199,59 +199,103 @@ author_profile: true
 <h2>Activity Log</h2>
 
 {% if strava.activities.size > 0 %}
-<div class="running-table-wrap">
-  <table class="running-table">
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Name</th>
-        <th>Distance</th>
-        <th>Time</th>
-        <th>Pace</th>
-        <th>Elevation</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for a in strava.activities %}
-        {% assign dist_km = a.distance_m | divided_by: 1000.0 %}
-        {% assign h = a.moving_time_s | divided_by: 3600 | floor %}
-        {% assign m = a.moving_time_s | modulo: 3600 | divided_by: 60 | floor %}
-        {% assign s = a.moving_time_s | modulo: 60 %}
-        {% if h > 0 %}
-          {% assign time_str = h | append: "h " | append: m | append: "m" %}
-        {% else %}
-          {% if s < 10 %}{% assign s_str = s | prepend: "0" %}{% else %}{% assign s_str = s | append: "" %}{% endif %}
-          {% assign time_str = m | append: ":" | append: s_str %}
-        {% endif %}
+<div class="activity-grid" id="activityGrid">
+  {% for a in strava.activities %}
+    {% assign dist_km = a.distance_m | divided_by: 1000.0 %}
 
-        {% if a.distance_m > 0 %}
-          {% assign ps = a.moving_time_s | times: 1.0 | divided_by: dist_km %}
-          {% assign pm = ps | divided_by: 60 | floor %}
-          {% assign psec = ps | modulo: 60 | round %}
-          {% if psec < 10 %}{% assign psec_s = psec | prepend: "0" %}{% else %}{% assign psec_s = psec | append: "" %}{% endif %}
-          {% assign pace_str = pm | append: "'" | append: psec_s | append: '"' %}
-        {% else %}
-          {% assign pace_str = "—" %}
-        {% endif %}
+    {% assign h = a.moving_time_s | divided_by: 3600 | floor %}
+    {% assign m = a.moving_time_s | modulo: 3600 | divided_by: 60 | floor %}
+    {% assign s = a.moving_time_s | modulo: 60 %}
+    {% if h > 0 %}
+      {% assign time_str = h | append: "h " | append: m | append: "m" %}
+    {% else %}
+      {% if s < 10 %}{% assign s_str = s | prepend: "0" %}{% else %}{% assign s_str = s | append: "" %}{% endif %}
+      {% assign time_str = m | append: ":" | append: s_str %}
+    {% endif %}
 
-        <tr>
-          <td data-label="Date">{{ a.date }}</td>
-          <td data-label="Name">{{ a.name }}</td>
-          <td data-label="Distance">{{ dist_km | round: 2 }} km</td>
-          <td data-label="Time">{{ time_str }}</td>
-          <td data-label="Pace">{{ pace_str }}/km</td>
-          <td data-label="Elevation">{{ a.elevation_m }} m</td>
-          <td>
-            <a href="{{ a.strava_url }}" target="_blank" rel="noopener" aria-label="Open on Strava">
-              <i class="fab fa-strava" aria-hidden="true"></i>
-            </a>
-          </td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+    {% if a.distance_m > 0 %}
+      {% assign ps = a.moving_time_s | times: 1.0 | divided_by: dist_km %}
+      {% assign pm = ps | divided_by: 60 | floor %}
+      {% assign psec = ps | modulo: 60 | round %}
+      {% if psec < 10 %}{% assign psec_s = psec | prepend: "0" %}{% else %}{% assign psec_s = psec | append: "" %}{% endif %}
+      {% assign pace_str = pm | append: "'" | append: psec_s | append: '"' %}
+    {% else %}
+      {% assign pace_str = "—" %}
+    {% endif %}
+
+    <div class="activity-card{% if forloop.index > 10 %} activity-card--hidden{% endif %}">
+
+      <div class="activity-card__header">
+        <span class="activity-card__name">{{ a.name }}</span>
+        <span class="activity-card__meta">
+          <span class="activity-card__date">{{ a.date }}</span>
+          <a href="{{ a.strava_url }}" target="_blank" rel="noopener"
+             class="activity-card__strava-link" aria-label="View on Strava">
+            <i class="fab fa-strava" aria-hidden="true"></i>
+          </a>
+        </span>
+      </div>
+
+      <div class="activity-card__stats">
+        <div class="activity-card__stat">
+          <span class="activity-card__stat-value">{{ dist_km | round: 2 }}</span>
+          <span class="activity-card__stat-label">km</span>
+        </div>
+        <div class="activity-card__stat">
+          <span class="activity-card__stat-value">{{ time_str }}</span>
+          <span class="activity-card__stat-label">time</span>
+        </div>
+        <div class="activity-card__stat">
+          <span class="activity-card__stat-value">{{ pace_str }}</span>
+          <span class="activity-card__stat-label">pace/km</span>
+        </div>
+        <div class="activity-card__stat">
+          <span class="activity-card__stat-value">{{ a.elevation_m }}</span>
+          <span class="activity-card__stat-label">m elev</span>
+        </div>
+      </div>
+
+      {% if a.route_svg != "" or a.photo_url != "" %}
+      <div class="activity-card__media">
+        {% if a.route_svg != "" %}
+        <div class="activity-card__map">
+          <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"
+               preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <path d="{{ a.route_svg }}"
+                  stroke="#FC4C02" stroke-width="2.5" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        {% endif %}
+        {% if a.photo_url != "" %}
+        <div class="activity-card__photo">
+          <img src="{{ a.photo_url }}" alt="{{ a.name }}" loading="lazy">
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
+
+    </div>
+  {% endfor %}
 </div>
+
+<button class="load-more-btn" id="loadMoreBtn">
+  <i class="fas fa-chevron-down" aria-hidden="true"></i> Show all {{ strava.activities.size }} activities
+</button>
+
+<script>
+(function () {
+  var btn = document.getElementById("loadMoreBtn");
+  if (!btn) return;
+  var hidden = document.querySelectorAll(".activity-card--hidden");
+  if (hidden.length === 0) { btn.style.display = "none"; return; }
+  btn.addEventListener("click", function () {
+    hidden.forEach(function (c) { c.classList.remove("activity-card--hidden"); });
+    btn.style.display = "none";
+  });
+})();
+</script>
+
 {% else %}
 <p>No activities yet — check back after the first sync.</p>
 {% endif %}

@@ -93,55 +93,190 @@
   margin: 0.5em 0 2.5em;
 }
 
-// ── Activity Table ───────────────────────────────────────────────────────────
+// ── Activity Cards ───────────────────────────────────────────────────────────
 
-.running-table-wrap {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin-bottom: 0.5em;
+.activity-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 0.75em;
 }
 
-.running-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.88em;
+.activity-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px var(--color-card-shadow);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
 
-  th,
-  td {
-    padding: 0.6em 0.85em;
-    text-align: left;
-    border-bottom: 1px solid var(--color-border);
-    white-space: nowrap;
+  &:hover {
+    box-shadow: 0 4px 16px var(--color-card-shadow);
   }
 
-  th {
+  &--hidden {
+    display: none;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5em;
+    padding: 0.75em 1em;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  &__name {
     font-weight: 600;
-    color: var(--color-text-muted);
-    background: var(--color-bg-secondary);
+    font-size: 0.95em;
+    color: var(--color-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    flex-shrink: 0;
+  }
+
+  &__date {
     font-size: 0.8em;
+    color: var(--color-text-muted);
+  }
+
+  &__strava-link {
+    color: #FC4C02;
+    font-size: 1.15em;
+    line-height: 1;
+
+    &:hover {
+      color: darken(#FC4C02, 10%);
+    }
+  }
+
+  &__stats {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  &__stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.55em 0.5em;
+    border-right: 1px solid var(--color-border);
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  &__stat-value {
+    font-weight: 700;
+    font-size: 0.95em;
+    color: var(--color-text);
+    line-height: 1.2;
+  }
+
+  &__stat-label {
+    font-size: 0.68em;
+    color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.04em;
+    margin-top: 0.1em;
   }
 
-  tbody tr:nth-child(even) {
+  &__media {
+    display: flex;
+    min-height: 150px;
+  }
+
+  &__map {
+    flex: 1;
     background: var(--color-bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+
+    svg {
+      width: 100%;
+      height: 140px;
+    }
   }
 
-  tbody tr:hover {
-    background: color-mix(in srgb, var(--color-border) 40%, transparent);
+  &__photo {
+    flex: 0 0 200px;
+    overflow: hidden;
+    border-left: 1px solid var(--color-border);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
   }
 
-  td:last-child {
-    text-align: center;
+  @media (max-width: 540px) {
+    &__media {
+      flex-direction: column;
+    }
 
-    a {
-      color: #FC4C02;
-      font-size: 1.1em;
+    &__photo {
+      flex: none;
+      border-left: none;
+      border-top: 1px solid var(--color-border);
+      height: 180px;
+    }
 
-      &:hover {
-        color: darken(#FC4C02, 10%);
+    &__stats {
+      flex-wrap: wrap;
+    }
+
+    &__stat {
+      flex: 0 0 50%;
+      border-right: none;
+      border-bottom: 1px solid var(--color-border);
+
+      &:nth-child(odd) {
+        border-right: 1px solid var(--color-border);
+      }
+
+      &:nth-last-child(-n+2) {
+        border-bottom: none;
       }
     }
+  }
+}
+
+.load-more-btn {
+  display: block;
+  width: 100%;
+  padding: 0.7em;
+  text-align: center;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 0.88em;
+  margin-bottom: 1em;
+  transition: background 0.2s, color 0.2s;
+
+  .fas {
+    margin-right: 0.3em;
+  }
+
+  &:hover {
+    background: var(--color-border);
+    color: var(--color-text);
   }
 }
 

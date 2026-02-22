@@ -121,11 +121,47 @@ def build_weekly(runs: list[dict]) -> list[dict]:
     return result
 
 
-def pace_seconds(distance_m: float, moving_time_s: float) -> float:
-    """Return pace in seconds-per-km, or 0 if distance is 0."""
-    if distance_m <= 0:
-        return 0.0
-    return moving_time_s / (distance_m / 1000)
+def decode_polyline(encoded: str) -> list[tuple[float, float]]:
+    """Decode a Google Encoded Polyline string to (lat, lon) pairs."""
+    if not encoded:
+        return []
+    coords: list[tuple[float, float]] = []
+    index, lat, lng = 0, 0, 0
+    while index < len(encoded):
+        for is_lng in (False, True):
+            result, shift = 0, 0
+            while True:
+                b = ord(encoded[index]) - 63
+                index += 1
+                result |= (b & 0x1F) << shift
+                shift += 5
+                if b < 0x20:
+                    break
+            value = ~(result >> 1) if result & 1 else result >> 1
+            if is_lng:
+                lng += value
+            else:
+                lat += value
+        coords.append((lat / 1e5, lng / 1e5))
+    return coords
+
+
+def polyline_to_svg_path(coords: list[tuple[float, float]], width: int = 200, height: int = 120) -> str:
+    """Normalize (lat, lon) coords to an SVG path string within width×height."""
+    if len(coords) < 2:
+        return ""
+    lats = [c[0] for c in coords]
+    lngs = [c[1] for c in coords]
+    lat_range = (max(lats) - min(lats)) or 1e-9
+    lng_range = (max(lngs) - min(lngs)) or 1e-9
+    pad = 8
+    scale = min((width - 2 * pad) / lng_range, (height - 2 * pad) / lat_range)
+    parts = []
+    for i, (lat, lng) in enumerate(coords):
+        x = pad + (lng - min(lngs)) * scale
+        y = pad + (max(lats) - lat) * scale  # flip Y axis
+        parts.append(f"{'M' if i == 0 else 'L'}{x:.1f},{y:.1f}")
+    return " ".join(parts)
 
 
 def build_output(runs: list[dict]) -> dict:
@@ -137,6 +173,17 @@ def build_output(runs: list[dict]) -> dict:
     for r in sorted(runs, key=lambda x: x["start_date"], reverse=True):
         dist = r.get("distance", 0)
         time = r.get("moving_time", 0)
+
+        # Route map: decode summary polyline → SVG path
+        encoded = (r.get("map") or {}).get("summary_polyline") or ""
+        route_svg = polyline_to_svg_path(decode_polyline(encoded))
+
+        # Primary photo URL (from summary activities response)
+        photos = r.get("photos") or {}
+        primary = photos.get("primary") or {}
+        urls = primary.get("urls") or {}
+        photo_url = urls.get("600") or urls.get("100") or ""
+
         activities.append(
             {
                 "id": r["id"],
@@ -147,6 +194,8 @@ def build_output(runs: list[dict]) -> dict:
                 "elevation_m": round(r.get("total_elevation_gain", 0), 1),
                 "avg_speed_ms": round(r.get("average_speed", 0), 3),
                 "strava_url": f"https://www.strava.com/activities/{r['id']}",
+                "route_svg": route_svg,
+                "photo_url": photo_url,
             }
         )
 
