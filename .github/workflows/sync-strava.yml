@@ -1,0 +1,59 @@
+name: Sync Strava Activities
+
+# ─── Triggers ────────────────────────────────────────────────────────────────
+# Runs automatically at 05:00 UTC every day, and can be triggered manually
+# from the GitHub Actions tab (useful for testing without waiting for the cron).
+on:
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+# ─── Required Secrets ────────────────────────────────────────────────────────
+# Add these in: GitHub repo → Settings → Secrets → Actions
+#
+#   STRAVA_CLIENT_ID      — numeric app ID from https://www.strava.com/settings/api
+#   STRAVA_CLIENT_SECRET  — secret from the same settings page
+#   STRAVA_REFRESH_TOKEN  — obtained via one-time OAuth flow with
+#                           scope=activity:read_all (see README / docs for details)
+#
+# One-time OAuth flow to get the refresh token:
+#   1. Open in browser (replace YOUR_CLIENT_ID):
+#      https://www.strava.com/oauth/authorize?client_id=YOUR_CLIENT_ID&response_type=code&redirect_uri=http://localhost&scope=activity:read_all
+#   2. Authorise, then copy the `code` from the redirect URL.
+#   3. POST to https://www.strava.com/oauth/token with grant_type=authorization_code
+#      and that code → the response contains `refresh_token`.
+# ─────────────────────────────────────────────────────────────────────────────
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to commit & push strava.json
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch Strava data
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+        run: python scripts/fetch_strava.py
+
+      - name: Commit updated strava.json (if changed)
+        run: |
+          git diff --quiet _data/strava.json && echo "No changes, skipping commit." && exit 0
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/strava.json
+          git commit -m "chore: sync strava activities [skip ci]"
+          git push

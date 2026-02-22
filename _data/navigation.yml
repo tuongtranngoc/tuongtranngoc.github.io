@@ -12,5 +12,8 @@ main:
   - title: "Collections"
     url: /collections/
 
+  - title: "Running"
+    url: /running/
+
   - title: "CV"
     url: /cv/

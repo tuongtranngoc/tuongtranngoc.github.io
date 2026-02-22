@@ -1,0 +1,158 @@
+// ── Running page ────────────────────────────────────────────────────────────
+
+.running-intro {
+  margin-bottom: 1.25em;
+  color: var(--color-text-muted);
+}
+
+// Strava profile button
+.strava-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  background: #FC4C02;
+  color: #fff !important;
+  padding: 0.45em 1.1em;
+  border-radius: 999px;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 2em;
+  transition: background 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    background: darken(#FC4C02, 8%);
+    box-shadow: 0 3px 10px rgba(252, 76, 2, 0.35);
+    color: #fff !important;
+    text-decoration: none;
+  }
+
+  .fab {
+    font-size: 1.05em;
+  }
+}
+
+// ── Stat Cards Grid ──────────────────────────────────────────────────────────
+
+.running-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  margin: 1.5em 0 2em;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px var(--color-card-shadow);
+  padding: 1.25em 1em;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px var(--color-card-shadow);
+  }
+
+  &__icon {
+    font-size: 1.6em;
+    color: #FC4C02;
+    margin-bottom: 0.35em;
+  }
+
+  &__value {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.1;
+    margin-bottom: 0.2em;
+  }
+
+  &__label {
+    font-size: 0.78em;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+// ── Weekly Chart ─────────────────────────────────────────────────────────────
+
+.running-chart-container {
+  max-width: 800px;
+  height: 300px;
+  margin: 0.5em 0 2.5em;
+}
+
+// ── Activity Table ───────────────────────────────────────────────────────────
+
+.running-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 0.5em;
+}
+
+.running-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88em;
+
+  th,
+  td {
+    padding: 0.6em 0.85em;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+    white-space: nowrap;
+  }
+
+  th {
+    font-weight: 600;
+    color: var(--color-text-muted);
+    background: var(--color-bg-secondary);
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  tbody tr:nth-child(even) {
+    background: var(--color-bg-secondary);
+  }
+
+  tbody tr:hover {
+    background: color-mix(in srgb, var(--color-border) 40%, transparent);
+  }
+
+  td:last-child {
+    text-align: center;
+
+    a {
+      color: #FC4C02;
+      font-size: 1.1em;
+
+      &:hover {
+        color: darken(#FC4C02, 10%);
+      }
+    }
+  }
+}
+
+// ── Last-synced note ──────────────────────────────────────────────────────────
+
+.running-sync-note {
+  font-size: 0.78em;
+  color: var(--color-text-muted);
+  margin-top: 1em;
+
+  .fas {
+    margin-right: 0.25em;
+  }
+}
