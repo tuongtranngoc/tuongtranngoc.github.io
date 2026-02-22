@@ -1,12 +1,55 @@
 {
-  "last_updated": "2026-02-22T14:16:57Z",
+  "last_updated": "2026-02-22T14:27:37Z",
   "summary": {
     "total_distance_km": 640.93,
     "total_runs": 125,
     "total_elevation_m": 3159.3,
     "total_moving_time_s": 311349
   },
-  "yearly": [],
+  "yearly": [
+    {
+      "year": 2026,
+      "runs": 1,
+      "distance_km": 3.02,
+      "elevation_m": 0.0,
+      "moving_time_s": 1407
+    },
+    {
+      "year": 2025,
+      "runs": 14,
+      "distance_km": 46.13,
+      "elevation_m": 4.6,
+      "moving_time_s": 22039
+    },
+    {
+      "year": 2024,
+      "runs": 28,
+      "distance_km": 146.76,
+      "elevation_m": 2142.4,
+      "moving_time_s": 88320
+    },
+    {
+      "year": 2023,
+      "runs": 35,
+      "distance_km": 157.87,
+      "elevation_m": 541.9,
+      "moving_time_s": 68928
+    },
+    {
+      "year": 2022,
+      "runs": 40,
+      "distance_km": 236.63,
+      "elevation_m": 415.6,
+      "moving_time_s": 108949
+    },
+    {
+      "year": 2021,
+      "runs": 7,
+      "distance_km": 50.52,
+      "elevation_m": 54.8,
+      "moving_time_s": 21706
+    }
+  ],
   "weekly": [
     {
       "label": "Nov W1",
