@@ -93,6 +93,42 @@
   }
 }
 
+// ── Today's Map ───────────────────────────────────────────────────────────────
+
+.running-today-map {
+  height: 360px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  margin-bottom: 1.25em;
+  z-index: 0; // keep below sticky nav
+}
+
+// ── Today's Photos ────────────────────────────────────────────────────────────
+
+.running-today-photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  margin-bottom: 2em;
+
+  img {
+    height: 200px;
+    width: auto;
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 2px 8px var(--color-card-shadow);
+  }
+
+  @media (max-width: 540px) {
+    img {
+      height: 160px;
+    }
+  }
+}
+
 // ── Yearly Stats Table ────────────────────────────────────────────────────────
 
 .running-table-wrap {

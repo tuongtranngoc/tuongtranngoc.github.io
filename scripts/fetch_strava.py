@@ -80,18 +80,29 @@ def build_today(runs: list[dict]) -> dict:
     elevation_m = 0.0
     moving_time_s = 0
     count = 0
+    polylines: list[str] = []
+    photos: list[str] = []
     for r in runs:
         if r["start_date_local"][:10] == today:
             distance_m += r.get("distance", 0)
             elevation_m += r.get("total_elevation_gain", 0)
             moving_time_s += r.get("moving_time", 0)
             count += 1
+            poly = (r.get("map") or {}).get("summary_polyline") or ""
+            if poly:
+                polylines.append(poly)
+            urls = ((r.get("photos") or {}).get("primary") or {}).get("urls") or {}
+            photo_url = urls.get("600") or urls.get("100") or ""
+            if photo_url:
+                photos.append(photo_url)
     return {
         "date": today,
         "runs": count,
         "distance_km": round(distance_m / 1000, 2),
         "elevation_m": round(elevation_m, 1),
         "moving_time_s": moving_time_s,
+        "polylines": polylines,
+        "photos": photos,
     }
 
 

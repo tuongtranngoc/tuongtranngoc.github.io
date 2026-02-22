@@ -60,6 +60,72 @@ author_profile: true
 
 </div>
 
+<!-- ─── Today's Map ───────────────────────────────────────────────── -->
+{% if today.polylines.size > 0 %}
+<div id="todayMap" class="running-today-map"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function () {
+  var polylines = {{ today.polylines | jsonify }};
+
+  function decodePolyline(str) {
+    var i = 0, lat = 0, lng = 0, coords = [], b, shift, result;
+    while (i < str.length) {
+      shift = result = 0;
+      do { b = str.charCodeAt(i++) - 63; result |= (b & 0x1F) << shift; shift += 5; } while (b >= 0x20);
+      lat += (result & 1) ? ~(result >> 1) : (result >> 1);
+      shift = result = 0;
+      do { b = str.charCodeAt(i++) - 63; result |= (b & 0x1F) << shift; shift += 5; } while (b >= 0x20);
+      lng += (result & 1) ? ~(result >> 1) : (result >> 1);
+      coords.push([lat / 1e5, lng / 1e5]);
+    }
+    return coords;
+  }
+
+  function initMap() {
+    if (typeof L === "undefined") { setTimeout(initMap, 100); return; }
+    var map = L.map("todayMap", { zoomControl: true, scrollWheelZoom: false });
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 18
+    }).addTo(map);
+
+    var allCoords = [];
+    polylines.forEach(function (encoded) {
+      var coords = decodePolyline(encoded);
+      if (!coords.length) return;
+      L.polyline(coords, { color: "#FC4C02", weight: 4, opacity: 0.85 }).addTo(map);
+      L.circleMarker(coords[0], {
+        radius: 6, fillColor: "#FC4C02", color: "#fff", weight: 2, fillOpacity: 1
+      }).addTo(map);
+      allCoords = allCoords.concat(coords);
+    });
+
+    if (allCoords.length) {
+      map.fitBounds(allCoords, { padding: [24, 24] });
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initMap);
+  } else {
+    initMap();
+  }
+})();
+</script>
+{% endif %}
+
+<!-- ─── Today's Photos ─────────────────────────────────────────────── -->
+{% if today.photos.size > 0 %}
+<div class="running-today-photos">
+  {% for photo in today.photos %}
+  <img src="{{ photo }}" alt="Activity photo" loading="lazy">
+  {% endfor %}
+</div>
+{% endif %}
+
 <!-- ─── Yearly Stats ──────────────────────────────────────────────── -->
 {% if strava.yearly.size > 0 %}
 <h2>Stats by Year</h2>
