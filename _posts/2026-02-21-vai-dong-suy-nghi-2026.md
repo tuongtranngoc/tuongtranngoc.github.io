@@ -5,7 +5,7 @@ permalink: /posts/2026/vai_dong_suy_nghi_2026/
 tags:
   - Working
   - Company
-  - Heath
+  - Health
 ---
 <head>
     <style type="text/css">
@@ -14,22 +14,23 @@ tags:
     </style>
 </head>
 
-Nay đã là mùng 5 Tết Bính Ngọ 2026, Bản thân có rảnh một hôm (trước khi lên Hà Nội bắt đầu công việc) để nhìn lại bản một năm vừa qua và viết ra vài dòng suy nghĩ.
+Nay đã là mùng 5 Tết Bính Ngọ 2026, bản thân có rảnh một hôm — trước khi lên Hà Nội bắt đầu lại guồng quay công việc — để nhìn lại một năm vừa qua và viết ra vài dòng suy nghĩ.
 
+Năm 2025 vừa rồi, nếu phải kể ra thì có lẽ rất nhiều tâm tư xoay quanh ba chủ đề: công việc, sức khỏe và gia đình.
 
-Một năm 2025 vừa rồi của bản thân để nói ra thì có lẽ rất là nhiều tâm sự về công việc, sức khỏe và gia đình.
-+ Công việc: từ những quyết định đưa ra dựa trên cảm xúc rất nhiều nên công việc trong năm vừa rồi của bản thân khá là khó khăn, chật vật. Từ một Engineer chuyển sang hẳn làm Research (điều mà bản thân chưa thực sự sẵn sàng trước khi vào công ty) nhưng đổi lại học được những thứ ngoài công việc ở một môi trường khắc nhiệt đến không tưởng.
-+ Sức khỏe: tính chất công việc làm bản thân stress và lo lắng nhiều hơn, OT nhiều hơn dẫn đến tình trạng sức khỏe xấu đi và không có nhiều thời gian dành cho bản thân.
-+ Gia đình: bản thân được trải qua cái cảm giác người thân trong gia đình ra đi đột ngột, ngoài những thứ liên quan đến cảm xúc còn những vấn đề mà khiến đàu óc mở mang ra rất nhiều.
+- **Công việc:** Nhiều quyết định trong năm được đưa ra dựa trên cảm xúc hơn là lý trí, khiến hành trình công việc trở nên khó khăn và chật vật hơn mình tưởng. Việc chuyển hẳn từ Engineer sang Research — điều mà bản thân chưa thực sự sẵn sàng khi bước vào công ty — là một thử thách lớn. Nhưng đổi lại, mình được trưởng thành trong một môi trường khắc nghiệt đến mức không ngờ, và học được nhiều thứ vượt ra ngoài phạm vi công việc thông thường.
+- **Sức khỏe:** Áp lực công việc kéo theo stress và lo lắng triền miên, cộng thêm việc tăng ca liên tục khiến sức khỏe xuống dốc và hầu như không còn thời gian dành cho bản thân.
+- **Gia đình:** Năm vừa rồi, mình lần đầu trải qua cảm giác mất đi người thân một cách đột ngột. Ngoài nỗi đau cảm xúc, sự kiện đó còn khiến đầu óc mình mở ra rất nhiều — về cuộc sống, về những điều thực sự quan trọng.
 
-Năm mới 2026, bản thân sẽ:
->1. Cố gắng cân bằng lại về mặt sức khỏe, tập thể dục thường xuyên, ngủ đúng và đủ giờ hơn, ăn uống có kiểm soát và lành mạnh hơn
->2. Cân bằng lại công việc. Năm nay đã bước sang tuổi 30, cái tuổi không còn trẻ nữa để mạo hiểm. Bản thân sẽ sắp xếp lại công việc và lựa chọn nơi phù hợp hơn để ổn định cuộc sống.
->3. Xây dựng riêng cho mình một tủ sách nhỏ để bồi đắp tâm hồn, tích cực học thêm các khóa về chuyên môn để phục vụ cho công việc.
+Bước sang năm mới 2026, mình tự nhắc mình:
+
+> 1. **Sức khỏe trước tiên.** Tập thể dục đều đặn, ngủ đúng giờ và đủ giấc, ăn uống lành mạnh và có kiểm soát hơn.
+> 2. **Cân bằng lại công việc.** Năm nay đã bước sang tuổi 30 — cái tuổi đủ chín để không còn hành động bốc đồng. Mình sẽ sắp xếp lại định hướng và tìm một môi trường phù hợp hơn để ổn định cuộc sống.
+> 3. **Nuôi dưỡng tâm hồn và chuyên môn.** Xây dựng cho mình một tủ sách nhỏ, đọc nhiều hơn, đồng thời chủ động học thêm các khóa chuyên sâu để phát triển nghề nghiệp.
 
 
 <p style="text-align:center;">
     <b>Bye 2025</b>
     <br>
-    <b>Một năm 2026 trở thành phiên bản tốt hơn !!!</b>
- </p>
+    <b>Một năm 2026 — trở thành phiên bản tốt hơn của chính mình!</b>
+</p>
