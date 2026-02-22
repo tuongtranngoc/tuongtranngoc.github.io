@@ -58,6 +58,44 @@ author_profile: true
 
 </div>
 
+<!-- ─── Yearly Stats ──────────────────────────────────────────────── -->
+{% if strava.yearly.size > 0 %}
+<h2>Stats by Year</h2>
+<div class="running-table-wrap">
+  <table class="running-table">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Runs</th>
+        <th>Distance</th>
+        <th>Elevation</th>
+        <th>Avg Pace</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for y in strava.yearly %}
+        {% if y.runs > 0 and y.distance_km > 0 %}
+          {% assign yps = y.moving_time_s | times: 1.0 | divided_by: y.distance_km %}
+          {% assign ypm = yps | divided_by: 60 | floor %}
+          {% assign ypsec = yps | modulo: 60 | round %}
+          {% if ypsec < 10 %}{% assign ypsec_s = ypsec | prepend: "0" %}{% else %}{% assign ypsec_s = ypsec | append: "" %}{% endif %}
+          {% assign ypace = ypm | append: "'" | append: ypsec_s | append: '"' %}
+        {% else %}
+          {% assign ypace = "—" %}
+        {% endif %}
+        <tr>
+          <td data-label="Year"><strong>{{ y.year }}</strong></td>
+          <td data-label="Runs">{{ y.runs }}</td>
+          <td data-label="Distance">{{ y.distance_km }} km</td>
+          <td data-label="Elevation">{{ y.elevation_m }} m</td>
+          <td data-label="Avg Pace">{{ ypace }}/km</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
+
 <!-- ─── Weekly Chart ──────────────────────────────────────────────── -->
 {% if strava.weekly.size > 0 %}
 <h2>Weekly Distance (last 16 weeks)</h2>

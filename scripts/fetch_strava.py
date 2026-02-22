@@ -74,6 +74,29 @@ def week_start(dt: datetime) -> datetime:
     )
 
 
+def build_yearly(runs: list[dict]) -> list[dict]:
+    yearly: dict[int, dict] = defaultdict(lambda: {"runs": 0, "distance_m": 0.0, "elevation_m": 0.0, "moving_time_s": 0})
+    for run in runs:
+        year = int(run["start_date_local"][:4])
+        yearly[year]["runs"] += 1
+        yearly[year]["distance_m"] += run.get("distance", 0)
+        yearly[year]["elevation_m"] += run.get("total_elevation_gain", 0)
+        yearly[year]["moving_time_s"] += run.get("moving_time", 0)
+
+    result = []
+    for year in sorted(yearly.keys(), reverse=True):
+        y = yearly[year]
+        dist_km = y["distance_m"] / 1000
+        result.append({
+            "year": year,
+            "runs": y["runs"],
+            "distance_km": round(dist_km, 2),
+            "elevation_m": round(y["elevation_m"], 1),
+            "moving_time_s": y["moving_time_s"],
+        })
+    return result
+
+
 def build_weekly(runs: list[dict]) -> list[dict]:
     now = datetime.now(timezone.utc)
     cutoff = week_start(now) - timedelta(weeks=WEEKS_BACK - 1)
@@ -135,6 +158,7 @@ def build_output(runs: list[dict]) -> dict:
             "total_elevation_m": round(total_elevation, 1),
             "total_moving_time_s": total_time,
         },
+        "yearly": build_yearly(runs),
         "weekly": build_weekly(runs),
         "activities": activities,
     }
