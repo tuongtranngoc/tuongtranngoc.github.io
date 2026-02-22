@@ -11,6 +11,17 @@
     ],
     "photos": []
   },
+  "latest": {
+    "id": 0,
+    "name": "",
+    "date": "",
+    "distance_km": 0,
+    "moving_time_s": 0,
+    "elevation_m": 0,
+    "strava_url": "",
+    "polyline": "",
+    "photos": []
+  },
   "summary": {
     "total_distance_km": 640.93,
     "total_runs": 125,

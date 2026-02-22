@@ -106,6 +106,27 @@ def build_today(runs: list[dict]) -> dict:
     }
 
 
+def build_latest(runs: list[dict]) -> dict:
+    if not runs:
+        return {}
+    r = max(runs, key=lambda x: x["start_date"])
+    dist = r.get("distance", 0)
+    poly = (r.get("map") or {}).get("summary_polyline") or ""
+    urls = ((r.get("photos") or {}).get("primary") or {}).get("urls") or {}
+    photo_url = urls.get("600") or urls.get("100") or ""
+    return {
+        "id": r["id"],
+        "name": r.get("name", ""),
+        "date": r["start_date_local"][:10],
+        "distance_km": round(dist / 1000, 2),
+        "moving_time_s": r.get("moving_time", 0),
+        "elevation_m": round(r.get("total_elevation_gain", 0), 1),
+        "strava_url": f"https://www.strava.com/activities/{r['id']}",
+        "polyline": poly,
+        "photos": [photo_url] if photo_url else [],
+    }
+
+
 def build_yearly(runs: list[dict]) -> list[dict]:
     yearly: dict[int, dict] = defaultdict(lambda: {"runs": 0, "distance_m": 0.0, "elevation_m": 0.0, "moving_time_s": 0})
     for run in runs:
@@ -234,6 +255,7 @@ def build_output(runs: list[dict]) -> dict:
     return {
         "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "today": build_today(runs),
+        "latest": build_latest(runs),
         "summary": {
             "total_distance_km": round(total_distance / 1000, 2),
             "total_runs": len(runs),

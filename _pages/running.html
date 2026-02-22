@@ -9,6 +9,15 @@ author_profile: true
 
 {% assign strava = site.data.strava %}
 {% assign today  = strava.today %}
+{% assign latest = strava.latest %}
+
+{% assign need_map = false %}
+{% if today.polylines.size > 0 %}{% assign need_map = true %}{% endif %}
+{% if latest.polyline.size > 0 %}{% assign need_map = true %}{% endif %}
+
+{% if need_map %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+{% endif %}
 
 <p class="running-intro">
   I run to clear my head and stay consistent.
@@ -62,67 +71,87 @@ author_profile: true
 
 <!-- ─── Today's Map ───────────────────────────────────────────────── -->
 {% if today.polylines.size > 0 %}
-<div id="todayMap" class="running-today-map"></div>
-
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script>
-(function () {
-  var polylines = {{ today.polylines | jsonify }};
-
-  function decodePolyline(str) {
-    var i = 0, lat = 0, lng = 0, coords = [], b, shift, result;
-    while (i < str.length) {
-      shift = result = 0;
-      do { b = str.charCodeAt(i++) - 63; result |= (b & 0x1F) << shift; shift += 5; } while (b >= 0x20);
-      lat += (result & 1) ? ~(result >> 1) : (result >> 1);
-      shift = result = 0;
-      do { b = str.charCodeAt(i++) - 63; result |= (b & 0x1F) << shift; shift += 5; } while (b >= 0x20);
-      lng += (result & 1) ? ~(result >> 1) : (result >> 1);
-      coords.push([lat / 1e5, lng / 1e5]);
-    }
-    return coords;
-  }
-
-  function initMap() {
-    if (typeof L === "undefined") { setTimeout(initMap, 100); return; }
-    var map = L.map("todayMap", { zoomControl: true, scrollWheelZoom: false });
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      maxZoom: 18
-    }).addTo(map);
-
-    var allCoords = [];
-    polylines.forEach(function (encoded) {
-      var coords = decodePolyline(encoded);
-      if (!coords.length) return;
-      L.polyline(coords, { color: "#FC4C02", weight: 4, opacity: 0.85 }).addTo(map);
-      L.circleMarker(coords[0], {
-        radius: 6, fillColor: "#FC4C02", color: "#fff", weight: 2, fillOpacity: 1
-      }).addTo(map);
-      allCoords = allCoords.concat(coords);
-    });
-
-    if (allCoords.length) {
-      map.fitBounds(allCoords, { padding: [24, 24] });
-    }
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initMap);
-  } else {
-    initMap();
-  }
-})();
-</script>
+<div id="todayMap" class="running-map"></div>
 {% endif %}
 
 <!-- ─── Today's Photos ─────────────────────────────────────────────── -->
 {% if today.photos.size > 0 %}
-<div class="running-today-photos">
+<div class="running-photos">
   {% for photo in today.photos %}
   <img src="{{ photo }}" alt="Activity photo" loading="lazy">
   {% endfor %}
+</div>
+{% endif %}
+
+<!-- ─── Latest Run ─────────────────────────────────────────────────── -->
+{% if latest.name.size > 0 %}
+
+{% assign ldist_km = latest.distance_km %}
+{% assign lh = latest.moving_time_s | divided_by: 3600 | floor %}
+{% assign lm = latest.moving_time_s | modulo: 3600 | divided_by: 60 | floor %}
+{% assign ls = latest.moving_time_s | modulo: 60 %}
+{% if lh > 0 %}
+  {% assign ltime = lh | append: "h " | append: lm | append: "m" %}
+{% else %}
+  {% if ls < 10 %}{% assign ls_str = ls | prepend: "0" %}{% else %}{% assign ls_str = ls | append: "" %}{% endif %}
+  {% assign ltime = lm | append: ":" | append: ls_str %}
+{% endif %}
+
+{% if ldist_km > 0 %}
+  {% assign lps = latest.moving_time_s | times: 1.0 | divided_by: ldist_km %}
+  {% assign lpm = lps | divided_by: 60 | floor %}
+  {% assign lpsec = lps | modulo: 60 | round %}
+  {% if lpsec < 10 %}{% assign lpsec_s = lpsec | prepend: "0" %}{% else %}{% assign lpsec_s = lpsec | append: "" %}{% endif %}
+  {% assign lpace = lpm | append: "'" | append: lpsec_s | append: '"' %}
+{% else %}
+  {% assign lpace = "—" %}
+{% endif %}
+
+<h2>Latest Run</h2>
+<div class="running-latest">
+
+  <div class="running-latest__header">
+    <span class="running-latest__name">{{ latest.name }}</span>
+    <span class="running-latest__meta">
+      <span>{{ latest.date }}</span>
+      <a href="{{ latest.strava_url }}" target="_blank" rel="noopener"
+         class="running-latest__strava" aria-label="View on Strava">
+        <i class="fab fa-strava" aria-hidden="true"></i>
+      </a>
+    </span>
+  </div>
+
+  <div class="running-latest__stats">
+    <div class="running-latest__stat">
+      <span class="running-latest__stat-value">{{ ldist_km }}</span>
+      <span class="running-latest__stat-label">km</span>
+    </div>
+    <div class="running-latest__stat">
+      <span class="running-latest__stat-value">{{ ltime }}</span>
+      <span class="running-latest__stat-label">time</span>
+    </div>
+    <div class="running-latest__stat">
+      <span class="running-latest__stat-value">{{ lpace }}</span>
+      <span class="running-latest__stat-label">pace/km</span>
+    </div>
+    <div class="running-latest__stat">
+      <span class="running-latest__stat-value">{{ latest.elevation_m }}</span>
+      <span class="running-latest__stat-label">m elev</span>
+    </div>
+  </div>
+
+  {% if latest.polyline.size > 0 %}
+  <div id="latestMap" class="running-map running-map--in-card"></div>
+  {% endif %}
+
+  {% if latest.photos.size > 0 %}
+  <div class="running-photos running-photos--in-card">
+    {% for photo in latest.photos %}
+    <img src="{{ photo }}" alt="{{ latest.name }}" loading="lazy">
+    {% endfor %}
+  </div>
+  {% endif %}
+
 </div>
 {% endif %}
 
@@ -178,9 +207,7 @@ author_profile: true
   var labels = [{% for w in strava.weekly %}"{{ w.label }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
   var data   = [{% for w in strava.weekly %}{{ w.distance_km }}{% unless forloop.last %},{% endunless %}{% endfor %}];
 
-  function isDark() {
-    return document.documentElement.getAttribute("data-theme") === "dark";
-  }
+  function isDark() { return document.documentElement.getAttribute("data-theme") === "dark"; }
 
   function chartColors() {
     return {
@@ -199,65 +226,34 @@ author_profile: true
       type: "bar",
       data: {
         labels: labels,
-        datasets: [{
-          label: "km",
-          data: data,
-          backgroundColor: c.bar,
-          borderColor: c.border,
-          borderWidth: 1,
-          borderRadius: 3,
-        }]
+        datasets: [{ label: "km", data: data, backgroundColor: c.bar,
+          borderColor: c.border, borderWidth: 1, borderRadius: 3 }]
       },
       options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            callbacks: {
-              label: function(ctx) { return ctx.parsed.y.toFixed(2) + " km"; }
-            }
-          }
-        },
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false },
+          tooltip: { callbacks: { label: function(c) { return c.parsed.y.toFixed(2) + " km"; } } } },
         scales: {
-          x: {
-            ticks: { color: c.text, font: { size: 11 } },
-            grid:  { color: c.grid }
-          },
-          y: {
-            beginAtZero: true,
-            ticks: {
-              color: c.text,
-              callback: function(v) { return v + " km"; }
-            },
-            grid: { color: c.grid }
-          }
+          x: { ticks: { color: c.text, font: { size: 11 } }, grid: { color: c.grid } },
+          y: { beginAtZero: true,
+            ticks: { color: c.text, callback: function(v) { return v + " km"; } },
+            grid: { color: c.grid } }
         }
       }
     });
   }
 
   var chartInstance = null;
-
   function init() {
-    if (typeof Chart === "undefined") {
-      setTimeout(init, 100);
-      return;
-    }
+    if (typeof Chart === "undefined") { setTimeout(init, 100); return; }
     chartInstance = buildChart();
-
-    var observer = new MutationObserver(function () {
-      if (chartInstance) { chartInstance.destroy(); }
+    new MutationObserver(function () {
+      if (chartInstance) chartInstance.destroy();
       chartInstance = buildChart();
-    });
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
   }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else {
-    init();
-  }
+  if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", init); }
+  else { init(); }
 })();
 </script>
 {% endif %}
@@ -266,3 +262,64 @@ author_profile: true
   <i class="fas fa-sync-alt" aria-hidden="true"></i>
   Last synced: {{ strava.last_updated }}
 </p>
+
+<!-- ─── Leaflet maps (shared init) ───────────────────────────────── -->
+{% if need_map %}
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+<script>
+(function () {
+  function decodePolyline(str) {
+    var i = 0, lat = 0, lng = 0, coords = [], b, shift, result;
+    while (i < str.length) {
+      shift = result = 0;
+      do { b = str.charCodeAt(i++) - 63; result |= (b & 0x1F) << shift; shift += 5; } while (b >= 0x20);
+      lat += (result & 1) ? ~(result >> 1) : (result >> 1);
+      shift = result = 0;
+      do { b = str.charCodeAt(i++) - 63; result |= (b & 0x1F) << shift; shift += 5; } while (b >= 0x20);
+      lng += (result & 1) ? ~(result >> 1) : (result >> 1);
+      coords.push([lat / 1e5, lng / 1e5]);
+    }
+    return coords;
+  }
+
+  function initRunMap(containerId, polylines) {
+    var el = document.getElementById(containerId);
+    if (!el) return;
+    var map = L.map(containerId, { zoomControl: true, scrollWheelZoom: false });
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 18
+    }).addTo(map);
+    var allCoords = [];
+    polylines.forEach(function (encoded) {
+      var coords = decodePolyline(encoded);
+      if (!coords.length) return;
+      L.polyline(coords, { color: "#FC4C02", weight: 4, opacity: 0.85 }).addTo(map);
+      L.circleMarker(coords[0], {
+        radius: 6, fillColor: "#FC4C02", color: "#fff", weight: 2, fillOpacity: 1
+      }).addTo(map);
+      allCoords = allCoords.concat(coords);
+    });
+    if (allCoords.length) map.fitBounds(allCoords, { padding: [24, 24] });
+  }
+
+  function whenLeaflet(fn) {
+    if (typeof L !== "undefined") { fn(); } else { setTimeout(function () { whenLeaflet(fn); }, 50); }
+  }
+
+  function initAllMaps() {
+    whenLeaflet(function () {
+      {% if today.polylines.size > 0 %}
+      initRunMap("todayMap", {{ today.polylines | jsonify }});
+      {% endif %}
+      {% if latest.polyline.size > 0 %}
+      initRunMap("latestMap", [{{ latest.polyline | jsonify }}]);
+      {% endif %}
+    });
+  }
+
+  if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", initAllMaps); }
+  else { initAllMaps(); }
+})();
+</script>
+{% endif %}

@@ -35,9 +35,7 @@
     text-decoration: none;
   }
 
-  .fab {
-    font-size: 1.05em;
-  }
+  .fab { font-size: 1.05em; }
 }
 
 // ── Stat Cards Grid ──────────────────────────────────────────────────────────
@@ -48,13 +46,8 @@
   gap: 1em;
   margin: 1.5em 0 2em;
 
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 480px) {
-    grid-template-columns: 1fr;
-  }
+  @media (max-width: 768px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 480px) { grid-template-columns: 1fr; }
 }
 
 .stat-card {
@@ -71,11 +64,7 @@
     box-shadow: 0 6px 18px var(--color-card-shadow);
   }
 
-  &__icon {
-    font-size: 1.6em;
-    color: #FC4C02;
-    margin-bottom: 0.35em;
-  }
+  &__icon { font-size: 1.6em; color: #FC4C02; margin-bottom: 0.35em; }
 
   &__value {
     font-size: 1.8em;
@@ -93,20 +82,28 @@
   }
 }
 
-// ── Today's Map ───────────────────────────────────────────────────────────────
+// ── Shared Map ────────────────────────────────────────────────────────────────
 
-.running-today-map {
+.running-map {
   height: 360px;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid var(--color-border);
   margin-bottom: 1.25em;
-  z-index: 0; // keep below sticky nav
+  z-index: 0;
+
+  &--in-card {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin-bottom: 0;
+  }
 }
 
-// ── Today's Photos ────────────────────────────────────────────────────────────
+// ── Shared Photo Strip ────────────────────────────────────────────────────────
 
-.running-today-photos {
+.running-photos {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75em;
@@ -122,9 +119,105 @@
     box-shadow: 0 2px 8px var(--color-card-shadow);
   }
 
-  @media (max-width: 540px) {
+  &--in-card {
+    padding: 0.75em;
+    margin-bottom: 0;
+    border-top: 1px solid var(--color-border);
+
     img {
-      height: 160px;
+      border-radius: 6px;
+      height: 180px;
+    }
+  }
+
+  @media (max-width: 540px) {
+    img { height: 160px; }
+  }
+}
+
+// ── Latest Run Card ───────────────────────────────────────────────────────────
+
+.running-latest {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px var(--color-card-shadow);
+  overflow: hidden;
+  margin-bottom: 2em;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5em;
+    padding: 0.8em 1em;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 1em;
+    color: var(--color-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    flex-shrink: 0;
+    font-size: 0.82em;
+    color: var(--color-text-muted);
+  }
+
+  &__strava {
+    color: #FC4C02;
+    font-size: 1.15em;
+    &:hover { color: darken(#FC4C02, 10%); }
+  }
+
+  &__stats {
+    display: flex;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  &__stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.55em 0.5em;
+    border-right: 1px solid var(--color-border);
+    &:last-child { border-right: none; }
+  }
+
+  &__stat-value {
+    font-weight: 700;
+    font-size: 1em;
+    color: var(--color-text);
+    line-height: 1.2;
+  }
+
+  &__stat-label {
+    font-size: 0.68em;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 0.1em;
+  }
+
+  @media (max-width: 480px) {
+    &__stats { flex-wrap: wrap; }
+
+    &__stat {
+      flex: 0 0 50%;
+      border-right: none;
+      border-bottom: 1px solid var(--color-border);
+
+      &:nth-child(odd) { border-right: 1px solid var(--color-border); }
+      &:nth-last-child(-n+2) { border-bottom: none; }
     }
   }
 }
@@ -142,8 +235,7 @@
   border-collapse: collapse;
   font-size: 0.88em;
 
-  th,
-  td {
+  th, td {
     padding: 0.6em 0.85em;
     text-align: left;
     border-bottom: 1px solid var(--color-border);
@@ -159,13 +251,8 @@
     letter-spacing: 0.04em;
   }
 
-  tbody tr:nth-child(even) {
-    background: var(--color-bg-secondary);
-  }
-
-  tbody tr:hover {
-    background: var(--color-border);
-  }
+  tbody tr:nth-child(even) { background: var(--color-bg-secondary); }
+  tbody tr:hover { background: var(--color-border); }
 }
 
 // ── Weekly Chart ─────────────────────────────────────────────────────────────
@@ -183,7 +270,5 @@
   color: var(--color-text-muted);
   margin-top: 1em;
 
-  .fas {
-    margin-right: 0.25em;
-  }
+  .fas { margin-right: 0.25em; }
 }
