@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-02-22T15:59:24Z",
+  "last_updated": "2026-02-22T16:24:10Z",
   "today": {
     "date": "2026-02-22",
     "runs": 1,
@@ -12,14 +12,14 @@
     "photos": []
   },
   "latest": {
-    "id": 0,
-    "name": "",
-    "date": "",
-    "distance_km": 0,
-    "moving_time_s": 0,
-    "elevation_m": 0,
-    "strava_url": "",
-    "polyline": "",
+    "id": 17482528912,
+    "name": "Afternoon Run",
+    "date": "2026-02-22",
+    "distance_km": 3.02,
+    "moving_time_s": 1407,
+    "elevation_m": 0.0,
+    "strava_url": "https://www.strava.com/activities/17482528912",
+    "polyline": "sfb_Cq`ydSPy@FGT@^Np@NXFX?LFHCNSTKVa@DAd@]FKTGHDPT?REb@B^MfA@t@CF@FMr@Cl@Kt@?L@JIDu@AIGS@UE[Bw@[SO?EEC[ME?MHE\\IBUAMHEAEB[EC@M@IHOGDIB]FIF[BED]FQLy@CCHORcAJ[DSHQHCv@XZD`AXFADA@CFING^i@FAFGNI^a@LCTNDJEx@BPEXC~AGnAEV@HOh@@`@GTS?MDKEW?SEO?OEQ?WC]Qq@i@MBCLIJAHCBQ?MFYBYGKD[DAAFYAIN]FU@YR_ADILw@BE@OL]D_@JUHEDF^JF?ZLr@JDDZFLGXYPOFIp@m@FKTC@CNHJ`@EPBJC@AP?ZCJEbA@VGp@@NIn@IXAh@CZEDE@i@EGAS@KEKB]E",
     "photos": []
   },
   "summary": {
