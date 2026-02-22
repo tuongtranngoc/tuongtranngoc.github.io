@@ -1,11 +1,15 @@
 {
-  "last_updated": "2026-02-22T15:32:52Z",
+  "last_updated": "2026-02-22T15:59:24Z",
   "today": {
     "date": "2026-02-22",
     "runs": 1,
     "distance_km": 3.02,
     "elevation_m": 0.0,
-    "moving_time_s": 1407
+    "moving_time_s": 1407,
+    "polylines": [
+      "sfb_Cq`ydSPy@FGT@^Np@NXFX?LFHCNSTKVa@DAd@]FKTGHDPT?REb@B^MfA@t@CF@FMr@Cl@Kt@?L@JIDu@AIGS@UE[Bw@[SO?EEC[ME?MHE\\IBUAMHEAEB[EC@M@IHOGDIB]FIF[BED]FQLy@CCHORcAJ[DSHQHCv@XZD`AXFADA@CFING^i@FAFGNI^a@LCTNDJEx@BPEXC~AGnAEV@HOh@@`@GTS?MDKEW?SEO?OEQ?WC]Qq@i@MBCLIJAHCBQ?MFYBYGKD[DAAFYAIN]FU@YR_ADILw@BE@OL]D_@JUHEDF^JF?ZLr@JDDZFLGXYPOFIp@m@FKTC@CNHJ`@EPBJC@AP?ZCJEbA@VGp@@NIn@IXAh@CZEDE@i@EGAS@KEKB]E"
+    ],
+    "photos": []
   },
   "summary": {
     "total_distance_km": 640.93,
