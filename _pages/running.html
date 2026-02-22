@@ -8,7 +8,7 @@ author_profile: true
 {% include base_path %}
 
 {% assign strava = site.data.strava %}
-{% assign summary = strava.summary %}
+{% assign today  = strava.today %}
 
 <p class="running-intro">
   I run to clear my head and stay consistent.
@@ -19,41 +19,43 @@ author_profile: true
   <i class="fab fa-strava" aria-hidden="true"></i> View on Strava
 </a>
 
-<!-- ─── Summary Cards ─────────────────────────────────────────────── -->
+<!-- ─── Today's Stats ──────────────────────────────────────────────── -->
+<h2>Today <small class="running-date">{{ today.date }}</small></h2>
+
 <div class="running-stats">
 
   <div class="stat-card">
     <div class="stat-card__icon"><i class="fas fa-route" aria-hidden="true"></i></div>
-    <div class="stat-card__value">{{ summary.total_distance_km | round: 1 }}</div>
-    <div class="stat-card__label">Total km</div>
+    <div class="stat-card__value">{{ today.distance_km }}</div>
+    <div class="stat-card__label">km today</div>
   </div>
 
   <div class="stat-card">
     <div class="stat-card__icon"><i class="fas fa-running" aria-hidden="true"></i></div>
-    <div class="stat-card__value">{{ summary.total_runs }}</div>
-    <div class="stat-card__label">Total runs</div>
+    <div class="stat-card__value">{{ today.runs }}</div>
+    <div class="stat-card__label">runs today</div>
   </div>
 
   <div class="stat-card">
     <div class="stat-card__icon"><i class="fas fa-mountain" aria-hidden="true"></i></div>
-    <div class="stat-card__value">{{ summary.total_elevation_m | round: 0 }}</div>
-    <div class="stat-card__label">Elevation (m)</div>
+    <div class="stat-card__value">{{ today.elevation_m }}</div>
+    <div class="stat-card__label">elevation (m)</div>
   </div>
 
-  {% if summary.total_runs > 0 and summary.total_distance_km > 0 %}
-    {% assign pace_s = summary.total_moving_time_s | divided_by: summary.total_distance_km %}
+  {% if today.runs > 0 and today.distance_km > 0 %}
+    {% assign pace_s = today.moving_time_s | times: 1.0 | divided_by: today.distance_km %}
     {% assign pace_min = pace_s | divided_by: 60 | floor %}
     {% assign pace_sec = pace_s | modulo: 60 | round %}
     {% if pace_sec < 10 %}{% assign pace_sec_str = pace_sec | prepend: "0" %}{% else %}{% assign pace_sec_str = pace_sec | append: "" %}{% endif %}
-    {% assign avg_pace = pace_min | append: ":" | append: pace_sec_str %}
+    {% assign today_pace = pace_min | append: ":" | append: pace_sec_str %}
   {% else %}
-    {% assign avg_pace = "—" %}
+    {% assign today_pace = "—" %}
   {% endif %}
 
   <div class="stat-card">
     <div class="stat-card__icon"><i class="fas fa-tachometer-alt" aria-hidden="true"></i></div>
-    <div class="stat-card__value">{{ avg_pace }}</div>
-    <div class="stat-card__label">Avg pace (min/km)</div>
+    <div class="stat-card__value">{{ today_pace }}</div>
+    <div class="stat-card__label">pace (min/km)</div>
   </div>
 
 </div>
@@ -178,7 +180,6 @@ author_profile: true
     }
     chartInstance = buildChart();
 
-    // Re-theme when dark mode toggle fires
     var observer = new MutationObserver(function () {
       if (chartInstance) { chartInstance.destroy(); }
       chartInstance = buildChart();
@@ -193,111 +194,6 @@ author_profile: true
   }
 })();
 </script>
-{% endif %}
-
-<!-- ─── Activity Log ───────────────────────────────────────────────── -->
-<h2>Activity Log</h2>
-
-{% if strava.activities.size > 0 %}
-<div class="activity-grid" id="activityGrid">
-  {% for a in strava.activities %}
-    {% assign dist_km = a.distance_m | divided_by: 1000.0 %}
-
-    {% assign h = a.moving_time_s | divided_by: 3600 | floor %}
-    {% assign m = a.moving_time_s | modulo: 3600 | divided_by: 60 | floor %}
-    {% assign s = a.moving_time_s | modulo: 60 %}
-    {% if h > 0 %}
-      {% assign time_str = h | append: "h " | append: m | append: "m" %}
-    {% else %}
-      {% if s < 10 %}{% assign s_str = s | prepend: "0" %}{% else %}{% assign s_str = s | append: "" %}{% endif %}
-      {% assign time_str = m | append: ":" | append: s_str %}
-    {% endif %}
-
-    {% if a.distance_m > 0 %}
-      {% assign ps = a.moving_time_s | times: 1.0 | divided_by: dist_km %}
-      {% assign pm = ps | divided_by: 60 | floor %}
-      {% assign psec = ps | modulo: 60 | round %}
-      {% if psec < 10 %}{% assign psec_s = psec | prepend: "0" %}{% else %}{% assign psec_s = psec | append: "" %}{% endif %}
-      {% assign pace_str = pm | append: "'" | append: psec_s | append: '"' %}
-    {% else %}
-      {% assign pace_str = "—" %}
-    {% endif %}
-
-    <div class="activity-card{% if forloop.index > 10 %} activity-card--hidden{% endif %}">
-
-      <div class="activity-card__header">
-        <span class="activity-card__name">{{ a.name }}</span>
-        <span class="activity-card__meta">
-          <span class="activity-card__date">{{ a.date }}</span>
-          <a href="{{ a.strava_url }}" target="_blank" rel="noopener"
-             class="activity-card__strava-link" aria-label="View on Strava">
-            <i class="fab fa-strava" aria-hidden="true"></i>
-          </a>
-        </span>
-      </div>
-
-      <div class="activity-card__stats">
-        <div class="activity-card__stat">
-          <span class="activity-card__stat-value">{{ dist_km | round: 2 }}</span>
-          <span class="activity-card__stat-label">km</span>
-        </div>
-        <div class="activity-card__stat">
-          <span class="activity-card__stat-value">{{ time_str }}</span>
-          <span class="activity-card__stat-label">time</span>
-        </div>
-        <div class="activity-card__stat">
-          <span class="activity-card__stat-value">{{ pace_str }}</span>
-          <span class="activity-card__stat-label">pace/km</span>
-        </div>
-        <div class="activity-card__stat">
-          <span class="activity-card__stat-value">{{ a.elevation_m }}</span>
-          <span class="activity-card__stat-label">m elev</span>
-        </div>
-      </div>
-
-      {% if a.route_svg != "" or a.photo_url != "" %}
-      <div class="activity-card__media">
-        {% if a.route_svg != "" %}
-        <div class="activity-card__map">
-          <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"
-               preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-            <path d="{{ a.route_svg }}"
-                  stroke="#FC4C02" stroke-width="2.5" fill="none"
-                  stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        {% endif %}
-        {% if a.photo_url != "" %}
-        <div class="activity-card__photo">
-          <img src="{{ a.photo_url }}" alt="{{ a.name }}" loading="lazy">
-        </div>
-        {% endif %}
-      </div>
-      {% endif %}
-
-    </div>
-  {% endfor %}
-</div>
-
-<button class="load-more-btn" id="loadMoreBtn">
-  <i class="fas fa-chevron-down" aria-hidden="true"></i> Show all {{ strava.activities.size }} activities
-</button>
-
-<script>
-(function () {
-  var btn = document.getElementById("loadMoreBtn");
-  if (!btn) return;
-  var hidden = document.querySelectorAll(".activity-card--hidden");
-  if (hidden.length === 0) { btn.style.display = "none"; return; }
-  btn.addEventListener("click", function () {
-    hidden.forEach(function (c) { c.classList.remove("activity-card--hidden"); });
-    btn.style.display = "none";
-  });
-})();
-</script>
-
-{% else %}
-<p>No activities yet — check back after the first sync.</p>
 {% endif %}
 
 <p class="running-sync-note">

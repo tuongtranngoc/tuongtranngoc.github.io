@@ -1,5 +1,12 @@
 {
   "last_updated": "2026-02-22T15:15:06Z",
+  "today": {
+    "date": "1970-01-01",
+    "runs": 0,
+    "distance_km": 0,
+    "elevation_m": 0,
+    "moving_time_s": 0
+  },
   "summary": {
     "total_distance_km": 640.93,
     "total_runs": 125,

@@ -74,6 +74,27 @@ def week_start(dt: datetime) -> datetime:
     )
 
 
+def build_today(runs: list[dict]) -> dict:
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    distance_m = 0.0
+    elevation_m = 0.0
+    moving_time_s = 0
+    count = 0
+    for r in runs:
+        if r["start_date_local"][:10] == today:
+            distance_m += r.get("distance", 0)
+            elevation_m += r.get("total_elevation_gain", 0)
+            moving_time_s += r.get("moving_time", 0)
+            count += 1
+    return {
+        "date": today,
+        "runs": count,
+        "distance_km": round(distance_m / 1000, 2),
+        "elevation_m": round(elevation_m, 1),
+        "moving_time_s": moving_time_s,
+    }
+
+
 def build_yearly(runs: list[dict]) -> list[dict]:
     yearly: dict[int, dict] = defaultdict(lambda: {"runs": 0, "distance_m": 0.0, "elevation_m": 0.0, "moving_time_s": 0})
     for run in runs:
@@ -201,6 +222,7 @@ def build_output(runs: list[dict]) -> dict:
 
     return {
         "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "today": build_today(runs),
         "summary": {
             "total_distance_km": round(total_distance / 1000, 2),
             "total_runs": len(runs),
