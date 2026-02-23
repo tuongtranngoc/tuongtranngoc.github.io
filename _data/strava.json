@@ -1,14 +1,12 @@
 {
-  "last_updated": "2026-02-22T16:24:10Z",
+  "last_updated": "2026-02-23T06:10:13Z",
   "today": {
-    "date": "2026-02-22",
-    "runs": 1,
-    "distance_km": 3.02,
+    "date": "2026-02-23",
+    "runs": 0,
+    "distance_km": 0.0,
     "elevation_m": 0.0,
-    "moving_time_s": 1407,
-    "polylines": [
-      "sfb_Cq`ydSPy@FGT@^Np@NXFX?LFHCNSTKVa@DAd@]FKTGHDPT?REb@B^MfA@t@CF@FMr@Cl@Kt@?L@JIDu@AIGS@UE[Bw@[SO?EEC[ME?MHE\\IBUAMHEAEB[EC@M@IHOGDIB]FIF[BED]FQLy@CCHORcAJ[DSHQHCv@XZD`AXFADA@CFING^i@FAFGNI^a@LCTNDJEx@BPEXC~AGnAEV@HOh@@`@GTS?MDKEW?SEO?OEQ?WC]Qq@i@MBCLIJAHCBQ?MFYBYGKD[DAAFYAIN]FU@YR_ADILw@BE@OL]D_@JUHEDF^JF?ZLr@JDDZFLGXYPOFIp@m@FKTC@CNHJ`@EPBJC@AP?ZCJEbA@VGp@@NIn@IXAh@CZEDE@i@EGAS@KEKB]E"
-    ],
+    "moving_time_s": 0,
+    "polylines": [],
     "photos": []
   },
   "latest": {
@@ -74,10 +72,6 @@
   ],
   "weekly": [
     {
-      "label": "Nov W1",
-      "distance_km": 0.0
-    },
-    {
       "label": "Nov W2",
       "distance_km": 0.0
     },
@@ -136,6 +130,10 @@
     {
       "label": "Feb W3",
       "distance_km": 3.02
+    },
+    {
+      "label": "Feb W4",
+      "distance_km": 0.0
     }
   ],
   "activities": [
