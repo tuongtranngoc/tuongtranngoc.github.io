@@ -1,38 +1,40 @@
 {
-  "last_updated": "2026-02-23T06:10:13Z",
+  "last_updated": "2026-02-24T06:05:14Z",
   "today": {
-    "date": "2026-02-23",
-    "runs": 0,
-    "distance_km": 0.0,
+    "date": "2026-02-24",
+    "runs": 1,
+    "distance_km": 2.84,
     "elevation_m": 0.0,
-    "moving_time_s": 0,
-    "polylines": [],
+    "moving_time_s": 1468,
+    "polylines": [
+      "_|a_CkyxdSKbACDm@ASEwAKSEe@W][KCMDAD?XGDu@LO?YEOJKECIJu@~@yEJY@ON]h@BTHVD|@\\VD`@]TWHQ|@s@LCHBPRDL?REhA@d@K~@Cx@KbA@PIx@GL[?_@C[GcAEe@Mo@i@MEMFAXCFE@{@L_@EUHGCAGHw@f@qCh@eCFKX@t@N|Ab@JE`@_@FEFKDEDAx@y@HANDPNBb@IhCE`AET@TIb@Aj@Kv@KDOCG@m@G]@e@IG@c@Q}@k@G@KFATEFq@HKD]GUJGAEEDU"
+    ],
     "photos": []
   },
   "latest": {
-    "id": 17482528912,
-    "name": "Afternoon Run",
-    "date": "2026-02-22",
-    "distance_km": 3.02,
-    "moving_time_s": 1407,
+    "id": 17500031537,
+    "name": "Morning Run",
+    "date": "2026-02-24",
+    "distance_km": 2.84,
+    "moving_time_s": 1468,
     "elevation_m": 0.0,
-    "strava_url": "https://www.strava.com/activities/17482528912",
-    "polyline": "sfb_Cq`ydSPy@FGT@^Np@NXFX?LFHCNSTKVa@DAd@]FKTGHDPT?REb@B^MfA@t@CF@FMr@Cl@Kt@?L@JIDu@AIGS@UE[Bw@[SO?EEC[ME?MHE\\IBUAMHEAEB[EC@M@IHOGDIB]FIF[BED]FQLy@CCHORcAJ[DSHQHCv@XZD`AXFADA@CFING^i@FAFGNI^a@LCTNDJEx@BPEXC~AGnAEV@HOh@@`@GTS?MDKEW?SEO?OEQ?WC]Qq@i@MBCLIJAHCBQ?MFYBYGKD[DAAFYAIN]FU@YR_ADILw@BE@OL]D_@JUHEDF^JF?ZLr@JDDZFLGXYPOFIp@m@FKTC@CNHJ`@EPBJC@AP?ZCJEbA@VGp@@NIn@IXAh@CZEDE@i@EGAS@KEKB]E",
+    "strava_url": "https://www.strava.com/activities/17500031537",
+    "polyline": "_|a_CkyxdSKbACDm@ASEwAKSEe@W][KCMDAD?XGDu@LO?YEOJKECIJu@~@yEJY@ON]h@BTHVD|@\\VD`@]TWHQ|@s@LCHBPRDL?REhA@d@K~@Cx@KbA@PIx@GL[?_@C[GcAEe@Mo@i@MEMFAXCFE@{@L_@EUHGCAGHw@f@qCh@eCFKX@t@N|Ab@JE`@_@FEFKDEDAx@y@HANDPNBb@IhCE`AET@TIb@Aj@Kv@KDOCG@m@G]@e@IG@c@Q}@k@G@KFATEFq@HKD]GUJGAEEDU",
     "photos": []
   },
   "summary": {
-    "total_distance_km": 640.93,
-    "total_runs": 125,
+    "total_distance_km": 643.77,
+    "total_runs": 126,
     "total_elevation_m": 3159.3,
-    "total_moving_time_s": 311349
+    "total_moving_time_s": 312817
   },
   "yearly": [
     {
       "year": 2026,
-      "runs": 1,
-      "distance_km": 3.02,
+      "runs": 2,
+      "distance_km": 5.86,
       "elevation_m": 0.0,
-      "moving_time_s": 1407
+      "moving_time_s": 2875
     },
     {
       "year": 2025,
@@ -133,10 +135,22 @@
     },
     {
       "label": "Feb W4",
-      "distance_km": 0.0
+      "distance_km": 2.84
     }
   ],
   "activities": [
+    {
+      "id": 17500031537,
+      "name": "Morning Run",
+      "date": "2026-02-24",
+      "distance_m": 2838.3,
+      "moving_time_s": 1468,
+      "elevation_m": 0.0,
+      "avg_speed_ms": 1.933,
+      "strava_url": "https://www.strava.com/activities/17500031537",
+      "route_svg": "M24.9,104.2 L9.4,101.5 L8.0,100.6 L8.5,90.1 L9.8,85.5 L12.6,65.5 L13.9,60.9 L19.4,52.2 L25.8,45.4 L26.7,42.7 L25.3,39.5 L24.0,39.0 L18.0,39.0 L16.7,37.2 L13.5,24.9 L13.5,21.2 L14.8,15.3 L12.1,11.6 L13.5,8.9 L15.8,8.0 L28.1,10.7 L77.8,25.3 L83.7,28.1 L87.4,28.5 L94.2,32.2 L93.3,41.8 L91.0,46.8 L89.6,52.2 L82.8,66.4 L81.4,71.9 L88.3,79.6 L93.8,84.6 L97.9,86.9 L109.7,101.1 L110.6,104.2 L109.7,106.5 L105.2,110.6 L102.0,112.0 L97.4,112.0 L80.5,110.6 L71.9,111.1 L57.3,108.4 L44.0,107.4 L28.5,104.7 L24.4,105.2 L11.2,102.9 L8.0,101.1 L8.0,94.7 L8.9,87.4 L10.7,81.0 L12.1,65.5 L15.3,56.8 L24.9,45.9 L26.2,42.7 L24.4,39.5 L18.5,39.0 L16.7,38.1 L16.2,36.7 L13.0,23.1 L14.4,15.8 L12.1,10.7 L13.0,8.9 L14.8,8.5 L27.6,10.7 L60.9,19.9 L91.5,29.4 L94.2,31.3 L93.8,37.2 L90.1,49.5 L81.9,70.9 L83.3,73.7 L90.6,81.4 L91.9,83.3 L94.7,85.1 L96.0,86.5 L96.5,87.8 L109.7,101.1 L110.2,103.3 L108.8,107.0 L105.2,111.1 L96.9,112.0 L65.5,109.7 L50.4,108.4 L45.4,107.0 L40.4,107.4 L32.2,105.2 L22.1,104.7 L9.4,102.0 L8.0,99.2 L8.9,95.6 L8.5,93.8 L10.3,83.3 L9.8,76.4 L12.1,67.8 L11.6,65.9 L15.8,57.7 L25.8,43.6 L25.3,41.8 L23.5,39.0 L18.5,38.6 L16.7,37.2 L14.4,25.8 L13.0,23.1 L14.8,16.2 L12.1,11.2 L12.6,9.4 L13.9,8.0 L18.9,9.4",
+      "photo_url": ""
+    },
     {
       "id": 17482528912,
       "name": "Afternoon Run",
