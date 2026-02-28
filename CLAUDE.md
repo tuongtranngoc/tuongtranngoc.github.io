@@ -24,7 +24,7 @@ npx uglify-js assets/js/vendor/jquery/jquery-1.12.4.min.js \
 npm run watch:js                                                 # Watch and auto-rebuild JS
 ```
 
-> `npm run build:js` requires `uglifyjs` to be globally installed; use `npx uglify-js ...` (command above) instead.
+> After `npm install`, `npm run build:js` (alias: `npm run uglify`) works using the local `uglify-js` devDependency. Alternatively, use `npx uglify-js ...` without installing.
 
 Use `_config.dev.yml` for local development — it disables analytics, uses `localhost:4000` as URL, and sets SASS to `expanded` output for easier debugging.
 
@@ -119,7 +119,7 @@ A running stats page at `/running/` displays activity data fetched from Strava a
 - `_sass/_running.scss` — Styles for the running page
 
 **GitHub Actions** (`.github/workflows/sync-strava.yml`):
-- Runs daily at 05:00 UTC (or manually via `workflow_dispatch`)
+- Runs 3 times daily at 05:00, 13:00, and 21:00 UTC (or manually via `workflow_dispatch`)
 - Requires three repository secrets: `STRAVA_CLIENT_ID`, `STRAVA_CLIENT_SECRET`, `STRAVA_REFRESH_TOKEN`
 - Auto-commits updates to `_data/strava.json` with `[skip ci]` to avoid build loops
 
