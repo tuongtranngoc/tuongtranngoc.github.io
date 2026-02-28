@@ -14,9 +14,17 @@ bundle exec jekyll serve                                         # Serve locally
 bundle exec jekyll serve --livereload                            # Serve with live reload (hawkins gem)
 bundle exec jekyll serve --config _config.yml,_config.dev.yml   # Serve with dev overrides
 bundle exec jekyll build                                         # Build static site to _site/
-npm run build:js                                                 # Minify JS to assets/js/main.min.js
+npx uglify-js assets/js/vendor/jquery/jquery-1.12.4.min.js \
+  assets/js/plugins/jquery.fitvids.js \
+  assets/js/plugins/jquery.greedy-navigation.js \
+  assets/js/plugins/jquery.magnific-popup.js \
+  assets/js/plugins/jquery.smooth-scroll.min.js \
+  assets/js/plugins/stickyfill.min.js \
+  assets/js/_main.js -c -m -o assets/js/main.min.js            # Rebuild minified JS bundle
 npm run watch:js                                                 # Watch and auto-rebuild JS
 ```
+
+> `npm run build:js` requires `uglifyjs` to be globally installed; use `npx uglify-js ...` (command above) instead.
 
 Use `_config.dev.yml` for local development — it disables analytics, uses `localhost:4000` as URL, and sets SASS to `expanded` output for easier debugging.
 
@@ -89,16 +97,17 @@ These are media-heavy: body content uses inline HTML `<img>` tags and `<video co
 ## Styling
 
 - `assets/css/main.scss` — Entry point that imports all `_sass/` partials
-- Custom partials: `_dark-mode.scss`, `_blog.scss`, `_collections.scss`, `_sidebar.scss`, `_cv.scss`, `_running.scss`, `_archive.scss`, `_footer.scss`, `_masthead.scss`, `_navigation.scss`, `_page.scss`
-- Dark mode uses a toggle with `localStorage` persistence
+- Custom partials: `_dark-mode.scss`, `_blog.scss`, `_collections.scss`, `_sidebar.scss`, `_cv.scss`, `_running.scss`, `_archive.scss`, `_footer.scss`, `_masthead.scss`, `_navigation.scss`, `_page.scss`, `_search.scss`
+- Dark mode uses a toggle with `localStorage` persistence (`data-theme` attribute on `<html>`)
 
 ## JavaScript
 
-- `assets/js/_main.js` — Source file; output is `assets/js/main.min.js`
-- `npm run build:js` concatenates and minifies: jQuery 1.12.4 + plugins (fitvids, greedy-navigation, magnific-popup, smooth-scroll, stickyfill) + `_main.js`
+- `assets/js/_main.js` — Source file; output is `assets/js/main.min.js`. **Always rebuild the bundle after editing `_main.js`.**
+- Bundle concatenation order: jQuery 1.12.4 → fitvids → greedy-navigation → magnific-popup → smooth-scroll → stickyfill → `_main.js`
 - Blog archive has tag-based filtering via JS
 - MathJax is loaded for math equation support in posts
 - Running page uses Leaflet.js (via unpkg CDN) for activity maps
+- Search overlay uses Lunr.js (unpkg CDN) with a client-side index built from `search.json`
 
 ## Strava Integration
 
@@ -113,6 +122,16 @@ A running stats page at `/running/` displays activity data fetched from Strava a
 - Runs daily at 05:00 UTC (or manually via `workflow_dispatch`)
 - Requires three repository secrets: `STRAVA_CLIENT_ID`, `STRAVA_CLIENT_SECRET`, `STRAVA_REFRESH_TOKEN`
 - Auto-commits updates to `_data/strava.json` with `[skip ci]` to avoid build loops
+
+## Search
+
+Client-side full-text search powered by Lunr.js — no server required (suitable for GitHub Pages).
+
+- `search.json` — Jekyll-generated index at repo root; includes title, url, tags, content (truncated 500 chars) for all `_posts/`
+- `_includes/masthead.html` — Search toggle button + fullscreen overlay HTML (backdrop, modal, input, results list, footer hints)
+- `_sass/_search.scss` — All overlay styles: backdrop blur, spring animation, result cards with tag pills and animated arrow, keyboard hint footer
+- `_includes/scripts.html` — Lunr.js loaded from CDN before `main.min.js`
+- Search logic in `assets/js/_main.js`: opens on button click or `Cmd+K`, supports `↑↓` keyboard navigation through results, `Enter` to follow, `Escape` to close
 
 ## Key Config Notes
 
