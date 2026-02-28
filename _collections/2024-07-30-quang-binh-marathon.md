@@ -1,6 +1,6 @@
 ---
 title: 'Running - Quảng Bình International Marathon 2024'
-excerpt: "Bản thân chưa thực sự có sự chuẩn bị tốt <br/><img src='/images/mylife/running-quang-binh-2024/cau_nhat_le_2-2_excerpt.jpg'>"
+excerpt: "Bản thân chưa thực sự có sự chuẩn bị tốt <br/><img src='/images/mylife/2024/running_quang_binh/cau_nhat_le_2-2_excerpt.jpg'>"
 collection: reading
 type: "collections"
 venue: "Mùa hạ, Hà Nội"
@@ -24,99 +24,99 @@ Quảng Bình International Marathon 2024 là giải đấu marathon do Sở VHT
 
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-quang-binh-2024/nhan_bib_1.jpg'>
+  <img src='/images/mylife/2024/running_quang_binh/nhan_bib_1.jpg'>
   <p style="text-align:center;"><b></b>Ngày nhận BIB</p>
 </p> 
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-quang-binh-2024/nhan_bib_2.jpg'>
+  <img src='/images/mylife/2024/running_quang_binh/nhan_bib_2.jpg'>
   <p style="text-align:center;"><b></b>Ngày nhận BIB</p>
 </p> 
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-quang-binh-2024/nhan_bib_3.jpg'>
+  <img src='/images/mylife/2024/running_quang_binh/nhan_bib_3.jpg'>
   <p style="text-align:center;"><b></b>Ngày nhận BIB</p>
 </p> 
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-quang-binh-2024/IMG_5143.PNG'>
+  <img src='/images/mylife/2024/running_quang_binh/IMG_5143.PNG'>
   <p style="text-align:center;"><b></b>Ngày nhận BIB</p>
 </p> 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-quang-binh-2024/quang_truong.jpg'>
+  <img src='/images/mylife/2024/running_quang_binh/quang_truong.jpg'>
   <p style="text-align:center;"><b></b>Quảng trường HCM</p>
 </p>
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-quang-binh-2024/IMG_5201.PNG'>
+  <img src='/images/mylife/2024/running_quang_binh/IMG_5201.PNG'>
   <p style="text-align:center;"><b></b>Quảng trường HCM</p>
 </p> 
 
 <p style="text-align:center;">
 <video controls>
-    <source src='/images/mylife/running-quang-binh-2024/video_5202.mp4' type='video/mp4'>
+    <source src='/images/mylife/2024/running_quang_binh/video_5202.mp4' type='video/mp4'>
 </video>
 </p>
 
 <p style="text-align:center;">
 <video controls>
-    <source src='/images/mylife/running-quang-binh-2024/video_5200.mp4' type='video/mp4'>
+    <source src='/images/mylife/2024/running_quang_binh/video_5200.mp4' type='video/mp4'>
 </video>
 </p>
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-quang-binh-2024/TLP00093.JPG'>
+  <img src='/images/mylife/2024/running_quang_binh/TLP00093.JPG'>
   <p style="text-align:center;"><b></b>Chụp ảnh tại Quảng trường</p>
 </p> 
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-quang-binh-2024/TLP00049.JPG'>
+  <img src='/images/mylife/2024/running_quang_binh/TLP00049.JPG'>
   <p style="text-align:center;"><b></b>Khởi động trước chạy</p>
 </p> 
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-quang-binh-2024/TLP00048.JPG'>
+  <img src='/images/mylife/2024/running_quang_binh/TLP00048.JPG'>
   <p style="text-align:center;"><b></b>Khởi động trước chạy</p>
 </p> 
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-quang-binh-2024/TAT01730.JPG'>
+  <img src='/images/mylife/2024/running_quang_binh/TAT01730.JPG'>
   <p style="text-align:center;"><b></b>Những cự ly đầu</p>
 </p> 
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-quang-binh-2024/PTT_0045.JPG'>
+  <img src='/images/mylife/2024/running_quang_binh/PTT_0045.JPG'>
   <p style="text-align:center;"><b></b>Những cự ly đầu</p>
 </p> 
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-quang-binh-2024/NTH03166.JPG'>
+  <img src='/images/mylife/2024/running_quang_binh/NTH03166.JPG'>
   <p style="text-align:center;"><b></b>Những cự ly đầu</p>
 </p> 
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-quang-binh-2024/cau_nhat_le_2-2.jpg'>
+  <img src='/images/mylife/2024/running_quang_binh/cau_nhat_le_2-2.jpg'>
   <p style="text-align:center;"><b></b>Cầu Nhật Lệ</p>
 </p> 
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-quang-binh-2024/cau_nhat_le_2.jpg'>
+  <img src='/images/mylife/2024/running_quang_binh/cau_nhat_le_2.jpg'>
   <p style="text-align:center;"><b></b>Cầu Nhật Lệ</p>
 </p> 
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-quang-binh-2024/ANH03380.jpg'>
-  <p style="text-align:center;"><b></b>Cầu Nhật Lệ</p>
-</p> 
-
-
-<p style="text-align:center;">
-  <img src='/images/mylife/running-quang-binh-2024/MAD_6878.JPG'>
+  <img src='/images/mylife/2024/running_quang_binh/ANH03380.jpg'>
   <p style="text-align:center;"><b></b>Cầu Nhật Lệ</p>
 </p> 
 
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-quang-binh-2024/ANH04484.jpg'>
+  <img src='/images/mylife/2024/running_quang_binh/MAD_6878.JPG'>
+  <p style="text-align:center;"><b></b>Cầu Nhật Lệ</p>
+</p> 
+
+
+<p style="text-align:center;">
+  <img src='/images/mylife/2024/running_quang_binh/ANH04484.jpg'>
   <p style="text-align:center;"><b></b>Nửa quãng đường</p>
 </p> 

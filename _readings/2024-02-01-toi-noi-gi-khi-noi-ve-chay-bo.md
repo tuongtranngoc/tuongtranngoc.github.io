@@ -21,7 +21,7 @@ tags:
 ## Introduction
 
 <p style="text-align:center;">
-  <img src="/images/reading/toinoigikhinoivechaybo.jpg">
+  <img src="/images/reading/2024/toi_noi_gi_khi_noi_ve_chay_bo/toinoigikhinoivechaybo.jpg">
 </p>
 
 1. Reading, 07/02/2024: 5/8/2005 - Kauai, Hawaii - Ai định cười Mick Jagger?

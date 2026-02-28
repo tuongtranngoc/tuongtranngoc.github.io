@@ -16,7 +16,7 @@ tags:
 One of the factors to become a good programer is not only to master solid professional knowledge but also need to optimize operations in programming. Using IDE tools effectively will help you save time and speed up work performance. 
 
 <p style="text-align:center;">
-  <img src="/images/posts/vscode_tips/VS_Code.png">
+  <img src="/images/posts/2024/vscode_tips/VS_Code.png">
 </p>
 
 

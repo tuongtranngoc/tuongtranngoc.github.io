@@ -37,7 +37,7 @@ Given $Z$, the decoder then generates an output sequence $Y=(y_1, y_2, ..., y_m)
 Next, we go to the detailed components of the architecture in Transformer.
 
 <p style="text-align:center;">
-  <img src="/images/posts/transformer/Transformer_model_architecture.png" width=300px>
+  <img src="/images/posts/2024/transformer/Transformer_model_architecture.png" width=300px>
 </p>
 
 ### Encoder
@@ -66,7 +66,7 @@ where $S(X)$ is the function implemented by the sub-layer itself, $LN$ is layer 
 **Attention** is function can be described mapping a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors. Assume that, the input consists of queries and keys of dimemsion $d_k$, and values of dimension $d_v$. 
 
 <p style="text-align:center;">
-  <img src="/images/posts/transformer/scaled_dot_product_attention.png" width=150px>
+  <img src="/images/posts/2024/transformer/scaled_dot_product_attention.png" width=150px>
 </p>
 
 The output of Attention is computed by the Scaled Dot-Product Attention:
@@ -124,7 +124,7 @@ class DotProductAttention(nn.Module):
 Instead of performing a single attention function, it allows the model to jointly attend to information from different representation subspaces at different positions. That perform the attention function in parallel.
 
 <p style="text-align:center;">
-  <img src="/images/posts/transformer/multi-head_attention.png" width=200px>
+  <img src="/images/posts/2024/transformer/multi-head_attention.png" width=200px>
 </p>
 
 $$\text{MultiHead(Q,K,V)}=\text{Concat}(\text{head}_1, ..., \text{head}_h)W^O$$

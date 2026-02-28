@@ -1,6 +1,6 @@
 ---
 title: "Trekking - SAMMU, Bắc Yên, Sơn La"
-excerpt: "Sự bỏ lỡ đáng tiếc <br/><img src='/images/mylife/trekking-samu/IMG_4675_excerpt.jpg'>"
+excerpt: "Sự bỏ lỡ đáng tiếc <br/><img src='/images/mylife/2024/trekking_samu/IMG_4675_excerpt.jpg'>"
 collection: journeys
 venue: "Mùa Xuân, Hà Nội"
 date: 2024-03-01
@@ -20,134 +20,134 @@ tags:
 
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4756.JPG'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4756.JPG'>
     <p style="text-align:center;"><b>Hành trình đi từ chân núi Xín Vàng - Bắc Yên lên đỉnh Samu</b></p>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4757.JPG'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4757.JPG'>
     <p style="text-align:center;"><b>Hành trình đi đỉnh núi Samu xuống chân núi Làng Chếu - Bắc Yên</b></p>
 </p>
 
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_1262.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_1262.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_1383.JPEG'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_1383.JPEG'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_1534.JPEG'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_1534.JPEG'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4395.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4395.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4414.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4414.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4417.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4417.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4419.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4419.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4427.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4427.jpg'>
 </p>
 
 <p style="text-align:center;">
 <video controls>
-    <source src='/images/mylife/trekking-samu/video_4473.mp4' type='video/mp4'>
+    <source src='/images/mylife/2024/trekking_samu/video_4473.mp4' type='video/mp4'>
 </video>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4432.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4432.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4447.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4447.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4454.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4454.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4470.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4470.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4481.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4481.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4525.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4525.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4484.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4484.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4554.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4554.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4583.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4583.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4608.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4608.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4632.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4632.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4670.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4670.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4671.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4671.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4672.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4672.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4675.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4675.jpg'>
 </p>
 
  <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4698.JPG'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4698.JPG'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4699.JPG'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4699.JPG'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4703.jpg'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4703.jpg'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4742.JPG'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4742.JPG'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4748.JPG'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4748.JPG'>
 </p>
 
 <p style="text-align:center;">
-    <img src='/images/mylife/trekking-samu/IMG_4750.JPG'>
+    <img src='/images/mylife/2024/trekking_samu/IMG_4750.JPG'>
 </p>

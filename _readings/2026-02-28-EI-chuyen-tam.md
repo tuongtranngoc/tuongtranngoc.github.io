@@ -19,6 +19,6 @@ tags:
 ## Introduction
 
 <p style="text-align:center;">
-  <img src="/images/reading/2026/Emotional_Intelligence/chuyen_tam.png">
+  <img src="/images/reading/2026/emotional_intelligence/chuyen_tam.png">
 </p>
 

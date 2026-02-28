@@ -139,7 +139,7 @@ $$P(E_1 \cup E_2 \cup E_3) = \\ P(E_1) + P(E_2) + P(E_3) \\ - P(E_1 \cap E_2) - 
 **Conditional Probabilty**
 
 <p style="text-align:center;">
-  <img src="/images/posts/2024-05-17-probability-statistic/conditional_prob.png">
+  <img src="/images/posts/2024/probability_statistic/conditional_prob.png">
 </p>
 
 $P(A\vert B)$ : The probability of $A$ given that $B$ occured

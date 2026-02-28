@@ -1,6 +1,6 @@
 ---
 title: 'Running - Long Bien Marathon 2022'
-excerpt: "Lần đầu tham gia một giải đấu Marathon <br/><img src='/images/mylife/running-long-bien-2022/IMG_1563_excerpt.PNG'>"
+excerpt: "Lần đầu tham gia một giải đấu Marathon <br/><img src='/images/mylife/2022/running_long_bien/IMG_1563_excerpt.PNG'>"
 collection: journeys
 venue: "Mùa thu, Hà Nội"
 date: 2022-10-31
@@ -17,53 +17,53 @@ tags:
 </head>
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-long-bien-2022/IMG_1563.PNG'>
+  <img src='/images/mylife/2022/running_long_bien/IMG_1563.PNG'>
 </p>
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-long-bien-2022/IMG_1564.JPG'>
+  <img src='/images/mylife/2022/running_long_bien/IMG_1564.JPG'>
 </p>
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-long-bien-2022/IMG_1570.JPG'>
+  <img src='/images/mylife/2022/running_long_bien/IMG_1570.JPG'>
 </p>
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-long-bien-2022/IMG_1535.PNG'>
+  <img src='/images/mylife/2022/running_long_bien/IMG_1535.PNG'>
 </p>
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-long-bien-2022/IMG_1559.PNG'>
+  <img src='/images/mylife/2022/running_long_bien/IMG_1559.PNG'>
 </p>
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-long-bien-2022/IMG_1573.JPG'>
+  <img src='/images/mylife/2022/running_long_bien/IMG_1573.JPG'>
 </p>
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-long-bien-2022/IMG_1574.JPG'>
+  <img src='/images/mylife/2022/running_long_bien/IMG_1574.JPG'>
 </p>
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-long-bien-2022/IMG_1598.JPG'>
+  <img src='/images/mylife/2022/running_long_bien/IMG_1598.JPG'>
 </p>
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-long-bien-2022/IMG_1577.PNG'>
+  <img src='/images/mylife/2022/running_long_bien/IMG_1577.PNG'>
 </p>
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-long-bien-2022/IMG_1589.JPG'>
+  <img src='/images/mylife/2022/running_long_bien/IMG_1589.JPG'>
 </p>
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-long-bien-2022/BFD05EA2-7F12-44B9-B9E9-88D524C7B61E.JPG'>
+  <img src='/images/mylife/2022/running_long_bien/BFD05EA2-7F12-44B9-B9E9-88D524C7B61E.JPG'>
 </p>
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-long-bien-2022/838DF696-AB41-4F17-BE94-108CF082BE11.JPG'>
+  <img src='/images/mylife/2022/running_long_bien/838DF696-AB41-4F17-BE94-108CF082BE11.JPG'>
 </p>
 
 <p style="text-align:center;">
-  <img src='/images/mylife/running-long-bien-2022/IMG_1584.PNG'>
+  <img src='/images/mylife/2022/running_long_bien/IMG_1584.PNG'>
 </p>

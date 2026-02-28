@@ -22,5 +22,5 @@ tags:
 This book is published by open source paddleocr, it implements state-of-the-art algorithms and OCR related applications like Text Detection, Text Reconition, Document Intellegence, Table Recognition, Layout Analysis,.. .
 
 <p style="text-align:center;">
-  <img src="/images/reading/dive2ocr/dive2ocr.png">
+  <img src="/images/reading/2023/dive2ocr/dive2ocr.png">
 </p>

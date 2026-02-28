@@ -20,7 +20,7 @@ tags:
 ## Introduction
 
 <p style="text-align:center;">
-  <img src="/images/reading/dive-to-depp-learning/front.png">
+  <img src="/images/reading/2024/dive_to_deep_learning/front.png">
 </p>
 
 
