@@ -1,38 +1,38 @@
 {
-  "last_updated": "2026-02-28T05:38:48Z",
+  "last_updated": "2026-02-28T13:35:09Z",
   "today": {
     "date": "2026-02-28",
-    "runs": 0,
-    "distance_km": 0.0,
+    "runs": 1,
+    "distance_km": 2.98,
     "elevation_m": 0.0,
-    "moving_time_s": 0,
+    "moving_time_s": 1260,
     "polylines": [],
     "photos": []
   },
   "latest": {
-    "id": 17500031537,
-    "name": "Morning Run",
-    "date": "2026-02-24",
-    "distance_km": 2.84,
-    "moving_time_s": 1468,
-    "elevation_m": 0.0,
-    "strava_url": "https://www.strava.com/activities/17500031537",
-    "polyline": "_|a_CkyxdSKbACDm@ASEwAKSEe@W][KCMDAD?XGDu@LO?YEOJKECIJu@~@yEJY@ON]h@BTHVD|@\\VD`@]TWHQ|@s@LCHBPRDL?REhA@d@K~@Cx@KbA@PIx@GL[?_@C[GcAEe@Mo@i@MEMFAXCFE@{@L_@EUHGCAGHw@f@qCh@eCFKX@t@N|Ab@JE`@_@FEFKDEDAx@y@HANDPNBb@IhCE`AET@TIb@Aj@Kv@KDOCG@m@G]@e@IG@c@Q}@k@G@KFATEFq@HKD]GUJGAEEDU",
+    "id": 17550911208,
+    "name": "Afternoon Run",
+    "date": "2026-02-28",
+    "distance_km": 2.98,
+    "moving_time_s": 1260,
+    "elevation_m": 0,
+    "strava_url": "https://www.strava.com/activities/17550911208",
+    "polyline": "",
     "photos": []
   },
   "summary": {
-    "total_distance_km": 643.77,
-    "total_runs": 126,
+    "total_distance_km": 646.75,
+    "total_runs": 127,
     "total_elevation_m": 3159.3,
-    "total_moving_time_s": 312817
+    "total_moving_time_s": 314077
   },
   "yearly": [
     {
       "year": 2026,
-      "runs": 2,
-      "distance_km": 5.86,
+      "runs": 3,
+      "distance_km": 8.84,
       "elevation_m": 0.0,
-      "moving_time_s": 2875
+      "moving_time_s": 4135
     },
     {
       "year": 2025,
@@ -133,10 +133,22 @@
     },
     {
       "label": "Feb W4",
-      "distance_km": 2.84
+      "distance_km": 5.82
     }
   ],
   "activities": [
+    {
+      "id": 17550911208,
+      "name": "Afternoon Run",
+      "date": "2026-02-28",
+      "distance_m": 2978.7,
+      "moving_time_s": 1260,
+      "elevation_m": 0,
+      "avg_speed_ms": 2.364,
+      "strava_url": "https://www.strava.com/activities/17550911208",
+      "route_svg": "",
+      "photo_url": ""
+    },
     {
       "id": 17500031537,
       "name": "Morning Run",
