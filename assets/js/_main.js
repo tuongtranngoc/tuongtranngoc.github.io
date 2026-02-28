@@ -104,8 +104,10 @@ $(document).ready(function(){
   var results  = document.getElementById('search-results');
   var openBtn  = document.getElementById('search-toggle');
   var backdrop = document.getElementById('search-backdrop');
+  var escHint  = document.getElementById('search-esc-hint');
 
   var idx, docs;
+  var activeIndex = -1;
 
   function openSearch() {
     overlay.classList.add('is-open');
@@ -119,6 +121,7 @@ $(document).ready(function(){
     overlay.setAttribute('aria-hidden', 'true');
     input.value = '';
     results.innerHTML = '';
+    activeIndex = -1;
   }
 
   function loadIndex() {
@@ -136,35 +139,98 @@ $(document).ready(function(){
       });
   }
 
+  function tagsHtml(tagsStr) {
+    if (!tagsStr) return '';
+    var tags = tagsStr.split(' ').filter(Boolean).slice(0, 3);
+    return tags.map(function(t) {
+      return '<span class="search-result__tag">' + t + '</span>';
+    }).join('');
+  }
+
   function renderResults(query) {
     results.innerHTML = '';
-    if (!idx || !query.trim()) return;
-    var hits;
-    try {
-      hits = idx.search(query + '*');
-    } catch(e) {
-      hits = idx.search(query);
+    activeIndex = -1;
+
+    if (!query.trim()) return;
+
+    if (!idx) {
+      results.innerHTML = '<li class="search-result search-result--empty">'
+        + '<i class="fas fa-circle-notch fa-spin"></i><p>Loading index…</p></li>';
+      return;
     }
+
+    var hits;
+    try { hits = idx.search(query + '*'); }
+    catch(e) { hits = idx.search(query); }
+
+    if (!hits.length) {
+      results.innerHTML = '<li class="search-result search-result--empty">'
+        + '<i class="fas fa-search"></i>'
+        + '<p>No results for <strong>&ldquo;' + query + '&rdquo;</strong></p></li>';
+      return;
+    }
+
     hits.slice(0, 8).forEach(function(hit) {
       var doc = docs.find(function(d) { return d.url === hit.ref; });
       if (!doc) return;
       var li = document.createElement('li');
       li.className = 'search-result';
-      li.innerHTML = '<a href="' + doc.url + '"><span class="search-result__title">'
-        + doc.title + '</span></a>';
+      li.innerHTML =
+        '<a href="' + doc.url + '">'
+        + '<span class="search-result__icon"><i class="fas fa-file-alt" aria-hidden="true"></i></span>'
+        + '<span class="search-result__body">'
+        +   '<span class="search-result__title">' + doc.title + '</span>'
+        +   '<span class="search-result__meta">' + tagsHtml(doc.tags) + '</span>'
+        + '</span>'
+        + '<i class="fas fa-arrow-right search-result__arrow" aria-hidden="true"></i>'
+        + '</a>';
       results.appendChild(li);
     });
-    if (!hits.length) {
-      results.innerHTML = '<li class="search-result search-result--empty">No results found.</li>';
+  }
+
+  function getItems() {
+    return results.querySelectorAll('.search-result:not(.search-result--empty)');
+  }
+
+  function setActive(index) {
+    var items = getItems();
+    items.forEach(function(el) { el.classList.remove('search-result--active'); });
+    if (index >= 0 && index < items.length) {
+      items[index].classList.add('search-result--active');
+      items[index].scrollIntoView({ block: 'nearest' });
     }
+    activeIndex = index;
   }
 
   if (openBtn)  openBtn.addEventListener('click', openSearch);
   if (backdrop) backdrop.addEventListener('click', closeSearch);
-  if (input)    input.addEventListener('input', function() { renderResults(this.value); });
+  if (escHint)  escHint.addEventListener('click', closeSearch);
+  if (input) {
+    input.addEventListener('input', function() {
+      renderResults(this.value);
+    });
+  }
 
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeSearch();
-    if (e.key === 'k' && (e.metaKey || e.ctrlKey)) { e.preventDefault(); openSearch(); }
+    if (!overlay.classList.contains('is-open')) {
+      if (e.key === 'k' && (e.metaKey || e.ctrlKey)) { e.preventDefault(); openSearch(); }
+      return;
+    }
+
+    if (e.key === 'Escape') { closeSearch(); return; }
+
+    var items = getItems();
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setActive(Math.min(activeIndex + 1, items.length - 1));
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setActive(Math.max(activeIndex - 1, 0));
+    } else if (e.key === 'Enter') {
+      if (activeIndex >= 0 && items[activeIndex]) {
+        var link = items[activeIndex].querySelector('a');
+        if (link) { window.location.href = link.getAttribute('href'); }
+      }
+    }
   });
 })();

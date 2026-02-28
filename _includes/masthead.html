@@ -35,10 +35,20 @@
 
 <div class="search-overlay" id="search-overlay" aria-hidden="true">
   <div class="search-overlay__backdrop" id="search-backdrop"></div>
-  <div class="search-overlay__modal">
-    <input class="search-overlay__input" id="search-input"
-           type="search" placeholder="Search posts, readings…" autocomplete="off">
+  <div class="search-overlay__modal" role="dialog" aria-label="Search">
+    <div class="search-overlay__header">
+      <i class="fas fa-search search-overlay__search-icon" aria-hidden="true"></i>
+      <input class="search-overlay__input" id="search-input"
+             type="search" placeholder="Search posts, readings…"
+             autocomplete="off" spellcheck="false">
+      <kbd class="search-overlay__esc-hint" id="search-esc-hint">ESC</kbd>
+    </div>
     <ul class="search-overlay__results" id="search-results"></ul>
+    <div class="search-overlay__footer">
+      <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+      <span><kbd>↵</kbd> open</span>
+      <span><kbd>ESC</kbd> close</span>
+    </div>
   </div>
 </div>
 <script>
