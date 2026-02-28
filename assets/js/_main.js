@@ -96,3 +96,75 @@ $(document).ready(function(){
   });
 
 });
+
+// Search overlay
+(function() {
+  var overlay  = document.getElementById('search-overlay');
+  var input    = document.getElementById('search-input');
+  var results  = document.getElementById('search-results');
+  var openBtn  = document.getElementById('search-toggle');
+  var backdrop = document.getElementById('search-backdrop');
+
+  var idx, docs;
+
+  function openSearch() {
+    overlay.classList.add('is-open');
+    overlay.setAttribute('aria-hidden', 'false');
+    input.focus();
+    if (!idx) loadIndex();
+  }
+
+  function closeSearch() {
+    overlay.classList.remove('is-open');
+    overlay.setAttribute('aria-hidden', 'true');
+    input.value = '';
+    results.innerHTML = '';
+  }
+
+  function loadIndex() {
+    fetch('/search.json')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        docs = data;
+        idx = lunr(function() {
+          this.ref('url');
+          this.field('title', { boost: 10 });
+          this.field('tags',  { boost: 5 });
+          this.field('content');
+          data.forEach(function(d) { this.add(d); }, this);
+        });
+      });
+  }
+
+  function renderResults(query) {
+    results.innerHTML = '';
+    if (!idx || !query.trim()) return;
+    var hits;
+    try {
+      hits = idx.search(query + '*');
+    } catch(e) {
+      hits = idx.search(query);
+    }
+    hits.slice(0, 8).forEach(function(hit) {
+      var doc = docs.find(function(d) { return d.url === hit.ref; });
+      if (!doc) return;
+      var li = document.createElement('li');
+      li.className = 'search-result';
+      li.innerHTML = '<a href="' + doc.url + '"><span class="search-result__title">'
+        + doc.title + '</span></a>';
+      results.appendChild(li);
+    });
+    if (!hits.length) {
+      results.innerHTML = '<li class="search-result search-result--empty">No results found.</li>';
+    }
+  }
+
+  if (openBtn)  openBtn.addEventListener('click', openSearch);
+  if (backdrop) backdrop.addEventListener('click', closeSearch);
+  if (input)    input.addEventListener('input', function() { renderResults(this.value); });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeSearch();
+    if (e.key === 'k' && (e.metaKey || e.ctrlKey)) { e.preventDefault(); openSearch(); }
+  });
+})();

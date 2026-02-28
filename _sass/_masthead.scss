@@ -42,11 +42,19 @@
   }
 }
 
-.masthead__menu .theme-toggle {
+.masthead__menu .masthead__controls {
   position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  z-index: 20;
+}
+
+.masthead__menu .theme-toggle,
+.masthead__menu .search-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +67,6 @@
   color: var(--color-text);
   font-size: 1rem;
   cursor: pointer;
-  z-index: 20;
   transition: color 0.2s ease, background-color 0.2s ease;
 
   &:hover {
@@ -71,7 +78,9 @@
     outline: 2px solid var(--color-link);
     outline-offset: 2px;
   }
+}
 
+.masthead__menu .theme-toggle {
   .theme-toggle__icon--dark {
     display: none;
   }

@@ -193,7 +193,7 @@
 .greedy-nav {
   position: relative;
   min-width: 250px;
-  padding-right: 2.5rem;
+  padding-right: 5rem;
   background: var(--color-bg);
 
   a {
@@ -211,7 +211,7 @@
   .greedy-nav__toggle {
     position: absolute;
     height: 100%;
-    right: 2.5rem;
+    right: 5rem;
     padding: 0 0.5rem;
     border: 0;
     outline: none;

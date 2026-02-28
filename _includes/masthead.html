@@ -18,13 +18,27 @@
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
-      <button class="theme-toggle" id="theme-toggle"
-              aria-label="Toggle dark mode"
-              title="Switch Color Scheme">
-        <i class="fas fa-moon theme-toggle__icon theme-toggle__icon--light" aria-hidden="true"></i>
-        <i class="fas fa-sun theme-toggle__icon theme-toggle__icon--dark" aria-hidden="true"></i>
-      </button>
+      <div class="masthead__controls">
+        <button class="search-toggle" id="search-toggle" aria-label="Open search">
+          <i class="fas fa-search" aria-hidden="true"></i>
+        </button>
+        <button class="theme-toggle" id="theme-toggle"
+                aria-label="Toggle dark mode"
+                title="Switch Color Scheme">
+          <i class="fas fa-moon theme-toggle__icon theme-toggle__icon--light" aria-hidden="true"></i>
+          <i class="fas fa-sun theme-toggle__icon theme-toggle__icon--dark" aria-hidden="true"></i>
+        </button>
+      </div>
     </div>
+  </div>
+</div>
+
+<div class="search-overlay" id="search-overlay" aria-hidden="true">
+  <div class="search-overlay__backdrop" id="search-backdrop"></div>
+  <div class="search-overlay__modal">
+    <input class="search-overlay__input" id="search-input"
+           type="search" placeholder="Search posts, readings…" autocomplete="off">
+    <ul class="search-overlay__results" id="search-results"></ul>
   </div>
 </div>
 <script>
