@@ -1,38 +1,38 @@
 {
-  "last_updated": "2026-03-01T13:35:33Z",
+  "last_updated": "2026-03-01T21:13:50Z",
   "today": {
     "date": "2026-03-01",
-    "runs": 0,
-    "distance_km": 0.0,
+    "runs": 1,
+    "distance_km": 5.0,
     "elevation_m": 0.0,
-    "moving_time_s": 0,
+    "moving_time_s": 1800,
     "polylines": [],
     "photos": []
   },
   "latest": {
-    "id": 17550911208,
-    "name": "Afternoon Run",
-    "date": "2026-02-28",
-    "distance_km": 2.98,
-    "moving_time_s": 1260,
+    "id": 17565281044,
+    "name": "Evening Run",
+    "date": "2026-03-01",
+    "distance_km": 5.0,
+    "moving_time_s": 1800,
     "elevation_m": 0,
-    "strava_url": "https://www.strava.com/activities/17550911208",
+    "strava_url": "https://www.strava.com/activities/17565281044",
     "polyline": "",
     "photos": []
   },
   "summary": {
-    "total_distance_km": 646.75,
-    "total_runs": 127,
+    "total_distance_km": 651.75,
+    "total_runs": 128,
     "total_elevation_m": 3159.3,
-    "total_moving_time_s": 314077
+    "total_moving_time_s": 315877
   },
   "yearly": [
     {
       "year": 2026,
-      "runs": 3,
-      "distance_km": 8.84,
+      "runs": 4,
+      "distance_km": 13.84,
       "elevation_m": 0.0,
-      "moving_time_s": 4135
+      "moving_time_s": 5935
     },
     {
       "year": 2025,
@@ -133,10 +133,22 @@
     },
     {
       "label": "Feb W4",
-      "distance_km": 5.82
+      "distance_km": 10.82
     }
   ],
   "activities": [
+    {
+      "id": 17565281044,
+      "name": "Evening Run",
+      "date": "2026-03-01",
+      "distance_m": 5000.0,
+      "moving_time_s": 1800,
+      "elevation_m": 0,
+      "avg_speed_ms": 2.778,
+      "strava_url": "https://www.strava.com/activities/17565281044",
+      "route_svg": "",
+      "photo_url": ""
+    },
     {
       "id": 17550911208,
       "name": "Afternoon Run",
