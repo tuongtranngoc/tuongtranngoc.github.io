@@ -55,7 +55,7 @@ tags:
   - Machine Learning
 toc: true          # optional, shows table of contents
 header:
-  teaser: /images/path/image.png   # optional, used in card previews
+  teaser: /images/posts/2024/topic_name/cover.png   # optional, used in card previews
 ---
 ```
 
@@ -77,7 +77,7 @@ tags:
 ```yaml
 ---
 title: 'Event Title'
-excerpt: "<br/><img src='/images/path/cover.jpg'>"  # HTML image shown on archive cards
+excerpt: "<br/><img src='/images/mylife/2024/topic_name/cover.jpg'>"  # HTML image shown on archive cards
 collection: collections
 type: "collections"
 venue: "Mùa hạ, Hà Nội"
@@ -132,6 +132,28 @@ Client-side full-text search powered by Lunr.js — no server required (suitable
 - `_sass/_search.scss` — All overlay styles: backdrop blur, spring animation, result cards with tag pills and animated arrow, keyboard hint footer
 - `_includes/scripts.html` — Lunr.js loaded from CDN before `main.min.js`
 - Search logic in `assets/js/_main.js`: opens on button click or `Cmd+K`, supports `↑↓` keyboard navigation through results, `Enter` to follow, `Escape` to close
+
+## Image Path Conventions
+
+All images must follow the canonical structure `/images/<tab>/<year>/<snake_case_topic>/<filename>`:
+
+| Tab prefix | Used by |
+|------------|---------|
+| `/images/posts/` | `_posts/` |
+| `/images/reading/` | `_readings/` |
+| `/images/learning/` | `_learnings/` |
+| `/images/mylife/` | `_collections/` and `_journeys/` |
+| `/images/cv/` | CV page (flat structure, exempt from year/topic rules) |
+| `/images/profile/` | Author profile (flat structure, exempt) |
+
+Rules enforced by `/check-images`:
+- Year segment must be 4 digits (2021–2030) immediately after the tab prefix
+- Topic segment must be `snake_case` (underscores, not hyphens, no date prefixes)
+- Each new content entry gets its own image directory with a `.gitkeep` to track it in git
+
+Example: a post about BERT written in 2024 → `/images/posts/2024/bert/cover.png`
+
+Collections always require **two paired files**: one in `_collections/` (narrative) and one in `_journeys/` (photo gallery), sharing the same `images/mylife/<year>/<topic>/` directory.
 
 ## Key Config Notes
 
