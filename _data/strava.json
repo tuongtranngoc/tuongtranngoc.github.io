@@ -1,38 +1,40 @@
 {
-  "last_updated": "2026-03-01T21:13:50Z",
+  "last_updated": "2026-03-02T03:30:05Z",
   "today": {
-    "date": "2026-03-01",
+    "date": "2026-03-02",
     "runs": 1,
-    "distance_km": 5.0,
+    "distance_km": 2.33,
     "elevation_m": 0.0,
-    "moving_time_s": 1800,
-    "polylines": [],
+    "moving_time_s": 1045,
+    "polylines": [
+      "gfb_CkbydSBIJCzA\\DD\\Lb@DPMf@k@^WBEJIPQHEBEH?JFLT?H?RCJ@NCH@PCPAjAG~@OtAIjACDa@?_@GY?w@Ie@OMGYYWKODGRALKFa@@UBQEa@JGId@{BFY@QRaAb@eBJANBbATRJt@LF?FETULMDI`@[XSFKNGF?PLFXCd@@j@CDChA@NMvA@HGJKjA@PILG?u@CCCkAGSGMIOCMIMQWMIBGHEH?JIDYB_@H[GI@IHE?CACIL{@"
+    ],
     "photos": []
   },
   "latest": {
-    "id": 17565281044,
-    "name": "Evening Run",
-    "date": "2026-03-01",
-    "distance_km": 5.0,
-    "moving_time_s": 1800,
-    "elevation_m": 0,
-    "strava_url": "https://www.strava.com/activities/17565281044",
-    "polyline": "",
+    "id": 17571080175,
+    "name": "Morning Run",
+    "date": "2026-03-02",
+    "distance_km": 2.33,
+    "moving_time_s": 1045,
+    "elevation_m": 0.0,
+    "strava_url": "https://www.strava.com/activities/17571080175",
+    "polyline": "gfb_CkbydSBIJCzA\\DD\\Lb@DPMf@k@^WBEJIPQHEBEH?JFLT?H?RCJ@NCH@PCPAjAG~@OtAIjACDa@?_@GY?w@Ie@OMGYYWKODGRALKFa@@UBQEa@JGId@{BFY@QRaAb@eBJANBbATRJt@LF?FETULMDI`@[XSFKNGF?PLFXCd@@j@CDChA@NMvA@HGJKjA@PILG?u@CCCkAGSGMIOCMIMQWMIBGHEH?JIDYB_@H[GI@IHE?CACIL{@",
     "photos": []
   },
   "summary": {
-    "total_distance_km": 651.75,
-    "total_runs": 128,
+    "total_distance_km": 654.07,
+    "total_runs": 129,
     "total_elevation_m": 3159.3,
-    "total_moving_time_s": 315877
+    "total_moving_time_s": 316922
   },
   "yearly": [
     {
       "year": 2026,
-      "runs": 4,
-      "distance_km": 13.84,
+      "runs": 5,
+      "distance_km": 16.16,
       "elevation_m": 0.0,
-      "moving_time_s": 5935
+      "moving_time_s": 6980
     },
     {
       "year": 2025,
@@ -71,10 +73,6 @@
     }
   ],
   "weekly": [
-    {
-      "label": "Nov W2",
-      "distance_km": 0.0
-    },
     {
       "label": "Nov W3",
       "distance_km": 0.0
@@ -134,9 +132,25 @@
     {
       "label": "Feb W4",
       "distance_km": 10.82
+    },
+    {
+      "label": "Mar W1",
+      "distance_km": 2.33
     }
   ],
   "activities": [
+    {
+      "id": 17571080175,
+      "name": "Morning Run",
+      "date": "2026-03-02",
+      "distance_m": 2325.2,
+      "moving_time_s": 1045,
+      "elevation_m": 0.0,
+      "avg_speed_ms": 2.225,
+      "strava_url": "https://www.strava.com/activities/17571080175",
+      "route_svg": "M89.9,30.5 L92.2,31.5 L93.1,34.2 L86.2,55.4 L84.8,56.8 L81.6,63.7 L80.2,72.0 L83.5,76.1 L93.6,85.3 L99.1,92.7 L100.5,93.6 L102.8,96.4 L106.9,100.5 L108.3,102.8 L109.7,103.7 L109.7,106.0 L107.9,108.8 L102.8,112.0 L100.5,112.0 L95.9,112.0 L93.1,111.1 L89.5,111.5 L87.2,110.6 L83.0,111.1 L78.9,110.2 L61.4,109.7 L46.7,107.9 L26.9,104.2 L9.4,101.9 L8.0,101.0 L8.0,93.1 L9.8,85.8 L9.8,79.8 L12.1,66.9 L15.8,58.2 L17.7,54.9 L23.6,49.0 L26.4,43.4 L25.0,39.8 L20.4,37.9 L17.2,37.5 L15.4,34.7 L14.9,26.9 L14.0,21.8 L15.4,17.7 L12.6,9.8 L14.9,8.0 L43.4,16.7 L49.4,18.6 L53.6,19.0 L68.7,23.6 L92.2,31.9 L92.7,34.7 L91.8,38.4 L86.7,54.0 L83.9,58.6 L80.7,71.0 L80.7,72.9 L82.1,74.7 L87.2,79.8 L90.4,83.0 L92.7,84.4 L99.1,92.2 L103.7,98.2 L106.5,100.0 L108.3,103.7 L108.3,105.6 L105.1,109.7 L99.1,111.5 L90.4,110.6 L80.2,111.1 L78.9,110.2 L61.8,109.2 L58.2,109.7 L37.9,106.5 L35.6,106.9 L32.8,105.1 L15.4,102.3 L11.2,102.8 L8.0,100.5 L8.0,98.7 L8.9,86.2 L9.8,85.3 L11.7,67.8 L13.5,63.2 L15.8,60.0 L16.7,56.3 L19.0,53.1 L23.2,49.9 L26.4,44.4 L25.5,42.1 L23.2,40.2 L20.9,38.8 L18.1,38.8 L16.7,36.5 L15.8,30.5 L13.5,23.2 L15.4,16.7 L14.9,14.4 L12.6,12.1 L12.6,10.8 L13.1,9.8 L15.4,8.9 L29.2,12.1",
+      "photo_url": ""
+    },
     {
       "id": 17565281044,
       "name": "Evening Run",
