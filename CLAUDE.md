@@ -8,6 +8,19 @@ Jekyll-based personal blog and portfolio site hosted on GitHub Pages, built on a
 
 ## Build & Serve Commands
 
+### Common Tasks
+
+Use the **Claude Code skills** for quick operations:
+- `/serve` — Start local Jekyll dev server with live reload
+- `/build-js` — Rebuild minified JavaScript bundle after editing `assets/js/_main.js`
+- `/check-links` — Validate all internal image and teaser references
+- `/check-images` — Audit image paths for compliance with naming conventions
+- `/new-post` — Create a new technical blog post
+- `/new-reading` — Create a new reading note entry
+- `/new-collection` — Create a new life/travel collection entry
+
+### Manual Commands
+
 ```bash
 bundle install                                                   # Install Ruby dependencies
 bundle exec jekyll serve                                         # Serve locally at localhost:4000
@@ -26,7 +39,15 @@ npm run watch:js                                                 # Watch and aut
 
 > After `npm install`, `npm run build:js` (alias: `npm run uglify`) works using the local `uglify-js` devDependency. Alternatively, use `npx uglify-js ...` without installing.
 
-Use `_config.dev.yml` for local development — it disables analytics, uses `localhost:4000` as URL, and sets SASS to `expanded` output for easier debugging.
+### Development Configuration
+
+Use `_config.dev.yml` for local development. It overrides the production settings:
+- **URL**: `http://localhost:4000` (instead of production domain)
+- **Analytics**: Disabled (provider set to `false`)
+- **Comments**: Uses dev Disqus shortname
+- **SASS output**: `expanded` style (instead of `compressed`) for easier CSS debugging
+
+Load it alongside the main config: `bundle exec jekyll serve --config _config.yml,_config.dev.yml`
 
 ## Content Architecture
 
@@ -119,9 +140,13 @@ A running stats page at `/running/` displays activity data fetched from Strava a
 - `_sass/_running.scss` — Styles for the running page
 
 **GitHub Actions** (`.github/workflows/sync-strava.yml`):
-- Runs 3 times daily at 05:00, 13:00, and 21:00 UTC (or manually via `workflow_dispatch`)
-- Requires three repository secrets: `STRAVA_CLIENT_ID`, `STRAVA_CLIENT_SECRET`, `STRAVA_REFRESH_TOKEN`
-- Auto-commits updates to `_data/strava.json` with `[skip ci]` to avoid build loops
+- Runs every hour at the top of the hour (via `cron: "0 * * * *"`) and can be triggered manually via `workflow_dispatch`
+- Requires three repository secrets set in GitHub repo settings:
+  - `STRAVA_CLIENT_ID` — Numeric app ID from Strava API settings page
+  - `STRAVA_CLIENT_SECRET` — Secret from the same Strava API settings
+  - `STRAVA_REFRESH_TOKEN` — Obtained via OAuth flow (see workflow file comments for one-time setup instructions)
+- Auto-commits updates to `_data/strava.json` with `[skip ci]` to avoid infinite build loops
+- Only commits if the file has changed (checks with `git diff --quiet`)
 
 ## Search
 
@@ -155,10 +180,29 @@ Example: a post about BERT written in 2024 → `/images/posts/2024/bert/cover.pn
 
 Collections always require **two paired files**: one in `_collections/` (narrative) and one in `_journeys/` (photo gallery), sharing the same `images/mylife/<year>/<topic>/` directory.
 
+## Local Testing & Validation
+
+**Always test locally before committing:**
+1. Start the dev server with live reload: `bundle exec jekyll serve --config _config.yml,_config.dev.yml --livereload`
+2. Visit http://localhost:4000 and verify your changes render correctly
+3. Check browser console for JavaScript errors
+4. If you modified `assets/js/_main.js`, rebuild the bundle: `npm run build:js`
+5. Use `/check-links` and `/check-images` skills to validate references before pushing
+
+**For new content:**
+- Use the `/new-post`, `/new-reading`, or `/new-collection` skills to scaffold properly with correct front matter
+- Always include a teaser image in the canonical path (e.g., `/images/posts/2024/topic_name/cover.png`)
+- Test tag filtering on the archive page — click tags to ensure they filter correctly
+
+**For Strava integration testing:**
+- The workflow requires valid secrets to run — cannot be tested locally without credentials
+- Commits to `_data/strava.json` happen hourly in production
+- To test locally, you would need to copy a sample `_data/strava.json` and verify the `/running/` page renders correctly with the data
+
 ## Key Config Notes
 
 - Pagination: 5 posts per page (jekyll-paginate)
 - `_pages/` is included via `include:` directive (not auto-discovered)
 - The `_projects/` directory exists but is not a configured Jekyll collection
 - Plugins: jekyll-paginate, jekyll-sitemap, jekyll-gist, jekyll-feed, jekyll-redirect-from (all via `github-pages` gem)
-- `_data/strava.json` is auto-generated — do not manually edit
+- `_data/strava.json` is auto-generated — **do not manually edit** (updated hourly by GitHub Actions)
