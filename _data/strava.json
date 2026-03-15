@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-15T22:26:46Z",
+  "last_updated": "2026-03-15T23:28:32Z",
   "today": {
     "date": "2026-03-15",
     "runs": 0,
@@ -10,29 +10,29 @@
     "photos": []
   },
   "latest": {
-    "id": 17571080175,
+    "id": 17737366828,
     "name": "Morning Run",
-    "date": "2026-03-02",
-    "distance_km": 2.33,
-    "moving_time_s": 1045,
+    "date": "2026-03-16",
+    "distance_km": 2.04,
+    "moving_time_s": 889,
     "elevation_m": 0.0,
-    "strava_url": "https://www.strava.com/activities/17571080175",
-    "polyline": "gfb_CkbydSBIJCzA\\DD\\Lb@DPMf@k@^WBEJIPQHEBEH?JFLT?H?RCJ@NCH@PCPAjAG~@OtAIjACDa@?_@GY?w@Ie@OMGYYWKODGRALKFa@@UBQEa@JGId@{BFY@QRaAb@eBJANBbATRJt@LF?FETULMDI`@[XSFKNGF?PLFXCd@@j@CDChA@NMvA@HGJKjA@PILG?u@CCCkAGSGMIOCMIMQWMIBGHEH?JIDYB_@H[GI@IHE?CACIL{@",
+    "strava_url": "https://www.strava.com/activities/17737366828",
+    "polyline": "",
     "photos": []
   },
   "summary": {
-    "total_distance_km": 654.07,
-    "total_runs": 129,
+    "total_distance_km": 656.11,
+    "total_runs": 130,
     "total_elevation_m": 3159.3,
-    "total_moving_time_s": 316922
+    "total_moving_time_s": 317811
   },
   "yearly": [
     {
       "year": 2026,
-      "runs": 5,
-      "distance_km": 16.16,
+      "runs": 6,
+      "distance_km": 18.2,
       "elevation_m": 0.0,
-      "moving_time_s": 6980
+      "moving_time_s": 7869
     },
     {
       "year": 2025,
@@ -137,6 +137,18 @@
     }
   ],
   "activities": [
+    {
+      "id": 17737366828,
+      "name": "Morning Run",
+      "date": "2026-03-16",
+      "distance_m": 2040.3,
+      "moving_time_s": 889,
+      "elevation_m": 0.0,
+      "avg_speed_ms": 2.295,
+      "strava_url": "https://www.strava.com/activities/17737366828",
+      "route_svg": "",
+      "photo_url": ""
+    },
     {
       "id": 17571080175,
       "name": "Morning Run",
