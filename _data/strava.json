@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-03-15T23:28:32Z",
+  "last_updated": "2026-03-16T02:11:14Z",
   "today": {
-    "date": "2026-03-15",
-    "runs": 0,
-    "distance_km": 0.0,
+    "date": "2026-03-16",
+    "runs": 1,
+    "distance_km": 2.04,
     "elevation_m": 0.0,
-    "moving_time_s": 0,
+    "moving_time_s": 889,
     "polylines": [],
     "photos": []
   },
@@ -72,10 +72,6 @@
   ],
   "weekly": [
     {
-      "label": "Nov W4",
-      "distance_km": 0.0
-    },
-    {
       "label": "Dec W1",
       "distance_km": 0.0
     },
@@ -134,6 +130,10 @@
     {
       "label": "Mar W2",
       "distance_km": 0.0
+    },
+    {
+      "label": "Mar W3",
+      "distance_km": 2.04
     }
   ],
   "activities": [
