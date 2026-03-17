@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-03-16T23:30:34Z",
+  "last_updated": "2026-03-17T01:58:48Z",
   "today": {
-    "date": "2026-03-16",
-    "runs": 1,
-    "distance_km": 2.04,
+    "date": "2026-03-17",
+    "runs": 0,
+    "distance_km": 0.0,
     "elevation_m": 0.0,
-    "moving_time_s": 889,
+    "moving_time_s": 0,
     "polylines": [],
     "photos": []
   },
