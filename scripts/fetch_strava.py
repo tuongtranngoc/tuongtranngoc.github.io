@@ -5,6 +5,7 @@ import json
 import math
 import os
 import sys
+import time
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 
@@ -16,6 +17,7 @@ import requests
 
 TOKEN_URL = "https://www.strava.com/oauth/token"
 ACTIVITIES_URL = "https://www.strava.com/api/v3/athlete/activities"
+ACTIVITY_DETAIL_URL = "https://www.strava.com/api/v3/activities"
 PER_PAGE = 200
 WEEKS_BACK = 16
 
@@ -58,7 +60,37 @@ def fetch_all_runs(access_token: str) -> list[dict]:
         if len(batch) < PER_PAGE:
             break
         page += 1
+
+    # Fetch detailed activity data to get corrected elevation.
+    # The list endpoint may return 0 for total_elevation_gain when
+    # Strava hasn't applied its DEM-based elevation correction yet.
+    zero_elev = [i for i, r in enumerate(runs) if r.get("total_elevation_gain", 0) == 0]
+    if zero_elev:
+        print(f"  Fetching detailed elevation for {len(zero_elev)} activities…")
+    for idx in zero_elev:
+        detail = fetch_activity_detail(access_token, runs[idx]["id"])
+        if detail:
+            runs[idx]["total_elevation_gain"] = detail.get(
+                "total_elevation_gain", 0
+            )
+        time.sleep(0.5)  # respect Strava rate limits
+
     return runs
+
+
+def fetch_activity_detail(access_token: str, activity_id: int) -> dict | None:
+    """Fetch a single activity's detailed data (includes corrected elevation)."""
+    headers = {"Authorization": f"Bearer {access_token}"}
+    try:
+        resp = requests.get(
+            f"{ACTIVITY_DETAIL_URL}/{activity_id}",
+            headers=headers,
+            timeout=30,
+        )
+        resp.raise_for_status()
+        return resp.json()
+    except requests.RequestException:
+        return None
 
 
 def week_label(dt: datetime) -> str:
