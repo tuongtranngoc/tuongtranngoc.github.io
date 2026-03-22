@@ -1,14 +1,12 @@
 {
-  "last_updated": "2026-03-21T23:23:21Z",
+  "last_updated": "2026-03-22T02:03:24Z",
   "today": {
-    "date": "2026-03-21",
-    "runs": 1,
-    "distance_km": 3.68,
+    "date": "2026-03-22",
+    "runs": 0,
+    "distance_km": 0.0,
     "elevation_m": 0.0,
-    "moving_time_s": 2094,
-    "polylines": [
-      "sfb_Cs`ydSPy@FGF?rAXt@VZBPUXS`@a@PMLQB@HKJEVLFRGj@?|@Cx@GNBDCp@Gl@G\\IrACB[@e@Ga@Aq@Ke@Ka@_@E?KKIAG?EHEVKHU@c@HYEQHI?CGPeAFYBAHc@@SFKFc@No@?ITcADERFXBPFR@`AXV@dAw@HMr@q@NDLFDFBJEVCr@@`AA\\]zCCx@EHG@u@IeAEOCi@QQMOOWOMDEDEH?NGD_@BGBUB[CQJIAAEr@uC?QLq@VgABUL]JCb@Rx@TH?PHZHHAPIPQXQJMRORU\\WZV@LGX?f@CH@f@Af@WnCAPBDEVCd@EHG?cCM{@Yo@c@OBEJCNIH]FCLQ@c@AOFOAGBGIEA?AHO@IFU?MHMBM\\sATsADg@F]DG?UBIXDPJl@JrA\\HAf@[h@_@DIFAPQN]BAJGFBJAJJPFAJBDEL?JCL@NEJEH@\\EP?lA"
-    ],
+    "moving_time_s": 0,
+    "polylines": [],
     "photos": []
   },
   "latest": {
