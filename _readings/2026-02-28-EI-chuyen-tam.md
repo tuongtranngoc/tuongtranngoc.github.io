@@ -4,7 +4,7 @@ colllection: reading
 type: "Emotional Intelligence"
 venue: "Ha Noi"
 date: 2026-02-28
-permalink: /posts/2026/EI-chuyen-tam
+permalink: /reading/2026/EI-chuyen-tam
 tags:
   - Emotional Intelligence
 --- 
