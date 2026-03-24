@@ -20,6 +20,23 @@ ACTIVITIES_URL = "https://www.strava.com/api/v3/athlete/activities"
 ACTIVITY_DETAIL_URL = "https://www.strava.com/api/v3/activities"
 PER_PAGE = 200
 WEEKS_BACK = 16
+MAX_RETRIES = 5
+
+
+def _get(url: str, **kwargs) -> requests.Response:
+    """GET with automatic retry/backoff on 429 rate-limit responses."""
+    delay = 60  # initial wait in seconds
+    for attempt in range(MAX_RETRIES):
+        resp = requests.get(url, **kwargs)
+        if resp.status_code != 429:
+            resp.raise_for_status()
+            return resp
+        retry_after = int(resp.headers.get("Retry-After", delay))
+        print(f"  Rate limited (429). Waiting {retry_after}s before retry {attempt + 1}/{MAX_RETRIES}…")
+        time.sleep(retry_after)
+        delay = min(delay * 2, 900)  # cap at 15 minutes
+    resp.raise_for_status()
+    return resp
 
 
 def get_access_token() -> str:
@@ -46,13 +63,12 @@ def fetch_all_runs(access_token: str) -> list[dict]:
     runs = []
     page = 1
     while True:
-        resp = requests.get(
+        resp = _get(
             ACTIVITIES_URL,
             headers=headers,
             params={"type": "Run", "per_page": PER_PAGE, "page": page},
             timeout=30,
         )
-        resp.raise_for_status()
         batch = resp.json()
         if not batch:
             break
@@ -82,12 +98,11 @@ def fetch_activity_detail(access_token: str, activity_id: int) -> dict | None:
     """Fetch a single activity's detailed data (includes corrected elevation)."""
     headers = {"Authorization": f"Bearer {access_token}"}
     try:
-        resp = requests.get(
+        resp = _get(
             f"{ACTIVITY_DETAIL_URL}/{activity_id}",
             headers=headers,
             timeout=30,
         )
-        resp.raise_for_status()
         return resp.json()
     except requests.RequestException:
         return None
