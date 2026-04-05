@@ -1,0 +1,866 @@
+---
+layout: default
+title: "D2LAI — Dive into Deep Learning"
+permalink: /d2lai/
+---
+
+<div class="d2l-wrapper">
+
+  <!-- ─── Left sidebar ─────────────────────────────────────────────────── -->
+  <nav class="d2l-sidebar" id="d2lSidebar" aria-label="Book navigation">
+
+    <div class="d2l-sidebar__hdr">
+      <a href="/d2lai/" class="d2l-sidebar__logo">Dive into Deep Learning</a>
+      <div class="d2l-sidebar__search" aria-hidden="true">
+        <i class="fas fa-search"></i>
+        <span>Search…</span>
+      </div>
+    </div>
+
+    <ul class="d2l-toc" role="tree">
+
+      <li class="d2l-toc__part">Foundations</li>
+
+      <li class="d2l-toc__chapter">
+        <a class="d2l-toc__ch-link" data-ch="1" role="treeitem">
+          <span class="ch-num">1</span>
+          <span class="ch-title">Introduction</span>
+          <span class="ch-arrow">▶</span>
+        </a>
+        <ul class="d2l-toc__secs" role="group">
+          <li><a href="#" class="d2l-toc__sec-link">1.1 A Motivating Example</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">1.2 Key Components</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">1.3 Kinds of Machine Learning</a></li>
+        </ul>
+      </li>
+
+      <li class="d2l-toc__chapter">
+        <a class="d2l-toc__ch-link" data-ch="2" role="treeitem">
+          <span class="ch-num">2</span>
+          <span class="ch-title">Preliminaries</span>
+          <span class="ch-arrow">▶</span>
+        </a>
+        <ul class="d2l-toc__secs" role="group">
+          <li><a href="#" class="d2l-toc__sec-link">2.1 Data Manipulation</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">2.2 Data Preprocessing</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">2.3 Linear Algebra</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">2.4 Calculus</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">2.5 Automatic Differentiation</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">2.6 Probability and Statistics</a></li>
+        </ul>
+      </li>
+
+      <li class="d2l-toc__chapter">
+        <a class="d2l-toc__ch-link" data-ch="3" role="treeitem">
+          <span class="ch-num">3</span>
+          <span class="ch-title">Linear Neural Networks for Regression</span>
+          <span class="ch-arrow">▶</span>
+        </a>
+        <ul class="d2l-toc__secs" role="group">
+          <li><a href="#" class="d2l-toc__sec-link">3.1 Linear Regression</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">3.2 Object-Oriented Design</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">3.3 Synthetic Regression Data</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">3.4 Linear Regression Implementation</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">3.5 Concise Implementation</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">3.6 Generalization</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">3.7 Weight Decay</a></li>
+        </ul>
+      </li>
+
+      <li class="d2l-toc__chapter">
+        <a class="d2l-toc__ch-link" data-ch="4" role="treeitem">
+          <span class="ch-num">4</span>
+          <span class="ch-title">Linear Neural Networks for Classification</span>
+          <span class="ch-arrow">▶</span>
+        </a>
+        <ul class="d2l-toc__secs" role="group">
+          <li><a href="#" class="d2l-toc__sec-link">4.1 Softmax Regression</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">4.2 The Image Classification Dataset</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">4.3 The Softmax Regression Implementation</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">4.4 Concise Implementation of Softmax</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">4.5 Generalization in Classification</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">4.6 Environment and Distribution Shift</a></li>
+        </ul>
+      </li>
+
+      <li class="d2l-toc__chapter">
+        <a class="d2l-toc__ch-link" data-ch="5" role="treeitem">
+          <span class="ch-num">5</span>
+          <span class="ch-title">Multilayer Perceptrons</span>
+          <span class="ch-arrow">▶</span>
+        </a>
+        <ul class="d2l-toc__secs" role="group">
+          <li><a href="#" class="d2l-toc__sec-link">5.1 Multilayer Perceptrons</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">5.2 Implementation of MLPs</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">5.3 Forward Propagation</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">5.4 Numerical Stability and Init</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">5.5 Generalization in Deep Learning</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">5.6 Dropout</a></li>
+        </ul>
+      </li>
+
+      <li class="d2l-toc__part">Convolutional Networks</li>
+
+      <li class="d2l-toc__chapter">
+        <a class="d2l-toc__ch-link" data-ch="6" role="treeitem">
+          <span class="ch-num">6</span>
+          <span class="ch-title">Convolutional Neural Networks</span>
+          <span class="ch-arrow">▶</span>
+        </a>
+        <ul class="d2l-toc__secs" role="group">
+          <li><a href="#" class="d2l-toc__sec-link">6.1 From Fully Connected to Convolutions</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">6.2 Convolutions for Images</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">6.3 Padding and Stride</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">6.4 Multiple Input and Output Channels</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">6.5 Pooling</a></li>
+        </ul>
+      </li>
+
+      <li class="d2l-toc__chapter">
+        <a class="d2l-toc__ch-link open d2l-active" data-ch="8" role="treeitem" aria-expanded="true">
+          <span class="ch-num">8</span>
+          <span class="ch-title">Modern Convolutional Neural Networks</span>
+          <span class="ch-arrow">▶</span>
+        </a>
+        <ul class="d2l-toc__secs open" role="group">
+          <li><a href="#" class="d2l-toc__sec-link">8.1 Deep Convolutional Neural Networks (AlexNet)</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">8.2 Networks Using Blocks (VGG)</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">8.3 Network in Network (NiN)</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">8.4 Multi-Branch Networks (GoogLeNet)</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">8.5 Batch Normalization</a></li>
+          <li><a href="#" class="d2l-toc__sec-link d2l-active">8.6 Residual Networks (ResNet) and ResNeXt</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">8.7 Densely Connected Networks (DenseNet)</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">8.8 Designing Convolution Network Architectures</a></li>
+        </ul>
+      </li>
+
+      <li class="d2l-toc__part">Recurrent & Attention</li>
+
+      <li class="d2l-toc__chapter">
+        <a class="d2l-toc__ch-link" data-ch="9" role="treeitem">
+          <span class="ch-num">9</span>
+          <span class="ch-title">Recurrent Neural Networks</span>
+          <span class="ch-arrow">▶</span>
+        </a>
+        <ul class="d2l-toc__secs" role="group">
+          <li><a href="#" class="d2l-toc__sec-link">9.1 Working with Sequences</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">9.2 Converting Raw Text into Sequence Data</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">9.3 Language Models</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">9.4 Recurrent Neural Networks</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">9.5 RNN Implementation from Scratch</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">9.6 Concise Implementation of RNNs</a></li>
+        </ul>
+      </li>
+
+      <li class="d2l-toc__chapter">
+        <a class="d2l-toc__ch-link" data-ch="11" role="treeitem">
+          <span class="ch-num">11</span>
+          <span class="ch-title">Attention Mechanisms and Transformers</span>
+          <span class="ch-arrow">▶</span>
+        </a>
+        <ul class="d2l-toc__secs" role="group">
+          <li><a href="#" class="d2l-toc__sec-link">11.1 Queries, Keys, and Values</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">11.2 Attention Pooling by Similarity</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">11.3 Attention Scoring Functions</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">11.4 The Bahdanau Attention Mechanism</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">11.5 Multi-Head Attention</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">11.6 Self-Attention and Positional Encoding</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">11.7 The Transformer Architecture</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">11.8 Transformers for Vision</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">11.9 Large-Scale Pretraining with Transformers</a></li>
+        </ul>
+      </li>
+
+      <li class="d2l-toc__part">Optimization & Beyond</li>
+
+      <li class="d2l-toc__chapter">
+        <a class="d2l-toc__ch-link" data-ch="12" role="treeitem">
+          <span class="ch-num">12</span>
+          <span class="ch-title">Optimization Algorithms</span>
+          <span class="ch-arrow">▶</span>
+        </a>
+        <ul class="d2l-toc__secs" role="group">
+          <li><a href="#" class="d2l-toc__sec-link">12.1 Optimization and Deep Learning</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">12.2 Convexity</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">12.3 Gradient Descent</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">12.4 Stochastic Gradient Descent</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">12.5 Minibatch SGD</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">12.6 Momentum</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">12.7 Adagrad</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">12.8 RMSProp</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">12.9 Adam</a></li>
+          <li><a href="#" class="d2l-toc__sec-link">12.10 Learning Rate Scheduling</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </nav><!-- /sidebar -->
+
+  <!-- ─── Main content ──────────────────────────────────────────────────── -->
+  <div class="d2l-content">
+
+    <!-- Breadcrumb -->
+    <nav class="d2l-breadcrumb" aria-label="Breadcrumb">
+      <a href="/d2lai/">D2L.ai</a>
+      <span class="sep" aria-hidden="true">›</span>
+      <a href="#">8. Modern Convolutional Neural Networks</a>
+      <span class="sep" aria-hidden="true">›</span>
+      <span aria-current="page">8.6. Residual Networks (ResNet) and ResNeXt</span>
+    </nav>
+
+    <!-- Open-in links -->
+    <div class="d2l-fw-links" aria-label="Open in framework">
+      <a href="#" class="d2l-fw-link d2l-fw-link--active">
+        <i class="fas fa-fire-alt"></i> PyTorch
+      </a>
+      <a href="#" class="d2l-fw-link">
+        <i class="fas fa-wind"></i> MXNet
+      </a>
+      <a href="#" class="d2l-fw-link">
+        <i class="fab fa-google"></i> JAX
+      </a>
+      <a href="#" class="d2l-fw-link">
+        <i class="fas fa-brain"></i> TensorFlow
+      </a>
+      <a href="#" class="d2l-fw-link">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="#" class="d2l-fw-link">
+        <i class="fas fa-book-open"></i> PDF
+      </a>
+    </div>
+
+    <!-- ── Article ────────────────────────────────────────────────────── -->
+    <article class="d2l-article">
+
+      <h1>8.6. Residual Networks (ResNet) and ResNeXt</h1>
+
+      <p>
+        As we design increasingly deeper networks, it becomes imperative to understand
+        how adding layers can increase the complexity and expressiveness of the network.
+        Even more important is the ability to design networks where adding layers makes
+        networks <em>strictly more expressive</em> rather than just different.
+        To make some progress, we need a bit of mathematics.
+      </p>
+
+      <!-- ── 8.6.1 Function Classes ──────────────────────────────────── -->
+      <h2 id="sec-fn-classes">
+        <span class="sec-num">8.6.1.</span> Function Classes
+      </h2>
+
+      <p>
+        Consider \(\mathcal{F}\), the class of functions that a specific network architecture
+        (together with learning rates and other hyperparameter settings) can reach.
+        That is, for all \(f \in \mathcal{F}\) there exists some set of parameters
+        \(\mathbf{W}\) that can be obtained through training on a suitable dataset.
+        Assume that \(f^*\) is the "truth" function we really would like to find.
+      </p>
+
+      <p>
+        If \(f^*\) is in \(\mathcal{F}\), we are in good shape, but typically
+        we will not be quite so lucky. Instead, we will try to find the best
+        \(f^*_\mathcal{F}\) within \(\mathcal{F}\), which is the best choice
+        given \(\mathcal{F}\):
+      </p>
+
+      <p>
+        $$f^*_\mathcal{F} \stackrel{\mathrm{def}}{=} \mathop{\mathrm{argmin}}_f L(\mathbf{X}, \mathbf{y}, f) \text{ subject to } f \in \mathcal{F}.$$
+      </p>
+
+      <p>
+        It is only reasonable to assume that if we design a different and more
+        powerful architecture \(\mathcal{F}'\) we should arrive at a better
+        outcome. In other words, we would expect that
+        \(f^*_{\mathcal{F}'}\) is "better" than \(f^*_\mathcal{F}\).
+        However, if \(\mathcal{F} \not\subseteq \mathcal{F}'\) there is no
+        guarantee that this even needs to happen.
+      </p>
+
+      <p>
+        This is the key question that He et al., 2016 asked: in what
+        circumstances is a larger function class guaranteed to contain the
+        smaller one? The answer is: when larger networks can always subsume the
+        role of smaller ones — i.e., when we can always set the additional
+        parameters to reproduce the identity mapping.
+      </p>
+
+      <!-- Figure 8.6.1 -->
+      <figure class="d2l-figure">
+        <div class="d2l-figure__box">
+          <svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg"
+               style="max-width:460px;width:100%;height:auto;"
+               aria-label="Left: non-nested function classes. Right: nested function classes.">
+            <!-- LEFT: non-nested (bad case) -->
+            <text x="120" y="20" text-anchor="middle" font-size="11" fill="#888">Non-nested</text>
+            <ellipse cx="100" cy="110" rx="90" ry="75" fill="none" stroke="#aaa" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <ellipse cx="145" cy="110" rx="55" ry="45" fill="none" stroke="#aaa" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <ellipse cx="155" cy="105" rx="28" ry="22" fill="rgba(240,151,39,0.18)" stroke="#F09727" stroke-width="1.5"/>
+            <text x="100" y="175" text-anchor="middle" font-size="10" fill="#999">F₁</text>
+            <text x="155" y="175" text-anchor="middle" font-size="10" fill="#999">F₂</text>
+            <text x="35"  y="100" font-size="10" fill="#999">F</text>
+            <!-- star for f* -->
+            <text x="108" y="115" text-anchor="middle" font-size="13" fill="#e74c3c">★</text>
+            <text x="108" y="128" text-anchor="middle" font-size="9" fill="#e74c3c">f*</text>
+
+            <!-- RIGHT: nested (good case) -->
+            <text x="360" y="20" text-anchor="middle" font-size="11" fill="#888">Nested (ResNet)</text>
+            <ellipse cx="360" cy="110" rx="90" ry="75" fill="none" stroke="#aaa" stroke-width="1.5"/>
+            <ellipse cx="360" cy="110" rx="60" ry="50" fill="none" stroke="#aaa" stroke-width="1.5"/>
+            <ellipse cx="360" cy="110" rx="32" ry="24" fill="rgba(240,151,39,0.18)" stroke="#F09727" stroke-width="1.5"/>
+            <text x="295" y="100" font-size="10" fill="#999">F</text>
+            <text x="308" y="145" font-size="10" fill="#999">F₂</text>
+            <text x="347" y="120" font-size="10" fill="#F09727">F₁</text>
+            <!-- star for f* -->
+            <text x="360" y="115" text-anchor="middle" font-size="13" fill="#e74c3c">★</text>
+            <text x="360" y="128" text-anchor="middle" font-size="9" fill="#e74c3c">f*</text>
+          </svg>
+        </div>
+        <figcaption>
+          <strong>Fig. 8.6.1</strong> Left: non-nested function classes — adding capacity does not
+          guarantee improvement. Right: nested function classes as designed by ResNet —
+          larger classes always contain the smaller class, ensuring the added layers can
+          always express the identity mapping.
+        </figcaption>
+      </figure>
+
+      <p>
+        ResNet solves this problem by making every additional layer easier to contain
+        the identity function as one of its elements. If the ideal mapping
+        \(f(\mathbf{x}) = \mathbf{x}\), the residual mapping
+        \(g(\mathbf{x}) = f(\mathbf{x}) - \mathbf{x} = 0\) is easier to learn —
+        pushing weights towards zero is a natural regularization pressure.
+      </p>
+
+      <!-- ── 8.6.2 Residual Blocks ──────────────────────────────────── -->
+      <h2 id="sec-res-block">
+        <span class="sec-num">8.6.2.</span> Residual Blocks
+      </h2>
+
+      <p>
+        ResNet follows VGG's full 3×3 convolutional layer design. The
+        <strong>residual block</strong> has two 3×3 convolutional layers with
+        the same number of output channels. Each convolutional layer is
+        followed by a batch normalization layer and a ReLU activation function.
+        Then, we skip these two convolution operations and add the input
+        directly before the final ReLU activation. This design requires that
+        the two convolutional layers produce output of the same shape as the input
+        so that they can be added together.
+      </p>
+
+      <!-- Figure 8.6.2 — Residual block diagram -->
+      <figure class="d2l-figure">
+        <div class="d2l-figure__box">
+          <svg viewBox="0 0 380 340" xmlns="http://www.w3.org/2000/svg"
+               style="max-width:340px;width:100%;height:auto;"
+               aria-label="Residual block architecture diagram">
+            <defs>
+              <marker id="arr" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+                <polygon points="0 0, 7 3.5, 0 7" fill="#666"/>
+              </marker>
+              <marker id="arr-orange" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+                <polygon points="0 0, 7 3.5, 0 7" fill="#F09727"/>
+              </marker>
+            </defs>
+
+            <!-- Input label -->
+            <text x="155" y="22" text-anchor="middle" font-size="13" font-weight="600" fill="#555">x</text>
+            <line x1="155" y1="28" x2="155" y2="52" stroke="#666" stroke-width="1.5" marker-end="url(#arr)"/>
+
+            <!-- Skip connection line: right side -->
+            <line x1="155" y1="22" x2="295" y2="22"  stroke="#F09727" stroke-width="1.8"/>
+            <line x1="295" y1="22" x2="295" y2="278" stroke="#F09727" stroke-width="1.8"/>
+            <line x1="295" y1="278" x2="192" y2="278" stroke="#F09727" stroke-width="1.8" marker-end="url(#arr-orange)"/>
+
+            <!-- Block 1: Conv 3x3 -->
+            <rect x="90" y="52" width="130" height="40" rx="5"
+                  fill="#e8f0fe" stroke="#4285f4" stroke-width="1.5"/>
+            <text x="155" y="77" text-anchor="middle" font-size="12" fill="#1a73e8">Conv 3×3</text>
+            <line x1="155" y1="92" x2="155" y2="112" stroke="#666" stroke-width="1.5" marker-end="url(#arr)"/>
+
+            <!-- Block 2: Batch Norm -->
+            <rect x="90" y="112" width="130" height="40" rx="5"
+                  fill="#e6f4ea" stroke="#34a853" stroke-width="1.5"/>
+            <text x="155" y="137" text-anchor="middle" font-size="12" fill="#1e8e3e">Batch Norm</text>
+            <line x1="155" y1="152" x2="155" y2="172" stroke="#666" stroke-width="1.5" marker-end="url(#arr)"/>
+
+            <!-- Block 3: ReLU -->
+            <rect x="90" y="172" width="130" height="40" rx="5"
+                  fill="#fce8e6" stroke="#ea4335" stroke-width="1.5"/>
+            <text x="155" y="197" text-anchor="middle" font-size="12" fill="#d93025">ReLU</text>
+            <line x1="155" y1="212" x2="155" y2="232" stroke="#666" stroke-width="1.5" marker-end="url(#arr)"/>
+
+            <!-- Block 4: Conv 3x3 -->
+            <rect x="90" y="232" width="130" height="40" rx="5"
+                  fill="#e8f0fe" stroke="#4285f4" stroke-width="1.5"/>
+            <text x="155" y="257" text-anchor="middle" font-size="12" fill="#1a73e8">Conv 3×3</text>
+            <line x1="155" y1="272" x2="155" y2="268" stroke="#666" stroke-width="1.5"/>
+
+            <!-- Add node -->
+            <circle cx="155" cy="282" r="14" fill="#fff" stroke="#F09727" stroke-width="2"/>
+            <text x="155" y="287" text-anchor="middle" font-size="14" fill="#F09727">⊕</text>
+            <line x1="155" y1="296" x2="155" y2="316" stroke="#666" stroke-width="1.5" marker-end="url(#arr)"/>
+
+            <!-- Output: ReLU -->
+            <rect x="90" y="316" width="130" height="16" rx="3" fill="#fce8e6" stroke="#ea4335" stroke-width="1"/>
+            <text x="155" y="328" text-anchor="middle" font-size="10" fill="#d93025">ReLU → H(x)</text>
+
+            <!-- Skip label -->
+            <text x="308" y="155" font-size="10" fill="#F09727" transform="rotate(-90,308,155)">skip connection</text>
+          </svg>
+        </div>
+        <figcaption>
+          <strong>Fig. 8.6.2</strong> A residual block. The skip connection (orange path)
+          bypasses the two convolution layers, adding the input \(\mathbf{x}\) directly
+          to the learned residual \(F(\mathbf{x})\). The network learns
+          \(F(\mathbf{x}) = H(\mathbf{x}) - \mathbf{x}\) instead of \(H(\mathbf{x})\).
+        </figcaption>
+      </figure>
+
+      <p>
+        If we wish to change the number of channels, we need to introduce an additional
+        1×1 convolutional layer to transform the input in the skip connection into the
+        desired shape for the addition operation. Let us have a look at the code below.
+      </p>
+
+      <!-- Code block -->
+      <div class="d2l-code-block">
+        <div class="d2l-code-hdr">
+          <div class="d2l-tabs">
+            <button class="d2l-tab active" data-panel="py-resblock">PyTorch</button>
+            <button class="d2l-tab"        data-panel="jax-resblock">JAX</button>
+            <button class="d2l-tab"        data-panel="tf-resblock">TensorFlow</button>
+          </div>
+          <button class="d2l-copy-btn" aria-label="Copy code">Copy</button>
+        </div>
+        <div class="d2l-panel active" id="py-resblock">
+<pre><code><span class="kw">import</span> torch
+<span class="kw">from</span> torch <span class="kw">import</span> nn
+<span class="kw">from</span> torch.nn <span class="kw">import</span> functional <span class="kw">as</span> F
+
+
+<span class="kw">class</span> <span class="fn">Residual</span>(nn.Module):
+    <span class="cm">"""The Residual block of ResNet models."""</span>
+
+    <span class="kw">def</span> <span class="fn">__init__</span>(self, num_channels, use_1x1conv=<span class="nb">False</span>, strides=<span class="nb">1</span>):
+        <span class="kw">super</span>().<span class="fn">__init__</span>()
+        self.conv1 = nn.<span class="fn">LazyConv2d</span>(num_channels, kernel_size=<span class="nb">3</span>,
+                                      padding=<span class="nb">1</span>, stride=strides)
+        self.conv2 = nn.<span class="fn">LazyConv2d</span>(num_channels, kernel_size=<span class="nb">3</span>, padding=<span class="nb">1</span>)
+        self.conv3 = nn.<span class="fn">LazyConv2d</span>(num_channels, kernel_size=<span class="nb">1</span>,
+                                      stride=strides) <span class="kw">if</span> use_1x1conv <span class="kw">else None</span>
+        self.bn1 = nn.<span class="fn">LazyBatchNorm2d</span>()
+        self.bn2 = nn.<span class="fn">LazyBatchNorm2d</span>()
+
+    <span class="kw">def</span> <span class="fn">forward</span>(self, X):
+        Y = F.<span class="fn">relu</span>(self.bn1(self.conv1(X)))
+        Y = self.bn2(self.conv2(Y))
+        <span class="kw">if</span> self.conv3:
+            X = self.conv3(X)
+        Y += X
+        <span class="kw">return</span> F.<span class="fn">relu</span>(Y)
+</code></pre>
+        </div>
+        <div class="d2l-panel" id="jax-resblock">
+<pre><code><span class="kw">import</span> jax
+<span class="kw">from</span> jax <span class="kw">import</span> numpy <span class="kw">as</span> jnp
+<span class="kw">from</span> flax <span class="kw">import</span> linen <span class="kw">as</span> nn
+
+
+<span class="kw">class</span> <span class="fn">Residual</span>(nn.Module):
+    <span class="cm">"""The Residual block of ResNet models."""</span>
+    num_channels: <span class="fn">int</span>
+    use_1x1conv: <span class="fn">bool</span> = <span class="nb">False</span>
+    strides: <span class="fn">int</span> = <span class="nb">1</span>
+
+    <span class="kw">@</span>nn.compact
+    <span class="kw">def</span> <span class="fn">__call__</span>(self, X, training=<span class="nb">False</span>):
+        Y = nn.<span class="fn">Conv</span>(self.num_channels, kernel_size=(<span class="nb">3</span>, <span class="nb">3</span>),
+                    strides=self.strides, padding=<span class="nb">1</span>)(X)
+        Y = nn.<span class="fn">BatchNorm</span>(use_running_average=<span class="kw">not</span> training)(Y)
+        Y = nn.activation.<span class="fn">relu</span>(Y)
+        Y = nn.<span class="fn">Conv</span>(self.num_channels, kernel_size=(<span class="nb">3</span>, <span class="nb">3</span>), padding=<span class="nb">1</span>)(Y)
+        Y = nn.<span class="fn">BatchNorm</span>(use_running_average=<span class="kw">not</span> training)(Y)
+        <span class="kw">if</span> self.use_1x1conv:
+            X = nn.<span class="fn">Conv</span>(self.num_channels, kernel_size=(<span class="nb">1</span>, <span class="nb">1</span>),
+                        strides=self.strides)(X)
+        <span class="kw">return</span> nn.activation.<span class="fn">relu</span>(Y + X)
+</code></pre>
+        </div>
+        <div class="d2l-panel" id="tf-resblock">
+<pre><code><span class="kw">import</span> tensorflow <span class="kw">as</span> tf
+
+
+<span class="kw">class</span> <span class="fn">Residual</span>(tf.keras.Model):
+    <span class="cm">"""The Residual block of ResNet models."""</span>
+
+    <span class="kw">def</span> <span class="fn">__init__</span>(self, num_channels, use_1x1conv=<span class="nb">False</span>, strides=<span class="nb">1</span>):
+        <span class="kw">super</span>().<span class="fn">__init__</span>()
+        self.conv1 = tf.keras.layers.<span class="fn">Conv2D</span>(num_channels, kernel_size=<span class="nb">3</span>,
+                                              padding=<span class="st">'same'</span>, strides=strides)
+        self.conv2 = tf.keras.layers.<span class="fn">Conv2D</span>(num_channels, kernel_size=<span class="nb">3</span>,
+                                              padding=<span class="st">'same'</span>)
+        self.conv3 = tf.keras.layers.<span class="fn">Conv2D</span>(num_channels, kernel_size=<span class="nb">1</span>,
+                       strides=strides) <span class="kw">if</span> use_1x1conv <span class="kw">else None</span>
+        self.bn1 = tf.keras.layers.<span class="fn">BatchNormalization</span>()
+        self.bn2 = tf.keras.layers.<span class="fn">BatchNormalization</span>()
+
+    <span class="kw">def</span> <span class="fn">call</span>(self, X):
+        Y = tf.keras.activations.<span class="fn">relu</span>(self.bn1(self.conv1(X)))
+        Y = self.bn2(self.conv2(Y))
+        <span class="kw">if</span> self.conv3 <span class="kw">is not None</span>:
+            X = self.conv3(X)
+        Y += X
+        <span class="kw">return</span> tf.keras.activations.<span class="fn">relu</span>(Y)
+</code></pre>
+        </div>
+      </div><!-- /code block -->
+
+      <p>
+        This code generates two types of networks: one where we add the input to the
+        output before applying the ReLU nonlinearity whenever <code>use_1x1conv=False</code>,
+        and one where we adjust channels and resolution by means of a 1×1 convolution
+        before adding. The diagram below shows the shapes at each step:
+      </p>
+
+      <!-- ── 8.6.3 ResNet Model ──────────────────────────────────────── -->
+      <h2 id="sec-resnet-model">
+        <span class="sec-num">8.6.3.</span> ResNet Model
+      </h2>
+
+      <p>
+        The first two layers of ResNet are the same as those of the GoogLeNet:
+        the 7×7 convolutional layer with 64 output channels and a stride of 2 is
+        followed by the 3×3 maximum pooling layer with a stride of 2.
+        The difference is the batch normalization layer added after each convolutional
+        layer in ResNet.
+      </p>
+
+      <div class="d2l-code-block">
+        <div class="d2l-code-hdr">
+          <div class="d2l-tabs">
+            <button class="d2l-tab active" data-panel="py-resnet">PyTorch</button>
+            <button class="d2l-tab"        data-panel="jax-resnet">JAX</button>
+          </div>
+          <button class="d2l-copy-btn" aria-label="Copy code">Copy</button>
+        </div>
+        <div class="d2l-panel active" id="py-resnet">
+<pre><code><span class="kw">class</span> <span class="fn">ResNet</span>(d2l.Classifier):
+    <span class="kw">def</span> <span class="fn">__init__</span>(self, arch, lr=<span class="nb">0.1</span>, num_classes=<span class="nb">10</span>):
+        <span class="kw">super</span>(ResNet, self).<span class="fn">__init__</span>()
+        self.<span class="fn">save_hyperparameters</span>()
+        self.net = nn.<span class="fn">Sequential</span>(self.<span class="fn">b1</span>())
+        <span class="kw">for</span> i, b <span class="kw">in</span> <span class="fn">enumerate</span>(arch):
+            self.net.<span class="fn">add_module</span>(<span class="st">f'b</span>{i+<span class="nb">2</span>}<span class="st">'</span>, self.<span class="fn">block</span>(*b, first_block=(i==<span class="nb">0</span>)))
+        self.net.<span class="fn">add_module</span>(<span class="st">'last'</span>, nn.<span class="fn">Sequential</span>(
+            nn.<span class="fn">AdaptiveAvgPool2d</span>((<span class="nb">1</span>, <span class="nb">1</span>)), nn.<span class="fn">Flatten</span>(),
+            nn.<span class="fn">LazyLinear</span>(num_classes)))
+
+    <span class="kw">def</span> <span class="fn">b1</span>(self):
+        <span class="kw">return</span> nn.<span class="fn">Sequential</span>(
+            nn.<span class="fn">LazyConv2d</span>(<span class="nb">64</span>, kernel_size=<span class="nb">7</span>, stride=<span class="nb">2</span>, padding=<span class="nb">3</span>),
+            nn.<span class="fn">LazyBatchNorm2d</span>(), nn.<span class="fn">ReLU</span>(),
+            nn.<span class="fn">MaxPool2d</span>(kernel_size=<span class="nb">3</span>, stride=<span class="nb">2</span>, padding=<span class="nb">1</span>))
+
+    <span class="kw">def</span> <span class="fn">block</span>(self, num_residuals, num_channels,
+               first_block=<span class="nb">False</span>):
+        blk = []
+        <span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(num_residuals):
+            <span class="kw">if</span> i == <span class="nb">0</span> <span class="kw">and not</span> first_block:
+                blk.<span class="fn">append</span>(<span class="fn">Residual</span>(num_channels,
+                    use_1x1conv=<span class="nb">True</span>, strides=<span class="nb">2</span>))
+            <span class="kw">else</span>:
+                blk.<span class="fn">append</span>(<span class="fn">Residual</span>(num_channels))
+        <span class="kw">return</span> nn.<span class="fn">Sequential</span>(*blk)
+
+
+<span class="kw">class</span> <span class="fn">ResNet18</span>(ResNet):
+    <span class="kw">def</span> <span class="fn">__init__</span>(self, lr=<span class="nb">0.1</span>, num_classes=<span class="nb">10</span>):
+        <span class="kw">super</span>().<span class="fn">__init__</span>(
+            ((<span class="nb">2</span>, <span class="nb">64</span>), (<span class="nb">2</span>, <span class="nb">128</span>), (<span class="nb">2</span>, <span class="nb">256</span>), (<span class="nb">2</span>, <span class="nb">512</span>)),
+            lr, num_classes)
+</code></pre>
+        </div>
+        <div class="d2l-panel" id="jax-resnet">
+<pre><code><span class="kw">class</span> <span class="fn">ResNet</span>(d2l.Classifier):
+    arch: <span class="fn">tuple</span>
+    lr: <span class="fn">float</span> = <span class="nb">0.1</span>
+    num_classes: <span class="fn">int</span> = <span class="nb">10</span>
+
+    <span class="kw">@</span>nn.compact
+    <span class="kw">def</span> <span class="fn">__call__</span>(self, X, training=<span class="nb">False</span>):
+        X = self.<span class="fn">b1</span>()(X, training=training)
+        <span class="kw">for</span> i, b <span class="kw">in</span> <span class="fn">enumerate</span>(self.arch):
+            X = self.<span class="fn">block</span>(*b, first_block=(i==<span class="nb">0</span>))(X, training=training)
+        <span class="kw">return</span> nn.<span class="fn">Dense</span>(self.num_classes)(X.<span class="fn">mean</span>(axis=(<span class="nb">1</span>, <span class="nb">2</span>)))
+</code></pre>
+        </div>
+      </div><!-- /code block -->
+
+      <!-- ── 8.6.4 Training ────────────────────────────────────────── -->
+      <h2 id="sec-training">
+        <span class="sec-num">8.6.4.</span> Training
+      </h2>
+
+      <p>
+        We train ResNet on the Fashion-MNIST dataset using the same setting as before.
+        ResNet is significantly easier to train than GoogLeNet because of the skip
+        connections — gradient flow is improved throughout the very deep network.
+      </p>
+
+      <div class="d2l-code-block">
+        <div class="d2l-code-hdr">
+          <div class="d2l-tabs">
+            <button class="d2l-tab active" data-panel="py-train">PyTorch</button>
+          </div>
+          <button class="d2l-copy-btn" aria-label="Copy code">Copy</button>
+        </div>
+        <div class="d2l-panel active" id="py-train">
+<pre><code>model = <span class="fn">ResNet18</span>(lr=<span class="nb">0.01</span>)
+trainer = d2l.<span class="fn">Trainer</span>(max_epochs=<span class="nb">10</span>, num_gpus=<span class="nb">1</span>)
+data = d2l.<span class="fn">FashionMNIST</span>(batch_size=<span class="nb">128</span>, resize=(<span class="nb">96</span>, <span class="nb">96</span>))
+model.<span class="fn">apply_init</span>([next(<span class="fn">iter</span>(data.<span class="fn">get_dataloader</span>(<span class="nb">True</span>)))[<span class="nb">0</span>]])
+trainer.<span class="fn">fit</span>(model, data)
+
+<span class="cm"># Expected output:</span>
+<span class="cm"># Epoch 10 | train loss: 0.014 | val accuracy: 0.906</span>
+</code></pre>
+        </div>
+      </div>
+
+      <!-- ── 8.6.5 ResNeXt ─────────────────────────────────────────── -->
+      <h2 id="sec-resnext">
+        <span class="sec-num">8.6.5.</span> ResNeXt
+      </h2>
+
+      <p>
+        One of the challenges in the design of ResNet is the trade-off between
+        nonlinearity and dimensionality within a given block.
+        <strong>ResNeXt</strong> (Xie et al., 2017) offers a solution by combining
+        the idea of VGG's repeated block structure with grouped convolutions.
+      </p>
+
+      <p>
+        In a ResNeXt block, instead of one wide convolution, we use many narrow
+        convolutions (grouped convolutions) in parallel and sum their outputs:
+      </p>
+
+      <p>
+        $$\mathbf{y} = \mathbf{x} + \sum_{t=1}^{C} \mathcal{T}_t(\mathbf{x}),$$
+      </p>
+
+      <p>
+        where \(C\) is called the <em>cardinality</em> of the transformation set.
+        Empirically, increasing cardinality is more effective than increasing width
+        or depth when the computational cost is held constant.
+      </p>
+
+      <div class="d2l-code-block">
+        <div class="d2l-code-hdr">
+          <div class="d2l-tabs">
+            <button class="d2l-tab active" data-panel="py-resnext">PyTorch</button>
+          </div>
+          <button class="d2l-copy-btn" aria-label="Copy code">Copy</button>
+        </div>
+        <div class="d2l-panel active" id="py-resnext">
+<pre><code><span class="kw">class</span> <span class="fn">ResNeXtBlock</span>(nn.Module):
+    <span class="cm">"""The ResNeXt block."""</span>
+
+    <span class="kw">def</span> <span class="fn">__init__</span>(self, num_channels, groups, bot_mul,
+                 use_1x1conv=<span class="nb">False</span>, strides=<span class="nb">1</span>):
+        <span class="kw">super</span>().<span class="fn">__init__</span>()
+        bot_channels = <span class="fn">int</span>(round(num_channels * bot_mul))
+        self.conv1 = nn.<span class="fn">LazyConv2d</span>(bot_channels, kernel_size=<span class="nb">1</span>, stride=<span class="nb">1</span>)
+        self.conv2 = nn.<span class="fn">LazyConv2d</span>(bot_channels, kernel_size=<span class="nb">3</span>,
+            stride=strides, padding=<span class="nb">1</span>, groups=bot_channels//<span class="fn">groups</span>)
+        self.conv3 = nn.<span class="fn">LazyConv2d</span>(num_channels, kernel_size=<span class="nb">1</span>)
+        self.bn1   = nn.<span class="fn">LazyBatchNorm2d</span>()
+        self.bn2   = nn.<span class="fn">LazyBatchNorm2d</span>()
+        self.bn3   = nn.<span class="fn">LazyBatchNorm2d</span>()
+        <span class="kw">if</span> use_1x1conv:
+            self.downsample = nn.<span class="fn">Sequential</span>(
+                nn.<span class="fn">LazyConv2d</span>(num_channels, kernel_size=<span class="nb">1</span>, stride=strides),
+                nn.<span class="fn">LazyBatchNorm2d</span>())
+        <span class="kw">else</span>:
+            self.downsample = <span class="kw">None</span>
+
+    <span class="kw">def</span> <span class="fn">forward</span>(self, X):
+        Y = F.<span class="fn">relu</span>(self.bn1(self.conv1(X)))
+        Y = F.<span class="fn">relu</span>(self.bn2(self.conv2(Y)))
+        Y = self.bn3(self.conv3(Y))
+        <span class="kw">if</span> self.downsample:
+            X = self.<span class="fn">downsample</span>(X)
+        <span class="kw">return</span> F.<span class="fn">relu</span>(Y + X)
+</code></pre>
+        </div>
+      </div>
+
+      <!-- ── Summary ───────────────────────────────────────────────── -->
+      <div class="d2l-note" id="sec-summary">
+        <div class="d2l-note__title">Summary</div>
+        <ul>
+          <li>
+            Nested function classes are desirable: extra layers in a larger function
+            class should be able to express the identity function, so adding layers
+            cannot hurt performance.
+          </li>
+          <li>
+            Residual mappings \(F(\mathbf{x}) = H(\mathbf{x}) - \mathbf{x}\)
+            are easier to learn than the original mapping — pushing weights to zero
+            forces the network to prefer simpler (identity-like) transformations.
+          </li>
+          <li>
+            The residual block is the fundamental building block of modern deep
+            convolutional networks. It allows training of very deep networks (100+
+            layers) that were previously intractable.
+          </li>
+          <li>
+            ResNeXt introduces grouped convolutions and <em>cardinality</em> as a
+            third dimension (alongside depth and width) for scaling neural networks.
+          </li>
+          <li>
+            ResNet and its variants remain competitive baselines for image
+            classification, object detection, and semantic segmentation tasks.
+          </li>
+        </ul>
+      </div>
+
+      <!-- ── Exercises ─────────────────────────────────────────────── -->
+      <div class="d2l-exercises" id="sec-exercises">
+        <div class="d2l-exercises__title">Exercises</div>
+        <ol>
+          <li>
+            What are the major differences between the Inception block in
+            GoogLeNet (Section 8.4) and the residual block? After removing some
+            paths in the Inception block, how are they related to each other?
+          </li>
+          <li>
+            Refer to Table 1 in the ResNet paper (He et al., 2016) to implement
+            different variants of the network. Do they achieve the same accuracy
+            on the Fashion-MNIST dataset?
+          </li>
+          <li>
+            For deeper networks, ResNet introduces a "bottleneck" architecture to
+            reduce model complexity. Try to implement it. Refer to Figure 5 in the
+            ResNet paper for details.
+          </li>
+          <li>
+            In subsequent versions of ResNet, the authors changed the "convolution,
+            batch normalization, and activation" structure to the "batch normalization,
+            activation, and convolution" structure. Make this improvement yourself.
+            See Figure 1 in He et al. (2016b) for details.
+          </li>
+          <li>
+            Why can't we just increase the complexity of functions without bound,
+            even if it fits the training data perfectly?
+          </li>
+          <li>
+            In ResNeXt, the number of groups \(g\) and bottleneck ratio are
+            hyperparameters. Using the Fashion-MNIST dataset, explore how varying
+            cardinality affects accuracy vs. computation cost.
+          </li>
+        </ol>
+      </div>
+
+    </article><!-- /d2l-article -->
+
+    <!-- ── Prev / Next navigation ──────────────────────────────────── -->
+    <div class="d2l-page-nav" aria-label="Chapter navigation">
+      <a href="#" class="d2l-nav-btn">
+        <span class="d2l-nav-btn__lbl">← Previous</span>
+        <span class="d2l-nav-btn__ttl">8.5. Batch Normalization</span>
+      </a>
+      <a href="#" class="d2l-nav-btn d2l-nav-btn--next">
+        <span class="d2l-nav-btn__lbl">Next →</span>
+        <span class="d2l-nav-btn__ttl">8.7. Densely Connected Networks (DenseNet)</span>
+      </a>
+    </div>
+
+  </div><!-- /d2l-content -->
+
+</div><!-- /d2l-wrapper -->
+
+<!-- Sidebar toggle FAB (mobile) -->
+<button class="d2l-fab" id="d2lFab" aria-label="Toggle navigation sidebar" aria-expanded="false">
+  <i class="fas fa-bars"></i>
+</button>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ── Sidebar toggle (mobile) ─────────────────────────────────────── */
+  var fab     = document.getElementById('d2lFab');
+  var sidebar = document.getElementById('d2lSidebar');
+
+  if (fab && sidebar) {
+    fab.addEventListener('click', function () {
+      var open = sidebar.classList.toggle('open');
+      fab.setAttribute('aria-expanded', open ? 'true' : 'false');
+      fab.querySelector('i').className = open ? 'fas fa-times' : 'fas fa-bars';
+    });
+
+    // Close sidebar on outside click
+    document.addEventListener('click', function (e) {
+      if (sidebar.classList.contains('open') &&
+          !sidebar.contains(e.target) && e.target !== fab) {
+        sidebar.classList.remove('open');
+        fab.setAttribute('aria-expanded', 'false');
+        fab.querySelector('i').className = 'fas fa-bars';
+      }
+    });
+  }
+
+  /* ── TOC chapter collapse / expand ──────────────────────────────── */
+  var chLinks = document.querySelectorAll('.d2l-toc__ch-link[data-ch]');
+  chLinks.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var secs = link.nextElementSibling;
+      if (!secs) return;
+      var isOpen = secs.classList.toggle('open');
+      link.classList.toggle('open', isOpen);
+    });
+  });
+
+  /* ── Code-block tab switching ────────────────────────────────────── */
+  document.querySelectorAll('.d2l-code-block').forEach(function (block) {
+    var tabs   = block.querySelectorAll('.d2l-tab');
+    var panels = block.querySelectorAll('.d2l-panel');
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var target = tab.dataset.panel;
+
+        tabs.forEach(function (t) { t.classList.remove('active'); });
+        panels.forEach(function (p) { p.classList.remove('active'); });
+
+        tab.classList.add('active');
+        var panel = block.querySelector('#' + target);
+        if (panel) panel.classList.add('active');
+      });
+    });
+  });
+
+  /* ── Copy-to-clipboard ───────────────────────────────────────────── */
+  document.querySelectorAll('.d2l-copy-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var block  = btn.closest('.d2l-code-block');
+      var active = block && block.querySelector('.d2l-panel.active pre');
+      if (!active) return;
+
+      var text = active.textContent || '';
+      navigator.clipboard.writeText(text).then(function () {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(function () {
+          btn.textContent = 'Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      }).catch(function () {
+        btn.textContent = 'Copy';
+      });
+    });
+  });
+
+})();
+</script>
