@@ -11,6 +11,7 @@ tags:
     <style type="text/css">
         figure{text-align: center;}
         math{text-align: center;}
+        [data-theme="dark"] p img { filter: invert(1) hue-rotate(180deg); }
     </style>
 </head>
 

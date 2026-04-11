@@ -1,11 +1,11 @@
 name: Sync Strava Activities
 
 # ─── Triggers ────────────────────────────────────────────────────────────────
-# Runs automatically every hour, and can be triggered manually from the
-# GitHub Actions tab (useful for testing without waiting for the cron).
+# Runs automatically once a day at midnight UTC, and can be triggered manually
+# from the GitHub Actions tab (useful for testing without waiting for the cron).
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 # ─── Required Secrets ────────────────────────────────────────────────────────
