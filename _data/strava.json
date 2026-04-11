@@ -1,38 +1,38 @@
 {
-  "last_updated": "2026-04-11T10:33:50Z",
+  "last_updated": "2026-04-11T11:30:27Z",
   "today": {
     "date": "2026-04-11",
-    "runs": 0,
-    "distance_km": 0.0,
-    "elevation_m": 0.0,
-    "moving_time_s": 0,
+    "runs": 1,
+    "distance_km": 2.02,
+    "elevation_m": 17.5,
+    "moving_time_s": 931,
     "polylines": [],
     "photos": []
   },
   "latest": {
-    "id": 17814428696,
+    "id": 18064217516,
     "name": "Afternoon Run",
-    "date": "2026-03-22",
-    "distance_km": 4.4,
-    "moving_time_s": 2970,
-    "elevation_m": 0.0,
-    "strava_url": "https://www.strava.com/activities/17814428696",
-    "polyline": "{fb_C{_ydS@OJUBSPa@FAn@LlBh@NKXWb@Yd@g@BGPMLCRJFPGrA?p@Cp@_@rEGNsCSi@Si@c@MEOFEZMF{@JMGa@FGACGHMr@mDD]ZoA?GJ_@H?VNnAXRHb@FHGNSLGNQpAiAHAJFLP?t@EpA?^KjBG^Er@Gp@GHm@AiBSe@OMIMOQMGAI?GDCVEHw@DQ?QCYHIAAETq@@MAYDs@XyAXu@DMRc@H?ZLjB`@X@TMHJD@NGHOAWZSPWTUFIBALDPP@RG~@?l@G`BIp@ObCCHI@o@Ck@I[?YEg@S_@YSKQBGZGDq@Li@EOJICCCFc@^eBf@mCT{@DALFfAN\\Jp@LZSn@i@x@y@JCHBNP@FCtBIfBQbBCz@GXKDiCQi@QIEW[KGIAODCHAPKHw@J[EWHE?EEBELeAJa@",
+    "date": "2026-04-11",
+    "distance_km": 2.02,
+    "moving_time_s": 931,
+    "elevation_m": 17.5,
+    "strava_url": "https://www.strava.com/activities/18064217516",
+    "polyline": "",
     "photos": []
   },
   "summary": {
-    "total_distance_km": 664.19,
-    "total_runs": 132,
-    "total_elevation_m": 3159.3,
-    "total_moving_time_s": 322875
+    "total_distance_km": 666.21,
+    "total_runs": 133,
+    "total_elevation_m": 3176.8,
+    "total_moving_time_s": 323806
   },
   "yearly": [
     {
       "year": 2026,
-      "runs": 8,
-      "distance_km": 26.28,
-      "elevation_m": 0.0,
-      "moving_time_s": 12933
+      "runs": 9,
+      "distance_km": 28.3,
+      "elevation_m": 17.5,
+      "moving_time_s": 13864
     },
     {
       "year": 2025,
@@ -133,10 +133,22 @@
     },
     {
       "label": "Apr W1",
-      "distance_km": 0.0
+      "distance_km": 2.02
     }
   ],
   "activities": [
+    {
+      "id": 18064217516,
+      "name": "Afternoon Run",
+      "date": "2026-04-11",
+      "distance_m": 2021.6,
+      "moving_time_s": 931,
+      "elevation_m": 17.5,
+      "avg_speed_ms": 2.171,
+      "strava_url": "https://www.strava.com/activities/18064217516",
+      "route_svg": "",
+      "photo_url": ""
+    },
     {
       "id": 17814428696,
       "name": "Afternoon Run",
