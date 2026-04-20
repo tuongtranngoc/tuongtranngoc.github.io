@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-04-19T01:20:24Z",
+  "last_updated": "2026-04-20T01:19:45Z",
   "today": {
-    "date": "2026-04-19",
+    "date": "2026-04-20",
     "runs": 0,
     "distance_km": 0.0,
     "elevation_m": 0.0,
@@ -72,10 +72,6 @@
   ],
   "weekly": [
     {
-      "label": "Dec W5",
-      "distance_km": 0.0
-    },
-    {
       "label": "Jan W1",
       "distance_km": 0.0
     },
@@ -133,6 +129,10 @@
     },
     {
       "label": "Apr W2",
+      "distance_km": 0.0
+    },
+    {
+      "label": "Apr W3",
       "distance_km": 0.0
     }
   ],
