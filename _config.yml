@@ -188,6 +188,12 @@ collections:
   journeys:
     output: true
     permalink: /:collection/:path/
+  mathematics:
+    output: true
+    permalink: /:collection/:path/
+  ai_robotics:
+    output: true
+    permalink: /:collection/:path/
 
 
 # Defaults
@@ -246,6 +252,28 @@ defaults:
   - scope:
       path: ""
       type: journeys
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _mathematics
+  - scope:
+      path: ""
+      type: mathematics
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _ai_robotics
+  - scope:
+      path: ""
+      type: ai_robotics
     values:
       layout: single
       author_profile: true

@@ -12,6 +12,12 @@ main:
   - title: "Collections"
     url: /collections/
 
+  - title: "Mathematics"
+    url: /mathematics/
+
+  - title: "AI/Robotics"
+    url: /ai-robotics/
+
   - title: "Running"
     url: /running/
 
