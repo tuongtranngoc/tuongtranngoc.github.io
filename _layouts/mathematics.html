@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+{% assign chapters = site.mathematics | sort: 'order' %}
+{% assign current_idx = -1 %}
+{% for ch in chapters %}
+  {% if ch.url == page.url %}
+    {% assign current_idx = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+
+<div class="d2l-wrapper d2l-wrapper--right">
+  <article class="d2l-content d2l-article">
+    <nav class="d2l-breadcrumb">
+      <a href="{{ '/mathematics/' | relative_url }}">Mathematics</a>
+      {% unless page.url == '/mathematics/' %}
+        <span class="sep">›</span>{{ page.title }}
+      {% endunless %}
+    </nav>
+
+    {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
+
+    {{ content }}
+
+    {% if current_idx >= 0 %}
+      <nav class="d2l-page-nav">
+        {% if current_idx > 0 %}
+          {% assign prev_idx = current_idx | minus: 1 %}
+          {% assign prev_ch = chapters[prev_idx] %}
+          <a class="d2l-nav-btn" href="{{ prev_ch.url | relative_url }}">
+            <span class="d2l-nav-btn__lbl">← Previous</span>
+            <span class="d2l-nav-btn__ttl">{{ prev_ch.title }}</span>
+          </a>
+        {% endif %}
+        {% assign next_idx = current_idx | plus: 1 %}
+        {% if next_idx < chapters.size %}
+          {% assign next_ch = chapters[next_idx] %}
+          <a class="d2l-nav-btn d2l-nav-btn--next" href="{{ next_ch.url | relative_url }}">
+            <span class="d2l-nav-btn__lbl">Next →</span>
+            <span class="d2l-nav-btn__ttl">{{ next_ch.title }}</span>
+          </a>
+        {% endif %}
+      </nav>
+    {% endif %}
+  </article>
+
+  <aside class="d2l-sidebar">
+    <div class="d2l-sidebar__hdr">
+      <a class="d2l-sidebar__logo" href="{{ '/mathematics/' | relative_url }}">Mathematics</a>
+    </div>
+    <ul class="d2l-toc">
+      <li class="d2l-toc__part">Chapters</li>
+      {% if chapters.size == 0 %}
+        <li class="d2l-toc__empty">No chapters yet.</li>
+      {% endif %}
+      {% for ch in chapters %}
+        <li>
+          <a class="d2l-toc__ch-link {% if ch.url == page.url %}d2l-active{% endif %}"
+             href="{{ ch.url | relative_url }}">
+            <span class="ch-num">{{ forloop.index }}.</span>
+            <span class="ch-title">{{ ch.title }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </aside>
+
+  <button class="d2l-fab" aria-label="Toggle table of contents"
+          onclick="document.querySelector('.d2l-sidebar').classList.toggle('open')">☰</button>
+</div>
