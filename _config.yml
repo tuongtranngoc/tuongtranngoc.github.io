@@ -265,7 +265,7 @@ defaults:
       type: mathematics
     values:
       layout: mathematics
-      author_profile: false
+      author_profile: true
       read_time: false
       comments: false
       share: false

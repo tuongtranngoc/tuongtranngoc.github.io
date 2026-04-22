@@ -13,38 +13,44 @@ layout: default
 {% endfor %}
 
 <div class="d2l-wrapper d2l-wrapper--right">
+  <aside class="d2l-author-sidebar">
+    {% include author-profile.html %}
+  </aside>
+
   <article class="d2l-content d2l-article">
-    <nav class="d2l-breadcrumb">
-      <a href="{{ '/mathematics/' | relative_url }}">Mathematics</a>
-      {% unless page.url == '/mathematics/' %}
-        <span class="sep">›</span>{{ page.title }}
-      {% endunless %}
-    </nav>
-
-    {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
-
-    {{ content }}
-
-    {% if current_idx >= 0 %}
-      <nav class="d2l-page-nav">
-        {% if current_idx > 0 %}
-          {% assign prev_idx = current_idx | minus: 1 %}
-          {% assign prev_ch = chapters[prev_idx] %}
-          <a class="d2l-nav-btn" href="{{ prev_ch.url | relative_url }}">
-            <span class="d2l-nav-btn__lbl">← Previous</span>
-            <span class="d2l-nav-btn__ttl">{{ prev_ch.title }}</span>
-          </a>
-        {% endif %}
-        {% assign next_idx = current_idx | plus: 1 %}
-        {% if next_idx < chapters.size %}
-          {% assign next_ch = chapters[next_idx] %}
-          <a class="d2l-nav-btn d2l-nav-btn--next" href="{{ next_ch.url | relative_url }}">
-            <span class="d2l-nav-btn__lbl">Next →</span>
-            <span class="d2l-nav-btn__ttl">{{ next_ch.title }}</span>
-          </a>
-        {% endif %}
+    <div class="d2l-content__inner">
+      <nav class="d2l-breadcrumb">
+        <a href="{{ '/mathematics/' | relative_url }}">Mathematics</a>
+        {% unless page.url == '/mathematics/' %}
+          <span class="sep">›</span>{{ page.title }}
+        {% endunless %}
       </nav>
-    {% endif %}
+
+      {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
+
+      {{ content }}
+
+      {% if current_idx >= 0 %}
+        <nav class="d2l-page-nav">
+          {% if current_idx > 0 %}
+            {% assign prev_idx = current_idx | minus: 1 %}
+            {% assign prev_ch = chapters[prev_idx] %}
+            <a class="d2l-nav-btn" href="{{ prev_ch.url | relative_url }}">
+              <span class="d2l-nav-btn__lbl">← Previous</span>
+              <span class="d2l-nav-btn__ttl">{{ prev_ch.title }}</span>
+            </a>
+          {% endif %}
+          {% assign next_idx = current_idx | plus: 1 %}
+          {% if next_idx < chapters.size %}
+            {% assign next_ch = chapters[next_idx] %}
+            <a class="d2l-nav-btn d2l-nav-btn--next" href="{{ next_ch.url | relative_url }}">
+              <span class="d2l-nav-btn__lbl">Next →</span>
+              <span class="d2l-nav-btn__ttl">{{ next_ch.title }}</span>
+            </a>
+          {% endif %}
+        </nav>
+      {% endif %}
+    </div>
   </article>
 
   <aside class="d2l-sidebar">
