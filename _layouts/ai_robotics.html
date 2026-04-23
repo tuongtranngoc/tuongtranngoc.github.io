@@ -4,7 +4,7 @@ layout: default
 
 {% include base_path %}
 
-{% assign chapters = site.mathematics | sort: 'order' %}
+{% assign chapters = site.ai_robotics | sort: 'order' %}
 {% assign current_idx = -1 %}
 {% for ch in chapters %}
   {% if ch.url == page.url %}
@@ -18,8 +18,8 @@ layout: default
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <div class="page__inner-wrap">
       <nav class="d2l-breadcrumb">
-        <a href="{{ '/mathematics/' | relative_url }}">Mathematics</a>
-        {% unless page.url == '/mathematics/' %}
+        <a href="{{ '/ai-robotics/' | relative_url }}">AI/Robotics</a>
+        {% unless page.url == '/ai-robotics/' %}
           <span class="sep">›</span>{{ page.title }}
         {% endunless %}
       </nav>
@@ -55,7 +55,7 @@ layout: default
 
   <aside class="book-toc">
     <div class="d2l-sidebar__hdr">
-      <a class="d2l-sidebar__logo" href="{{ '/mathematics/' | relative_url }}">Mathematics</a>
+      <a class="d2l-sidebar__logo" href="{{ '/ai-robotics/' | relative_url }}">AI/Robotics</a>
     </div>
     <ul class="d2l-toc">
       <li class="d2l-toc__part">Chapters</li>

@@ -275,12 +275,12 @@ defaults:
       path: ""
       type: ai_robotics
     values:
-      layout: single
+      layout: ai_robotics
       author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
+      read_time: false
+      comments: false
+      share: false
+      related: false
 
 # Sass/SCSS
 sass:
