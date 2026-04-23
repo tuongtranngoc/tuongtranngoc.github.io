@@ -33,11 +33,16 @@
 }
 
 // Right-side sidebar variant (book layout: profile | content | TOC)
+// Wrapper is capped at the same width as the standard #main container so the
+// profile card in this layout matches its size and position elsewhere.
 .d2l-wrapper--right {
+  max-width: 1280px;
+  margin: 0 auto;
+
   .d2l-sidebar {
     order: 3;
-    width: 240px;
-    min-width: 240px;
+    width: 280px;
+    min-width: 280px;
     border-right: none;
     border-left: 1px solid var(--color-border);
   }
@@ -65,11 +70,13 @@
   }
 }
 
-// Author profile sidebar on the left side of the book layout
+// Author profile sidebar on the left side of the book layout.
+// Width matches the standard sidebar (Susy span 3-of-12 on the 1280px grid)
+// so the .profile-card renders at the same size as on /, posts, readings, etc.
 .d2l-author-sidebar {
   order: 1;
-  width: 240px;
-  min-width: 240px;
+  width: 280px;
+  min-width: 280px;
   flex-shrink: 0;
   padding: 1.5rem 1.2rem;
   position: sticky;
