@@ -32,61 +32,76 @@
   min-height: 80vh;
 }
 
-// Right-side sidebar variant (book layout: profile | content | TOC)
-// Wrapper is capped at the same width as the standard #main container so the
-// profile card in this layout matches its size and position elsewhere.
-.d2l-wrapper--right {
-  max-width: 1280px;
-  margin: 0 auto;
-
-  .d2l-sidebar {
-    order: 3;
-    width: 280px;
-    min-width: 280px;
-    border-right: none;
-    border-left: 1px solid var(--color-border);
-  }
-
-  .d2l-content {
-    order: 2;
-    display: flex;
-    justify-content: center;
-    max-width: none;
-    padding: 2rem 1.5rem 4rem;
-  }
-
-  .d2l-content__inner {
-    width: 100%;
-    max-width: 880px;
-    min-width: 0;
-  }
-
-  @media (max-width: 960px) {
-    .d2l-sidebar {
-      left: auto;
-      right: 0;
-      box-shadow: -4px 0 16px rgba(0,0,0,0.15);
+// ── Mathematics book layout ───────────────────────────────────────────────
+// Reuses the standard #main + sidebar.html structure so the .profile-card is
+// rendered identically to every other page. A right-side TOC is added as a
+// third Susy column, narrowing .page from 9-of-12 to 6-of-12.
+.math-book {
+  .page {
+    @include breakpoint($large) {
+      @include span(6 of 12);
+      @include prefix(0.5 of 12);
     }
   }
 }
 
-// Author profile sidebar on the left side of the book layout.
-// Width matches the standard sidebar (Susy span 3-of-12 on the 1280px grid)
-// so the .profile-card renders at the same size as on /, posts, readings, etc.
-.d2l-author-sidebar {
-  order: 1;
-  width: 280px;
-  min-width: 280px;
-  flex-shrink: 0;
-  padding: 1.5rem 1.2rem;
-  position: sticky;
-  top: 66px;
-  align-self: flex-start;
-  max-height: calc(100vh - 66px);
-  overflow-y: auto;
+.math-toc {
+  background: var(--d2l-sidebar-bg);
+  border-left: 1px solid var(--color-border);
 
-  @media (max-width: 960px) {
+  @include breakpoint($large) {
+    @include span(3 of 12 last);
+    position: sticky;
+    top: 66px;
+    max-height: calc(100vh - 66px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+
+    &::-webkit-scrollbar       { width: 3px; }
+    &::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 2px; }
+  }
+
+  @media (max-width: $large) {
     display: none;
+
+    &.open {
+      display: block;
+      position: fixed;
+      top: 66px;
+      right: 0;
+      width: 280px;
+      height: calc(100vh - 66px);
+      z-index: 50;
+      box-shadow: -4px 0 16px rgba(0,0,0,0.15);
+      overflow-y: auto;
+    }
+  }
+}
+
+.math-toc-fab {
+  display: none;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 60;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--d2l-accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+
+  &:hover { transform: scale(1.07); }
+
+  @media (max-width: $large) {
+    display: flex;
   }
 }
 

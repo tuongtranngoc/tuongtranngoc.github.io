@@ -12,13 +12,11 @@ layout: default
   {% endif %}
 {% endfor %}
 
-<div class="d2l-wrapper d2l-wrapper--right">
-  <aside class="d2l-author-sidebar">
-    {% include author-profile.html %}
-  </aside>
+<div id="main" role="main" class="math-book">
+  {% include sidebar.html %}
 
-  <article class="d2l-content d2l-article">
-    <div class="d2l-content__inner">
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <div class="page__inner-wrap">
       <nav class="d2l-breadcrumb">
         <a href="{{ '/mathematics/' | relative_url }}">Mathematics</a>
         {% unless page.url == '/mathematics/' %}
@@ -26,9 +24,11 @@ layout: default
         {% endunless %}
       </nav>
 
-      {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
+      {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title }}</h1>{% endif %}
 
-      {{ content }}
+      <section class="page__content d2l-article" itemprop="text">
+        {{ content }}
+      </section>
 
       {% if current_idx >= 0 %}
         <nav class="d2l-page-nav">
@@ -53,7 +53,7 @@ layout: default
     </div>
   </article>
 
-  <aside class="d2l-sidebar">
+  <aside class="math-toc">
     <div class="d2l-sidebar__hdr">
       <a class="d2l-sidebar__logo" href="{{ '/mathematics/' | relative_url }}">Mathematics</a>
     </div>
@@ -73,7 +73,7 @@ layout: default
       {% endfor %}
     </ul>
   </aside>
-
-  <button class="d2l-fab" aria-label="Toggle table of contents"
-          onclick="document.querySelector('.d2l-sidebar').classList.toggle('open')">☰</button>
 </div>
+
+<button class="math-toc-fab" aria-label="Toggle table of contents"
+        onclick="document.querySelector('.math-toc').classList.toggle('open')">☰</button>
