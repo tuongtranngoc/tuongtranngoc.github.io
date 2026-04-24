@@ -191,7 +191,7 @@ collections:
   mathematics:
     output: true
     permalink: /:collection/:path/
-  ai_robotics:
+  projects:
     output: true
     permalink: /:collection/:path/
 
@@ -270,12 +270,12 @@ defaults:
       comments: false
       share: false
       related: false
-  # _ai_robotics
+  # _projects
   - scope:
       path: ""
-      type: ai_robotics
+      type: projects
     values:
-      layout: ai_robotics
+      layout: projects
       author_profile: true
       read_time: false
       comments: false
