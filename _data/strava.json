@@ -1,38 +1,40 @@
 {
-  "last_updated": "2026-05-17T01:49:42Z",
+  "last_updated": "2026-05-18T01:58:34Z",
   "today": {
-    "date": "2026-05-17",
-    "runs": 0,
-    "distance_km": 0.0,
+    "date": "2026-05-18",
+    "runs": 1,
+    "distance_km": 2.37,
     "elevation_m": 0.0,
-    "moving_time_s": 0,
-    "polylines": [],
+    "moving_time_s": 1436,
+    "polylines": [
+      "_gb_Ca`ydSH[DK@SFS?GHGH?JJJ?VJf@LHDf@FXJHEFMb@a@NQVOFKDAJGNSNDTNBVGx@?p@GzA?DED@HCN@FEl@ERCT@NE^?LADIFm@I_ACi@Ii@QUQMMYOIHCDA\\IBWB_@H_@IOHM?EC?IHYPgALa@@QH]BWFSFa@L_@?KFW?ELITB\\HFDh@HF?RLF?@BZFDAx@y@dA}@F?LDLJDJ?n@GlCQrBERGnAKDo@?_@GU?MCUAe@O"
+    ],
     "photos": []
   },
   "latest": {
-    "id": 18502857163,
-    "name": "Afternoon Run",
-    "date": "2026-05-14",
-    "distance_km": 4.45,
-    "moving_time_s": 2821,
-    "elevation_m": 3.7,
-    "strava_url": "https://www.strava.com/activities/18502857163",
-    "polyline": "s|a_CcwxdSBKHgBLoAFsCDSAs@IOSESB]b@WRKLm@f@GDUCq@USA_AWKAID@FGb@EJMz@GP?NSt@QnAQx@@FD@VK^@XGLAPGBIAMDIPELF`@^v@XfCRJCBG?[CEJ{@PuB?SBCAOBAAM@SAa@BgAAOEG]KE@KJ[^c@^UVWPy@OIEiAW[GE@EFEf@GPOhA[~AMn@GLG^EDBRD@^KTDVEDCL?RI@KAI@KDCNA\\Ll@`@d@NR?FBL?RDNAj@FNABKCY@c@D[Be@FYDw@JyC?[AOQQCAK@KFCF_@b@ODKNID_@\\OFc@GeAYaAQKn@KXEj@u@tDER?JERDF@?PKd@@\\G@CN?FCF[DELARBFHb@Tl@PdAJHBJAh@BDABG?]DaARyB?QAEDMAm@HwAAKIOUIM?Wb@MLo@l@a@Xa@EqA_@s@KKBE`@{@jEQdAGP?PDB^KVBn@KJE?SDINEH@dAl@\\JhBNZ@FCBI@i@HqAJ{@Ba@@w@JU?g@Hy@CEB[DYJCV@JK@g@HQCWBOASFW?OBICW@EM_@Gg@",
+    "id": 18549256802,
+    "name": "Morning Run",
+    "date": "2026-05-18",
+    "distance_km": 2.37,
+    "moving_time_s": 1436,
+    "elevation_m": 0.0,
+    "strava_url": "https://www.strava.com/activities/18549256802",
+    "polyline": "_gb_Ca`ydSH[DK@SFS?GHGH?JJJ?VJf@LHDf@FXJHEFMb@a@NQVOFKDAJGNSNDTNBVGx@?p@GzA?DED@HCN@FEl@ERCT@NE^?LADIFm@I_ACi@Ii@QUQMMYOIHCDA\\IBWB_@H_@IOHM?EC?IHYPgALa@@QH]BWFSFa@L_@?KFW?ELITB\\HFDh@HF?RLF?@BZFDAx@y@dA}@F?LDLJDJ?n@GlCQrBERGnAKDo@?_@GU?MCUAe@O",
     "photos": []
   },
   "summary": {
-    "total_distance_km": 670.66,
-    "total_runs": 134,
+    "total_distance_km": 673.03,
+    "total_runs": 135,
     "total_elevation_m": 3180.5,
-    "total_moving_time_s": 326627
+    "total_moving_time_s": 328063
   },
   "yearly": [
     {
       "year": 2026,
-      "runs": 10,
-      "distance_km": 32.75,
+      "runs": 11,
+      "distance_km": 35.12,
       "elevation_m": 21.2,
-      "moving_time_s": 16685
+      "moving_time_s": 18121
     },
     {
       "year": 2025,
@@ -71,10 +73,6 @@
     }
   ],
   "weekly": [
-    {
-      "label": "Jan W4",
-      "distance_km": 0.0
-    },
     {
       "label": "Feb W1",
       "distance_km": 0.0
@@ -134,9 +132,25 @@
     {
       "label": "May W2",
       "distance_km": 4.45
+    },
+    {
+      "label": "May W3",
+      "distance_km": 2.37
     }
   ],
   "activities": [
+    {
+      "id": 18549256802,
+      "name": "Morning Run",
+      "date": "2026-05-18",
+      "distance_m": 2368.1,
+      "moving_time_s": 1436,
+      "elevation_m": 0.0,
+      "avg_speed_ms": 1.649,
+      "strava_url": "https://www.strava.com/activities/18549256802",
+      "route_svg": "M74.5,24.3 L80.8,26.5 L83.5,27.9 L88.0,28.3 L92.6,30.2 L94.4,30.2 L96.2,32.4 L96.2,34.7 L93.5,37.4 L93.5,40.1 L90.7,45.5 L87.6,54.6 L86.2,56.8 L84.4,65.9 L81.7,71.8 L83.1,74.0 L86.2,75.8 L93.9,84.0 L98.0,87.6 L101.6,93.0 L104.3,94.8 L104.8,96.2 L106.6,98.9 L111.1,102.5 L109.7,106.1 L106.1,111.1 L100.7,112.0 L87.6,110.2 L76.3,110.2 L55.5,108.4 L54.1,108.4 L52.8,107.0 L50.5,107.5 L46.9,106.6 L45.1,107.0 L34.7,105.7 L30.2,104.3 L25.2,103.4 L21.6,103.9 L14.3,102.5 L11.2,102.5 L9.8,102.1 L8.0,99.8 L10.3,89.4 L11.2,74.9 L13.4,65.4 L17.5,55.9 L21.6,51.0 L24.7,47.8 L28.3,41.9 L26.1,39.7 L24.7,38.7 L17.9,38.3 L17.0,36.0 L16.1,30.6 L13.9,23.4 L16.1,16.1 L13.9,12.5 L13.9,9.4 L14.8,8.0 L17.0,8.0 L22.9,10.3 L39.2,14.3 L46.9,17.5 L51.0,17.9 L57.7,20.2 L63.2,21.1 L67.7,22.9 L75.4,24.7 L82.6,27.9 L85.3,27.9 L90.7,29.7 L92.1,29.7 L94.4,32.9 L93.5,37.8 L91.2,44.6 L89.8,46.4 L87.6,55.9 L87.6,57.7 L84.4,62.3 L84.4,64.1 L83.5,64.5 L81.7,70.9 L82.2,72.2 L95.3,85.3 L109.3,101.1 L109.3,103.0 L107.9,106.1 L105.2,109.3 L102.5,110.6 L91.7,110.6 L59.5,108.8 L33.3,104.8 L28.8,103.4 L10.7,101.6 L9.4,98.9 L9.4,88.0 L11.2,80.8 L11.2,75.8 L12.1,72.7 L12.5,67.7 L16.1,59.1",
+      "photo_url": ""
+    },
     {
       "id": 18502857163,
       "name": "Afternoon Run",
