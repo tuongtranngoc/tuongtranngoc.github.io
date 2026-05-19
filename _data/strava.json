@@ -1,14 +1,12 @@
 {
-  "last_updated": "2026-05-18T01:58:34Z",
+  "last_updated": "2026-05-19T01:58:36Z",
   "today": {
-    "date": "2026-05-18",
-    "runs": 1,
-    "distance_km": 2.37,
+    "date": "2026-05-19",
+    "runs": 0,
+    "distance_km": 0.0,
     "elevation_m": 0.0,
-    "moving_time_s": 1436,
-    "polylines": [
-      "_gb_Ca`ydSH[DK@SFS?GHGH?JJJ?VJf@LHDf@FXJHEFMb@a@NQVOFKDAJGNSNDTNBVGx@?p@GzA?DED@HCN@FEl@ERCT@NE^?LADIFm@I_ACi@Ii@QUQMMYOIHCDA\\IBWB_@H_@IOHM?EC?IHYPgALa@@QH]BWFSFa@L_@?KFW?ELITB\\HFDh@HF?RLF?@BZFDAx@y@dA}@F?LDLJDJ?n@GlCQrBERGnAKDo@?_@GU?MCUAe@O"
-    ],
+    "moving_time_s": 0,
+    "polylines": [],
     "photos": []
   },
   "latest": {
