@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-23T01:49:46Z",
+  "last_updated": "2026-05-24T01:55:54Z",
   "today": {
-    "date": "2026-05-23",
+    "date": "2026-05-24",
     "runs": 0,
     "distance_km": 0.0,
     "elevation_m": 0.0,
@@ -10,29 +10,29 @@
     "photos": []
   },
   "latest": {
-    "id": 18606939608,
-    "name": "Afternoon Run",
-    "date": "2026-05-22",
-    "distance_km": 3.04,
-    "moving_time_s": 1525,
-    "elevation_m": 0.0,
-    "strava_url": "https://www.strava.com/activities/18606939608",
-    "polyline": "i|a_C_eydSTHFPC|@@p@Cp@M`BA\\Mz@AZANEHGDw@A_AEQEq@W]YQII@GDEJCLULG?_@H[GWHI?CCNaAn@mDT{@Hc@HODAXDv@Ph@PVFN@FCb@]^e@p@i@LELDHPDBEr@?bAGlBG^Ez@KbAEPEBk@AwAKi@OYQWUOGOFCVIH}@NYGWJECEEJ_@T{AHQNeAb@mB?IBGDEN@t@LhA\\ZFFCBGh@g@T[XOVWDAH?LHDHBHItDG~@Ip@A`@EXEp@IBO?oAIY?",
+    "id": 18620625811,
+    "name": "Evening Run",
+    "date": "2026-05-23",
+    "distance_km": 3.83,
+    "moving_time_s": 2208,
+    "elevation_m": 3.6,
+    "strava_url": "https://www.strava.com/activities/18620625811",
+    "polyline": "ofb_C{aydSJYNCdAVz@VVDVQnBeBHAJBN\\C~@@ZMtCOzA?LCHGl@IBy@IeAGYGc@Q[YMGC@ICKFI^k@LS?WGSFE?KGHU?GPu@Jm@FG?SXmAHu@FG@OFQNAx@LD?hA\\NBD?l@c@\\_@ROX[VINF@HF@?FK|@DVET?p@GdAQ|BCHIl@EBg@Cm@Gk@Ck@Uu@g@ICM@EDE\\GDs@Ja@EUFGABe@zAkHDEF?d@Fh@J\\Np@L\\U|@u@HA\\i@RAJFHTG|@Ad@@HDC@_@DOESBY@CB_@FU?CPEF@H?DGDm@FO@OB?FSAQBOCO@[Ii@CuAEWB_@EG@@@ECG?IOm@O_@BI?GQCACDEACSMKc@MWYFKGCIBE@@C@@C?BJCOlBZa@Go@KB@@AOXb@J@KM@DQ@TNAOOW@GVz@{@mBXj@OKEWBDAGIKLRKJLDUh@HCMTX?Jw@Ld@GIFSDDC^D`@B?VVHW@@SSRTHDK?COB@CA@@O?ASGO@@_@NxA~@?Ao@_@Ug@GIA@@DLKAHFFEGK@CIUa@ABB?BJJBBFFj@DJER?FJNHDFN\\h@DNBLCD@RF?FLLHTDDFL@BJAP@XARPd@ILARGP@HEXUt@BJ?RMPm@D",
     "photos": []
   },
   "summary": {
-    "total_distance_km": 676.06,
-    "total_runs": 136,
-    "total_elevation_m": 3180.5,
-    "total_moving_time_s": 329588
+    "total_distance_km": 679.9,
+    "total_runs": 137,
+    "total_elevation_m": 3184.1,
+    "total_moving_time_s": 331796
   },
   "yearly": [
     {
       "year": 2026,
-      "runs": 12,
-      "distance_km": 38.15,
-      "elevation_m": 21.2,
-      "moving_time_s": 19646
+      "runs": 13,
+      "distance_km": 41.99,
+      "elevation_m": 24.8,
+      "moving_time_s": 21854
     },
     {
       "year": 2025,
@@ -133,10 +133,22 @@
     },
     {
       "label": "May W3",
-      "distance_km": 5.4
+      "distance_km": 9.24
     }
   ],
   "activities": [
+    {
+      "id": 18620625811,
+      "name": "Evening Run",
+      "date": "2026-05-23",
+      "distance_m": 3835.0,
+      "moving_time_s": 2208,
+      "elevation_m": 3.6,
+      "avg_speed_ms": 1.737,
+      "strava_url": "https://www.strava.com/activities/18620625811",
+      "route_svg": "M65.2,23.3 L69.6,25.3 L70.2,28.0 L66.2,39.6 L62.2,49.6 L61.2,53.6 L64.2,57.6 L81.2,76.2 L81.5,77.9 L80.9,79.9 L75.9,82.5 L65.2,81.9 L60.6,82.2 L35.6,79.9 L20.3,77.2 L18.0,77.2 L16.3,76.5 L8.7,75.2 L8.0,73.5 L9.7,63.9 L11.0,52.3 L12.3,47.9 L15.3,41.9 L19.6,37.3 L21.0,35.0 L20.6,34.3 L21.3,32.6 L20.0,30.6 L14.7,29.0 L12.3,21.6 L12.3,18.3 L13.7,14.3 L12.3,11.0 L12.3,10.0 L13.7,8.0 L17.3,9.7 L18.6,9.7 L27.6,12.7 L35.3,14.7 L36.6,16.0 L39.9,16.0 L52.9,20.3 L61.9,22.0 L63.2,23.3 L65.9,23.6 L68.9,25.0 L69.2,27.6 L66.9,37.3 L66.9,38.3 L61.9,50.6 L61.2,53.3 L61.2,54.2 L67.2,61.9 L72.5,66.9 L75.2,70.2 L79.9,74.5 L81.5,78.5 L80.2,81.2 L78.5,81.5 L78.2,82.9 L76.9,82.9 L66.6,80.9 L62.6,81.9 L58.9,80.9 L50.6,80.9 L38.9,79.5 L18.0,76.5 L16.3,75.9 L8.7,74.2 L8.0,73.2 L8.7,66.6 L10.0,58.9 L10.7,51.6 L14.3,44.3 L21.0,35.3 L21.6,33.6 L21.3,31.3 L20.3,30.3 L15.3,29.3 L14.3,28.0 L12.3,19.3 L13.3,13.7 L12.0,10.0 L12.3,8.7 L18.6,9.3 L68.6,24.6 L69.6,25.6 L69.6,27.0 L68.2,33.3 L66.2,40.3 L63.6,45.3 L61.2,53.6 L64.9,58.6 L73.9,68.9 L74.2,70.6 L81.2,75.5 L81.5,78.9 L80.2,80.9 L76.5,82.5 L66.2,81.2 L59.9,80.9 L58.2,81.2 L58.9,82.2 L64.2,82.5 L66.9,83.5 L70.2,82.5 L74.5,83.2 L75.2,83.5 L80.5,84.2 L84.2,85.5 L84.9,85.5 L85.9,88.5 L85.5,89.9 L85.5,91.5 L86.9,92.5 L94.5,93.5 L97.2,94.8 L99.8,95.2 L99.8,95.8 L103.2,97.2 L106.2,96.8 L108.8,97.5 L111.5,96.8 L116.1,97.2 L123.1,95.5 L137.4,94.8 L141.4,93.8 L146.7,94.5 L148.1,93.5 L147.7,93.8 L148.7,94.2 L150.1,93.5 L151.7,93.5 L159.4,90.8 L164.7,88.2 L166.4,88.9 L167.7,88.9 L168.4,85.9 L169.0,85.5 L170.0,86.5 L170.7,86.2 L173.0,82.9 L179.0,80.9 L183.0,78.5 L181.7,74.2 L183.0,72.2 L184.7,71.6 L185.7,72.2 L185.3,72.5 L185.0,71.9 L185.7,72.2 L185.0,72.2 L185.7,74.2 L167.4,71.6 L173.0,76.2 L181.0,74.9 L180.4,72.9 L180.0,73.2 L182.7,72.9 L176.7,77.2 L176.4,79.2 L178.7,77.2 L177.7,77.5 L177.4,74.5 L174.7,78.2 L177.4,77.9 L181.4,75.2 L182.7,75.5 L172.7,79.5 L191.0,69.6 L183.7,73.9 L185.7,71.2 L189.7,70.2 L188.7,70.9 L190.0,70.6 L192.0,68.9 L188.7,71.2 L186.7,69.2 L185.7,71.6 L178.7,67.9 L179.4,69.6 L175.7,67.2 L175.7,71.6 L185.0,73.5 L178.7,75.9 L180.4,74.5 L183.7,75.9 L182.7,76.9 L177.4,76.2 L171.7,77.2 L171.7,77.9 L167.7,81.9 L171.7,83.5 L171.4,83.9 L174.7,80.5 L171.0,83.9 L170.0,85.5 L170.0,83.5 L172.7,82.9 L172.4,83.5 L172.7,82.9 L172.4,83.2 L172.4,80.5 L175.7,80.2 L178.4,78.9 L178.0,79.2 L175.4,73.9 L164.7,88.9 L165.0,88.9 L170.4,80.9 L177.0,77.2 L178.7,75.9 L178.4,75.5 L177.4,75.9 L179.4,78.2 L177.7,77.9 L176.4,79.2 L177.7,78.2 L177.4,76.2 L179.0,75.5 L184.7,71.9 L184.0,71.6 L184.0,72.2 L182.0,72.9 L181.4,74.9 L180.0,75.5 L172.7,76.9 L170.7,77.9 L167.4,76.9 L166.0,76.9 L163.4,78.9 L162.4,80.5 L159.7,81.9 L152.7,86.9 L150.1,87.9 L147.7,88.5 L146.7,87.9 L143.4,88.2 L143.4,89.5 L141.1,90.8 L139.4,93.2 L138.4,96.8 L137.1,97.8 L136.8,100.2 L134.8,100.8 L131.8,100.5 L127.5,100.8 L124.1,100.5 L117.8,103.5 L115.5,101.8 L112.1,101.5 L109.2,100.2 L107.5,100.5 L103.2,99.5 L94.2,95.8 L92.2,96.5 L88.9,96.5 L85.9,94.2 L84.9,86.5",
+      "photo_url": ""
+    },
     {
       "id": 18606939608,
       "name": "Afternoon Run",
