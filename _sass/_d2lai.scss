@@ -653,3 +653,39 @@
   .d2l-article h1 { font-size: 1.35rem; }
   .d2l-content    { padding: 1rem 0.85rem 2.5rem; }
 }
+
+// ── AI tab overrides ───────────────────────────────────────────────────────
+// Smaller article typography and prev/next pinned to the bottom of the page.
+.ai-layout {
+  .page__inner-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+  }
+
+  .d2l-article {
+    font-size: 0.9rem;
+
+    h1 { font-size: 1.4rem; margin: 0 0 1.2rem; }
+    h2 { font-size: 1rem;   margin: 2.2rem 0 0.7rem; }
+    h3 { font-size: 0.9rem; margin: 1.5rem 0 0.55rem; }
+
+    p  { font-size: 0.88rem; line-height: 1.7; }
+    li { font-size: 0.88rem; line-height: 1.65; }
+
+    code { font-size: 0.8em; }
+  }
+
+  .d2l-page-nav {
+    margin-top: auto;
+  }
+
+  .d2l-nav-btn {
+    .d2l-nav-btn__lbl { font-size: 0.62rem; }
+    .d2l-nav-btn__ttl { font-size: 0.78rem; }
+  }
+}
+
+@media (max-width: 600px) {
+  .ai-layout .d2l-article h1 { font-size: 1.15rem; }
+}
