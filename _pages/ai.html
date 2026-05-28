@@ -1,0 +1,22 @@
+---
+layout: ai
+title: "AI"
+permalink: /ai/
+---
+
+<p>A working notebook of artificial intelligence — from classical machine learning to modern deep learning, written as a book that grows one chapter at a time.</p>
+
+{% assign chapters = site.ai | sort: 'order' %}
+{% if chapters.size > 0 %}
+  <h2>Chapters</h2>
+  <ol class="math-chapter-list">
+    {% for ch in chapters %}
+      <li>
+        <a href="{{ ch.url | relative_url }}">{{ ch.title }}</a>
+        {% if ch.description %}<span class="math-chapter-desc"> — {{ ch.description }}</span>{% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+{% else %}
+  <p><em>No chapters published yet — check back soon.</em></p>
+{% endif %}

@@ -15,8 +15,14 @@ main:
   - title: "Mathematics"
     url: /mathematics/
 
+  - title: "AI"
+    url: /ai/
+
   - title: "Projects"
     url: /projects/
+
+  - title: "Publications"
+    url: /publications/
 
   - title: "Running"
     url: /running/

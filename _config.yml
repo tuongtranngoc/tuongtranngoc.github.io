@@ -191,6 +191,9 @@ collections:
   mathematics:
     output: true
     permalink: /:collection/:path/
+  ai:
+    output: true
+    permalink: /:collection/:path/
   projects:
     output: true
     permalink: /:collection/:path/
@@ -265,6 +268,17 @@ defaults:
       type: mathematics
     values:
       layout: mathematics
+      author_profile: true
+      read_time: false
+      comments: false
+      share: false
+      related: false
+  # _ai
+  - scope:
+      path: ""
+      type: ai
+    values:
+      layout: ai
       author_profile: true
       read_time: false
       comments: false
