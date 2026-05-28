@@ -9,9 +9,6 @@ A list of papers, articles, and technical reports.
 
 ## Selected Publications
 
-<!--
-Add entries in reverse-chronological order using this format:
-
 ### 2026
 
 - **Paper Title.**
