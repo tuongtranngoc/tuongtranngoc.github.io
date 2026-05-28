@@ -655,12 +655,15 @@
 }
 
 // ── AI tab overrides ───────────────────────────────────────────────────────
-// Smaller text inside .page__inner-wrap (article body, title, breadcrumb,
-// nav buttons). Layout, positioning, and prev/next placement are left at
-// their book-layout defaults.
+// Inside .page__inner-wrap only:
+//   - Smaller article body, title, breadcrumb, and nav-button text.
+//   - Pin the Prev/Next nav to the bottom of .page__inner-wrap via flex column.
 // Note: html font-size is 18px at $medium+, so 1rem ≈ 18px on desktop.
 .ai-layout {
   .page__inner-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 8rem);
     font-size: 0.78rem;
 
     .d2l-breadcrumb { font-size: 0.72rem; }
@@ -679,6 +682,11 @@
       code         { font-size: 0.78em; }
     }
 
+    // Push the Prev/Next nav to the bottom of the inner-wrap.
+    .d2l-page-nav {
+      margin-top: auto;
+    }
+
     .d2l-nav-btn {
       padding: 0.5rem 0.8rem;
       .d2l-nav-btn__lbl { font-size: 0.58rem; }
@@ -688,6 +696,7 @@
 }
 
 @media (max-width: 600px) {
+  .ai-layout .page__inner-wrap { min-height: calc(100vh - 6rem); }
   .ai-layout .page__inner-wrap .d2l-article h1,
   .ai-layout .page__inner-wrap .page__title { font-size: 1rem; }
 }
