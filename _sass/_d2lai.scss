@@ -656,36 +656,57 @@
 
 // ── AI tab overrides ───────────────────────────────────────────────────────
 // Smaller article typography and prev/next pinned to the bottom of the page.
+// Note: html font-size is 18px at $medium+, so rem values here are relative
+// to 18px on desktop (1rem = 18px). To make body text visibly smaller than
+// the default ~16px, sizes are kept under 0.85rem.
 .ai-layout {
+  .page,
   .page__inner-wrap {
     display: flex;
     flex-direction: column;
-    min-height: 80vh;
+  }
+
+  .page {
+    min-height: calc(100vh - 8rem);
+  }
+
+  .page__inner-wrap {
+    flex: 1 1 auto;
   }
 
   .d2l-article {
-    font-size: 0.9rem;
+    font-size: 0.78rem;
 
-    h1 { font-size: 1.4rem; margin: 0 0 1.2rem; }
-    h2 { font-size: 1rem;   margin: 2.2rem 0 0.7rem; }
-    h3 { font-size: 0.9rem; margin: 1.5rem 0 0.55rem; }
+    h1 { font-size: 1.15rem; margin: 0 0 1rem;       line-height: 1.25; }
+    h2 { font-size: 0.92rem; margin: 1.8rem 0 0.55rem; }
+    h3 { font-size: 0.82rem; margin: 1.3rem 0 0.5rem;  }
 
-    p  { font-size: 0.88rem; line-height: 1.7; }
-    li { font-size: 0.88rem; line-height: 1.65; }
+    p  { font-size: 0.78rem; line-height: 1.6;   margin-bottom: 0.85rem; }
+    li { font-size: 0.78rem; line-height: 1.55;  margin-bottom: 0.2rem;  }
 
-    code { font-size: 0.8em; }
+    a            { font-size: inherit; }
+    blockquote p { font-size: 0.78rem; }
+    code         { font-size: 0.78em; }
   }
+
+  // Smaller breadcrumb and page title too.
+  .d2l-breadcrumb { font-size: 0.72rem; }
+  .page__title    { font-size: 1.15rem; }
 
   .d2l-page-nav {
     margin-top: auto;
+    margin-bottom: 0;
   }
 
   .d2l-nav-btn {
-    .d2l-nav-btn__lbl { font-size: 0.62rem; }
-    .d2l-nav-btn__ttl { font-size: 0.78rem; }
+    padding: 0.5rem 0.8rem;
+    .d2l-nav-btn__lbl { font-size: 0.58rem; }
+    .d2l-nav-btn__ttl { font-size: 0.72rem; }
   }
 }
 
 @media (max-width: 600px) {
-  .ai-layout .d2l-article h1 { font-size: 1.15rem; }
+  .ai-layout .d2l-article h1,
+  .ai-layout .page__title       { font-size: 1rem; }
+  .ai-layout .page              { min-height: calc(100vh - 6rem); }
 }
