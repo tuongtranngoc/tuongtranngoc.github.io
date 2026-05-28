@@ -655,58 +655,39 @@
 }
 
 // ── AI tab overrides ───────────────────────────────────────────────────────
-// Smaller article typography and prev/next pinned to the bottom of the page.
-// Note: html font-size is 18px at $medium+, so rem values here are relative
-// to 18px on desktop (1rem = 18px). To make body text visibly smaller than
-// the default ~16px, sizes are kept under 0.85rem.
+// Smaller text inside .page__inner-wrap (article body, title, breadcrumb,
+// nav buttons). Layout, positioning, and prev/next placement are left at
+// their book-layout defaults.
+// Note: html font-size is 18px at $medium+, so 1rem ≈ 18px on desktop.
 .ai-layout {
-  .page,
   .page__inner-wrap {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .page {
-    min-height: calc(100vh - 8rem);
-  }
-
-  .page__inner-wrap {
-    flex: 1 1 auto;
-  }
-
-  .d2l-article {
     font-size: 0.78rem;
 
-    h1 { font-size: 1.15rem; margin: 0 0 1rem;       line-height: 1.25; }
-    h2 { font-size: 0.92rem; margin: 1.8rem 0 0.55rem; }
-    h3 { font-size: 0.82rem; margin: 1.3rem 0 0.5rem;  }
+    .d2l-breadcrumb { font-size: 0.72rem; }
+    .page__title    { font-size: 1.15rem; line-height: 1.25; }
 
-    p  { font-size: 0.78rem; line-height: 1.6;   margin-bottom: 0.85rem; }
-    li { font-size: 0.78rem; line-height: 1.55;  margin-bottom: 0.2rem;  }
+    .d2l-article {
+      h1 { font-size: 1.15rem; }
+      h2 { font-size: 0.92rem; margin: 1.8rem 0 0.55rem; }
+      h3 { font-size: 0.82rem; margin: 1.3rem 0 0.5rem;  }
 
-    a            { font-size: inherit; }
-    blockquote p { font-size: 0.78rem; }
-    code         { font-size: 0.78em; }
-  }
+      p  { font-size: 0.78rem; line-height: 1.6;  margin-bottom: 0.85rem; }
+      li { font-size: 0.78rem; line-height: 1.55; margin-bottom: 0.2rem;  }
 
-  // Smaller breadcrumb and page title too.
-  .d2l-breadcrumb { font-size: 0.72rem; }
-  .page__title    { font-size: 1.15rem; }
+      a            { font-size: inherit; }
+      blockquote p { font-size: 0.78rem; }
+      code         { font-size: 0.78em; }
+    }
 
-  .d2l-page-nav {
-    margin-top: auto;
-    margin-bottom: 0;
-  }
-
-  .d2l-nav-btn {
-    padding: 0.5rem 0.8rem;
-    .d2l-nav-btn__lbl { font-size: 0.58rem; }
-    .d2l-nav-btn__ttl { font-size: 0.72rem; }
+    .d2l-nav-btn {
+      padding: 0.5rem 0.8rem;
+      .d2l-nav-btn__lbl { font-size: 0.58rem; }
+      .d2l-nav-btn__ttl { font-size: 0.72rem; }
+    }
   }
 }
 
 @media (max-width: 600px) {
-  .ai-layout .d2l-article h1,
-  .ai-layout .page__title       { font-size: 1rem; }
-  .ai-layout .page              { min-height: calc(100vh - 6rem); }
+  .ai-layout .page__inner-wrap .d2l-article h1,
+  .ai-layout .page__inner-wrap .page__title { font-size: 1rem; }
 }
