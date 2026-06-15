@@ -13,4 +13,5 @@ Bằng cách tận dụng tính chất không gian của ảnh, các pixel ở g
 
 ## 2. Từ Fully Connected layers đến Convolutions
 
+### 2.1. Tính bất biến (Invariance)
 
